@@ -21,7 +21,8 @@ namespace Agile_Extension.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            frmChat chat = new frmChat();
+            chat.Show();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
