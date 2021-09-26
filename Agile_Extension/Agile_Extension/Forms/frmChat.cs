@@ -16,14 +16,16 @@ namespace Agile_Extension.Forms
     public partial class frmChat : MetroSetForm
     {
         private ChromiumWebBrowser chromeBrowser;
+        private static string path = Application.StartupPath;
+        private static string cache = path + "\\ChromeCache";
 
         private void InitializeChromium()
         {
             CefSettings settings = new CefSettings();
-            //settings.CachePath = @"C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\ITRI624Project\Agile_Extension\Agile_Extension\chromeCache\";
+            settings.CachePath = @"" + cache;
             // Initialize cef with the provided settings
-            //Cef.Initialize(settings);
-            // Create a browser component
+            Cef.Initialize(settings);
+            //Create a browser component
             chromeBrowser = new ChromiumWebBrowser("https://web.telegram.org");
             // Add it to the form and fill it to the form window.
             this.Controls.Add(chromeBrowser);
