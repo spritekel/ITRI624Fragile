@@ -167,3 +167,567 @@
 [0926/095822.440:INFO:CONSOLE(1)] "[1.410] [MESSAGES]: noIdsDialogs [object Object]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
 [0926/095827.383:INFO:CONSOLE(1)] "[object Object]", source: https://web.telegram.org/k/15.d25b4a66b1a7c4f4baba.chunk.js (1)
 [0926/095850.054:ERROR:command_buffer_proxy_impl.cc(328)] GPU state invalid after WaitForGetOffsetInRange.
+[0926/171341.969:ERROR:os_crypt_win.cc(93)] Failed to decrypt: Key not valid for use in specified state. (0x8009000B)
+[0926/171342.167:WARNING:value_store_frontend.cc(45)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/171342.984:ERROR:service_worker_storage.cc(1899)] Failed to delete the database: Database IO error
+[0926/171343.730:INFO:CONSOLE(1)] "Application Cache API manifest selection is deprecated and will be removed in M85, around August 2020. See https://www.chromestatus.com/features/6192449487634432 for more details.", source: https://web.telegram.org/ (1)
+[0926/171343.735:INFO:CONSOLE(0)] "Creating Application Cache with manifest https://web.telegram.org/webogram.appcache", source: https://web.telegram.org/ (0)
+[0926/171343.735:INFO:CONSOLE(0)] "Application Cache Checking event", source: https://web.telegram.org/ (0)
+[0926/171343.927:INFO:CONSOLE(0)] "Application Cache Error event: Invalid or missing manifest origin trial token: https://web.telegram.org/webogram.appcache", source: https://web.telegram.org/ (0)
+[0926/171345.681:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/171345.687:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/171345.688:INFO:CONSOLE(1)] "[0.020] [API-PROXY]: SW registration failed! [object DOMException]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/171345.690:INFO:CONSOLE(1)] "[0.023] [IDB-session]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/171345.690:INFO:CONSOLE(1)] "[AS]: get error: [object Event] allDialogsLoaded,pinnedOrders,contactsList,updates,filters,maxSeenMsgId,stateCreatedTime,recentEmoji,topPeersCache,recentSearch,version,authState,hiddenPinnedMessages,settings,keepSigned,chatContextMenuHintWasShown,stateId,user_auth,langPack session", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/171345.695:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/171345.700:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/171345.701:INFO:CONSOLE(1)] "[0.034] [IDB-users]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/171345.710:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/171345.715:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/171345.717:INFO:CONSOLE(1)] "[0.050] [IDB-chats]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/171345.724:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/171345.729:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/171345.730:INFO:CONSOLE(1)] "[0.063] [IDB-dialogs]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/171345.731:INFO:CONSOLE(1)] "load state: 57.7041015625 ms", source: https://web.telegram.org/k/27.a0f5b46feab229f7fa74.chunk.js (1)
+[0926/171345.907:INFO:CONSOLE(1)] "got state, time: 218.69999998807907", source: https://web.telegram.org/k/main.267dcd2265b909fb017b.bundle.js (1)
+[0926/171345.907:INFO:CONSOLE(1)] "Will mount auth page: authStateSignQr 1632669225.907", source: https://web.telegram.org/k/main.267dcd2265b909fb017b.bundle.js (1)
+[0926/171345.925:INFO:CONSOLE(3)] "CW constructor", source: https://web.telegram.org/k/mtproto.worker.4552b0dae1b85559e0b5.bundle.worker.js (3)
+[0926/171345.937:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/171350.087:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/172721.838:WARNING:value_store_frontend.cc(45)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172722.747:INFO:CONSOLE(1)] "Application Cache API manifest selection is deprecated and will be removed in M85, around August 2020. See https://www.chromestatus.com/features/6192449487634432 for more details.", source: https://web.telegram.org/ (1)
+[0926/172722.750:INFO:CONSOLE(0)] "Creating Application Cache with manifest https://web.telegram.org/webogram.appcache", source: https://web.telegram.org/ (0)
+[0926/172722.750:INFO:CONSOLE(0)] "Application Cache Checking event", source: https://web.telegram.org/ (0)
+[0926/172723.003:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172723.010:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172723.015:INFO:CONSOLE(1)] "[0.024] [IDB-session]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/172723.015:INFO:CONSOLE(1)] "[AS]: get error: [object Event] allDialogsLoaded,pinnedOrders,contactsList,updates,filters,maxSeenMsgId,stateCreatedTime,recentEmoji,topPeersCache,recentSearch,version,authState,hiddenPinnedMessages,settings,keepSigned,chatContextMenuHintWasShown,stateId,user_auth,langPack session", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/172723.022:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172723.031:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172723.035:INFO:CONSOLE(1)] "[0.044] [IDB-users]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/172723.044:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172723.051:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172723.052:INFO:CONSOLE(1)] "[0.061] [IDB-chats]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/172723.060:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172723.062:INFO:CONSOLE(3)] "CW constructor", source: https://web.telegram.org/k/mtproto.worker.4552b0dae1b85559e0b5.bundle.worker.js (3)
+[0926/172723.067:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172723.070:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/172723.070:INFO:CONSOLE(1)] "[0.080] [IDB-dialogs]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/172723.071:INFO:CONSOLE(1)] "load state: 78.240966796875 ms", source: https://web.telegram.org/k/27.a0f5b46feab229f7fa74.chunk.js (1)
+[0926/172723.072:INFO:CONSOLE(1)] "got state, time: 64.29999999701977", source: https://web.telegram.org/k/main.267dcd2265b909fb017b.bundle.js (1)
+[0926/172723.072:INFO:CONSOLE(1)] "Will mount auth page: authStateSignQr 1632670043.072", source: https://web.telegram.org/k/main.267dcd2265b909fb017b.bundle.js (1)
+[0926/172723.999:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/172724.006:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/172724.009:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172724.018:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/172724.020:INFO:CONSOLE(3)] "[0.022] [IDB-session]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/sw.js (3)
+[0926/172724.021:INFO:CONSOLE(3)] "[0.023] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/172724.021:INFO:CONSOLE(3)] "Uncaught (in promise) #<Event>", source: https://web.telegram.org/k/sw.js (3)
+[0926/172724.021:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174526.252:WARNING:value_store_frontend.cc(45)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.164:INFO:CONSOLE(1)] "Application Cache API manifest selection is deprecated and will be removed in M85, around August 2020. See https://www.chromestatus.com/features/6192449487634432 for more details.", source: https://web.telegram.org/ (1)
+[0926/174527.165:INFO:CONSOLE(0)] "Creating Application Cache with manifest https://web.telegram.org/webogram.appcache", source: https://web.telegram.org/ (0)
+[0926/174527.166:INFO:CONSOLE(0)] "Application Cache Checking event", source: https://web.telegram.org/ (0)
+[0926/174527.252:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174527.256:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.263:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.264:INFO:CONSOLE(3)] "[0.017] [IDB-session]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.264:INFO:CONSOLE(3)] "[0.017] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.266:INFO:CONSOLE(3)] "Uncaught (in promise) #<Event>", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.271:ERROR:simple_index_file.cc(305)] Could not create a directory to hold the index file
+[0926/174527.297:INFO:CONSOLE(3)] "[0.048] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.297:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.297:INFO:CONSOLE(3)] "[0.049] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.297:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.297:INFO:CONSOLE(3)] "[0.049] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.298:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.305:INFO:CONSOLE(3)] "[0.057] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.305:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.306:INFO:CONSOLE(3)] "[0.059] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.306:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.309:INFO:CONSOLE(3)] "[0.061] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.309:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.310:INFO:CONSOLE(3)] "[0.061] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.310:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.310:INFO:CONSOLE(3)] "[0.062] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.310:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.319:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.324:INFO:CONSOLE(3)] "[0.077] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.324:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.326:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.327:INFO:CONSOLE(1)] "[0.015] [IDB-session]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/174527.327:INFO:CONSOLE(1)] "Uncaught (in promise) #<Event>", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/174527.330:INFO:CONSOLE(1)] "[AS]: get error: [object Event] allDialogsLoaded,pinnedOrders,contactsList,updates,filters,maxSeenMsgId,stateCreatedTime,recentEmoji,topPeersCache,recentSearch,version,authState,hiddenPinnedMessages,settings,keepSigned,chatContextMenuHintWasShown,stateId,user_auth,langPack session", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/174527.338:INFO:CONSOLE(3)] "[0.090] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.338:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.338:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.338:INFO:CONSOLE(3)] "[0.091] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.338:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.339:INFO:CONSOLE(3)] "[0.092] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.339:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.346:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.347:INFO:CONSOLE(1)] "[0.036] [IDB-users]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/174527.356:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.363:INFO:CONSOLE(3)] "CW constructor", source: https://web.telegram.org/k/mtproto.worker.4552b0dae1b85559e0b5.bundle.worker.js (3)
+[0926/174527.363:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.366:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174527.371:INFO:CONSOLE(1)] "[0.059] [IDB-chats]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/174527.373:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.379:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174527.380:INFO:CONSOLE(1)] "[0.069] [IDB-dialogs]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/174527.381:INFO:CONSOLE(1)] "load state: 69.5927734375 ms", source: https://web.telegram.org/k/27.a0f5b46feab229f7fa74.chunk.js (1)
+[0926/174527.382:INFO:CONSOLE(1)] "got state, time: 64.09999999403954", source: https://web.telegram.org/k/main.267dcd2265b909fb017b.bundle.js (1)
+[0926/174527.382:INFO:CONSOLE(1)] "Will mount auth page: authStateSignQr 1632671127.382", source: https://web.telegram.org/k/main.267dcd2265b909fb017b.bundle.js (1)
+[0926/174527.391:INFO:CONSOLE(3)] "[0.145] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.392:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.394:INFO:CONSOLE(3)] "[0.148] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.395:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.409:INFO:CONSOLE(3)] "[0.163] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.410:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.420:INFO:CONSOLE(3)] "[0.173] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.420:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.421:INFO:CONSOLE(3)] "[0.174] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.421:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174527.461:INFO:CONSOLE(3)] "[0.213] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174527.461:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174528.351:INFO:CONSOLE(1)] "[SW] Push worker started", source: https://web.telegram.org/js/lib/push_worker.js (1)
+[0926/174528.357:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.357:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.358:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.358:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.358:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.358:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.359:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.360:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.361:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.361:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.362:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.363:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.363:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.364:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.364:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.365:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.365:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.366:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.366:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.367:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.367:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.368:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174528.368:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.368:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.369:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.369:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.370:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.370:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.370:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.371:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.371:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.371:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.372:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.372:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.372:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.373:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.373:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.373:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.374:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.374:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.375:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.375:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.375:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.376:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.377:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.377:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.377:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.378:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.378:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.379:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.379:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.380:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.380:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.380:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.381:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.381:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/174528.381:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.382:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.382:INFO:CONSOLE(317)] "Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/js/lib/push_worker.js (317)
+[0926/174528.382:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.382:INFO:CONSOLE(318)] "Uncaught (in promise) #<Event>", source: https://web.telegram.org/js/lib/push_worker.js (318)
+[0926/174528.383:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.383:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.383:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.383:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.384:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.385:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.385:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.386:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.386:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.387:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.387:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.387:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.388:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.388:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.389:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.389:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.389:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.390:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.390:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.390:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.390:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.391:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.391:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.392:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.393:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.393:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.393:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.394:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.394:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.395:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.395:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.395:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.396:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.396:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.396:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.397:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.398:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.398:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.398:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.398:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.399:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.399:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.399:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.399:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174528.589:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/service_worker.js (0)
+[0926/174528.789:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 11
+[0926/174528.789:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 13
+[0926/174528.802:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 15
+[0926/174528.812:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 17
+[0926/174531.678:INFO:CONSOLE(3)] "[4.431] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/174531.678:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/174533.094:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.095:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.095:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.095:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.094:ERROR:simple_index_file.cc(305)] Could not create a directory to hold the index file
+[0926/174533.095:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.095:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.095:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.096:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.096:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.096:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.097:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.097:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.097:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.097:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.097:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.097:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.097:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.097:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.097:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.099:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.099:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.099:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.098:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.099:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.099:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.099:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.099:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.100:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.101:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.102:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.103:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.104:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.104:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.104:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.104:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/174533.104:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175003.041:WARNING:value_store_frontend.cc(45)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175003.922:INFO:CONSOLE(1)] "Application Cache API manifest selection is deprecated and will be removed in M85, around August 2020. See https://www.chromestatus.com/features/6192449487634432 for more details.", source: https://web.telegram.org/ (1)
+[0926/175003.925:INFO:CONSOLE(0)] "Creating Application Cache with manifest https://web.telegram.org/webogram.appcache", source: https://web.telegram.org/ (0)
+[0926/175003.925:INFO:CONSOLE(0)] "Application Cache Checking event", source: https://web.telegram.org/ (0)
+[0926/175004.021:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.027:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.034:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.036:INFO:CONSOLE(3)] "[0.019] [IDB-session]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.036:INFO:CONSOLE(3)] "[0.020] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.036:INFO:CONSOLE(3)] "Uncaught (in promise) #<Event>", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.039:ERROR:simple_index_file.cc(305)] Could not create a directory to hold the index file
+[0926/175004.051:INFO:CONSOLE(3)] "[0.035] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.051:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.051:INFO:CONSOLE(3)] "[0.035] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.052:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.052:INFO:CONSOLE(3)] "[0.036] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.052:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.066:INFO:CONSOLE(3)] "[0.050] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.066:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.068:INFO:CONSOLE(3)] "[0.052] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.068:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.069:INFO:CONSOLE(3)] "[0.054] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.070:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.071:INFO:CONSOLE(3)] "[0.055] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.071:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.072:INFO:CONSOLE(3)] "[0.056] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.072:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.080:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.085:INFO:CONSOLE(3)] "[0.069] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.085:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.087:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.087:INFO:CONSOLE(1)] "[0.018] [IDB-session]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/175004.088:INFO:CONSOLE(1)] "Uncaught (in promise) #<Event>", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/175004.088:INFO:CONSOLE(1)] "[AS]: get error: [object Event] allDialogsLoaded,pinnedOrders,contactsList,updates,filters,maxSeenMsgId,stateCreatedTime,recentEmoji,topPeersCache,recentSearch,version,authState,hiddenPinnedMessages,settings,keepSigned,chatContextMenuHintWasShown,stateId,user_auth,langPack session", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/175004.096:INFO:CONSOLE(3)] "[0.080] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.096:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.097:INFO:CONSOLE(3)] "[0.081] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.097:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.097:INFO:CONSOLE(3)] "[0.081] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.097:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.098:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.105:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.106:INFO:CONSOLE(1)] "[0.036] [IDB-users]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/175004.114:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.121:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.121:INFO:CONSOLE(3)] "CW constructor", source: https://web.telegram.org/k/mtproto.worker.4552b0dae1b85559e0b5.bundle.worker.js (3)
+[0926/175004.122:INFO:CONSOLE(1)] "[0.052] [IDB-chats]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/175004.126:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.133:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.139:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.140:INFO:CONSOLE(1)] "[0.070] [IDB-dialogs]: Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/k/0.a10c05fe0531384f1075.chunk.js (1)
+[0926/175004.142:INFO:CONSOLE(1)] "load state: 70.530029296875 ms", source: https://web.telegram.org/k/27.a0f5b46feab229f7fa74.chunk.js (1)
+[0926/175004.143:INFO:CONSOLE(1)] "got state, time: 64.70000000298023", source: https://web.telegram.org/k/main.267dcd2265b909fb017b.bundle.js (1)
+[0926/175004.144:INFO:CONSOLE(1)] "Will mount auth page: authStateSignQr 1632671404.144", source: https://web.telegram.org/k/main.267dcd2265b909fb017b.bundle.js (1)
+[0926/175004.150:INFO:CONSOLE(3)] "[0.134] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.150:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.150:INFO:CONSOLE(3)] "[0.134] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.150:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.158:INFO:CONSOLE(3)] "[0.142] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.158:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.168:INFO:CONSOLE(3)] "[0.152] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.168:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.168:INFO:CONSOLE(3)] "[0.153] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.169:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.204:INFO:CONSOLE(3)] "[0.188] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175004.204:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175004.830:INFO:CONSOLE(1)] "[SW] Push worker started", source: https://web.telegram.org/js/lib/push_worker.js (1)
+[0926/175004.837:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.838:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.839:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.840:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.840:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.840:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.841:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.842:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.842:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.843:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.845:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.845:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.846:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.846:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.847:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.847:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.848:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.848:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.849:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.849:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.851:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.852:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.853:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.853:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.853:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.854:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.854:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.855:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.856:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.856:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.856:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.857:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.857:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.858:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.858:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.859:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.859:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.860:ERROR:leveldb_factory.cc(91)] Failed to open LevelDB database from C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb,IO error: C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\ChromeCache\IndexedDB\https_web.telegram.org_0.indexeddb.leveldb/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[0926/175004.860:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.862:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.862:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.863:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.863:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.863:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.864:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.864:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.864:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.864:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.865:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.865:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.865:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.865:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.866:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.866:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/service_worker.js (0)
+[0926/175004.866:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.866:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.866:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.866:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.867:INFO:CONSOLE(317)] "Error creating/accessing IndexedDB database [object Event]", source: https://web.telegram.org/js/lib/push_worker.js (317)
+[0926/175004.867:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.867:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.868:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.868:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.869:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.869:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.869:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.870:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.870:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.870:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.870:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.871:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.871:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.871:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.871:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.872:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.872:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.872:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.874:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.874:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.874:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.875:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.876:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.876:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.876:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.876:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.877:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.877:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.877:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.878:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.878:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.878:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.878:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.878:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.878:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.879:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.879:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.879:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.880:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.880:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.880:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.880:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.880:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.880:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.880:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175004.880:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175005.059:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 5
+[0926/175005.248:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 7
+[0926/175005.250:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 9
+[0926/175005.251:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 11
+[0926/175005.258:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 13
+[0926/175005.285:INFO:CONSOLE(3)] "[1.268] [SW]: onunhandledrejection: [object PromiseRejectionEvent]", source: https://web.telegram.org/k/sw.js (3)
+[0926/175005.285:INFO:CONSOLE(0)] "Uncaught (in promise) InvalidAccessError: Entry already exists.", source: https://web.telegram.org/k/sw.js (0)
+[0926/175005.444:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 15
+[0926/175008.427:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.427:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.427:ERROR:simple_index_file.cc(305)] Could not create a directory to hold the index file
+[0926/175008.428:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.428:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.428:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.429:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.429:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.429:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.429:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.430:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.430:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.430:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.430:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.430:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.430:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.431:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.431:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.431:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.431:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.431:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.431:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.431:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.431:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.432:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.432:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.432:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.432:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.432:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.432:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.432:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.433:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.430:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.434:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
+[0926/175008.434:ERROR:simple_index_file.cc(321)] Failed to write the temporary index file
