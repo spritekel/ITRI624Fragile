@@ -314,7 +314,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(690, 30);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(684, 30);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
