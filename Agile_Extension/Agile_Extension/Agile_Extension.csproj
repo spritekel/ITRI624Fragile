@@ -90,6 +90,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\clsDynamicFormControls.cs" />
+    <Compile Include="Forms\frmAddProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddProject.Designer.cs">
+      <DependentUpon>frmAddProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmChat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +117,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmAddProject.resx">
+      <DependentUpon>frmAddProject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChat.resx">
       <DependentUpon>frmChat.cs</DependentUpon>
     </EmbeddedResource>

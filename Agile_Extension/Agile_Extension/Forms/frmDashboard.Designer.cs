@@ -42,6 +42,7 @@ namespace Agile_Extension.Forms
             this.metroSetTabPage2 = new MetroSet_UI.Child.MetroSetTabPage();
             this.metroSetEllipse1 = new MetroSet_UI.Controls.MetroSetEllipse();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
+            this.btnAddProj = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetTabControl1.SuspendLayout();
             this.metroSetTabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,10 +64,10 @@ namespace Agile_Extension.Forms
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage2);
             this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl1.Location = new System.Drawing.Point(1, 85);
+            this.metroSetTabControl1.Location = new System.Drawing.Point(1, 132);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
             this.metroSetTabControl1.SelectedIndex = 0;
-            this.metroSetTabControl1.Size = new System.Drawing.Size(798, 549);
+            this.metroSetTabControl1.Size = new System.Drawing.Size(1040, 556);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl1.Speed = 20;
             this.metroSetTabControl1.Style = MetroSet_UI.Design.Style.Light;
@@ -89,7 +90,7 @@ namespace Agile_Extension.Forms
             this.metroSetTabPage1.ImageKey = null;
             this.metroSetTabPage1.Location = new System.Drawing.Point(4, 42);
             this.metroSetTabPage1.Name = "metroSetTabPage1";
-            this.metroSetTabPage1.Size = new System.Drawing.Size(790, 503);
+            this.metroSetTabPage1.Size = new System.Drawing.Size(1032, 510);
             this.metroSetTabPage1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetTabPage1.StyleManager = this.styleManager1;
             this.metroSetTabPage1.TabIndex = 0;
@@ -102,7 +103,7 @@ namespace Agile_Extension.Forms
             // 
             this.panel1.Controls.Add(this.metroSetListBox1);
             this.panel1.Controls.Add(this.metroSetLabel1);
-            this.panel1.Location = new System.Drawing.Point(537, 224);
+            this.panel1.Location = new System.Drawing.Point(778, 221);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 273);
             this.panel1.TabIndex = 4;
@@ -162,7 +163,7 @@ namespace Agile_Extension.Forms
             this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(29, 334);
+            this.circularProgressBar1.Location = new System.Drawing.Point(13, 373);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.Silver;
@@ -171,7 +172,7 @@ namespace Agile_Extension.Forms
             this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.circularProgressBar1.ProgressWidth = 19;
             this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.circularProgressBar1.Size = new System.Drawing.Size(159, 160);
+            this.circularProgressBar1.Size = new System.Drawing.Size(126, 121);
             this.circularProgressBar1.StartAngle = 270;
             this.circularProgressBar1.SubscriptColor = System.Drawing.Color.Black;
             this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
@@ -269,7 +270,7 @@ namespace Agile_Extension.Forms
             this.metroSetTabPage2.ImageKey = null;
             this.metroSetTabPage2.Location = new System.Drawing.Point(4, 42);
             this.metroSetTabPage2.Name = "metroSetTabPage2";
-            this.metroSetTabPage2.Size = new System.Drawing.Size(790, 503);
+            this.metroSetTabPage2.Size = new System.Drawing.Size(1032, 510);
             this.metroSetTabPage2.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetTabPage2.StyleManager = this.styleManager1;
             this.metroSetTabPage2.TabIndex = 1;
@@ -290,7 +291,7 @@ namespace Agile_Extension.Forms
             this.metroSetEllipse1.HoverTextColor = System.Drawing.Color.White;
             this.metroSetEllipse1.Image = null;
             this.metroSetEllipse1.ImageSize = new System.Drawing.Size(64, 64);
-            this.metroSetEllipse1.Location = new System.Drawing.Point(32, 640);
+            this.metroSetEllipse1.Location = new System.Drawing.Point(32, 689);
             this.metroSetEllipse1.Name = "metroSetEllipse1";
             this.metroSetEllipse1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.metroSetEllipse1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -298,7 +299,7 @@ namespace Agile_Extension.Forms
             this.metroSetEllipse1.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.metroSetEllipse1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.metroSetEllipse1.PressTextColor = System.Drawing.Color.White;
-            this.metroSetEllipse1.Size = new System.Drawing.Size(161, 161);
+            this.metroSetEllipse1.Size = new System.Drawing.Size(112, 110);
             this.metroSetEllipse1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetEllipse1.StyleManager = this.styleManager1;
             this.metroSetEllipse1.TabIndex = 1;
@@ -314,7 +315,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(684, 30);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(962, 30);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -332,11 +333,38 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.ThemeAuthor = "Narwin";
             this.metroSetControlBox1.ThemeName = "MetroLite";
             // 
+            // btnAddProj
+            // 
+            this.btnAddProj.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddProj.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddProj.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnAddProj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAddProj.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnAddProj.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnAddProj.HoverTextColor = System.Drawing.Color.White;
+            this.btnAddProj.Location = new System.Drawing.Point(5, 91);
+            this.btnAddProj.Name = "btnAddProj";
+            this.btnAddProj.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddProj.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddProj.NormalTextColor = System.Drawing.Color.White;
+            this.btnAddProj.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnAddProj.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnAddProj.PressTextColor = System.Drawing.Color.White;
+            this.btnAddProj.Size = new System.Drawing.Size(112, 35);
+            this.btnAddProj.Style = MetroSet_UI.Design.Style.Light;
+            this.btnAddProj.StyleManager = this.styleManager1;
+            this.btnAddProj.TabIndex = 3;
+            this.btnAddProj.Text = "Add Project";
+            this.btnAddProj.ThemeAuthor = "Narwin";
+            this.btnAddProj.ThemeName = "MetroLite";
+            this.btnAddProj.Click += new System.EventHandler(this.btnAddProj_Click);
+            // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 814);
+            this.ClientSize = new System.Drawing.Size(1083, 814);
+            this.Controls.Add(this.btnAddProj);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetEllipse1);
             this.Controls.Add(this.metroSetTabControl1);
@@ -366,5 +394,6 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
         private MetroSet_UI.Controls.MetroSetEllipse metroSetEllipse1;
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
+        private MetroSet_UI.Controls.MetroSetButton btnAddProj;
     }
 }

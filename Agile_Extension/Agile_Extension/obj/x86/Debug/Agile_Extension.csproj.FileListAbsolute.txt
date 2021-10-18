@@ -200,3 +200,4 @@ D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\De
 D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\WinFormAnimation.dll
 D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\CircularProgressBar.xml
 D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmDashboard.resources
+D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddProject.resources
