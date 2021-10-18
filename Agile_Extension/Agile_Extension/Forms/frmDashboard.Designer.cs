@@ -80,6 +80,7 @@ namespace Agile_Extension.Forms
             // 
             // metroSetTabPage1
             // 
+            this.metroSetTabPage1.AutoScroll = true;
             this.metroSetTabPage1.BaseColor = System.Drawing.Color.White;
             this.metroSetTabPage1.Controls.Add(this.panel1);
             this.metroSetTabPage1.Controls.Add(this.circularProgressBar1);
@@ -291,7 +292,7 @@ namespace Agile_Extension.Forms
             this.metroSetEllipse1.HoverTextColor = System.Drawing.Color.White;
             this.metroSetEllipse1.Image = null;
             this.metroSetEllipse1.ImageSize = new System.Drawing.Size(64, 64);
-            this.metroSetEllipse1.Location = new System.Drawing.Point(32, 689);
+            this.metroSetEllipse1.Location = new System.Drawing.Point(18, 690);
             this.metroSetEllipse1.Name = "metroSetEllipse1";
             this.metroSetEllipse1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.metroSetEllipse1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -361,7 +362,7 @@ namespace Agile_Extension.Forms
             // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 814);
             this.Controls.Add(this.btnAddProj);

@@ -7,6 +7,7 @@ using MetroSet_UI;
 using MetroSet_UI.Forms;
 using System.Drawing;
 using System.Windows.Forms;
+using CircularProgressBar;
 
 //HRR POTGIETER
 //Reason for Class:
@@ -22,9 +23,19 @@ namespace Agile_Extension.Classes
         private int size_one;
         private int size_two;
 
+        //Controls that require text
         public clsDynamicFormControls(string control_text, int local_one, int local_two, int size_one, int size_two)
         {
-            setName(control_text);
+            setControlText(control_text);
+            setLocalOne(local_one);
+            setLocalTwo(local_two);
+            setSizeOne(size_one);
+            setSizeTwo(size_two);
+        }
+
+        //Controls that do not require text
+        public clsDynamicFormControls(int local_one, int local_two, int size_one, int size_two)
+        {
             setLocalOne(local_one);
             setLocalTwo(local_two);
             setSizeOne(size_one);
@@ -32,8 +43,8 @@ namespace Agile_Extension.Classes
         }
 
         //SET METHODS
-        
-        private void setName(string control_name)
+
+        private void setControlText(string control_name)
         {
             this.control_text = control_name;
         }
@@ -93,9 +104,49 @@ namespace Agile_Extension.Classes
 
             return tile;
         }
-            
-    }
 
-    
+        public Panel createDynamicPanel(Control parentControl)
+        {
+            Panel panel = new Panel();
+            parentControl.Controls.Add(panel);
+            panel.Location = new Point(getLocalOne(), getLocalTwo());
+            panel.Size = new Size(getSizeOne(), getSizeTwo());
+
+            return panel;
+        }
+
+        public MetroSet_UI.Controls.MetroSetLabel createDynamicLabel (Control parentControl)
+        {
+            MetroSet_UI.Controls.MetroSetLabel label = new MetroSet_UI.Controls.MetroSetLabel();
+            parentControl.Controls.Add(label);
+            label.Text = getControlText();
+            label.Location = new Point(getLocalOne(), getLocalTwo());
+            label.Size = new Size(getSizeOne(), getSizeTwo());
+
+            return label; 
+        }
+
+        public MetroSet_UI.Controls.MetroSetListBox createDynamicListBox (Control parentControl)
+        {
+            MetroSet_UI.Controls.MetroSetListBox listBox = new MetroSet_UI.Controls.MetroSetListBox();
+            parentControl.Controls.Add(listBox);
+            listBox.Location = new Point(getLocalOne(), getLocalTwo());
+            listBox.Size = new Size(getSizeOne(), getSizeTwo());
+
+            return listBox; 
+        }
+
+        public CircularProgressBar.CircularProgressBar createDynamicProgressBar(Control parentControl)
+        {
+            CircularProgressBar.CircularProgressBar progressBar = new CircularProgressBar.CircularProgressBar();
+            parentControl.Controls.Add(progressBar);
+            progressBar.Location = new Point(getLocalOne(), getLocalTwo());
+            progressBar.Text = getControlText();
+            progressBar.Size = new Size(getSizeOne(), getSizeTwo());
+
+            return progressBar;
+        }
+        
+    }
 
 }
