@@ -119,6 +119,7 @@ namespace Agile_Extension.Classes
         {
             MetroSet_UI.Controls.MetroSetLabel label = new MetroSet_UI.Controls.MetroSetLabel();
             parentControl.Controls.Add(label);
+            label.BorderStyle = BorderStyle.FixedSingle;
             label.Text = getControlText();
             label.Location = new Point(getLocalOne(), getLocalTwo());
             label.Size = new Size(getSizeOne(), getSizeTwo());

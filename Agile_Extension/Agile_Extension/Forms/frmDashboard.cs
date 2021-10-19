@@ -48,8 +48,12 @@ namespace Agile_Extension.Forms
         private void getProjects()
         {      
             //Add tabPages
-            metroSetTabControl1.TabPages.Add("PROJ_3", "PROJECT 3");
-            int pageIndex = metroSetTabControl1.TabPages.IndexOfKey("PROJ_3");
+            MetroSet_UI.Child.MetroSetTabPage tabPage = new MetroSet_UI.Child.MetroSetTabPage();
+            tabPage.AutoScroll = true;
+            tabPage.Name = "PROJ_3";
+            tabPage.Text = "PROJECT 3";
+            metroSetTabControl1.Controls.Add(tabPage);
+            int page_index = metroSetTabControl1.TabPages.IndexOf(tabPage);
             
             //Adds Tiles Dynamically
             int first_c_local_one = 30;
@@ -59,7 +63,7 @@ namespace Agile_Extension.Forms
             
             for(int i = 0; i < 8; i++)
             {
-                tiles.Add(new clsDynamicFormControls(first_c_local_one, first_c_local_two, tile_size*3, tile_size).createDynamicTile(metroSetTabControl1.GetControl(pageIndex)));
+                tiles.Add(new clsDynamicFormControls("Sprint " + (i+1),first_c_local_one, first_c_local_two, tile_size*3, tile_size).createDynamicTile(metroSetTabControl1.TabPages[page_index]));
                 first_c_local_one += tile_size * 3 + 20;
             }
 
@@ -69,15 +73,29 @@ namespace Agile_Extension.Forms
             int progress_bar_size = 150;
 
 
-            CircularProgressBar.CircularProgressBar progress = new clsDynamicFormControls("Progress",progress_bar_local_one, progress_bar_local_two, progress_bar_size, progress_bar_size).createDynamicProgressBar(metroSetTabControl1.GetControl(pageIndex));
+            CircularProgressBar.CircularProgressBar progress = new clsDynamicFormControls("Progress",progress_bar_local_one, progress_bar_local_two, progress_bar_size, progress_bar_size).createDynamicProgressBar(metroSetTabControl1.GetControl(page_index));
             progress.Value = 75;
             
             //Adds Panel TODO: Fix this please.
-            int panel_local_one = 5;
-            int panel_local_two = 5;
+            int panel_local_one = 450;
+            int panel_local_two = 120;
             int panel_size = 250;
-            Panel panel = new clsDynamicFormControls(panel_local_one, panel_local_two, panel_size, panel_size).createDynamicPanel(metroSetTabControl1.GetControl(pageIndex));
-           
+            Panel panel = new clsDynamicFormControls(panel_local_one, panel_local_two, panel_size, panel_size).createDynamicPanel(metroSetTabControl1.TabPages[page_index]);
+
+            //Add label to Panel
+            int lbl_local_one = 9;
+            int lbl_local_two = 9;
+            int lbl_size_one = 240;
+            int lbl_size_two = 23;
+            MetroSet_UI.Controls.MetroSetLabel label = new clsDynamicFormControls("AGENDA",lbl_local_one, lbl_local_two, lbl_size_one, lbl_size_two).createDynamicLabel(panel);
+
+
+            //Adds Listbox to Panel
+            int list_local_one = 8;
+            int list_local_two = 47;
+            int list_size = 223;
+            MetroSet_UI.Controls.MetroSetListBox list = new clsDynamicFormControls(list_local_one, list_local_two, list_size, list_size).createDynamicListBox(panel);
+            list.Items.Add("Generate Dynamic GUI");
         }
 
     }

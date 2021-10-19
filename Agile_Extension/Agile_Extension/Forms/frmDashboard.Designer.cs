@@ -62,7 +62,7 @@ namespace Agile_Extension.Forms
             this.metroSetTabControl1.AnimateTime = 200;
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage1);
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage2);
-            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl1.Location = new System.Drawing.Point(1, 132);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
@@ -104,7 +104,7 @@ namespace Agile_Extension.Forms
             // 
             this.panel1.Controls.Add(this.metroSetListBox1);
             this.panel1.Controls.Add(this.metroSetLabel1);
-            this.panel1.Location = new System.Drawing.Point(778, 221);
+            this.panel1.Location = new System.Drawing.Point(760, 221);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 273);
             this.panel1.TabIndex = 4;
