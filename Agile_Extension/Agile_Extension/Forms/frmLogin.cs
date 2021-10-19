@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RestSharp;
+using RestSharp.Authenticators;
 
 namespace Agile_Extension.Forms
 {
@@ -28,12 +30,19 @@ namespace Agile_Extension.Forms
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+        
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void metroSetLink1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmSignUp signUp = new frmSignUp();
+            signUp.Show();
+            this.Hide();
         }
     }
 }

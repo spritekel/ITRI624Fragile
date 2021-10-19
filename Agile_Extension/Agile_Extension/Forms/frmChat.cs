@@ -23,10 +23,11 @@ namespace Agile_Extension.Forms
         {
             CefSettings settings = new CefSettings();
             settings.CachePath = @"" + cache;
+            settings.CefCommandLineArgs.Add("enable-media-stream", "1");
             // Initialize cef with the provided settings
             Cef.Initialize(settings);
             //Create a browser component
-            chromeBrowser = new ChromiumWebBrowser("https://web.telegram.org");
+            chromeBrowser = new ChromiumWebBrowser("https://discord.gg/NpeJbX3xm9");
             // Add it to the form and fill it to the form window.
             this.Controls.Add(chromeBrowser);
             chromeBrowser.Dock = DockStyle.Fill;

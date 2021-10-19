@@ -211,6 +211,7 @@ namespace Agile_Extension.Forms
             this.metroSetLink1.ThemeAuthor = null;
             this.metroSetLink1.ThemeName = null;
             this.metroSetLink1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(157)))), ((int)(((byte)(205)))));
+            this.metroSetLink1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.metroSetLink1_LinkClicked);
             // 
             // frmLogin
             // 
