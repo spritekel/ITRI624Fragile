@@ -39,9 +39,9 @@ namespace Agile_Extension.Forms
         private void btnAddProj_Click(object sender, EventArgs e)
         {
             frmAddProject frmProjAdd = new frmAddProject();
-            frmProjAdd.ShowDialog();
-           
-            //Figure out how to close form
+            frmProjAdd.Show();
+            this.Hide();
+            
         }
 
 
@@ -107,5 +107,10 @@ namespace Agile_Extension.Forms
             MetroSetMessageBox.Show(this, name, name);
         }
 
+        private void frmDashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+        }
     }
 }

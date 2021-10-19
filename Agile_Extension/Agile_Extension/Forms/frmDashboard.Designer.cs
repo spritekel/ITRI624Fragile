@@ -62,9 +62,9 @@ namespace Agile_Extension.Forms
             this.metroSetTabControl1.AnimateTime = 200;
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage1);
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage2);
-            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl1.Location = new System.Drawing.Point(1, 132);
+            this.metroSetTabControl1.Location = new System.Drawing.Point(5, 146);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
             this.metroSetTabControl1.SelectedIndex = 0;
             this.metroSetTabControl1.Size = new System.Drawing.Size(1040, 556);
@@ -292,7 +292,7 @@ namespace Agile_Extension.Forms
             this.metroSetEllipse1.HoverTextColor = System.Drawing.Color.White;
             this.metroSetEllipse1.Image = null;
             this.metroSetEllipse1.ImageSize = new System.Drawing.Size(64, 64);
-            this.metroSetEllipse1.Location = new System.Drawing.Point(18, 690);
+            this.metroSetEllipse1.Location = new System.Drawing.Point(5, 708);
             this.metroSetEllipse1.Name = "metroSetEllipse1";
             this.metroSetEllipse1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.metroSetEllipse1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -316,7 +316,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(962, 30);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(929, 17);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -343,7 +343,7 @@ namespace Agile_Extension.Forms
             this.btnAddProj.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnAddProj.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnAddProj.HoverTextColor = System.Drawing.Color.White;
-            this.btnAddProj.Location = new System.Drawing.Point(5, 91);
+            this.btnAddProj.Location = new System.Drawing.Point(5, 105);
             this.btnAddProj.Name = "btnAddProj";
             this.btnAddProj.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnAddProj.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -364,7 +364,7 @@ namespace Agile_Extension.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 814);
+            this.ClientSize = new System.Drawing.Size(1055, 823);
             this.Controls.Add(this.btnAddProj);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetEllipse1);
@@ -372,6 +372,7 @@ namespace Agile_Extension.Forms
             this.Name = "frmDashboard";
             this.StyleManager = this.styleManager1;
             this.Text = "Dashboard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDashboard_FormClosing);
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.metroSetTabControl1.ResumeLayout(false);
             this.metroSetTabPage1.ResumeLayout(false);

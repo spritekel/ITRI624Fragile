@@ -36,5 +36,11 @@ namespace Agile_Extension.Forms
             
 
         }
+
+        private void frmAddProject_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmDashboard dash = new frmDashboard();
+            dash.Show();
+        }
     }
 }

@@ -267,10 +267,10 @@ namespace Agile_Extension.Forms
             // listMembers
             // 
             this.listMembers.FormattingEnabled = true;
-            this.listMembers.ItemHeight = 20;
+            this.listMembers.ItemHeight = 26;
             this.listMembers.Location = new System.Drawing.Point(12, 88);
             this.listMembers.Name = "listMembers";
-            this.listMembers.Size = new System.Drawing.Size(244, 184);
+            this.listMembers.Size = new System.Drawing.Size(244, 160);
             this.listMembers.TabIndex = 8;
             // 
             // lblProjFDetails
@@ -288,7 +288,7 @@ namespace Agile_Extension.Forms
             // 
             // frmAddProject
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 390);
             this.Controls.Add(this.metroSetPanel2);
@@ -299,6 +299,7 @@ namespace Agile_Extension.Forms
             this.Text = "Add Project";
             this.ThemeAuthor = null;
             this.ThemeName = null;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddProject_FormClosing);
             this.metroSetPanel1.ResumeLayout(false);
             this.metroSetPanel2.ResumeLayout(false);
             this.ResumeLayout(false);

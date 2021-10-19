@@ -22,12 +22,18 @@ namespace Agile_Extension.Forms
         private void btnLogin_Click(object sender, EventArgs e)
         {
             frmDashboard dash = new frmDashboard();
-            dash.ShowDialog();
+            dash.Show();
+            this.Hide();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
