@@ -65,14 +65,15 @@ namespace Agile_Extension.Forms
             {
                 tiles.Add(new clsDynamicFormControls("Sprint " + (i+1),first_c_local_one, first_c_local_two, tile_size*3, tile_size).createDynamicTile(metroSetTabControl1.TabPages[page_index]));
                 first_c_local_one += tile_size * 3 + 20;
+                tiles[i].Click += tile_click_event;
+                tiles[i].Name = "tile " + (i + 1);
             }
+
 
             //Adds Progress Bar
             int progress_bar_local_one = 13;
             int progress_bar_local_two = 200;
             int progress_bar_size = 150;
-
-
             CircularProgressBar.CircularProgressBar progress = new clsDynamicFormControls("Progress",progress_bar_local_one, progress_bar_local_two, progress_bar_size, progress_bar_size).createDynamicProgressBar(metroSetTabControl1.GetControl(page_index));
             progress.Value = 75;
             
@@ -89,13 +90,21 @@ namespace Agile_Extension.Forms
             int lbl_size_two = 23;
             MetroSet_UI.Controls.MetroSetLabel label = new clsDynamicFormControls("AGENDA",lbl_local_one, lbl_local_two, lbl_size_one, lbl_size_two).createDynamicLabel(panel);
 
-
             //Adds Listbox to Panel
             int list_local_one = 8;
             int list_local_two = 47;
             int list_size = 223;
             MetroSet_UI.Controls.MetroSetListBox list = new clsDynamicFormControls(list_local_one, list_local_two, list_size, list_size).createDynamicListBox(panel);
             list.Items.Add("Generate Dynamic GUI");
+        }
+
+        //On Click event handler for dynamically created Tile Control
+        private void tile_click_event(object sender, EventArgs e)
+        {
+
+            MetroSet_UI.Controls.MetroSetTile tile = (MetroSet_UI.Controls.MetroSetTile)sender;
+            string name = tile.Name;
+            MetroSetMessageBox.Show(this, name, name);
         }
 
     }
