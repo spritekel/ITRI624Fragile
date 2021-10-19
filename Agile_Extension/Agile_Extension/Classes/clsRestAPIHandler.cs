@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
 using RestSharp.Authenticators;
+using System.Diagnostics;
 
 namespace Agile_Extension.Classes
 {
@@ -20,51 +21,64 @@ namespace Agile_Extension.Classes
 
         public bool create_user(string username, string password, string role)
         {
-            var client = new RestClient(BASE_URL);
-            var request = new RestRequest("", Method.POST);
-            request.RequestFormat = DataFormat.Json;
-            request.AddHeader("Content-type", "application/json");
-            request.AddJsonBody(new
+            try
             {
-                username = username,
-                password = password,
-                role = role
-            });
-            
-            var response = client.Execute(request);
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("", Method.POST);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(new
+                {
+                    username = username,
+                    password = password,
+                    role = role
+                });
 
-            if(response.StatusCode.GetHashCode() == 200)
-            {
-                return true;
+                var response = client.Execute(request);
+
+                if (response.StatusCode.GetHashCode() == 200)
+                {
+                    return true;
+                }
+
+              
             }
-
+            catch(Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
             return false;
         }
 
         public bool login_user(string username, string password)
         {
-            var client = new RestClient(BASE_URL);
-            var request = new RestRequest("", Method.POST);
-            request.RequestFormat = DataFormat.Json;
-            request.AddHeader("Content-type", "application/json");
-            request.AddJsonBody(new
+            try
             {
-                username = username,
-                password = password
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("", Method.POST);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(new
+                {
+                    username = username,
+                    password = password
 
-            });
+                });
 
-            var respone = client.Execute(request);
+                var respone = client.Execute(request);
 
-            if(respone.StatusCode.GetHashCode() == 200)
+                if (respone.StatusCode.GetHashCode() == 200)
+                {
+                    return true;
+                }
+            }
+            catch(Exception e)
             {
-                return true;
+                Debug.WriteLine(e.ToString());
             }
 
             return false; 
         }
-
-
 
     }
 }

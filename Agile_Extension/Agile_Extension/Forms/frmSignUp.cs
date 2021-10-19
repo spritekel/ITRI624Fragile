@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroSet_UI.Forms;
+using Agile_Extension.Classes;
 
 namespace Agile_Extension.Forms
 {
@@ -28,7 +29,17 @@ namespace Agile_Extension.Forms
             if(validate(txtUsrName.Text, txtPassWd.Text, txtCPassWd.Text))
             {
                 string is_lead = isProjectLead();
-                MetroSetMessageBox.Show(this, "User: " + txtUsrName.Text + " Created Successfully (Role: " + is_lead + ").", "User Created");
+                if (new clsRestAPIHandler().create_user(txtUsrName.Text, txtPassWd.Text, is_lead))
+                {
+                    lblEMessage.Text = "User: " + txtUsrName.Text + " Created Successfully (Role: " + is_lead + ").";
+                    lblUsername.Text = "";
+                    lblPassword.Text = "";
+                    lblCPassword.Text = "";
+                }
+                else
+                {
+                    lblEMessage.Text = "Error orrcured";
+                }
             }
         }
 

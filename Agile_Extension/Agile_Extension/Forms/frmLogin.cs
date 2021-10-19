@@ -35,7 +35,14 @@ namespace Agile_Extension.Forms
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                Application.Exit();
+            }
+            catch
+            {
+
+            }
         }
 
         private void metroSetLink1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
