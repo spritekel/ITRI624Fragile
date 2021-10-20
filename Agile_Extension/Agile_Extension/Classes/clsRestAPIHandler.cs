@@ -7,6 +7,8 @@ using RestSharp;
 using System.Net;
 using RestSharp.Authenticators;
 using System.Diagnostics;
+using Newtonsoft;
+using Newtonsoft.Json.Linq;
 
 namespace Agile_Extension.Classes
 {
@@ -68,11 +70,12 @@ namespace Agile_Extension.Classes
                 });
 
                 var response = client.Execute(request);
+             
                 HttpStatusCode statusCode = response.StatusCode;
                 
                 if ((int)statusCode == 200)
                 {
-                    return true;
+                    return true;                 
                 }
             }
             catch(Exception e)
@@ -83,5 +86,41 @@ namespace Agile_Extension.Classes
             return false; 
         }
 
+        public string get_user_info(string username)
+        {
+            try
+            {
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/user/" + username, Method.GET);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                var response = client.Execute(request);
+                
+                HttpStatusCode statusCode = response.StatusCode;                        
+               
+                if ((int)statusCode == 200)
+                {
+                    Debug.WriteLine(response.Content);
+                    return is_admin(response.Content);
+                }
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
+
+            return "0";
+        }
+
+        
+        public string is_admin(string content)
+        {
+            if (content.Contains("admin"))
+            {
+                return "admin";
+            }
+            return "member"; 
+        }
+        
     }
 }

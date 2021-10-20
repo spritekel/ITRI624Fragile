@@ -14,6 +14,7 @@ namespace Agile_Extension.Forms
 {
     public partial class frmDashboard : MetroSetForm
     {
+        public string isAdmin = "";
         public frmDashboard()
         {
             InitializeComponent();
@@ -22,7 +23,11 @@ namespace Agile_Extension.Forms
         private void frmDashboard_Load(object sender, EventArgs e)
         {
             getProjects();
-
+      
+            if(isAdmin == "admin")
+            {
+                btnAddProj.Enabled = true;
+            }
         }
 
         private void metroSetListBox1_SelectedIndexChanged(object sender)
@@ -113,6 +118,7 @@ namespace Agile_Extension.Forms
             login.Show();
         }
 
+     
     
     }
 }

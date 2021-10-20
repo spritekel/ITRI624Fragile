@@ -24,11 +24,13 @@ namespace Agile_Extension.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(new clsRestAPIHandler().login_user(txtUsername.Text,txtPassword.Text))
+            if (new clsRestAPIHandler().login_user(txtUsername.Text, txtPassword.Text))
             {
+                frmDashboard dash = new frmDashboard();
+                dash.isAdmin = new clsRestAPIHandler().get_user_info(txtUsername.Text);
                 txtUsername.Text = "";
                 txtPassword.Text = "";
-                frmDashboard dash = new frmDashboard();
+                lblEMessage.Text = "";
                 dash.Show();
                 this.Hide();
             }
@@ -54,6 +56,11 @@ namespace Agile_Extension.Forms
             frmSignUp signUp = new frmSignUp();
             signUp.Show();
             this.Hide();
+        }
+
+        public bool is_user_admin()
+        {
+            return true;
         }
     }
 }
