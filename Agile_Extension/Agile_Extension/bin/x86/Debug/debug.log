@@ -7293,3 +7293,189 @@ color: purple;
 [1019/224643.435:INFO:CONSOLE(138)] "[FAST CONNECT] connected in 399ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
 [1019/224656.203:WARNING:sqlite_persistent_store_backend_base.cc(172)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:220 to client_task_runner_.
 [1019/224656.203:WARNING:sqlite_persistent_store_backend_base.cc(172)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:220 to client_task_runner_.
+[1020/201216.879:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.", source:  (0)
+[1020/201217.872:INFO:CONSOLE(49)] "[FAST CONNECT] connecting to: wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream", source: https://discord.com/invite/NpeJbX3xm9 (49)
+[1020/201218.301:INFO:CONSOLE(138)] "[FAST CONNECT] connected in 396ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201218.697:INFO:CONSOLE(138)] "%c[Logger.tsx] 
+font-weight: bold;
+color: purple;
+ Logger has loaded", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201219.109:INFO:CONSOLE(138)] "%c[default] 
+font-weight: bold;
+color: purple;
+ [BUILD INFO] Release Channel: stable, Build Number: 101451, Version Hash: b46c2300e6221a523a6b73e7405f99596a3a4e5e", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201219.321:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow batch emitChanges took 116ms recentActions: EXPERIMENT_REGISTER_LEGACY -> I18N_LOAD_START -> STREAMING_UPDATE -> ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED -> ACCESSIBILITY_SYSTEM_PREFERS_COLOR_SCHEME_CHANGED -> I18N_LOAD_SUCCESS", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201219.323:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow dispatch on I18N_LOAD_SUCCESS: 117ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201220.111:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow batch emitChanges took 107ms recentActions: ACCESSIBILITY_SYSTEM_PREFERS_COLOR_SCHEME_CHANGED -> I18N_LOAD_SUCCESS -> TRACK -> EXPERIMENTS_FETCH -> TRACK -> MEDIA_ENGINE_DEVICES -> EXPERIMENTS_FETCH_SUCCESS -> EXPERIMENT_TRIGGER -> NATIVE_APP_MODAL_OPENING -> INVITE_RESOLVE", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201220.127:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow dispatch on INVITE_RESOLVE: 107ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201224.595:INFO:CONSOLE(138)] "%c[Routing/Utils] 
+font-weight: bold;
+color: purple;
+ transitionTo - Transitioning to /channels/900011760843640862/900014243687067709", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201224.676:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.", source:  (0)
+[1020/201224.773:INFO:CONSOLE(49)] "[FAST CONNECT] connecting to: wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream", source: https://discord.com/channels/900011760843640862/900014243687067709 (49)
+[1020/201225.028:INFO:CONSOLE(138)] "%c[Logger.tsx] 
+font-weight: bold;
+color: purple;
+ Logger has loaded", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201225.142:INFO:CONSOLE(138)] "%c[default] 
+font-weight: bold;
+color: purple;
+ [BUILD INFO] Release Channel: stable, Build Number: 101451, Version Hash: b46c2300e6221a523a6b73e7405f99596a3a4e5e", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201225.278:INFO:CONSOLE(138)] "[FAST CONNECT] connected in 504ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201226.351:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [CONNECT] wss://gateway.discord.gg, encoding: json, version: 9, compression: zlib-stream", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201226.351:INFO:CONSOLE(138)] "[FAST CONNECT] successfully took over websocket, state: [object Object]", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201226.351:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [CONNECTED] wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream in 0 ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201226.352:INFO:CONSOLE(138)] "%c[ConnectionStore] 
+font-weight: bold;
+color: purple;
+ handleIdentify called [object Object]", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201226.352:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [IDENTIFY]", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201226.392:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [HELLO] via ["gateway-prd-main-0v55",{"micros":0.0}], heartbeat interval: 41250, took 41 ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201226.778:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [READY] took 426ms, via ["gateway-prd-main-0v55",{"micros":131014,"calls":["discord-sessions-blue-prd-2-167",{"micros":129250,"calls":["start_session",{"micros":105832,"calls":["api-prd-main-368g",{"micros":92579,"calls":["get_user",{"micros":13686},"add_authorized_ip",{"micros":10804},"get_guilds",{"micros":9156},"private_channels",{"micros":13915},"read_states",{"micros":7300},"coros_wait",{"micros":8477},"aliases",{"micros":7301},"affine_user_ids",{"micros":705},"experiments",{"micros":4800}]}]},"guilds_connect",{"micros":550,"calls":[]},"presence_connect",{"micros":1,"calls":[]}]}]}] as bc67720a301925283071bb9f43dd04d1", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201226.781:INFO:CONSOLE(138)] "%c[AuthenticationStore] 
+font-weight: bold;
+color: purple;
+ handleConnectionOpen called [object Object]", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201226.865:WARNING:http_cache_transaction.cc(2395)] Multiple or malformed validation headers found.
+[1020/201226.866:INFO:CONSOLE(138)] "%c[MessageActionCreators] 
+font-weight: bold;
+color: purple;
+ Fetching messages for 900014243687067709 between undefined and undefined. jump=undefined", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201227.419:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow batch emitChanges took 521ms recentActions: EXPERIMENT_TRIGGER -> EXPERIMENT_TRIGGER -> EXPERIMENT_TRIGGER -> TRACK -> TRACK -> EXPERIMENT_TRIGGER -> TRACK -> EXPERIMENT_TRIGGER -> UPDATE_CHANNEL_LIST_DIMENSIONS -> EXPERIMENT_TRIGGER", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201227.555:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [READY_SUPPLEMENTAL] took 1204ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201227.654:INFO:CONSOLE(138)] "%c[MessageActionCreators] 
+font-weight: bold;
+color: purple;
+ Fetched 1 messages for 900014243687067709 isBefore:false isAfter:false", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201507.978:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.", source:  (0)
+[1020/201508.110:INFO:CONSOLE(49)] "[FAST CONNECT] connecting to: wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream", source: https://discord.com/invite/NpeJbX3xm9 (49)
+[1020/201508.500:INFO:CONSOLE(138)] "%c[Logger.tsx] 
+font-weight: bold;
+color: purple;
+ Logger has loaded", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201508.630:INFO:CONSOLE(138)] "%c[default] 
+font-weight: bold;
+color: purple;
+ [BUILD INFO] Release Channel: stable, Build Number: 101451, Version Hash: b46c2300e6221a523a6b73e7405f99596a3a4e5e", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201508.670:INFO:CONSOLE(138)] "[FAST CONNECT] connected in 560ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201510.548:INFO:CONSOLE(138)] "%c[Routing/Utils] 
+font-weight: bold;
+color: purple;
+ transitionTo - Transitioning to /channels/900011760843640862/900014243687067709", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201510.570:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.", source:  (0)
+[1020/201510.648:INFO:CONSOLE(49)] "[FAST CONNECT] connecting to: wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream", source: https://discord.com/channels/900011760843640862/900014243687067709 (49)
+[1020/201510.900:INFO:CONSOLE(138)] "%c[Logger.tsx] 
+font-weight: bold;
+color: purple;
+ Logger has loaded", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201511.014:INFO:CONSOLE(138)] "%c[default] 
+font-weight: bold;
+color: purple;
+ [BUILD INFO] Release Channel: stable, Build Number: 101451, Version Hash: b46c2300e6221a523a6b73e7405f99596a3a4e5e", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201511.052:INFO:CONSOLE(138)] "[FAST CONNECT] connected in 403ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201511.812:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [CONNECT] wss://gateway.discord.gg, encoding: json, version: 9, compression: zlib-stream", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201511.812:INFO:CONSOLE(138)] "[FAST CONNECT] successfully took over websocket, state: [object Object]", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201511.812:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [CONNECTED] wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream in 1 ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201511.813:INFO:CONSOLE(138)] "%c[ConnectionStore] 
+font-weight: bold;
+color: purple;
+ handleIdentify called [object Object]", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201511.813:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [IDENTIFY]", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201511.827:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [HELLO] via ["gateway-prd-main-b2nk",{"micros":0.0}], heartbeat interval: 41250, took 16 ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201512.221:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [READY] took 410ms, via ["gateway-prd-main-b2nk",{"micros":94549,"calls":["discord-sessions-blue-prd-2-77",{"micros":91680,"calls":["start_session",{"micros":63099,"calls":["api-prd-main-5ldm",{"micros":53911,"calls":["get_user",{"micros":6134},"add_authorized_ip",{"micros":5645},"get_guilds",{"micros":4222},"private_channels",{"micros":9902},"read_states",{"micros":4684},"coros_wait",{"micros":4033},"aliases",{"micros":3432},"affine_user_ids",{"micros":494},"experiments",{"micros":3143}]}]},"guilds_connect",{"micros":665,"calls":[]},"presence_connect",{"micros":1,"calls":[]}]}]}] as a78ff79fa5a12000efa115fa88f95bc8", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201512.225:INFO:CONSOLE(138)] "%c[AuthenticationStore] 
+font-weight: bold;
+color: purple;
+ handleConnectionOpen called [object Object]", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201512.321:WARNING:http_cache_transaction.cc(2395)] Multiple or malformed validation headers found.
+[1020/201512.322:INFO:CONSOLE(138)] "%c[MessageActionCreators] 
+font-weight: bold;
+color: purple;
+ Fetching messages for 900014243687067709 between undefined and undefined. jump=undefined", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201512.632:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow batch emitChanges took 303ms recentActions: EXPERIMENT_TRIGGER -> EXPERIMENT_TRIGGER -> EXPERIMENT_TRIGGER -> TRACK -> TRACK -> EXPERIMENT_TRIGGER -> TRACK -> EXPERIMENT_TRIGGER -> UPDATE_CHANNEL_LIST_DIMENSIONS -> EXPERIMENT_TRIGGER", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201512.845:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [READY_SUPPLEMENTAL] took 1033ms", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201513.213:INFO:CONSOLE(138)] "%c[MessageActionCreators] 
+font-weight: bold;
+color: purple;
+ Fetched 1 messages for 900014243687067709 isBefore:false isAfter:false", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201519.070:INFO:CONSOLE(138)] "%c[MessageActionCreators] 
+font-weight: bold;
+color: purple;
+ Fetching messages for 900081157671108661 between undefined and undefined. jump=undefined", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201519.151:INFO:CONSOLE(138)] "%c[Routing/Utils] 
+font-weight: bold;
+color: purple;
+ transitionTo - Transitioning to /channels/900011760843640862/900081157671108661", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201519.424:INFO:CONSOLE(138)] "%c[MessageActionCreators] 
+font-weight: bold;
+color: purple;
+ Fetched 0 messages for 900081157671108661 isBefore:false isAfter:false", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201520.348:INFO:CONSOLE(138)] "%c[MessageActionCreators] 
+font-weight: bold;
+color: purple;
+ Fetching messages for 900099796902219837 between undefined and undefined. jump=undefined", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201520.460:INFO:CONSOLE(138)] "%c[Routing/Utils] 
+font-weight: bold;
+color: purple;
+ transitionTo - Transitioning to /channels/900011760843640862/900099796902219837", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/201520.640:INFO:CONSOLE(138)] "%c[MessageActionCreators] 
+font-weight: bold;
+color: purple;
+ Fetched 11 messages for 900099796902219837 isBefore:false isAfter:false", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
+[1020/211723.595:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1020/212352.732:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled

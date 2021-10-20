@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
+using System.Net;
 using RestSharp.Authenticators;
 using System.Diagnostics;
 
@@ -12,7 +13,7 @@ namespace Agile_Extension.Classes
     class clsRestAPIHandler
     {
 
-        private const string BASE_URL = "";
+        private const string BASE_URL = "https://mysterious-reef-01698.herokuapp.com/";
         public clsRestAPIHandler()
         {
 
@@ -24,7 +25,7 @@ namespace Agile_Extension.Classes
             try
             {
                 var client = new RestClient(BASE_URL);
-                var request = new RestRequest("", Method.POST);
+                var request = new RestRequest("/user/signup", Method.POST);
                 request.RequestFormat = DataFormat.Json;
                 request.AddHeader("Content-type", "application/json");
                 request.AddJsonBody(new
@@ -35,8 +36,9 @@ namespace Agile_Extension.Classes
                 });
 
                 var response = client.Execute(request);
-
-                if (response.StatusCode.GetHashCode() == 200)
+                HttpStatusCode statusCode = response.StatusCode;
+                int num_status_code = (int)statusCode;
+                if (num_status_code == 201)
                 {
                     return true;
                 }
@@ -55,7 +57,7 @@ namespace Agile_Extension.Classes
             try
             {
                 var client = new RestClient(BASE_URL);
-                var request = new RestRequest("", Method.POST);
+                var request = new RestRequest("/user/login", Method.POST);
                 request.RequestFormat = DataFormat.Json;
                 request.AddHeader("Content-type", "application/json");
                 request.AddJsonBody(new
@@ -65,9 +67,10 @@ namespace Agile_Extension.Classes
 
                 });
 
-                var respone = client.Execute(request);
-
-                if (respone.StatusCode.GetHashCode() == 200)
+                var response = client.Execute(request);
+                HttpStatusCode statusCode = response.StatusCode;
+                
+                if ((int)statusCode == 200)
                 {
                     return true;
                 }

@@ -32,12 +32,13 @@ namespace Agile_Extension.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.styleManager1 = new MetroSet_UI.StyleManager();
-            this.lblUsername = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.txtUsername = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.lblPassword = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.txtPassword = new MetroSet_UI.Controls.MetroSetTextBox();
             this.btnLogin = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetLink1 = new MetroSet_UI.Controls.MetroSetLink();
+            this.lblEMessage = new MetroSet_UI.Controls.MetroSetLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,34 +86,33 @@ namespace Agile_Extension.Forms
             this.styleManager1.ThemeAuthor = null;
             this.styleManager1.ThemeName = null;
             // 
-            // lblUsername
+            // txtUsername
             // 
-            this.lblUsername.AutoCompleteCustomSource = null;
-            this.lblUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.lblUsername.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.lblUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.lblUsername.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.lblUsername.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.lblUsername.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblUsername.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.lblUsername.Image = null;
-            this.lblUsername.Lines = null;
-            this.lblUsername.Location = new System.Drawing.Point(15, 259);
-            this.lblUsername.MaxLength = 32767;
-            this.lblUsername.Multiline = false;
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.ReadOnly = false;
-            this.lblUsername.Size = new System.Drawing.Size(262, 25);
-            this.lblUsername.Style = MetroSet_UI.Design.Style.Light;
-            this.lblUsername.StyleManager = this.styleManager1;
-            this.lblUsername.TabIndex = 3;
-            this.lblUsername.Text = "Chanel";
-            this.lblUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.lblUsername.ThemeAuthor = null;
-            this.lblUsername.ThemeName = null;
-            this.lblUsername.UseSystemPasswordChar = false;
-            this.lblUsername.WatermarkText = "";
+            this.txtUsername.AutoCompleteCustomSource = null;
+            this.txtUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtUsername.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtUsername.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtUsername.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtUsername.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtUsername.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtUsername.Image = null;
+            this.txtUsername.Lines = null;
+            this.txtUsername.Location = new System.Drawing.Point(15, 259);
+            this.txtUsername.MaxLength = 32767;
+            this.txtUsername.Multiline = false;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.ReadOnly = false;
+            this.txtUsername.Size = new System.Drawing.Size(262, 25);
+            this.txtUsername.Style = MetroSet_UI.Design.Style.Light;
+            this.txtUsername.StyleManager = this.styleManager1;
+            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsername.ThemeAuthor = null;
+            this.txtUsername.ThemeName = null;
+            this.txtUsername.UseSystemPasswordChar = false;
+            this.txtUsername.WatermarkText = "";
             // 
             // metroSetLabel1
             // 
@@ -140,34 +140,33 @@ namespace Agile_Extension.Forms
             this.metroSetLabel2.ThemeAuthor = null;
             this.metroSetLabel2.ThemeName = null;
             // 
-            // lblPassword
+            // txtPassword
             // 
-            this.lblPassword.AutoCompleteCustomSource = null;
-            this.lblPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.lblPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.lblPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.lblPassword.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.lblPassword.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.lblPassword.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblPassword.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.lblPassword.Image = null;
-            this.lblPassword.Lines = null;
-            this.lblPassword.Location = new System.Drawing.Point(15, 316);
-            this.lblPassword.MaxLength = 32767;
-            this.lblPassword.Multiline = false;
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.ReadOnly = false;
-            this.lblPassword.Size = new System.Drawing.Size(262, 25);
-            this.lblPassword.Style = MetroSet_UI.Design.Style.Light;
-            this.lblPassword.StyleManager = this.styleManager1;
-            this.lblPassword.TabIndex = 6;
-            this.lblPassword.Text = "*********";
-            this.lblPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.lblPassword.ThemeAuthor = null;
-            this.lblPassword.ThemeName = null;
-            this.lblPassword.UseSystemPasswordChar = false;
-            this.lblPassword.WatermarkText = "";
+            this.txtPassword.AutoCompleteCustomSource = null;
+            this.txtPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtPassword.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtPassword.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtPassword.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtPassword.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtPassword.Image = null;
+            this.txtPassword.Lines = null;
+            this.txtPassword.Location = new System.Drawing.Point(15, 316);
+            this.txtPassword.MaxLength = 32767;
+            this.txtPassword.Multiline = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.ReadOnly = false;
+            this.txtPassword.Size = new System.Drawing.Size(262, 25);
+            this.txtPassword.Style = MetroSet_UI.Design.Style.Light;
+            this.txtPassword.StyleManager = this.styleManager1;
+            this.txtPassword.TabIndex = 6;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPassword.ThemeAuthor = null;
+            this.txtPassword.ThemeName = null;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.WatermarkText = "";
             // 
             // btnLogin
             // 
@@ -178,7 +177,7 @@ namespace Agile_Extension.Forms
             this.btnLogin.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnLogin.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnLogin.HoverTextColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(102, 356);
+            this.btnLogin.Location = new System.Drawing.Point(105, 357);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnLogin.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -200,7 +199,7 @@ namespace Agile_Extension.Forms
             this.metroSetLink1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroSetLink1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.metroSetLink1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.metroSetLink1.Location = new System.Drawing.Point(15, 412);
+            this.metroSetLink1.Location = new System.Drawing.Point(13, 450);
             this.metroSetLink1.Name = "metroSetLink1";
             this.metroSetLink1.Size = new System.Drawing.Size(264, 23);
             this.metroSetLink1.Style = MetroSet_UI.Design.Style.Light;
@@ -213,18 +212,31 @@ namespace Agile_Extension.Forms
             this.metroSetLink1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(157)))), ((int)(((byte)(205)))));
             this.metroSetLink1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.metroSetLink1_LinkClicked);
             // 
+            // lblEMessage
+            // 
+            this.lblEMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblEMessage.Location = new System.Drawing.Point(15, 408);
+            this.lblEMessage.Name = "lblEMessage";
+            this.lblEMessage.Size = new System.Drawing.Size(100, 23);
+            this.lblEMessage.Style = MetroSet_UI.Design.Style.Light;
+            this.lblEMessage.StyleManager = this.styleManager1;
+            this.lblEMessage.TabIndex = 9;
+            this.lblEMessage.ThemeAuthor = null;
+            this.lblEMessage.ThemeName = null;
+            // 
             // frmLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(292, 447);
+            this.ClientSize = new System.Drawing.Size(292, 484);
+            this.Controls.Add(this.lblEMessage);
             this.Controls.Add(this.metroSetLink1);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.metroSetLabel2);
             this.Controls.Add(this.metroSetLabel1);
-            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
@@ -244,12 +256,13 @@ namespace Agile_Extension.Forms
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
-        private MetroSet_UI.Controls.MetroSetTextBox lblUsername;
+        private MetroSet_UI.Controls.MetroSetTextBox txtUsername;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel2;
-        private MetroSet_UI.Controls.MetroSetTextBox lblPassword;
+        private MetroSet_UI.Controls.MetroSetTextBox txtPassword;
         private MetroSet_UI.Controls.MetroSetButton btnLogin;
         private MetroSet_UI.Controls.MetroSetLink metroSetLink1;
         private MetroSet_UI.StyleManager styleManager1;
+        private MetroSet_UI.Controls.MetroSetLabel lblEMessage;
     }
 }
