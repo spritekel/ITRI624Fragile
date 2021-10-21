@@ -67,5 +67,11 @@ namespace Agile_Extension.Forms
             cmbMembers.Items.RemoveAt(index);
         }
 
+        private void listMembers_SelectedIndexChanged(object sender)
+        {
+            int index = listMembers.SelectedIndex;
+            cmbMembers.Items.Add(listMembers.Items[index]);
+            listMembers.Items.RemoveAt(index);
+        }
     }
 }

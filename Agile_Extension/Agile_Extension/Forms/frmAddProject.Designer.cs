@@ -39,10 +39,10 @@ namespace Agile_Extension.Forms
             this.txtProjName = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lblProjName = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetPanel2 = new MetroSet_UI.Controls.MetroSetPanel();
+            this.listMembers = new MetroSet_UI.Controls.MetroSetListBox();
             this.lblFMembers = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblProjFName = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblProjFDetails = new MetroSet_UI.Controls.MetroSetLabel();
-            this.listMembers = new MetroSet_UI.Controls.MetroSetListBox();
             this.metroSetPanel1.SuspendLayout();
             this.metroSetPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -240,6 +240,33 @@ namespace Agile_Extension.Forms
             this.metroSetPanel2.ThemeAuthor = null;
             this.metroSetPanel2.ThemeName = null;
             // 
+            // listMembers
+            // 
+            this.listMembers.BorderColor = System.Drawing.Color.LightGray;
+            this.listMembers.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.listMembers.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.listMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.listMembers.HoveredItemBackColor = System.Drawing.Color.LightGray;
+            this.listMembers.HoveredItemColor = System.Drawing.Color.DimGray;
+            this.listMembers.ItemHeight = 30;
+            this.listMembers.Location = new System.Drawing.Point(12, 85);
+            this.listMembers.MultiSelect = false;
+            this.listMembers.Name = "listMembers";
+            this.listMembers.SelectedIndex = -1;
+            this.listMembers.SelectedItem = null;
+            this.listMembers.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.listMembers.SelectedItemColor = System.Drawing.Color.White;
+            this.listMembers.SelectedValue = null;
+            this.listMembers.ShowBorder = false;
+            this.listMembers.ShowScrollBar = false;
+            this.listMembers.Size = new System.Drawing.Size(273, 187);
+            this.listMembers.Style = MetroSet_UI.Design.Style.Light;
+            this.listMembers.StyleManager = null;
+            this.listMembers.TabIndex = 11;
+            this.listMembers.ThemeAuthor = "Narwin";
+            this.listMembers.ThemeName = "MetroLite";
+            this.listMembers.SelectedIndexChanged += new MetroSet_UI.Controls.MetroSetListBox.SelectedIndexChangedEventHandler(this.listMembers_SelectedIndexChanged);
+            // 
             // lblFMembers
             // 
             this.lblFMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -277,32 +304,6 @@ namespace Agile_Extension.Forms
             this.lblProjFDetails.Text = "Project Summary:";
             this.lblProjFDetails.ThemeAuthor = "Narwin";
             this.lblProjFDetails.ThemeName = "MetroLite";
-            // 
-            // listMembers
-            // 
-            this.listMembers.BorderColor = System.Drawing.Color.LightGray;
-            this.listMembers.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.listMembers.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.listMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.listMembers.HoveredItemBackColor = System.Drawing.Color.LightGray;
-            this.listMembers.HoveredItemColor = System.Drawing.Color.DimGray;
-            this.listMembers.ItemHeight = 30;
-            this.listMembers.Location = new System.Drawing.Point(12, 85);
-            this.listMembers.MultiSelect = false;
-            this.listMembers.Name = "listMembers";
-            this.listMembers.SelectedIndex = -1;
-            this.listMembers.SelectedItem = null;
-            this.listMembers.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.listMembers.SelectedItemColor = System.Drawing.Color.White;
-            this.listMembers.SelectedValue = null;
-            this.listMembers.ShowBorder = false;
-            this.listMembers.ShowScrollBar = false;
-            this.listMembers.Size = new System.Drawing.Size(273, 187);
-            this.listMembers.Style = MetroSet_UI.Design.Style.Light;
-            this.listMembers.StyleManager = null;
-            this.listMembers.TabIndex = 11;
-            this.listMembers.ThemeAuthor = "Narwin";
-            this.listMembers.ThemeName = "MetroLite";
             // 
             // frmAddProject
             // 
