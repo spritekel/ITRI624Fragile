@@ -15,9 +15,11 @@ namespace Agile_Extension.Forms
 {
     public partial class frmChat : MetroSetForm
     {
-
+        #region INSTANCE_VARIABLES
         private readonly ChromiumWebBrowser browser;
-    
+        #endregion
+
+        #region FORM_METHODS
         public frmChat()
         {
             InitializeComponent();
@@ -30,12 +32,10 @@ namespace Agile_Extension.Forms
 
         }
 
-    
         private void frmChat_Load(object sender, EventArgs e)
         {
 
         }
-
         private void frmChat_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(!Cef.IsInitialized)
@@ -44,8 +44,7 @@ namespace Agile_Extension.Forms
             }
             this.Dispose();
         }
-
-
+        #endregion
 
     }
 }

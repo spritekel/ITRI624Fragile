@@ -137,7 +137,6 @@ namespace Agile_Extension.Forms
             this.metroSetListBox1.TabIndex = 1;
             this.metroSetListBox1.ThemeAuthor = "Narwin";
             this.metroSetListBox1.ThemeName = "MetroLite";
-            this.metroSetListBox1.SelectedIndexChanged += new MetroSet_UI.Controls.MetroSetListBox.SelectedIndexChangedEventHandler(this.metroSetListBox1_SelectedIndexChanged);
             // 
             // metroSetLabel1
             // 

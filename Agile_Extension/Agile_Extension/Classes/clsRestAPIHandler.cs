@@ -20,8 +20,7 @@ namespace Agile_Extension.Classes
         {
 
         }
-
-
+        #region LOGIN_SIGNUP
         public bool create_user(string username, string password, string role)
         {
             try
@@ -85,7 +84,9 @@ namespace Agile_Extension.Classes
 
             return false; 
         }
+        #endregion
 
+        #region GET_USER_INFO
         public JObject get_user_info(string username)
         {
             try
@@ -137,14 +138,15 @@ namespace Agile_Extension.Classes
 
             return null;
         }
+        #endregion
 
-        
-
+        #region GENERIC_METHODS
         public JObject toJsonObject(string response)
         {
             JObject obj = JObject.Parse(response);
             return obj;
         }
+        #endregion
         
     }
 }

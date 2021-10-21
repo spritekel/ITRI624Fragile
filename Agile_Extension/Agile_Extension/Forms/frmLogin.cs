@@ -17,11 +17,11 @@ namespace Agile_Extension.Forms
 {
     public partial class frmLogin : MetroSetForm
     {
+        #region FORM_METHODS
         public frmLogin()
         {
             InitializeComponent();
         }
-
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -56,10 +56,6 @@ namespace Agile_Extension.Forms
             signUp.Show();
             this.Hide();
         }
-
-        public bool is_user_admin()
-        {
-            return true;
-        }
+        #endregion
     }
 }

@@ -15,6 +15,7 @@ namespace Agile_Extension.Forms
 {
     public partial class frmAddProject : MetroSetForm
     {
+        #region FORM_METHODS
         public frmAddProject()
         {
             InitializeComponent();
@@ -28,16 +29,12 @@ namespace Agile_Extension.Forms
 
         private void btnAddProj_Click(object sender, EventArgs e)
         {
-            
-
             if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.Yes)
             {
                 //TODO: write data to DB
                 frmDashboard dashboard = new frmDashboard();
                 dashboard.ShowDialog();
-                //Figure out how to close form
             }
-            
 
         }
 
@@ -73,5 +70,6 @@ namespace Agile_Extension.Forms
             cmbMembers.Items.Add(listMembers.Items[index]);
             listMembers.Items.RemoveAt(index);
         }
+        #endregion
     }
 }

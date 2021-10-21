@@ -14,6 +14,7 @@ namespace Agile_Extension.Forms
 {
     public partial class frmSignUp : MetroSetForm
     {
+        #region FORM_METHODS
         public frmSignUp()
         {
             InitializeComponent();
@@ -43,30 +44,38 @@ namespace Agile_Extension.Forms
             }
         }
 
+        private void frmSignUp_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+        }
+        #endregion
+
+        #region METHODS
         private bool validate(string username, string password, string confirm)
         {
-            if(username.Length <= 0)
+            if (username.Length <= 0)
             {
                 txtUsrName.Focus();
                 lblEMessage.Text = "Provide username";
-                return false; 
+                return false;
             }
 
-            if(password.Length <= 0)
+            if (password.Length <= 0)
             {
                 txtPassWd.Focus();
                 lblEMessage.Text = "Provide password";
                 return false;
             }
 
-            if(confirm.Length <= 0)
+            if (confirm.Length <= 0)
             {
                 txtCPassWd.Focus();
                 lblEMessage.Text = "Provide confirmation password";
                 return false;
             }
 
-            if(password != confirm)
+            if (password != confirm)
             {
                 txtPassWd.Text = "";
                 txtCPassWd.Text = "";
@@ -81,17 +90,13 @@ namespace Agile_Extension.Forms
 
         private string isProjectLead()
         {
-            if(swProjectLead.Switched)
+            if (swProjectLead.Switched)
             {
                 return "admin";
             }
             return "member";
         }
+        #endregion
 
-        private void frmSignUp_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            frmLogin login = new frmLogin();
-            login.Show();
-        }
     }
 }

@@ -11,11 +11,15 @@ namespace Agile_Extension.Classes
 {
     class clsFileHandler
     {
-      
+
+        #region INSTANCE_VARIABLES
         private static string path = Application.StartupPath;
         private static string file_folder = "\\Role";
         private static string full_path = path + file_folder;
         private static string file_name = full_path += "\\role.txt";
+        #endregion
+
+        #region METHODS
         public void writeToFile(string role)
         {
             try
@@ -30,7 +34,6 @@ namespace Agile_Extension.Classes
                 Debug.WriteLine(e);
             }
         }
-
         public string readFromFile()
         {
             try
@@ -49,7 +52,6 @@ namespace Agile_Extension.Classes
 
             return "file not found";
         }
-
         public void deleteFile()
         {
             try
@@ -61,5 +63,6 @@ namespace Agile_Extension.Classes
                 Debug.WriteLine(e);
             }
         }
+        #endregion
     }
 }

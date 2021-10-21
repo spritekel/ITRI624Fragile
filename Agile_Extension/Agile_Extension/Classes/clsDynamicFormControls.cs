@@ -16,13 +16,16 @@ namespace Agile_Extension.Classes
 {
     class clsDynamicFormControls
     {
+        #region INSTANCE_VARIABLES
         //Intance
         private string control_text;
         private int local_one;
         private int local_two;
         private int size_one;
         private int size_two;
+        #endregion
 
+        #region CONSTRUCTORS
         //Controls that require text
         public clsDynamicFormControls(string control_text, int local_one, int local_two, int size_one, int size_two)
         {
@@ -32,7 +35,7 @@ namespace Agile_Extension.Classes
             setSizeOne(size_one);
             setSizeTwo(size_two);
         }
-
+       
         //Controls that do not require text
         public clsDynamicFormControls(int local_one, int local_two, int size_one, int size_two)
         {
@@ -41,9 +44,10 @@ namespace Agile_Extension.Classes
             setSizeOne(size_one);
             setSizeTwo(size_two);
         }
+        #endregion
 
+        #region SET_METHODS
         //SET METHODS
-
         private void setControlText(string control_name)
         {
             this.control_text = control_name;
@@ -67,7 +71,9 @@ namespace Agile_Extension.Classes
         {
             this.size_two = size_two;
         }
-        
+        #endregion
+
+        #region GET_METHODS
         //GET METHODS
         private string getControlText()
         {
@@ -93,7 +99,9 @@ namespace Agile_Extension.Classes
         {
             return size_two;
         }
+        #endregion
 
+        #region DYNAMIC_CONTROLS
         public MetroSet_UI.Controls.MetroSetTile createDynamicTile(Control parentControl)
         {
             MetroSet_UI.Controls.MetroSetTile tile = new MetroSet_UI.Controls.MetroSetTile();
@@ -105,9 +113,9 @@ namespace Agile_Extension.Classes
             return tile;
         }
 
-        public Panel createDynamicPanel(Control parentControl)
+        public MetroSet_UI.Controls.MetroSetPanel createDynamicPanel(Control parentControl)
         {
-            Panel panel = new Panel();
+            MetroSet_UI.Controls.MetroSetPanel panel = new MetroSet_UI.Controls.MetroSetPanel();
             parentControl.Controls.Add(panel);
             panel.Location = new Point(getLocalOne(), getLocalTwo());
             panel.Size = new Size(getSizeOne(), getSizeTwo());
@@ -147,7 +155,7 @@ namespace Agile_Extension.Classes
 
             return progressBar;
         }
+        #endregion
         
     }
-
 }
