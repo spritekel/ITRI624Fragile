@@ -82,6 +82,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -98,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\clsDynamicFormControls.cs" />
+    <Compile Include="Classes\clsFileHandler.cs" />
     <Compile Include="Classes\clsRestAPIHandler.cs" />
     <Compile Include="Forms\frmAddProject.cs">
       <SubType>Form</SubType>
@@ -173,9 +175,7 @@
   <ItemGroup>
     <None Include="Resources\Fragile LOGO.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ChromeCache\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

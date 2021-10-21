@@ -23,8 +23,8 @@ namespace Agile_Extension.Forms
         private void frmDashboard_Load(object sender, EventArgs e)
         {
             getProjects();
-      
-            if(isAdmin == "admin")
+            MessageBox.Show(new clsFileHandler().readFromFile());
+            if(new clsFileHandler().readFromFile() == "admin")
             {
                 btnAddProj.Enabled = true;
             }
@@ -114,6 +114,7 @@ namespace Agile_Extension.Forms
 
         private void frmDashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
+            new clsFileHandler().deleteFile();
             frmLogin login = new frmLogin();
             login.Show();
         }

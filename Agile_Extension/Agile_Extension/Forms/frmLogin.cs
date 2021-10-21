@@ -27,11 +27,11 @@ namespace Agile_Extension.Forms
         {
             if (new clsRestAPIHandler().login_user(txtUsername.Text, txtPassword.Text))
             {
+                
                 frmDashboard dash = new frmDashboard();
                 JObject obj = new clsRestAPIHandler().get_user_info(txtUsername.Text);
-                string admin = obj["user"][0]["role"].ToString();
-                MessageBox.Show(admin);
-                
+                string role = obj["user"][0]["role"].ToString();
+                new clsFileHandler().writeToFile(role);
                 txtUsername.Text = "";
                 txtPassword.Text = "";
                 lblEMessage.Text = "";
