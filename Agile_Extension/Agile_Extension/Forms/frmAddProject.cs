@@ -51,7 +51,7 @@ namespace Agile_Extension.Forms
 
             for (int i = 0; i < user_count; i++)
             {
-                string users = obj["users"][i]["_id"].ToString();
+                string users = obj["users"][i]["username"].ToString();
                 cmbMembers.Items.Add(users);
             }
         }
