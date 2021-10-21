@@ -245,7 +245,6 @@ namespace Agile_Extension.Forms
             this.Text = "LOGIN";
             this.ThemeAuthor = null;
             this.ThemeName = null;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

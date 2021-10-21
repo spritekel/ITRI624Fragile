@@ -41,8 +41,8 @@ namespace Agile_Extension.Forms
             this.metroSetPanel2 = new MetroSet_UI.Controls.MetroSetPanel();
             this.lblFMembers = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblProjFName = new MetroSet_UI.Controls.MetroSetLabel();
-            this.listMembers = new System.Windows.Forms.ListBox();
             this.lblProjFDetails = new MetroSet_UI.Controls.MetroSetLabel();
+            this.listMembers = new MetroSet_UI.Controls.MetroSetListBox();
             this.metroSetPanel1.SuspendLayout();
             this.metroSetPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +62,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(461, 13);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(521, 13);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -93,7 +93,7 @@ namespace Agile_Extension.Forms
             this.metroSetPanel1.Controls.Add(this.lblProjName);
             this.metroSetPanel1.Location = new System.Drawing.Point(15, 90);
             this.metroSetPanel1.Name = "metroSetPanel1";
-            this.metroSetPanel1.Size = new System.Drawing.Size(273, 285);
+            this.metroSetPanel1.Size = new System.Drawing.Size(315, 285);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetPanel1.StyleManager = this.styleManager1;
             this.metroSetPanel1.TabIndex = 2;
@@ -155,7 +155,7 @@ namespace Agile_Extension.Forms
             this.cmbMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbMembers.FormattingEnabled = true;
             this.cmbMembers.ItemHeight = 20;
-            this.cmbMembers.Location = new System.Drawing.Point(128, 82);
+            this.cmbMembers.Location = new System.Drawing.Point(170, 82);
             this.cmbMembers.Name = "cmbMembers";
             this.cmbMembers.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.cmbMembers.SelectedItemForeColor = System.Drawing.Color.White;
@@ -165,13 +165,14 @@ namespace Agile_Extension.Forms
             this.cmbMembers.TabIndex = 5;
             this.cmbMembers.ThemeAuthor = "Narwin";
             this.cmbMembers.ThemeName = "MetroLite";
+            this.cmbMembers.SelectedIndexChanged += new System.EventHandler(this.cmbMembers_SelectedIndexChanged);
             // 
             // lblMembers
             // 
             this.lblMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblMembers.Location = new System.Drawing.Point(9, 85);
             this.lblMembers.Name = "lblMembers";
-            this.lblMembers.Size = new System.Drawing.Size(134, 23);
+            this.lblMembers.Size = new System.Drawing.Size(155, 23);
             this.lblMembers.Style = MetroSet_UI.Design.Style.Light;
             this.lblMembers.StyleManager = null;
             this.lblMembers.TabIndex = 2;
@@ -192,7 +193,7 @@ namespace Agile_Extension.Forms
             this.txtProjName.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.txtProjName.Image = null;
             this.txtProjName.Lines = null;
-            this.txtProjName.Location = new System.Drawing.Point(128, 39);
+            this.txtProjName.Location = new System.Drawing.Point(170, 39);
             this.txtProjName.MaxLength = 32767;
             this.txtProjName.Multiline = false;
             this.txtProjName.Name = "txtProjName";
@@ -226,13 +227,13 @@ namespace Agile_Extension.Forms
             this.metroSetPanel2.BackgroundColor = System.Drawing.Color.White;
             this.metroSetPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.metroSetPanel2.BorderThickness = 1;
+            this.metroSetPanel2.Controls.Add(this.listMembers);
             this.metroSetPanel2.Controls.Add(this.lblFMembers);
             this.metroSetPanel2.Controls.Add(this.lblProjFName);
-            this.metroSetPanel2.Controls.Add(this.listMembers);
             this.metroSetPanel2.Controls.Add(this.lblProjFDetails);
-            this.metroSetPanel2.Location = new System.Drawing.Point(305, 90);
+            this.metroSetPanel2.Location = new System.Drawing.Point(336, 90);
             this.metroSetPanel2.Name = "metroSetPanel2";
-            this.metroSetPanel2.Size = new System.Drawing.Size(272, 285);
+            this.metroSetPanel2.Size = new System.Drawing.Size(305, 285);
             this.metroSetPanel2.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetPanel2.StyleManager = this.styleManager1;
             this.metroSetPanel2.TabIndex = 6;
@@ -264,15 +265,6 @@ namespace Agile_Extension.Forms
             this.lblProjFName.ThemeAuthor = "Narwin";
             this.lblProjFName.ThemeName = "MetroLite";
             // 
-            // listMembers
-            // 
-            this.listMembers.FormattingEnabled = true;
-            this.listMembers.ItemHeight = 26;
-            this.listMembers.Location = new System.Drawing.Point(12, 88);
-            this.listMembers.Name = "listMembers";
-            this.listMembers.Size = new System.Drawing.Size(244, 160);
-            this.listMembers.TabIndex = 8;
-            // 
             // lblProjFDetails
             // 
             this.lblProjFDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -286,11 +278,37 @@ namespace Agile_Extension.Forms
             this.lblProjFDetails.ThemeAuthor = "Narwin";
             this.lblProjFDetails.ThemeName = "MetroLite";
             // 
+            // listMembers
+            // 
+            this.listMembers.BorderColor = System.Drawing.Color.LightGray;
+            this.listMembers.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.listMembers.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.listMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.listMembers.HoveredItemBackColor = System.Drawing.Color.LightGray;
+            this.listMembers.HoveredItemColor = System.Drawing.Color.DimGray;
+            this.listMembers.ItemHeight = 30;
+            this.listMembers.Location = new System.Drawing.Point(12, 85);
+            this.listMembers.MultiSelect = false;
+            this.listMembers.Name = "listMembers";
+            this.listMembers.SelectedIndex = -1;
+            this.listMembers.SelectedItem = null;
+            this.listMembers.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.listMembers.SelectedItemColor = System.Drawing.Color.White;
+            this.listMembers.SelectedValue = null;
+            this.listMembers.ShowBorder = false;
+            this.listMembers.ShowScrollBar = false;
+            this.listMembers.Size = new System.Drawing.Size(273, 187);
+            this.listMembers.Style = MetroSet_UI.Design.Style.Light;
+            this.listMembers.StyleManager = null;
+            this.listMembers.TabIndex = 11;
+            this.listMembers.ThemeAuthor = "Narwin";
+            this.listMembers.ThemeName = "MetroLite";
+            // 
             // frmAddProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 390);
+            this.ClientSize = new System.Drawing.Size(652, 390);
             this.Controls.Add(this.metroSetPanel2);
             this.Controls.Add(this.metroSetPanel1);
             this.Controls.Add(this.metroSetControlBox1);
@@ -300,6 +318,7 @@ namespace Agile_Extension.Forms
             this.ThemeAuthor = null;
             this.ThemeName = null;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddProject_FormClosing);
+            this.Load += new System.EventHandler(this.frmAddProject_Load);
             this.metroSetPanel1.ResumeLayout(false);
             this.metroSetPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -313,7 +332,6 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetPanel metroSetPanel2;
         private MetroSet_UI.Controls.MetroSetLabel lblFMembers;
         private MetroSet_UI.Controls.MetroSetLabel lblProjFName;
-        private System.Windows.Forms.ListBox listMembers;
         private MetroSet_UI.Controls.MetroSetLabel lblProjFDetails;
         private MetroSet_UI.Controls.MetroSetPanel metroSetPanel1;
         private MetroSet_UI.Controls.MetroSetButton btnAddProj;
@@ -322,5 +340,6 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetLabel lblMembers;
         private MetroSet_UI.Controls.MetroSetTextBox txtProjName;
         private MetroSet_UI.Controls.MetroSetLabel lblProjName;
+        private MetroSet_UI.Controls.MetroSetListBox listMembers;
     }
 }

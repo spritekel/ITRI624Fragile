@@ -50,11 +50,6 @@ namespace Agile_Extension.Forms
         
         }
 
-        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-        }
-
         private void metroSetLink1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmSignUp signUp = new frmSignUp();

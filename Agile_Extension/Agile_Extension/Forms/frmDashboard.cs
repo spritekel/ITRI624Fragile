@@ -23,8 +23,7 @@ namespace Agile_Extension.Forms
         private void frmDashboard_Load(object sender, EventArgs e)
         {
             getProjects();
-            MessageBox.Show(new clsFileHandler().readFromFile());
-            if(new clsFileHandler().readFromFile() == "admin")
+            if(new clsFileHandler().readFromFile().Contains("admin"))
             {
                 btnAddProj.Enabled = true;
             }

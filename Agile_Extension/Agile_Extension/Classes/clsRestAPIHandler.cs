@@ -112,15 +112,33 @@ namespace Agile_Extension.Classes
             return null;
         }
 
-        
-        public string is_admin(string content)
+        public JObject get_all_users()
         {
-            if (content.Contains("admin"))
+            try
             {
-                return "admin";
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/user/", Method.GET);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                var response = client.Execute(request);
+
+                HttpStatusCode statusCode = response.StatusCode;
+
+                if((int)statusCode == 200)
+                {
+                    Debug.WriteLine(response.Content);
+                    return toJsonObject(response.Content);
+                }
             }
-            return "member"; 
+            catch(Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
+
+            return null;
         }
+
+        
 
         public JObject toJsonObject(string response)
         {
