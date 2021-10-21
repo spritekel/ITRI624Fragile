@@ -138,18 +138,19 @@ namespace Agile_Extension.Classes
             return null;
         }
 
+        //FIX THIS METHOD The JSONBody is the issue
         public JObject update_user(string username ,string projects)
         {
             try
             {
+                string json_payload = "[{" + (char)34 + "propName" + (char)34 + ":" + (char)34 + "projects" + (char)34 + "},{" + (char)34 + "value" + (char)34 + ":" + (char)34 + projects + (char)34 + "}]";
+                Debug.WriteLine("data to be sent: update user: " + json_payload);
                 
                 var client = new RestClient(BASE_URL);
                 var request = new RestRequest("/user/" + username, Method.PATCH);
                 request.RequestFormat = DataFormat.Json;
                 request.AddHeader("Content-type", "application/json");
-                request.AddJsonBody(
-                   //TODO: Figure out how to pass string array in body
-                );
+                request.AddJsonBody(json_payload);
 
                 var response = client.Execute(request);
                 HttpStatusCode statusCode = response.StatusCode;
