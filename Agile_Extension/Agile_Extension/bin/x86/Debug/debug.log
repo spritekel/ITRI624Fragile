@@ -7479,3 +7479,4 @@ color: purple;
  Fetched 11 messages for 900099796902219837 isBefore:false isAfter:false", source: https://discord.com/assets/30949161dcee54ad3961.js (138)
 [1020/211723.595:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1020/212352.732:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1021/103905.219:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using RestSharp;
 using RestSharp.Authenticators;
 using Agile_Extension.Classes;
+using Newtonsoft.Json.Linq;
 
 namespace Agile_Extension.Forms
 {
@@ -27,7 +28,10 @@ namespace Agile_Extension.Forms
             if (new clsRestAPIHandler().login_user(txtUsername.Text, txtPassword.Text))
             {
                 frmDashboard dash = new frmDashboard();
-                dash.isAdmin = new clsRestAPIHandler().get_user_info(txtUsername.Text);
+                JObject obj = new clsRestAPIHandler().get_user_info(txtUsername.Text);
+                string admin = obj["user"][0]["role"].ToString();
+                MessageBox.Show(admin);
+                
                 txtUsername.Text = "";
                 txtPassword.Text = "";
                 lblEMessage.Text = "";

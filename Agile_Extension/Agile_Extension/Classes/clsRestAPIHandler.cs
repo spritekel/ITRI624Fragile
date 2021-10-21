@@ -86,7 +86,7 @@ namespace Agile_Extension.Classes
             return false; 
         }
 
-        public string get_user_info(string username)
+        public JObject get_user_info(string username)
         {
             try
             {
@@ -101,7 +101,7 @@ namespace Agile_Extension.Classes
                 if ((int)statusCode == 200)
                 {
                     Debug.WriteLine(response.Content);
-                    return is_admin(response.Content);
+                    return toJsonObject(response.Content);
                 }
             }
             catch(Exception e)
@@ -109,7 +109,7 @@ namespace Agile_Extension.Classes
                 Debug.WriteLine(e.ToString());
             }
 
-            return "0";
+            return null;
         }
 
         
@@ -120,6 +120,12 @@ namespace Agile_Extension.Classes
                 return "admin";
             }
             return "member"; 
+        }
+
+        public JObject toJsonObject(string response)
+        {
+            JObject obj = JObject.Parse(response);
+            return obj;
         }
         
     }
