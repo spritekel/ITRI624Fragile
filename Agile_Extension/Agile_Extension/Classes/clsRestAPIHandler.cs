@@ -9,6 +9,7 @@ using RestSharp.Authenticators;
 using System.Diagnostics;
 using Newtonsoft;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace Agile_Extension.Classes
 {
@@ -20,7 +21,7 @@ namespace Agile_Extension.Classes
         {
 
         }
-        #region LOGIN_SIGNUP
+        #region USER_ROUTES
         public bool create_user(string username, string password, string role)
         {
             try
@@ -38,6 +39,7 @@ namespace Agile_Extension.Classes
 
                 var response = client.Execute(request);
                 HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("login_user" + response.Content);
                 int num_status_code = (int)statusCode;
                 if (num_status_code == 201)
                 {
@@ -71,7 +73,7 @@ namespace Agile_Extension.Classes
                 var response = client.Execute(request);
              
                 HttpStatusCode statusCode = response.StatusCode;
-                
+                Debug.WriteLine("login_user" + response.Content);
                 if ((int)statusCode == 200)
                 {
                     return true;                 
@@ -84,9 +86,7 @@ namespace Agile_Extension.Classes
 
             return false; 
         }
-        #endregion
-
-        #region GET_USER_INFO
+     
         public JObject get_user_info(string username)
         {
             try
@@ -97,11 +97,11 @@ namespace Agile_Extension.Classes
                 request.AddHeader("Content-type", "application/json");
                 var response = client.Execute(request);
                 
-                HttpStatusCode statusCode = response.StatusCode;                        
-               
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("get_user_info" + response.Content);
                 if ((int)statusCode == 200)
                 {
-                    Debug.WriteLine(response.Content);
+                    
                     return toJsonObject(response.Content);
                 }
             }
@@ -124,10 +124,9 @@ namespace Agile_Extension.Classes
                 var response = client.Execute(request);
 
                 HttpStatusCode statusCode = response.StatusCode;
-
-                if((int)statusCode == 200)
-                {
-                    Debug.WriteLine(response.Content);
+                Debug.WriteLine("get_all_users: " + response.Content);
+                if ((int)statusCode == 200)
+                {               
                     return toJsonObject(response.Content);
                 }
             }
@@ -138,6 +137,71 @@ namespace Agile_Extension.Classes
 
             return null;
         }
+
+        public JObject update_user(string username ,string projects)
+        {
+            try
+            {
+                
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/user/" + username, Method.PATCH);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(
+                   //TODO: Figure out how to pass string array in body
+                );
+
+                var response = client.Execute(request);
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("update_user: " + response.Content);
+
+                if ((int)statusCode == 200)
+                {
+                    
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine(e);
+            }
+            return null;
+        }
+
+        #endregion
+ 
+        #region PROJECT_ROUTES
+        public JObject create_project(string project_name, string members)
+        {
+            try
+            {
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/project/project_create", Method.POST);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(new
+                {
+                    projName = project_name,
+                    projUsers = members
+                });
+                var response = client.Execute(request);
+
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("create_project: " + response.Content);
+                if ((int)statusCode == 200)
+                {
+                    
+                    return toJsonObject(response.Content);
+                }
+
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
+            return null;
+        }
+
         #endregion
 
         #region GENERIC_METHODS
@@ -147,6 +211,9 @@ namespace Agile_Extension.Classes
             return obj;
         }
         #endregion
+
         
     }
+
+    
 }

@@ -29,12 +29,16 @@ namespace Agile_Extension.Forms
 
         private void btnAddProj_Click(object sender, EventArgs e)
         {
-            if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.Yes)
-            {
-                //TODO: write data to DB
-                frmDashboard dashboard = new frmDashboard();
-                dashboard.ShowDialog();
-            }
+            
+            //if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.Yes)
+            //{
+
+                JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, project_users_list());
+            //update_users_to_projects(txtProjName.Text);
+            JObject user_proj = new clsRestAPIHandler().update_user(listMembers.Items[0].ToString(),txtProjName.Text);
+                //frmDashboard dashboard = new frmDashboard();
+                //dashboard.ShowDialog();
+           //}
 
         }
 
@@ -71,5 +75,33 @@ namespace Agile_Extension.Forms
             listMembers.Items.RemoveAt(index);
         }
         #endregion
+
+        public void update_users_to_projects(string new_project)
+        {   
+            for(int i = 0; i < listMembers.Items.Count; i++)
+            {
+                //JObject current_user = new clsRestAPIHandler().get_user_info(listMembers.Items[i].ToString());
+                //string projects = current_user["user"][0]["projects"].ToString();
+                //projects += ","+ new_project;
+                JObject users_update = new clsRestAPIHandler().update_user(listMembers.Items[i].ToString(), new_project);
+            }
+        }
+
+        public string project_users_list()
+        {
+            string output = "";
+            for(int i = 0; i < listMembers.Items.Count; i++)
+            {
+                output += listMembers.Items[i];
+                if(i < listMembers.Items.Count-1)
+                {
+                    output += ",";
+                }
+            }
+            return output;
+        }
+
+ 
+
     }
 }

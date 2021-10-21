@@ -7553,3 +7553,5 @@ font-weight: bold;
 color: purple;
  Fetched 1 messages for 900014243687067709 isBefore:false isAfter:false", source: https://discord.com/assets/0f4780944d960ac92134.js (138)
 [1021/212843.149:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1021/231306.721:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1021/233750.779:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
