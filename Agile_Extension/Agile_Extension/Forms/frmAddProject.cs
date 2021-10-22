@@ -33,9 +33,8 @@ namespace Agile_Extension.Forms
             //if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.Yes)
             //{
 
-                JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, project_users_list());
-                update_users_to_projects(txtProjName.Text);
-                //JObject user_proj = new clsRestAPIHandler().update_user(listMembers.Items[0].ToString(),txtProjName.Text);
+                JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList());
+                update_user_projects();
                 //frmDashboard dashboard = new frmDashboard();
                 //dashboard.ShowDialog();
            //}
@@ -76,32 +75,50 @@ namespace Agile_Extension.Forms
         }
         #endregion
 
-        public void update_users_to_projects(string new_project)
-        {   
+        #region SEND_INFO_TO_API_METHODS
+        public void update_user_projects()
+        {
             for(int i = 0; i < listMembers.Items.Count; i++)
             {
-                JObject current_user = new clsRestAPIHandler().get_user_info(listMembers.Items[i].ToString());
-                string projects = current_user["user"][0]["projects"].ToString();
-                projects += ","+ new_project;
-                JObject users_update = new clsRestAPIHandler().update_user(listMembers.Items[i].ToString(), new_project);
+                JObject obj = new clsRestAPIHandler().get_user_info(listMembers.Items[i].ToString());
+                string projects = obj["user"][0]["projects"].ToString();
+                string trimmed_proj = projects.Trim(new char[] { '[', ']' });
+                string payload = update_user_projects(trimmed_proj, txtProjName.Text);
+                payload =payload.Replace("\r\n", string.Empty);
+                new clsRestAPIHandler().update_user(listMembers.Items[i].ToString(), payload);
             }
+            
+        }
+        
+        public string update_user_projects(string projects,string new_project)
+        {
+            string json_payload = "[{" + (char)34 + "propName" + (char)34 + ":" + (char)34 + "projects" + (char)34 + "," + (char)34 + "value" + (char)34 + ":[";
+
+            if(projects.Length > 0)
+            {
+                List<string> user_projects = projects.Split(',').ToList();
+                for (int i = 0; i < user_projects.Count; i++)
+                {
+                    json_payload += user_projects[i] + ",";
+
+                }
+            }
+            
+            json_payload += ((char)34 + new_project + (char)34) + "]}]";
+            MessageBox.Show(json_payload);
+            return json_payload;
         }
 
-        public string project_users_list()
+        private List<string> listbox_toList()
         {
-            string output = "";
-            for(int i = 0; i < listMembers.Items.Count; i++)
+            List<string> output = new List<string>();
+            for(int i = 0; i < listMembers.Items.Count;i++)
             {
-                output += listMembers.Items[i];
-                if(i < listMembers.Items.Count-1)
-                {
-                    output += ",";
-                }
+                output.Add(listMembers.Items[i].ToString());
             }
             return output;
         }
-
- 
-
+        #endregion
+       
     }
 }

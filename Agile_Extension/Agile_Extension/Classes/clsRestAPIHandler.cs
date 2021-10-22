@@ -143,14 +143,14 @@ namespace Agile_Extension.Classes
         {
             try
             {
-                string json_payload = "[{" + (char)34 + "propName" + (char)34 + ":" + (char)34 + "projects" + (char)34 + "},{" + (char)34 + "value" + (char)34 + ":" + (char)34 + projects + (char)34 + "}]";
-                Debug.WriteLine("data to be sent: update user: " + json_payload);
+             
+                Debug.WriteLine("data to be sent: update user: " + projects);
                 
                 var client = new RestClient(BASE_URL);
                 var request = new RestRequest("/user/" + username, Method.PATCH);
                 request.RequestFormat = DataFormat.Json;
-                request.AddHeader("Content-type", "application/json");
-                request.AddJsonBody(json_payload);
+                request.AddHeader("Content-type", "application/json");  
+                request.AddJsonBody(projects);
 
                 var response = client.Execute(request);
                 HttpStatusCode statusCode = response.StatusCode;
@@ -172,7 +172,7 @@ namespace Agile_Extension.Classes
         #endregion
  
         #region PROJECT_ROUTES
-        public JObject create_project(string project_name, string members)
+        public JObject create_project(string project_name, List<string> members)
         {
             try
             {
@@ -212,6 +212,8 @@ namespace Agile_Extension.Classes
             return obj;
         }
         #endregion
+
+      
 
         
     }
