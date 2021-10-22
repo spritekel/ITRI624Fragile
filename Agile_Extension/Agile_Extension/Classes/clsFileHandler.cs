@@ -80,7 +80,11 @@ namespace Agile_Extension.Classes
                 {
                     while(!reader.EndOfStream)
                     {
-                        list.Add(reader.ReadLine());
+                        string line = reader.ReadLine();
+                        if(line != "")
+                        {
+                            list.Add(line);
+                        }
                     }
                     return list;
                 }

@@ -36,7 +36,6 @@ namespace Agile_Extension.Forms
                 string projects = obj["user"][0]["projects"].ToString();
                 string trimmed_proj = projects.Trim(new char[] { '[', ']' });
                 List<string> user_projects = trimmed_proj.Split(',').ToList();
-                MessageBox.Show(user_projects[0]);
                 new clsFileHandler().writeMutlipleLines(user_projects, new clsFileHandler().get_project_file());
 
                 txtUsername.Text = "";

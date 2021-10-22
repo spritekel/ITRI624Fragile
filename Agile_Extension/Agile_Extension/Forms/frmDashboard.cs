@@ -29,6 +29,7 @@ namespace Agile_Extension.Forms
             {
                 btnAddProj.Enabled = true;
             }
+            gen_tabs(projects);
         }
 
         private void metroSetEllipse1_Click(object sender, EventArgs e)
@@ -55,6 +56,25 @@ namespace Agile_Extension.Forms
         #endregion
 
         #region DYNAMIC_FORM_CREATION
+
+        private void gen_tabs (List<string> tabs)
+        {
+            //Add TabPages
+            List<MetroSet_UI.Child.MetroSetTabPage> tap_page = new List<MetroSet_UI.Child.MetroSetTabPage>();
+            for(int i = 0; i < tabs.Count; i++)
+            {
+                tap_page.Add(new MetroSet_UI.Child.MetroSetTabPage());
+            }
+
+            for(int i =0; i < tap_page.Count;i++)
+            {
+                tap_page[i].AutoScroll = true;
+                tap_page[i].Name = tabs[i].ToString();
+                tap_page[i].Text = tabs[i].ToString();
+                metroSetTabControl1.Controls.Add(tap_page[i]);
+            }
+        }
+
 
         private void getProjects()
         {      
