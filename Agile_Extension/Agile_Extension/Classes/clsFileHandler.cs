@@ -13,9 +13,7 @@ namespace Agile_Extension.Classes
     {
 
         #region INSTANCE_VARIABLES
-        private static string path = Application.StartupPath;
-        private static string file_folder = "\\Role";
-        private static string full_path = path + file_folder;
+        private static string path = System.IO.Directory.GetCurrentDirectory();
         private const string ROLE_FILE = "\\Role.txt";
         private const string USER_INFO = "\\User.txt";
         private const string PROJECTS_INFO = "\\Projects.txt";
@@ -42,7 +40,8 @@ namespace Agile_Extension.Classes
         {
             try
             {
-                using (StreamWriter writer = new StreamWriter(full_path + file))
+                Debug.WriteLine("WRITE TO FILE: " + path);
+                using (StreamWriter writer = new StreamWriter(path + file))
                 {
                     writer.WriteLine(param);
                 }
@@ -57,7 +56,7 @@ namespace Agile_Extension.Classes
             try
             {
                 string line;
-                using (StreamReader reader = new StreamReader(full_path + file))
+                using (StreamReader reader = new StreamReader(path + file))
                 {
                     line = reader.ReadToEnd();
                     return line;
@@ -76,7 +75,7 @@ namespace Agile_Extension.Classes
             try
             {
                 List<string> list = new List<string>();
-                using(StreamReader reader = new StreamReader(full_path + file))
+                using(StreamReader reader = new StreamReader(path + file))
                 {
                     while(!reader.EndOfStream)
                     {
@@ -101,7 +100,7 @@ namespace Agile_Extension.Classes
         {
             try
             {
-                using (StreamWriter writer = new StreamWriter(full_path + file))
+                using (StreamWriter writer = new StreamWriter(path + file))
                 {
                     for (int i = 0; i < list.Count; i++)
                     {
@@ -119,7 +118,7 @@ namespace Agile_Extension.Classes
         {
             try
             {
-                File.Delete(full_path + file);
+                File.Delete(path + file);
             }
             catch(IOException e)
             {
