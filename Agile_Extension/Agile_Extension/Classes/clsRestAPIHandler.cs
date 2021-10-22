@@ -100,8 +100,7 @@ namespace Agile_Extension.Classes
                 HttpStatusCode statusCode = response.StatusCode;
                 Debug.WriteLine("get_user_info" + response.Content);
                 if ((int)statusCode == 200)
-                {
-                    
+                {            
                     return toJsonObject(response.Content);
                 }
             }

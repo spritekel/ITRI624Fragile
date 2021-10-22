@@ -16,17 +16,35 @@ namespace Agile_Extension.Classes
         private static string path = Application.StartupPath;
         private static string file_folder = "\\Role";
         private static string full_path = path + file_folder;
-        private static string file_name = full_path += "\\role.txt";
+        private const string ROLE_FILE = "\\Role.txt";
+        private const string USER_INFO = "\\User.txt";
+        private const string PROJECTS_INFO = "\\Projects.txt";
         #endregion
 
+        public string get_role_file()
+        {
+            return ROLE_FILE;
+        }
+
+        public string get_user_file()
+        {
+            return USER_INFO;
+        }
+
+        public string get_project_file()
+        {
+            return PROJECTS_INFO;
+        }
+
+        
         #region METHODS
-        public void writeToFile(string role)
+        public void writeToFile(string param, string file)
         {
             try
             {
-                using (StreamWriter writer = new StreamWriter(file_name))
+                using (StreamWriter writer = new StreamWriter(full_path + file))
                 {
-                    writer.WriteLine(role);
+                    writer.WriteLine(param);
                 }
             }
             catch(IOException e)
@@ -34,12 +52,12 @@ namespace Agile_Extension.Classes
                 Debug.WriteLine(e);
             }
         }
-        public string readFromFile()
+        public string readFromFile(string file)
         {
             try
             {
                 string line;
-                using (StreamReader reader = new StreamReader(file_name))
+                using (StreamReader reader = new StreamReader(full_path + file))
                 {
                     line = reader.ReadToEnd();
                     return line;
@@ -52,11 +70,52 @@ namespace Agile_Extension.Classes
 
             return "file not found";
         }
-        public void deleteFile()
+
+        public List<string> readMultipleLinesFromFIle(string file)
         {
             try
             {
-                File.Delete(file_name);
+                List<string> list = new List<string>();
+                using(StreamReader reader = new StreamReader(full_path + file))
+                {
+                    while(!reader.EndOfStream)
+                    {
+                        list.Add(reader.ReadLine());
+                    }
+                    return list;
+                }
+            }
+            catch (IOException e)
+            {
+                Debug.WriteLine(e);
+            }
+
+            return null;
+        }
+
+            public void writeMutlipleLines(List<string> list, string file)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(full_path + file))
+                {
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        writer.Write(list[i].ToString());
+                    }
+                }
+            }
+            catch(IOException e)
+            {
+                Debug.WriteLine(e);
+            }
+        }
+
+        public void deleteFile(string file)
+        {
+            try
+            {
+                File.Delete(full_path + file);
             }
             catch(IOException e)
             {

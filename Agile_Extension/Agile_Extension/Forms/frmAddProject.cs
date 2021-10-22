@@ -105,7 +105,6 @@ namespace Agile_Extension.Forms
             }
             
             json_payload += ((char)34 + new_project + (char)34) + "]}]";
-            MessageBox.Show(json_payload);
             return json_payload;
         }
 

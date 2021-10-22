@@ -27,11 +27,18 @@ namespace Agile_Extension.Forms
         {
             if (new clsRestAPIHandler().login_user(txtUsername.Text, txtPassword.Text))
             {
-                
+
                 frmDashboard dash = new frmDashboard();
                 JObject obj = new clsRestAPIHandler().get_user_info(txtUsername.Text);
                 string role = obj["user"][0]["role"].ToString();
-                new clsFileHandler().writeToFile(role);
+                new clsFileHandler().writeToFile(role, new clsFileHandler().get_role_file());
+
+                string projects = obj["user"][0]["projects"].ToString();
+                string trimmed_proj = projects.Trim(new char[] { '[', ']' });
+                List<string> user_projects = trimmed_proj.Split(',').ToList();
+                MessageBox.Show(user_projects[0]);
+                new clsFileHandler().writeMutlipleLines(user_projects, new clsFileHandler().get_project_file());
+
                 txtUsername.Text = "";
                 txtPassword.Text = "";
                 lblEMessage.Text = "";
