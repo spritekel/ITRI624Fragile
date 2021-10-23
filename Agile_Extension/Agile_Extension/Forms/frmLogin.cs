@@ -63,5 +63,10 @@ namespace Agile_Extension.Forms
             this.Hide();
         }
         #endregion
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -50,7 +50,9 @@ namespace Agile_Extension.Forms
         {
             new clsFileHandler().deleteFile(new clsFileHandler().get_role_file());
             new clsFileHandler().deleteFile(new clsFileHandler().get_project_file());
+            new clsFileHandler().deleteFile(new clsFileHandler().get_user_file());
             frmLogin login = new frmLogin();
+            this.Hide();
             login.Show();
         }
         #endregion

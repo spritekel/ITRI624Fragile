@@ -84,7 +84,7 @@ namespace Agile_Extension.Forms
                 return false;
             }
 
-            lblEMessage.Text = "";
+            resetControls();
             return true;
         }
 
@@ -98,5 +98,15 @@ namespace Agile_Extension.Forms
         }
         #endregion
 
+        #region METHODS
+        private void resetControls()
+        {
+            txtUsrName.Text = "";
+            txtPassWd.Text = "";
+            txtCPassWd.Text = "";
+            lblEMessage.Text = "";
+            swProjectLead.Switched = false;
+        }
+        #endregion
     }
 }

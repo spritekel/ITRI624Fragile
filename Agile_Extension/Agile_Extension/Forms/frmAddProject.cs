@@ -24,21 +24,20 @@ namespace Agile_Extension.Forms
         private void txtProjName_TextChanged(object sender)
         {
             //Changes text of Summary label as text is entered
-            lblProjFName.Text = txtProjName.Text;
+            lblProjFName.Text = "Project: " +  txtProjName.Text;
         }
 
         private void btnAddProj_Click(object sender, EventArgs e)
         {
             
-            //if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.Yes)
-            //{
+            if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
 
                 JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList());
                 update_user_projects();
-                //frmDashboard dashboard = new frmDashboard();
-                //dashboard.ShowDialog();
-           //}
-
+                resetControls();
+            }
+            
         }
 
         private void frmAddProject_FormClosing(object sender, FormClosingEventArgs e)
@@ -49,14 +48,7 @@ namespace Agile_Extension.Forms
 
         private void frmAddProject_Load(object sender, EventArgs e)
         {
-            JObject obj = new clsRestAPIHandler().get_all_users();
-            int user_count = int.Parse(obj.GetValue("count").ToString());
-
-            for (int i = 0; i < user_count; i++)
-            {
-                string users = obj["users"][i]["username"].ToString();
-                cmbMembers.Items.Add(users);
-            }
+            populateComboBox();
         }
 
         private void cmbMembers_SelectedIndexChanged(object sender, EventArgs e)
@@ -116,6 +108,28 @@ namespace Agile_Extension.Forms
                 output.Add(listMembers.Items[i].ToString());
             }
             return output;
+        }
+
+        private void populateComboBox()
+        {
+            JObject obj = new clsRestAPIHandler().get_all_users();
+            int user_count = int.Parse(obj.GetValue("count").ToString());
+
+            for (int i = 0; i < user_count; i++)
+            {
+                string users = obj["users"][i]["username"].ToString();
+                cmbMembers.Items.Add(users);
+            }
+        }
+
+        private void resetControls()
+        {
+            txtProjName.Text = "";
+            lblProjFName.Text = "";
+            cmbMembers.Items.Clear();
+            listMembers.Items.Clear();
+            populateComboBox();
+
         }
         #endregion
        
