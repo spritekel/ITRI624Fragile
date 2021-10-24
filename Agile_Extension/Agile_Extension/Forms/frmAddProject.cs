@@ -32,21 +32,22 @@ namespace Agile_Extension.Forms
         }
 
         private void btnAddProj_Click(object sender, EventArgs e)
-        {
-            
-            if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {            
-                JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList(),sprint_list(txtSprintName.Text));
-                update_user_projects();     
-                get_updated_project_file();
-                if(obj_proj != null)
+        {      
+            if(validate(txtProjName.Text,txtSprintName.Text,listMembers))
+            {
+                if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text);
-                    lblOutput.Text = obj_proj["message"].ToString();
+                    JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList(), sprint_list(txtSprintName.Text));
+                    update_user_projects();
+                    get_updated_project_file();
+                    if (obj_proj != null)
+                    {
+                        new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text);
+                        lblOutput.Text = obj_proj["message"].ToString();
+                    }
+                    resetControls();
                 }
-                resetControls();
-            }
-            
+            } 
         }
 
         private void frmAddProject_FormClosing(object sender, FormClosingEventArgs e)
@@ -79,7 +80,6 @@ namespace Agile_Extension.Forms
         #endregion
 
         #region SEND_INFO_TO_API_METHODS
-        //CHANGE TO JARRAY
         public void update_user_projects()
         {
             //Adds project to each user in the listbox to DB.
@@ -87,38 +87,37 @@ namespace Agile_Extension.Forms
             {
                 JObject obj = new clsRestAPIHandler().get_user_info(listMembers.Items[i].ToString());
                 string projects = obj["user"][0]["projects"].ToString();
-                string trimmed_proj = projects.Trim(new char[] { '[', ']' });
-                string payload = update_user_projects(trimmed_proj, txtProjName.Text);
-                payload =payload.Replace("\r\n", string.Empty);
-                new clsRestAPIHandler().update_user(listMembers.Items[i].ToString(), payload);
+                JArray user_projects = JArray.Parse(projects);
+                user_projects.Add(txtProjName.Text);
+                string json_payload = prepareJsonPayload(user_projects);
+                MessageBox.Show(json_payload);
+                new clsRestAPIHandler().update_user(listMembers.Items[i].ToString(), json_payload);
             }
 
             //Adds project to the current user in DB.
             string current_user = new clsFileHandler().readFromFile(new clsFileHandler().get_user_file());
             JObject obj_current_user = new clsRestAPIHandler().get_user_info(current_user);
             string projects_current_user = obj_current_user["user"][0]["projects"].ToString();
-            string trimmed_proj_current_user = projects_current_user.Trim(new char[] { '[', ']' });
-            string payload_current_user = update_user_projects(trimmed_proj_current_user, txtProjName.Text);
-            payload_current_user = payload_current_user.Replace("\r\n", string.Empty);
-            new clsRestAPIHandler().update_user(current_user, payload_current_user);
-            
+            JArray projects_current_user_array = JArray.Parse(projects_current_user);
+            projects_current_user_array.Add(txtProjName.Text);
+            string current_payload = prepareJsonPayload(projects_current_user_array);
+            MessageBox.Show(current_payload);
+            new clsRestAPIHandler().update_user(current_user,current_payload);
         }
-      
-        public string update_user_projects(string projects,string new_project)
+        
+        private string prepareJsonPayload(JArray content)
         {
-            string json_payload = "[{" + (char)34 + "propName" + (char)34 + ":" + (char)34 + "projects" + (char)34 + "," + (char)34 + "value" + (char)34 + ":[";
-
-            if(projects.Length > 0)
+            string payload = "[{" + (char)34 + "propName" + (char)34 + ":" + (char)34 + "projects" + (char)34 + "," + (char)34 + "value" + (char)34 + ":[";
+            for (int i = 0; i < content.Count;i++)
             {
-                List<string> user_projects = projects.Split(',').ToList();
-                for (int i = 0; i < user_projects.Count; i++)
+                payload += (char)34 + content[i].ToString() + (char)34;
+                if(i < content.Count-1)
                 {
-                    json_payload += user_projects[i] + ",";                   
+                    payload += ",";
                 }
             }
-            
-            json_payload += ((char)34 + new_project + (char)34) + "]}]";
-            return json_payload;
+            payload += "]}]";
+            return payload;
         }
 
         private List<string> listbox_toList()
@@ -175,9 +174,36 @@ namespace Agile_Extension.Forms
             lblProjFName.Text = "";
             cmbMembers.Items.Clear();
             listMembers.Items.Clear();
-            lblOutput.Text = "";
+            txtSprintName.Text = "";
             populateComboBox();
         }
         #endregion
+
+        private bool validate(string proj_name, string sprint_name, MetroSet_UI.Controls.MetroSetListBox list)
+        {
+            if(proj_name.Length<=0 || proj_name.Contains(" "))
+            {
+                lblOutput.Text = "Please enter a valid project name eg: proj_name";
+                txtProjName.Focus();
+                return false;
+            }
+
+            if(sprint_name.Length <=0 || sprint_name.Contains(" "))
+            {
+                lblOutput.Text = "Please enter a valid sprint name eg: sprint_1";
+                txtSprintName.Focus();
+                return false;
+            }
+
+            if(list.Items.Count <= 0)
+            {
+                lblOutput.Text = "No members added to project";
+                list.Focus();
+                return false;
+            }
+
+            lblOutput.Text = "";
+            return true;
+        }
     }
 }

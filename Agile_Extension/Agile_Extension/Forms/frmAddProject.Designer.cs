@@ -307,7 +307,7 @@ namespace Agile_Extension.Forms
             this.lblOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblOutput.Location = new System.Drawing.Point(12, 317);
             this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(100, 23);
+            this.lblOutput.Size = new System.Drawing.Size(273, 23);
             this.lblOutput.Style = MetroSet_UI.Design.Style.Light;
             this.lblOutput.StyleManager = null;
             this.lblOutput.TabIndex = 12;

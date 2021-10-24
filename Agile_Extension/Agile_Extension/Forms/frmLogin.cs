@@ -35,7 +35,6 @@ namespace Agile_Extension.Forms
                 string projects = obj["user"][0]["projects"].ToString();
                 string username = obj["user"][0]["username"].ToString();
                 JArray user_projects = JArray.Parse(projects);
-                MessageBox.Show(user_projects[0].ToString());
                 new clsFileHandler().writeToFile(role, new clsFileHandler().get_role_file());
                 new clsFileHandler().writeToFile(username, new clsFileHandler().get_user_file());
                 new clsFileHandler().writeMutlipleLines(user_projects, new clsFileHandler().get_project_file());           
