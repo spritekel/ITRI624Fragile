@@ -31,12 +31,15 @@ namespace Agile_Extension.Forms
                 frmDashboard dash = new frmDashboard();
                 JObject obj = new clsRestAPIHandler().get_user_info(txtUsername.Text);
                 string role = obj["user"][0]["role"].ToString();
-                new clsFileHandler().writeToFile(role, new clsFileHandler().get_role_file());
-
                 string projects = obj["user"][0]["projects"].ToString();
+                string username = obj["user"][0]["username"].ToString();
+                username = username.Trim();
                 string trimmed_proj = projects.Trim(new char[] { '[', ']' });
                 List<string> user_projects = trimmed_proj.Split(',').ToList();
-                new clsFileHandler().writeMutlipleLines(user_projects, new clsFileHandler().get_project_file());
+
+                new clsFileHandler().writeToFile(role, new clsFileHandler().get_role_file());
+                new clsFileHandler().writeToFile(username, new clsFileHandler().get_user_file());
+                new clsFileHandler().writeMutlipleLines(user_projects, new clsFileHandler().get_project_file());           
 
                 txtUsername.Text = "";
                 txtPassword.Text = "";

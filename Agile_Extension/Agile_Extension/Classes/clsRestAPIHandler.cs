@@ -156,8 +156,7 @@ namespace Agile_Extension.Classes
                 Debug.WriteLine("update_user: " + response.Content);
 
                 if ((int)statusCode == 200)
-                {
-                    
+                {                    
                     return toJsonObject(response.Content);
                 }
             }
@@ -188,12 +187,10 @@ namespace Agile_Extension.Classes
 
                 HttpStatusCode statusCode = response.StatusCode;
                 Debug.WriteLine("create_project: " + response.Content);
-                if ((int)statusCode == 200)
-                {
-                    
+                if ((int)statusCode == 201)
+                {                  
                     return toJsonObject(response.Content);
                 }
-
             }
             catch(Exception e)
             {

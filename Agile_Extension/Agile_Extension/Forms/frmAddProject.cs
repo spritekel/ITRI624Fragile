@@ -32,10 +32,13 @@ namespace Agile_Extension.Forms
             
             if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-
                 JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList());
                 update_user_projects();
                 resetControls();
+                if(obj_proj != null)
+                {
+                    lblOutput.Text = obj_proj["message"].ToString();
+                }            
             }
             
         }
@@ -49,6 +52,7 @@ namespace Agile_Extension.Forms
         private void frmAddProject_Load(object sender, EventArgs e)
         {
             populateComboBox();
+           
         }
 
         private void cmbMembers_SelectedIndexChanged(object sender, EventArgs e)
@@ -70,6 +74,7 @@ namespace Agile_Extension.Forms
         #region SEND_INFO_TO_API_METHODS
         public void update_user_projects()
         {
+            //Adds project to each user in the listbox to DB.
             for(int i = 0; i < listMembers.Items.Count; i++)
             {
                 JObject obj = new clsRestAPIHandler().get_user_info(listMembers.Items[i].ToString());
@@ -79,6 +84,15 @@ namespace Agile_Extension.Forms
                 payload =payload.Replace("\r\n", string.Empty);
                 new clsRestAPIHandler().update_user(listMembers.Items[i].ToString(), payload);
             }
+
+            //Adds project to the current user in DB.
+            string current_user = new clsFileHandler().readFromFile(new clsFileHandler().get_user_file());
+            JObject obj_current_user = new clsRestAPIHandler().get_user_info(current_user);
+            string projects_current_user = obj_current_user["user"][0]["projects"].ToString();
+            string trimmed_proj_current_user = projects_current_user.Trim(new char[] { '[', ']' });
+            string payload_current_user = update_user_projects(trimmed_proj_current_user, txtProjName.Text);
+            payload_current_user = payload_current_user.Replace("\r\n", string.Empty);
+            new clsRestAPIHandler().update_user(current_user, payload_current_user);
             
         }
         
@@ -92,7 +106,6 @@ namespace Agile_Extension.Forms
                 for (int i = 0; i < user_projects.Count; i++)
                 {
                     json_payload += user_projects[i] + ",";
-
                 }
             }
             
@@ -103,6 +116,8 @@ namespace Agile_Extension.Forms
         private List<string> listbox_toList()
         {
             List<string> output = new List<string>();
+            //Code below: adds user that is logged in to the project
+            output.Add(new clsFileHandler().readFromFile(new clsFileHandler().get_user_file()));
             for(int i = 0; i < listMembers.Items.Count;i++)
             {
                 output.Add(listMembers.Items[i].ToString());
@@ -114,12 +129,14 @@ namespace Agile_Extension.Forms
         {
             JObject obj = new clsRestAPIHandler().get_all_users();
             int user_count = int.Parse(obj.GetValue("count").ToString());
-
+            string current_user = new clsFileHandler().readFromFile(new clsFileHandler().get_user_file());
+  
             for (int i = 0; i < user_count; i++)
-            {
-                string users = obj["users"][i]["username"].ToString();
-                cmbMembers.Items.Add(users);
+            {         
+                string users = obj["users"][i]["username"].ToString();     
+                cmbMembers.Items.Add(users);                   
             }
+            cmbMembers.Items.Remove(current_user);
         }
 
         private void resetControls()
@@ -128,8 +145,8 @@ namespace Agile_Extension.Forms
             lblProjFName.Text = "";
             cmbMembers.Items.Clear();
             listMembers.Items.Clear();
+            lblOutput.Text = "";
             populateComboBox();
-
         }
         #endregion
        

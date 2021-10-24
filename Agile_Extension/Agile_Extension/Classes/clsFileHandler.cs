@@ -59,6 +59,7 @@ namespace Agile_Extension.Classes
                 using (StreamReader reader = new StreamReader(path + file))
                 {
                     line = reader.ReadToEnd();
+                    line = line.Trim();
                     return line;
                 }
             }
