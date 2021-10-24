@@ -79,6 +79,7 @@ namespace Agile_Extension.Forms
         #endregion
 
         #region SEND_INFO_TO_API_METHODS
+        //CHANGE TO JARRAY
         public void update_user_projects()
         {
             //Adds project to each user in the listbox to DB.
@@ -161,10 +162,8 @@ namespace Agile_Extension.Forms
             new clsFileHandler().deleteFile(new clsFileHandler().get_project_file());
             string current_user = new clsFileHandler().readFromFile(new clsFileHandler().get_user_file());
             JObject obj = new clsRestAPIHandler().get_user_info(current_user);
-            string username = obj["user"][0]["username"].ToString();
             string projects = obj["user"][0]["projects"].ToString();
-            string trimmed_proj = projects.Trim(new char[] { '[', ']' });
-            List<string> user_projects = trimmed_proj.Split(',').ToList();
+            JArray user_projects = JArray.Parse(projects);
             new clsFileHandler().writeMutlipleLines(user_projects, new clsFileHandler().get_project_file());
         }
         #endregion

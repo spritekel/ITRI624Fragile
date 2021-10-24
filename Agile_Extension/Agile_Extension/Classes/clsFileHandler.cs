@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Agile_Extension.Classes
 {
@@ -97,15 +99,15 @@ namespace Agile_Extension.Classes
             return null;
         }
 
-            public void writeMutlipleLines(List<string> list, string file)
+            public void writeMutlipleLines(JArray content, string file)
         {
             try
             {
                 using (StreamWriter writer = new StreamWriter(path + file))
                 {
-                    for (int i = 0; i < list.Count; i++)
+                    for (int i = 0; i < content.Count; i++)
                     {
-                        writer.Write(list[i].ToString());
+                        writer.Write(content[i].ToString());
                     }
                 }
             }

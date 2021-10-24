@@ -167,8 +167,34 @@ namespace Agile_Extension.Classes
         }
 
         #endregion
- 
+
         #region PROJECT_ROUTES
+        public JObject get_single_project(string project_name)
+        {
+            try
+            {
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/project/" + project_name, Method.GET);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                var response = client.Execute(request);
+
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("get_single_project" + response.Content);
+                if ((int)statusCode == 200)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
+
+            return null;
+        }
+
+
         public JObject create_project(string project_name, List<string> members, List<string> sprints)
         {
             try
@@ -227,6 +253,56 @@ namespace Agile_Extension.Classes
         #endregion
 
         #region SPRINT_ROUTES
+
+        public JObject get_single_sprint(string project_name)
+        {
+            try
+            {
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/sprint/" + project_name, Method.GET);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                var response = client.Execute(request);
+
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("get_single_sprint" + response.Content);
+                if ((int)statusCode == 200)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
+
+            return null;
+        }
+
+        public JObject get_all_sprints()
+        {
+            try
+            {
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/sprint/", Method.GET);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                var response = client.Execute(request);
+
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("get_all_sprints: " + response.Content);
+                if ((int)statusCode == 200)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
+
+            return null;
+        }
         public JObject create_sprint(string sprint_name, string project)
         {
             try

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroSet_UI.Forms;
 using Agile_Extension.Classes;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace Agile_Extension.Forms
 {
@@ -68,12 +70,30 @@ namespace Agile_Extension.Forms
                 tap_page.Add(new MetroSet_UI.Child.MetroSetTabPage());
             }
 
-            for(int i =0; i < tap_page.Count;i++)
+            for (int i = 0; i < tap_page.Count; i++)
             {
                 tap_page[i].AutoScroll = true;
-                tap_page[i].Name = tabs[i].ToString();
-                tap_page[i].Text = tabs[i].ToString();
+                string project_name = tabs[i].ToString();
+                tap_page[i].Name = project_name;
+                tap_page[i].Text = project_name;
                 metroSetTabControl1.Controls.Add(tap_page[i]);
+                generate_sprint_tiles(project_name, tap_page[i]);
+            }
+        }
+
+        private void generate_sprint_tiles(string project_name, Control parent)
+        {
+            List<MetroSet_UI.Controls.MetroSetTile> tiles = new List<MetroSet_UI.Controls.MetroSetTile>();
+            JArray sprints = get_sprints(project_name);
+            int first_c_local_one = 30;
+            int first_c_local_two = 35;
+            int tile_size = 75;
+            for (int i = 0; i < sprints.Count; i++)
+            {
+                tiles.Add(new clsDynamicFormControls(sprints[i].ToString(), first_c_local_one, first_c_local_two*2, tile_size, tile_size).createDynamicTile(parent));
+                first_c_local_one += tile_size * 2 + 20;
+                tiles[i].Click += tile_click_event;
+                tiles[i].Name = sprints[i].ToString();
             }
         }
 
@@ -139,6 +159,16 @@ namespace Agile_Extension.Forms
             MetroSet_UI.Controls.MetroSetTile tile = (MetroSet_UI.Controls.MetroSetTile)sender;
             string name = tile.Name;
             MetroSetMessageBox.Show(this, name, name);
+        }
+        #endregion
+
+        #region GENERIC_METHODS
+        public JArray get_sprints(string project)
+        {
+            JObject obj = new clsRestAPIHandler().get_single_project(project);
+            string json_projects = obj["project"][0]["sprints"].ToString();
+            JArray sprints_array = JArray.Parse(json_projects);
+            return sprints_array;
         }
         #endregion
 

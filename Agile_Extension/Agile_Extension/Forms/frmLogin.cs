@@ -12,6 +12,7 @@ using RestSharp;
 using RestSharp.Authenticators;
 using Agile_Extension.Classes;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace Agile_Extension.Forms
 {
@@ -33,9 +34,8 @@ namespace Agile_Extension.Forms
                 string role = obj["user"][0]["role"].ToString();
                 string projects = obj["user"][0]["projects"].ToString();
                 string username = obj["user"][0]["username"].ToString();
-                string trimmed_proj = projects.Trim(new char[] { '[', ']' });
-                List<string> user_projects = trimmed_proj.Split(',').ToList();
-
+                JArray user_projects = JArray.Parse(projects);
+                MessageBox.Show(user_projects[0].ToString());
                 new clsFileHandler().writeToFile(role, new clsFileHandler().get_role_file());
                 new clsFileHandler().writeToFile(username, new clsFileHandler().get_user_file());
                 new clsFileHandler().writeMutlipleLines(user_projects, new clsFileHandler().get_project_file());           
