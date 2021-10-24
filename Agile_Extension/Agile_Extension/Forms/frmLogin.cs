@@ -33,7 +33,6 @@ namespace Agile_Extension.Forms
                 string role = obj["user"][0]["role"].ToString();
                 string projects = obj["user"][0]["projects"].ToString();
                 string username = obj["user"][0]["username"].ToString();
-                username = username.Trim();
                 string trimmed_proj = projects.Trim(new char[] { '[', ']' });
                 List<string> user_projects = trimmed_proj.Split(',').ToList();
 

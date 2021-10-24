@@ -35,6 +35,7 @@ namespace Agile_Extension.Forms
                 JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList());
                 update_user_projects();
                 resetControls();
+                get_updated_project_file();
                 if(obj_proj != null)
                 {
                     lblOutput.Text = obj_proj["message"].ToString();
@@ -105,7 +106,7 @@ namespace Agile_Extension.Forms
                 List<string> user_projects = projects.Split(',').ToList();
                 for (int i = 0; i < user_projects.Count; i++)
                 {
-                    json_payload += user_projects[i] + ",";
+                    json_payload += user_projects[i] + ",";                   
                 }
             }
             
@@ -149,6 +150,18 @@ namespace Agile_Extension.Forms
             populateComboBox();
         }
         #endregion
+
+        private void get_updated_project_file()
+        {
+            new clsFileHandler().deleteFile(new clsFileHandler().get_project_file());
+            string current_user = new clsFileHandler().readFromFile(new clsFileHandler().get_user_file());
+            JObject obj = new clsRestAPIHandler().get_user_info(current_user);
+            string username = obj["user"][0]["username"].ToString();
+            string projects = obj["user"][0]["projects"].ToString();
+            string trimmed_proj = projects.Trim(new char[] { '[', ']' });
+            List<string> user_projects = trimmed_proj.Split(',').ToList();
+            new clsFileHandler().writeMutlipleLines(user_projects, new clsFileHandler().get_project_file());
+        }
        
     }
 }
