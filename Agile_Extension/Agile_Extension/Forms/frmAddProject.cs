@@ -26,20 +26,25 @@ namespace Agile_Extension.Forms
             //Changes text of Summary label as text is entered
             lblProjFName.Text = "Project: " +  txtProjName.Text;
         }
+        private void txtSprintName_TextChanged(object sender)
+        {
+            lblSprintF.Text = "1st Sprint: " + txtSprintName.Text;
+        }
 
         private void btnAddProj_Click(object sender, EventArgs e)
         {
             
             if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
-                JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList());
-                update_user_projects();
-                resetControls();
+            {            
+                JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList(),sprint_list(txtSprintName.Text));
+                update_user_projects();     
                 get_updated_project_file();
                 if(obj_proj != null)
                 {
+                    new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text);
                     lblOutput.Text = obj_proj["message"].ToString();
-                }            
+                }
+                resetControls();
             }
             
         }
@@ -70,6 +75,7 @@ namespace Agile_Extension.Forms
             cmbMembers.Items.Add(listMembers.Items[index]);
             listMembers.Items.RemoveAt(index);
         }
+        
         #endregion
 
         #region SEND_INFO_TO_API_METHODS
@@ -96,7 +102,7 @@ namespace Agile_Extension.Forms
             new clsRestAPIHandler().update_user(current_user, payload_current_user);
             
         }
-        
+      
         public string update_user_projects(string projects,string new_project)
         {
             string json_payload = "[{" + (char)34 + "propName" + (char)34 + ":" + (char)34 + "projects" + (char)34 + "," + (char)34 + "value" + (char)34 + ":[";
@@ -140,17 +146,16 @@ namespace Agile_Extension.Forms
             cmbMembers.Items.Remove(current_user);
         }
 
-        private void resetControls()
+        private List<string> sprint_list(string sprint)
         {
-            txtProjName.Text = "";
-            lblProjFName.Text = "";
-            cmbMembers.Items.Clear();
-            listMembers.Items.Clear();
-            lblOutput.Text = "";
-            populateComboBox();
+            List<string> list = new List<string>();
+            list.Add(sprint);
+            return list;
         }
+      
         #endregion
 
+        #region UPDATE_CACHE_FILES_METHODS
         private void get_updated_project_file()
         {
             new clsFileHandler().deleteFile(new clsFileHandler().get_project_file());
@@ -162,6 +167,18 @@ namespace Agile_Extension.Forms
             List<string> user_projects = trimmed_proj.Split(',').ToList();
             new clsFileHandler().writeMutlipleLines(user_projects, new clsFileHandler().get_project_file());
         }
-       
+        #endregion
+
+        #region GENERIC_METHODS
+        private void resetControls()
+        {
+            txtProjName.Text = "";
+            lblProjFName.Text = "";
+            cmbMembers.Items.Clear();
+            listMembers.Items.Clear();
+            lblOutput.Text = "";
+            populateComboBox();
+        }
+        #endregion
     }
 }

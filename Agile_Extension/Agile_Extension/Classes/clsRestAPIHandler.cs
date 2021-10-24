@@ -137,19 +137,18 @@ namespace Agile_Extension.Classes
             return null;
         }
 
-        //FIX THIS METHOD The JSONBody is the issue
-        public JObject update_user(string username ,string projects)
+        public JObject update_user(string username ,string content)
         {
             try
             {
              
-                Debug.WriteLine("data to be sent: update user: " + projects);
+                Debug.WriteLine("data to be sent: update user: " + content);
                 
                 var client = new RestClient(BASE_URL);
                 var request = new RestRequest("/user/" + username, Method.PATCH);
                 request.RequestFormat = DataFormat.Json;
                 request.AddHeader("Content-type", "application/json");  
-                request.AddJsonBody(projects);
+                request.AddJsonBody(content);
 
                 var response = client.Execute(request);
                 HttpStatusCode statusCode = response.StatusCode;
@@ -170,7 +169,7 @@ namespace Agile_Extension.Classes
         #endregion
  
         #region PROJECT_ROUTES
-        public JObject create_project(string project_name, List<string> members)
+        public JObject create_project(string project_name, List<string> members, List<string> sprints)
         {
             try
             {
@@ -181,7 +180,8 @@ namespace Agile_Extension.Classes
                 request.AddJsonBody(new
                 {
                     projName = project_name,
-                    projUsers = members
+                    projUsers = members,
+                    sprints = sprints
                 });
                 var response = client.Execute(request);
 
@@ -199,6 +199,118 @@ namespace Agile_Extension.Classes
             return null;
         }
 
+        public JObject delete_project(string project_name)
+        {
+            try
+            {
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/project/" + project_name, Method.DELETE);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+
+                var response = client.Execute(request);
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("Delete project: " + response.Content);
+
+                if ((int)statusCode == 200)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e);
+            }
+            return null;
+        }
+
+        #endregion
+
+        #region SPRINT_ROUTES
+        public JObject create_sprint(string sprint_name, string project)
+        {
+            try
+            {
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/sprint/sprint_create", Method.POST);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(new
+                {
+                    sprName = sprint_name,
+                    project = project
+                });
+                var response = client.Execute(request);
+
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("create_project: " + response.Content);
+                if ((int)statusCode == 201)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
+            return null;
+        }
+
+        public JObject update_sprint(string sprint_name, string content)
+        {
+            try
+            {
+
+                Debug.WriteLine("data to be sent: update user: " + content);
+
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/sprint/" + sprint_name, Method.PATCH);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(content);
+
+                var response = client.Execute(request);
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("Update Sprint: " + response.Content);
+
+                if ((int)statusCode == 200)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e);
+            }
+            return null;
+        }
+
+        public JObject delete_sprint(string sprint_name)
+        {
+            try
+            {
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/sprint/" + sprint_name, Method.DELETE);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+
+                var response = client.Execute(request);
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("Delete sprint: " + response.Content);
+
+                if ((int)statusCode == 200)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e);
+            }
+            return null;
+        }
+
+
         #endregion
 
         #region GENERIC_METHODS
@@ -208,10 +320,6 @@ namespace Agile_Extension.Classes
             return obj;
         }
         #endregion
-
-      
-
-        
     }
 
     
