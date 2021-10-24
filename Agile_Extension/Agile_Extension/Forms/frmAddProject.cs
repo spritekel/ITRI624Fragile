@@ -90,7 +90,6 @@ namespace Agile_Extension.Forms
                 JArray user_projects = JArray.Parse(projects);
                 user_projects.Add(txtProjName.Text);
                 string json_payload = prepareJsonPayload(user_projects);
-                MessageBox.Show(json_payload);
                 new clsRestAPIHandler().update_user(listMembers.Items[i].ToString(), json_payload);
             }
 
@@ -101,10 +100,11 @@ namespace Agile_Extension.Forms
             JArray projects_current_user_array = JArray.Parse(projects_current_user);
             projects_current_user_array.Add(txtProjName.Text);
             string current_payload = prepareJsonPayload(projects_current_user_array);
-            MessageBox.Show(current_payload);
             new clsRestAPIHandler().update_user(current_user,current_payload);
         }
         
+
+        //Generates the JSON string that updates a user's projects
         private string prepareJsonPayload(JArray content)
         {
             string payload = "[{" + (char)34 + "propName" + (char)34 + ":" + (char)34 + "projects" + (char)34 + "," + (char)34 + "value" + (char)34 + ":[";

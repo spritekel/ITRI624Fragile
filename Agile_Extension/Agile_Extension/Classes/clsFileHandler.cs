@@ -107,7 +107,7 @@ namespace Agile_Extension.Classes
                 {
                     for (int i = 0; i < content.Count; i++)
                     {
-                        writer.Write(content[i].ToString());
+                        writer.Write(content[i].ToString() +"\r\n");
                     }
                 }
             }
