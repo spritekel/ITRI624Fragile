@@ -7570,3 +7570,12 @@ color: purple;
 [1024/181207.888:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1024/182605.109:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1024/184554.365:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1024/194824.927:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.", source:  (0)
+[1024/194825.853:INFO:CONSOLE(138)] "%c[Logger.tsx] 
+font-weight: bold;
+color: purple;
+ Logger has loaded", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1024/194826.154:INFO:CONSOLE(138)] "%c[default] 
+font-weight: bold;
+color: purple;
+ [BUILD INFO] Release Channel: stable, Build Number: 102113, Version Hash: 711e9a88dc7d77ebece893a148fc7440fc80fe53", source: https://discord.com/assets/be358c929d9afee6527f.js (138)

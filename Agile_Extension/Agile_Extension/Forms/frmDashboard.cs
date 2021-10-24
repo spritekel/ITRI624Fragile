@@ -109,6 +109,7 @@ namespace Agile_Extension.Forms
             progress.Name = "pb" + project;  
             //Change value throuh API
             progress.Value = 75;
+            progress.SubscriptText = "75";
         }
 
         //Add Panel

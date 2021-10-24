@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using CircularProgressBar;
 
+
 //HRR POTGIETER
 //Reason for Class:
 //This class handles all dynamic components of the dashboard form
@@ -152,6 +153,18 @@ namespace Agile_Extension.Classes
             progressBar.Location = new Point(getLocalOne(), getLocalTwo());
             progressBar.Text = getControlText();
             progressBar.Size = new Size(getSizeOne(), getSizeTwo());
+            progressBar.Font = new Font(FontFamily.GenericSansSerif, 10, FontStyle.Bold);
+            progressBar.ForeColor = System.Drawing.Color.Black;
+            progressBar.InnerColor = System.Drawing.Color.White;
+            progressBar.OuterColor = System.Drawing.Color.Silver;
+            progressBar.ProgressColor = System.Drawing.Color.FromArgb(65, 177, 225);
+            progressBar.SecondaryFont = new Font(FontFamily.GenericSansSerif, 10);
+            progressBar.SubscriptColor = System.Drawing.Color.Black;
+            progressBar.SuperscriptColor = System.Drawing.Color.Black;
+            progressBar.SuperscriptText = "%";
+            progressBar.OuterMargin = -25;
+            progressBar.OuterWidth = 20;
+            progressBar.ProgressWidth = 19;
 
             return progressBar;
         }

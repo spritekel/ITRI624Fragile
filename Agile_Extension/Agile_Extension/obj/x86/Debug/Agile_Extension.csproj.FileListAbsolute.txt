@@ -206,3 +206,9 @@ D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\De
 D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmSignUp.resources
 D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\Newtonsoft.Json.dll
 D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\RestSharp.dll
+C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\RestSharp.xml
+C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddProject.resources
+C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\Henro\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmSignUp.resources
