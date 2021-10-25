@@ -149,7 +149,7 @@ namespace Agile_Extension.Forms
             this.AllowResize = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 823);
+            this.ClientSize = new System.Drawing.Size(1055, 788);
             this.Controls.Add(this.btnAddProj);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetEllipse1);

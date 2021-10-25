@@ -29,7 +29,6 @@ namespace Agile_Extension.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.styleManager1 = new MetroSet_UI.StyleManager();
             this.txtUsername = new MetroSet_UI.Controls.MetroSetTextBox();
@@ -39,19 +38,9 @@ namespace Agile_Extension.Forms
             this.btnLogin = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetLink1 = new MetroSet_UI.Controls.MetroSetLink();
             this.lblEMessage = new MetroSet_UI.Controls.MetroSetLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::Agile_Extension.Properties.Resources.Fragile_LOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 90);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // metroSetControlBox1
             // 
@@ -223,6 +212,17 @@ namespace Agile_Extension.Forms
             this.lblEMessage.TabIndex = 9;
             this.lblEMessage.ThemeAuthor = null;
             this.lblEMessage.ThemeName = null;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::Agile_Extension.Properties.Resources.logoFragile;
+            this.pictureBox1.Location = new System.Drawing.Point(57, 90);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(167, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 

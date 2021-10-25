@@ -7579,3 +7579,113 @@ color: purple;
 font-weight: bold;
 color: purple;
  [BUILD INFO] Release Channel: stable, Build Number: 102113, Version Hash: 711e9a88dc7d77ebece893a148fc7440fc80fe53", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104407.980:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.", source:  (0)
+[1025/104408.891:INFO:CONSOLE(138)] "%c[Logger.tsx] 
+font-weight: bold;
+color: purple;
+ Logger has loaded", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104409.699:INFO:CONSOLE(138)] "%c[default] 
+font-weight: bold;
+color: purple;
+ [BUILD INFO] Release Channel: stable, Build Number: 102113, Version Hash: 711e9a88dc7d77ebece893a148fc7440fc80fe53", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104411.015:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow batch emitChanges took 155ms recentActions: EXPERIMENTS_FETCH_SUCCESS -> EXPERIMENT_TRIGGER -> TRACK -> TRACK -> TRACK -> INVITE_RESOLVE -> NATIVE_APP_MODAL_OPENING -> TRACK -> TRACK -> INVITE_RESOLVE_SUCCESS", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104411.019:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow dispatch on INVITE_RESOLVE_SUCCESS: 159ms", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104423.823:INFO:CONSOLE(138)] "%c[AuthenticationStore] 
+font-weight: bold;
+color: purple;
+ setAuthToken called. [object Object]", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104423.840:INFO:CONSOLE(138)] "%c[Routing/Utils] 
+font-weight: bold;
+color: purple;
+ transitionTo - Transitioning to /channels/900011760843640862/900014243687067709", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104423.919:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.", source:  (0)
+[1025/104424.080:INFO:CONSOLE(49)] "[FAST CONNECT] connecting to: wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream", source: https://discord.com/channels/900011760843640862/900014243687067709 (49)
+[1025/104424.728:INFO:CONSOLE(138)] "%c[Logger.tsx] 
+font-weight: bold;
+color: purple;
+ Logger has loaded", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104425.343:INFO:CONSOLE(138)] "%c[default] 
+font-weight: bold;
+color: purple;
+ [BUILD INFO] Release Channel: stable, Build Number: 102113, Version Hash: 711e9a88dc7d77ebece893a148fc7440fc80fe53", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104425.481:INFO:CONSOLE(138)] "[FAST CONNECT] connected in 1401ms", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104428.327:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [CONNECT] wss://gateway.discord.gg, encoding: json, version: 9, compression: zlib-stream", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104428.328:INFO:CONSOLE(138)] "[FAST CONNECT] successfully took over websocket, state: [object Object]", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104428.329:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [CONNECTED] wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream in 2 ms", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104428.331:INFO:CONSOLE(138)] "%c[ConnectionStore] 
+font-weight: bold;
+color: purple;
+ handleIdentify called [object Object]", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104428.335:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [IDENTIFY]", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104428.374:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [HELLO] via ["gateway-prd-main-sd1p",{"micros":0.0}], heartbeat interval: 41250, took 46 ms", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104428.796:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [READY] took 468ms, via ["gateway-prd-main-sd1p",{"micros":100730,"calls":["discord-sessions-blue-prd-2-34",{"micros":99545,"calls":["start_session",{"micros":64371,"calls":["api-prd-main-5b0b",{"micros":59290,"calls":["get_user",{"micros":2982},"add_authorized_ip",{"micros":8318},"get_guilds",{"micros":4986},"private_channels",{"micros":2826},"read_states",{"micros":3181},"coros_wait",{"micros":67},"aliases",{"micros":2954},"affine_user_ids",{"micros":19345},"experiments",{"micros":4989}]}]},"guilds_connect",{"micros":613,"calls":[]},"presence_connect",{"micros":10764,"calls":[]}]}]}] as 9f0332445d8d08a62cdcfc6c60b4a3e0", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104428.801:INFO:CONSOLE(138)] "%c[AuthenticationStore] 
+font-weight: bold;
+color: purple;
+ handleConnectionOpen called [object Object]", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104428.877:WARNING:http_cache_transaction.cc(2395)] Multiple or malformed validation headers found.
+[1025/104428.879:INFO:CONSOLE(138)] "%c[MessageActionCreators] 
+font-weight: bold;
+color: purple;
+ Fetching messages for 900014243687067709 between undefined and undefined. jump=undefined", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104430.030:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow dispatch on CONNECTION_OPEN: 1231ms", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104430.292:INFO:CONSOLE(138)] "%c[GatewaySocket] 
+font-weight: bold;
+color: purple;
+ [READY_SUPPLEMENTAL] took 1966ms", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104430.625:INFO:CONSOLE(138)] "%c[MessageActionCreators] 
+font-weight: bold;
+color: purple;
+ Fetched 1 messages for 900014243687067709 isBefore:false isAfter:false", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104430.796:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow batch emitChanges took 163ms recentActions: TRACK -> EXPERIMENT_TRIGGER -> GUILD_SUBSCRIPTIONS_CHANNEL -> USER_SETTINGS_UPDATE -> SEARCH_AUTOCOMPLETE_QUERY_UPDATE -> TRACK -> SURVEY_FETCHED -> STATUS_PAGE_SCHEDULED_MAINTENANCE -> LIBRARY_FETCH_SUCCESS -> LOAD_MESSAGES_SUCCESS", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104430.797:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow dispatch on LOAD_MESSAGES_SUCCESS: 171ms", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104453.345:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow batch emitChanges took 118ms recentActions: UPDATE_CHANNEL_DIMENSIONS -> GAMES_DATABASE_UPDATE -> MEDIA_ENGINE_DEVICES -> MEDIA_ENGINE_DEVICES -> MEDIA_ENGINE_DEVICES -> MEDIA_ENGINE_DEVICES -> EXPERIMENT_TRIGGER -> TRACK -> EXPERIMENT_TRIGGER -> CURRENT_USER_UPDATE", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104453.346:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow dispatch on CURRENT_USER_UPDATE: 201ms", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104458.435:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1025/104525.131:INFO:CONSOLE(138)] "%c[ComponentDispatchUtils] 
+font-weight: bold;
+color: purple;
+ ComponentDispatch.subscribe: Attempting to add a duplicate listener POPOUT_CLOSE", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/104533.238:INFO:CONSOLE(138)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow dispatch on WINDOW_FOCUS: 122ms", source: https://discord.com/assets/be358c929d9afee6527f.js (138)
+[1025/111352.971:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1025/114356.086:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1025/120804.599:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
