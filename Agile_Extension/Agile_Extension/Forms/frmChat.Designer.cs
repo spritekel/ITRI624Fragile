@@ -68,11 +68,12 @@ namespace Agile_Extension.Forms
             // 
             // frmChat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(848, 524);
             this.Controls.Add(this.metroSetControlBox1);
             this.Name = "frmChat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StyleManager = this.styleManager1;
             this.Text = "Chat";
             this.ThemeAuthor = null;

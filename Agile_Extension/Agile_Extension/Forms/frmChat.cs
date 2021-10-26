@@ -15,35 +15,36 @@ namespace Agile_Extension.Forms
 {
     public partial class frmChat : MetroSetForm
     {
-        private ChromiumWebBrowser chromeBrowser;
+        #region INSTANCE_VARIABLES
+        private readonly ChromiumWebBrowser browser;
+        #endregion
 
-        private void InitializeChromium()
-        {
-            CefSettings settings = new CefSettings();
-            //settings.CachePath = @"C:\Users\kelvi\Documents\1. honours\ITRI 624\Development\ITRI624Project\Agile_Extension\Agile_Extension\chromeCache\";
-            // Initialize cef with the provided settings
-            //Cef.Initialize(settings);
-            // Create a browser component
-            chromeBrowser = new ChromiumWebBrowser("https://web.telegram.org");
-            // Add it to the form and fill it to the form window.
-            this.Controls.Add(chromeBrowser);
-            chromeBrowser.Dock = DockStyle.Fill;
-
-        }
+        #region FORM_METHODS
         public frmChat()
         {
             InitializeComponent();
-            InitializeChromium();
+            if(Cef.IsInitialized)
+            {
+                browser = new ChromiumWebBrowser("https://discord.gg/NpeJbX3xm9");
+                this.Controls.Add(browser);
+                browser.Dock = DockStyle.Fill;
+            }
+
         }
 
         private void frmChat_Load(object sender, EventArgs e)
         {
 
         }
-
         private void frmChat_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Cef.Shutdown();
+            if(!Cef.IsInitialized)
+            {
+                Cef.Shutdown();
+            }
+            this.Dispose();
         }
+        #endregion
+
     }
 }
