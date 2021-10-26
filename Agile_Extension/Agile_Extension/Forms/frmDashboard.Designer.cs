@@ -52,7 +52,7 @@ namespace Agile_Extension.Forms
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl1.Location = new System.Drawing.Point(5, 146);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
-            this.metroSetTabControl1.Size = new System.Drawing.Size(1040, 556);
+            this.metroSetTabControl1.Size = new System.Drawing.Size(1040, 398);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl1.Speed = 20;
             this.metroSetTabControl1.Style = MetroSet_UI.Design.Style.Light;
@@ -75,7 +75,7 @@ namespace Agile_Extension.Forms
             this.metroSetEllipse1.HoverTextColor = System.Drawing.Color.White;
             this.metroSetEllipse1.Image = null;
             this.metroSetEllipse1.ImageSize = new System.Drawing.Size(64, 64);
-            this.metroSetEllipse1.Location = new System.Drawing.Point(5, 708);
+            this.metroSetEllipse1.Location = new System.Drawing.Point(15, 539);
             this.metroSetEllipse1.Name = "metroSetEllipse1";
             this.metroSetEllipse1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.metroSetEllipse1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -147,9 +147,9 @@ namespace Agile_Extension.Forms
             // frmDashboard
             // 
             this.AllowResize = false;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 788);
+            this.ClientSize = new System.Drawing.Size(1055, 664);
             this.Controls.Add(this.btnAddProj);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetEllipse1);

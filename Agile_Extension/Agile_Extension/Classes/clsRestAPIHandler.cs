@@ -396,6 +396,21 @@ namespace Agile_Extension.Classes
             return obj;
         }
         #endregion
+
+        public string prepareJsonPayload(string prop, JArray content)
+        {
+            string payload = "[{" + (char)34 + "propName" + (char)34 + ":" + (char)34 + prop + (char)34 + "," + (char)34 + "value" + (char)34 + ":[";
+            for (int i = 0; i < content.Count; i++)
+            {
+                payload += (char)34 + content[i].ToString() + (char)34;
+                if (i < content.Count - 1)
+                {
+                    payload += ",";
+                }
+            }
+            payload += "]}]";
+            return payload;
+        }
     }
 
     

@@ -89,7 +89,7 @@ namespace Agile_Extension.Forms
                 string projects = obj["user"][0]["projects"].ToString();
                 JArray user_projects = JArray.Parse(projects);
                 user_projects.Add(txtProjName.Text);
-                string json_payload = prepareJsonPayload(user_projects);
+                string json_payload = new clsRestAPIHandler().prepareJsonPayload("projects",user_projects);
                 new clsRestAPIHandler().update_user(listMembers.Items[i].ToString(), json_payload);
             }
 
@@ -99,27 +99,12 @@ namespace Agile_Extension.Forms
             string projects_current_user = obj_current_user["user"][0]["projects"].ToString();
             JArray projects_current_user_array = JArray.Parse(projects_current_user);
             projects_current_user_array.Add(txtProjName.Text);
-            string current_payload = prepareJsonPayload(projects_current_user_array);
+            string current_payload = new clsRestAPIHandler().prepareJsonPayload("projects", projects_current_user_array);
             new clsRestAPIHandler().update_user(current_user,current_payload);
         }
         
 
         //Generates the JSON string that updates a user's projects
-        private string prepareJsonPayload(JArray content)
-        {
-            string payload = "[{" + (char)34 + "propName" + (char)34 + ":" + (char)34 + "projects" + (char)34 + "," + (char)34 + "value" + (char)34 + ":[";
-            for (int i = 0; i < content.Count;i++)
-            {
-                payload += (char)34 + content[i].ToString() + (char)34;
-                if(i < content.Count-1)
-                {
-                    payload += ",";
-                }
-            }
-            payload += "]}]";
-            return payload;
-        }
-
         private List<string> listbox_toList()
         {
             List<string> output = new List<string>();
