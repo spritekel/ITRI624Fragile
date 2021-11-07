@@ -15,7 +15,7 @@ namespace Agile_Extension.Classes
     {
 
         #region INSTANCE_VARIABLES
-        private static string path = System.IO.Directory.GetCurrentDirectory();
+        private static string path = Path.GetTempPath();
         private const string ROLE_FILE = "\\Role.txt";
         private const string USER_INFO = "\\User.txt";
         private const string PROJECTS_INFO = "\\Projects.txt";
