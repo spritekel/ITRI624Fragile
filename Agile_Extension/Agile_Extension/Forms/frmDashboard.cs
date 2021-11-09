@@ -165,5 +165,11 @@ namespace Agile_Extension.Forms
         }
         #endregion
 
+        private void metroSetButton1_Click(object sender, EventArgs e)
+        {
+            frmKanbanTemplate3 kan = new frmKanbanTemplate3();
+            kan.Show();
+            this.Hide();
+        }
     }
 }
