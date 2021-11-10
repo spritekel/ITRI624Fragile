@@ -107,9 +107,6 @@
     <Compile Include="Forms\frmAddProject.Designer.cs">
       <DependentUpon>frmAddProject.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAddTask.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\frmChat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +118,18 @@
     </Compile>
     <Compile Include="Forms\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddTask.Designer.cs">
+      <DependentUpon>frmAddTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKanbanTemplate5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKanbanTemplate5.Designer.cs">
+      <DependentUpon>frmKanbanTemplate5.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmKanbanTemplate3.cs">
       <SubType>Form</SubType>
@@ -145,14 +154,17 @@
     <EmbeddedResource Include="Forms\frmAddProject.resx">
       <DependentUpon>frmAddProject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddTask.resx">
-      <DependentUpon>frmAddTask.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChat.resx">
       <DependentUpon>frmChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddTask.resx">
+      <DependentUpon>frmAddTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKanbanTemplate5.resx">
+      <DependentUpon>frmKanbanTemplate5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmKanbanTemplate3.resx">
       <DependentUpon>frmKanbanTemplate3.cs</DependentUpon>
