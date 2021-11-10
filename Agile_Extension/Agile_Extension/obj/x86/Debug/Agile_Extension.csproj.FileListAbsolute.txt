@@ -430,3 +430,4 @@ C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agi
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate3.resources
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTask.resources
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate5.resources
+C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate5Hons.resources

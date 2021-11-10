@@ -1,7 +1,7 @@
 ﻿
 namespace Agile_Extension.Forms
 {
-    partial class frmKanbanTemplate3
+    partial class frmKanbanTemplate5Hons
     {
         /// <summary>
         /// Required designer variable.
@@ -31,21 +31,29 @@ namespace Agile_Extension.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.inpTodo = new System.Windows.Forms.TextBox();
+            this.inpNotStarted = new System.Windows.Forms.TextBox();
             this.inpDone = new System.Windows.Forms.TextBox();
-            this.inpDoing = new System.Windows.Forms.TextBox();
-            this.lstTodo = new System.Windows.Forms.ListView();
+            this.inpResearch = new System.Windows.Forms.TextBox();
+            this.lstNotStarted = new System.Windows.Forms.ListView();
             this.taskToDo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lstDoing = new System.Windows.Forms.ListView();
+            this.lstResearch = new System.Windows.Forms.ListView();
             this.taskDoing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDone = new System.Windows.Forms.ListView();
             this.taskDone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnTodo = new System.Windows.Forms.Button();
-            this.btnDoing = new System.Windows.Forms.Button();
+            this.btnNotStarted = new System.Windows.Forms.Button();
+            this.btnResearch = new System.Windows.Forms.Button();
             this.btnDone = new System.Windows.Forms.Button();
             this.metroSetProgressBar1 = new MetroSet_UI.Controls.MetroSetProgressBar();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
+            this.btnDevelop = new System.Windows.Forms.Button();
+            this.lstDevelop = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.inpDevelop = new System.Windows.Forms.TextBox();
+            this.btnTesting = new System.Windows.Forms.Button();
+            this.lstTesting = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.inpTesting = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -54,67 +62,67 @@ namespace Agile_Extension.Forms
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // inpTodo
+            // inpNotStarted
             // 
-            this.inpTodo.Location = new System.Drawing.Point(15, 492);
-            this.inpTodo.Name = "inpTodo";
-            this.inpTodo.Size = new System.Drawing.Size(206, 27);
-            this.inpTodo.TabIndex = 1;
+            this.inpNotStarted.Location = new System.Drawing.Point(15, 492);
+            this.inpNotStarted.Name = "inpNotStarted";
+            this.inpNotStarted.Size = new System.Drawing.Size(206, 27);
+            this.inpNotStarted.TabIndex = 1;
             // 
             // inpDone
             // 
-            this.inpDone.Location = new System.Drawing.Point(528, 490);
+            this.inpDone.Location = new System.Drawing.Point(1039, 490);
             this.inpDone.Name = "inpDone";
             this.inpDone.Size = new System.Drawing.Size(206, 27);
             this.inpDone.TabIndex = 3;
             // 
-            // inpDoing
+            // inpResearch
             // 
-            this.inpDoing.Location = new System.Drawing.Point(273, 491);
-            this.inpDoing.Name = "inpDoing";
-            this.inpDoing.Size = new System.Drawing.Size(206, 27);
-            this.inpDoing.TabIndex = 2;
+            this.inpResearch.Location = new System.Drawing.Point(273, 491);
+            this.inpResearch.Name = "inpResearch";
+            this.inpResearch.Size = new System.Drawing.Size(206, 27);
+            this.inpResearch.TabIndex = 2;
             // 
-            // lstTodo
+            // lstNotStarted
             // 
-            this.lstTodo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstNotStarted.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.taskToDo});
-            this.lstTodo.GridLines = true;
-            this.lstTodo.HideSelection = false;
-            this.lstTodo.Location = new System.Drawing.Point(15, 188);
-            this.lstTodo.Name = "lstTodo";
-            this.lstTodo.Size = new System.Drawing.Size(252, 297);
-            this.lstTodo.TabIndex = 4;
-            this.lstTodo.UseCompatibleStateImageBehavior = false;
-            this.lstTodo.View = System.Windows.Forms.View.Details;
-            this.lstTodo.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstTodo_ItemDrag_Done);
-            this.lstTodo.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstTodo_DragDrop);
-            this.lstTodo.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
+            this.lstNotStarted.GridLines = true;
+            this.lstNotStarted.HideSelection = false;
+            this.lstNotStarted.Location = new System.Drawing.Point(15, 188);
+            this.lstNotStarted.Name = "lstNotStarted";
+            this.lstNotStarted.Size = new System.Drawing.Size(252, 297);
+            this.lstNotStarted.TabIndex = 4;
+            this.lstNotStarted.UseCompatibleStateImageBehavior = false;
+            this.lstNotStarted.View = System.Windows.Forms.View.Details;
+            this.lstNotStarted.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstNotStarted_ItemDrag);
+            this.lstNotStarted.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstTodo_DragDrop);
+            this.lstNotStarted.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
             // taskToDo
             // 
-            this.taskToDo.Text = "To Do";
+            this.taskToDo.Text = "Not Started";
             this.taskToDo.Width = 250;
             // 
-            // lstDoing
+            // lstResearch
             // 
-            this.lstDoing.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstResearch.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.taskDoing});
-            this.lstDoing.GridLines = true;
-            this.lstDoing.HideSelection = false;
-            this.lstDoing.Location = new System.Drawing.Point(273, 188);
-            this.lstDoing.Name = "lstDoing";
-            this.lstDoing.Size = new System.Drawing.Size(249, 297);
-            this.lstDoing.TabIndex = 5;
-            this.lstDoing.UseCompatibleStateImageBehavior = false;
-            this.lstDoing.View = System.Windows.Forms.View.Details;
-            this.lstDoing.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstDoing_ItemDrag_Done);
-            this.lstDoing.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDoing_DragDrop);
-            this.lstDoing.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
+            this.lstResearch.GridLines = true;
+            this.lstResearch.HideSelection = false;
+            this.lstResearch.Location = new System.Drawing.Point(273, 188);
+            this.lstResearch.Name = "lstResearch";
+            this.lstResearch.Size = new System.Drawing.Size(249, 297);
+            this.lstResearch.TabIndex = 5;
+            this.lstResearch.UseCompatibleStateImageBehavior = false;
+            this.lstResearch.View = System.Windows.Forms.View.Details;
+            this.lstResearch.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstResearch_ItemDrag);
+            this.lstResearch.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDoing_DragDrop);
+            this.lstResearch.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
             // taskDoing
             // 
-            this.taskDoing.Text = "Doing";
+            this.taskDoing.Text = "Research";
             this.taskDoing.Width = 250;
             // 
             // lstDone
@@ -123,13 +131,13 @@ namespace Agile_Extension.Forms
             this.taskDone});
             this.lstDone.GridLines = true;
             this.lstDone.HideSelection = false;
-            this.lstDone.Location = new System.Drawing.Point(528, 188);
+            this.lstDone.Location = new System.Drawing.Point(1039, 188);
             this.lstDone.Name = "lstDone";
             this.lstDone.Size = new System.Drawing.Size(249, 296);
             this.lstDone.TabIndex = 6;
             this.lstDone.UseCompatibleStateImageBehavior = false;
             this.lstDone.View = System.Windows.Forms.View.Details;
-            this.lstDone.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstDone_ItemDrag_Doing);
+            this.lstDone.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstDone_ItemDrag);
             this.lstDone.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDone_DragDrop);
             this.lstDone.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
@@ -138,32 +146,32 @@ namespace Agile_Extension.Forms
             this.taskDone.Text = "Done";
             this.taskDone.Width = 250;
             // 
-            // btnTodo
+            // btnNotStarted
             // 
-            this.btnTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnTodo.Location = new System.Drawing.Point(227, 491);
-            this.btnTodo.Name = "btnTodo";
-            this.btnTodo.Size = new System.Drawing.Size(40, 27);
-            this.btnTodo.TabIndex = 7;
-            this.btnTodo.Text = "Add";
-            this.btnTodo.UseVisualStyleBackColor = true;
-            this.btnTodo.Click += new System.EventHandler(this.btnTodo_Click);
+            this.btnNotStarted.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.btnNotStarted.Location = new System.Drawing.Point(227, 491);
+            this.btnNotStarted.Name = "btnNotStarted";
+            this.btnNotStarted.Size = new System.Drawing.Size(40, 27);
+            this.btnNotStarted.TabIndex = 7;
+            this.btnNotStarted.Text = "Add";
+            this.btnNotStarted.UseVisualStyleBackColor = true;
+            this.btnNotStarted.Click += new System.EventHandler(this.btnNotStarted_Click);
             // 
-            // btnDoing
+            // btnResearch
             // 
-            this.btnDoing.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnDoing.Location = new System.Drawing.Point(485, 491);
-            this.btnDoing.Name = "btnDoing";
-            this.btnDoing.Size = new System.Drawing.Size(37, 27);
-            this.btnDoing.TabIndex = 8;
-            this.btnDoing.Text = "Add";
-            this.btnDoing.UseVisualStyleBackColor = true;
-            this.btnDoing.Click += new System.EventHandler(this.btnDoing_Click);
+            this.btnResearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.btnResearch.Location = new System.Drawing.Point(485, 491);
+            this.btnResearch.Name = "btnResearch";
+            this.btnResearch.Size = new System.Drawing.Size(37, 27);
+            this.btnResearch.TabIndex = 8;
+            this.btnResearch.Text = "Add";
+            this.btnResearch.UseVisualStyleBackColor = true;
+            this.btnResearch.Click += new System.EventHandler(this.btnResearch_Click);
             // 
             // btnDone
             // 
             this.btnDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnDone.Location = new System.Drawing.Point(740, 490);
+            this.btnDone.Location = new System.Drawing.Point(1251, 490);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(37, 27);
             this.btnDone.TabIndex = 9;
@@ -184,7 +192,7 @@ namespace Agile_Extension.Forms
             this.metroSetProgressBar1.Name = "metroSetProgressBar1";
             this.metroSetProgressBar1.Orientation = MetroSet_UI.Enums.ProgressOrientation.Horizontal;
             this.metroSetProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetProgressBar1.Size = new System.Drawing.Size(762, 23);
+            this.metroSetProgressBar1.Size = new System.Drawing.Size(1273, 23);
             this.metroSetProgressBar1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetProgressBar1.StyleManager = null;
             this.metroSetProgressBar1.TabIndex = 13;
@@ -200,7 +208,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(677, 17);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(1188, 17);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -245,26 +253,110 @@ namespace Agile_Extension.Forms
             this.metroSetButton1.ThemeName = "MetroLite";
             this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_Click);
             // 
-            // frmKanbanTemplate3
+            // btnDevelop
+            // 
+            this.btnDevelop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.btnDevelop.Location = new System.Drawing.Point(740, 492);
+            this.btnDevelop.Name = "btnDevelop";
+            this.btnDevelop.Size = new System.Drawing.Size(37, 27);
+            this.btnDevelop.TabIndex = 21;
+            this.btnDevelop.Text = "Add";
+            this.btnDevelop.UseVisualStyleBackColor = true;
+            this.btnDevelop.Click += new System.EventHandler(this.btnCodeReview_Click);
+            // 
+            // lstDevelop
+            // 
+            this.lstDevelop.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.lstDevelop.GridLines = true;
+            this.lstDevelop.HideSelection = false;
+            this.lstDevelop.Location = new System.Drawing.Point(528, 189);
+            this.lstDevelop.Name = "lstDevelop";
+            this.lstDevelop.Size = new System.Drawing.Size(249, 297);
+            this.lstDevelop.TabIndex = 20;
+            this.lstDevelop.UseCompatibleStateImageBehavior = false;
+            this.lstDevelop.View = System.Windows.Forms.View.Details;
+            this.lstDevelop.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstDevelop_ItemDrag);
+            this.lstDevelop.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDevelop_DragDrop);
+            this.lstDevelop.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Develop";
+            this.columnHeader1.Width = 250;
+            // 
+            // inpDevelop
+            // 
+            this.inpDevelop.Location = new System.Drawing.Point(528, 492);
+            this.inpDevelop.Name = "inpDevelop";
+            this.inpDevelop.Size = new System.Drawing.Size(206, 27);
+            this.inpDevelop.TabIndex = 19;
+            // 
+            // btnTesting
+            // 
+            this.btnTesting.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.btnTesting.Location = new System.Drawing.Point(995, 491);
+            this.btnTesting.Name = "btnTesting";
+            this.btnTesting.Size = new System.Drawing.Size(37, 27);
+            this.btnTesting.TabIndex = 25;
+            this.btnTesting.Text = "Add";
+            this.btnTesting.UseVisualStyleBackColor = true;
+            this.btnTesting.Click += new System.EventHandler(this.btnTesting_Click);
+            // 
+            // lstTesting
+            // 
+            this.lstTesting.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader2});
+            this.lstTesting.GridLines = true;
+            this.lstTesting.HideSelection = false;
+            this.lstTesting.Location = new System.Drawing.Point(783, 188);
+            this.lstTesting.Name = "lstTesting";
+            this.lstTesting.Size = new System.Drawing.Size(249, 297);
+            this.lstTesting.TabIndex = 24;
+            this.lstTesting.UseCompatibleStateImageBehavior = false;
+            this.lstTesting.View = System.Windows.Forms.View.Details;
+            this.lstTesting.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstTesting_ItemDrag);
+            this.lstTesting.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstTesting_DragDrop);
+            this.lstTesting.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "In Testing";
+            this.columnHeader2.Width = 250;
+            // 
+            // inpTesting
+            // 
+            this.inpTesting.Location = new System.Drawing.Point(783, 491);
+            this.inpTesting.Name = "inpTesting";
+            this.inpTesting.Size = new System.Drawing.Size(206, 27);
+            this.inpTesting.TabIndex = 23;
+            // 
+            // frmKanbanTemplate5Hons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(792, 567);
+            this.ClientSize = new System.Drawing.Size(1303, 588);
+            this.Controls.Add(this.btnTesting);
+            this.Controls.Add(this.lstTesting);
+            this.Controls.Add(this.inpTesting);
+            this.Controls.Add(this.btnDevelop);
+            this.Controls.Add(this.lstDevelop);
+            this.Controls.Add(this.inpDevelop);
             this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetProgressBar1);
             this.Controls.Add(this.btnDone);
-            this.Controls.Add(this.btnDoing);
-            this.Controls.Add(this.btnTodo);
+            this.Controls.Add(this.btnResearch);
+            this.Controls.Add(this.btnNotStarted);
             this.Controls.Add(this.lstDone);
-            this.Controls.Add(this.lstDoing);
-            this.Controls.Add(this.lstTodo);
+            this.Controls.Add(this.lstResearch);
+            this.Controls.Add(this.lstNotStarted);
             this.Controls.Add(this.inpDone);
-            this.Controls.Add(this.inpDoing);
-            this.Controls.Add(this.inpTodo);
-            this.Name = "frmKanbanTemplate3";
-            this.Text = "Kanban Board - Simple";
+            this.Controls.Add(this.inpResearch);
+            this.Controls.Add(this.inpNotStarted);
+            this.Name = "frmKanbanTemplate5Hons";
+            this.Text = "Kanban Board - PostGrad Projects";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,14 +365,14 @@ namespace Agile_Extension.Forms
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox inpTodo;
+        private System.Windows.Forms.TextBox inpNotStarted;
         private System.Windows.Forms.TextBox inpDone;
-        private System.Windows.Forms.TextBox inpDoing;
-        private System.Windows.Forms.ListView lstTodo;
-        private System.Windows.Forms.ListView lstDoing;
+        private System.Windows.Forms.TextBox inpResearch;
+        private System.Windows.Forms.ListView lstNotStarted;
+        private System.Windows.Forms.ListView lstResearch;
         private System.Windows.Forms.ListView lstDone;
-        private System.Windows.Forms.Button btnTodo;
-        private System.Windows.Forms.Button btnDoing;
+        private System.Windows.Forms.Button btnNotStarted;
+        private System.Windows.Forms.Button btnResearch;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.ColumnHeader taskToDo;
         private System.Windows.Forms.ColumnHeader taskDoing;
@@ -288,5 +380,13 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetProgressBar metroSetProgressBar1;
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
+        private System.Windows.Forms.Button btnDevelop;
+        private System.Windows.Forms.ListView lstDevelop;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.TextBox inpDevelop;
+        private System.Windows.Forms.Button btnTesting;
+        private System.Windows.Forms.ListView lstTesting;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.TextBox inpTesting;
     }
 }

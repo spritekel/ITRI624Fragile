@@ -35,6 +35,8 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.btnAddProj = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
+            this.metroSetButton2 = new MetroSet_UI.Controls.MetroSetButton();
+            this.metroSetButton3 = new MetroSet_UI.Controls.MetroSetButton();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -154,7 +156,7 @@ namespace Agile_Extension.Forms
             this.metroSetButton1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton1.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Location = new System.Drawing.Point(942, 615);
+            this.metroSetButton1.Location = new System.Drawing.Point(792, 615);
             this.metroSetButton1.Name = "metroSetButton1";
             this.metroSetButton1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -166,10 +168,62 @@ namespace Agile_Extension.Forms
             this.metroSetButton1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetButton1.StyleManager = this.styleManager1;
             this.metroSetButton1.TabIndex = 4;
-            this.metroSetButton1.Text = "Kan-Test";
+            this.metroSetButton1.Text = "Kan-Test 5 ICT";
             this.metroSetButton1.ThemeAuthor = "Narwin";
             this.metroSetButton1.ThemeName = "MetroLite";
             this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_Click);
+            // 
+            // metroSetButton2
+            // 
+            this.metroSetButton2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton2.DisabledForeColor = System.Drawing.Color.Gray;
+            this.metroSetButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetButton2.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton2.HoverTextColor = System.Drawing.Color.White;
+            this.metroSetButton2.Location = new System.Drawing.Point(688, 615);
+            this.metroSetButton2.Name = "metroSetButton2";
+            this.metroSetButton2.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton2.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton2.NormalTextColor = System.Drawing.Color.White;
+            this.metroSetButton2.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton2.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton2.PressTextColor = System.Drawing.Color.White;
+            this.metroSetButton2.Size = new System.Drawing.Size(98, 34);
+            this.metroSetButton2.Style = MetroSet_UI.Design.Style.Light;
+            this.metroSetButton2.StyleManager = this.styleManager1;
+            this.metroSetButton2.TabIndex = 5;
+            this.metroSetButton2.Text = "Kan-Test 3";
+            this.metroSetButton2.ThemeAuthor = "Narwin";
+            this.metroSetButton2.ThemeName = "MetroLite";
+            this.metroSetButton2.Click += new System.EventHandler(this.metroSetButton2_Click);
+            // 
+            // metroSetButton3
+            // 
+            this.metroSetButton3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton3.DisabledForeColor = System.Drawing.Color.Gray;
+            this.metroSetButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetButton3.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton3.HoverTextColor = System.Drawing.Color.White;
+            this.metroSetButton3.Location = new System.Drawing.Point(896, 615);
+            this.metroSetButton3.Name = "metroSetButton3";
+            this.metroSetButton3.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton3.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton3.NormalTextColor = System.Drawing.Color.White;
+            this.metroSetButton3.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton3.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton3.PressTextColor = System.Drawing.Color.White;
+            this.metroSetButton3.Size = new System.Drawing.Size(98, 34);
+            this.metroSetButton3.Style = MetroSet_UI.Design.Style.Light;
+            this.metroSetButton3.StyleManager = this.styleManager1;
+            this.metroSetButton3.TabIndex = 6;
+            this.metroSetButton3.Text = "Kan-Test 5 Hons";
+            this.metroSetButton3.ThemeAuthor = "Narwin";
+            this.metroSetButton3.ThemeName = "MetroLite";
+            this.metroSetButton3.Click += new System.EventHandler(this.metroSetButton3_Click);
             // 
             // frmDashboard
             // 
@@ -177,6 +231,8 @@ namespace Agile_Extension.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1055, 664);
+            this.Controls.Add(this.metroSetButton3);
+            this.Controls.Add(this.metroSetButton2);
             this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.btnAddProj);
             this.Controls.Add(this.metroSetControlBox1);
@@ -199,5 +255,7 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetButton btnAddProj;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
+        private MetroSet_UI.Controls.MetroSetButton metroSetButton2;
+        private MetroSet_UI.Controls.MetroSetButton metroSetButton3;
     }
 }

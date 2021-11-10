@@ -356,7 +356,7 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.inpProgress);
             this.Controls.Add(this.inpNotStarted);
             this.Name = "frmKanbanTemplate5";
-            this.Text = "Kanban Board";
+            this.Text = "Kanban Board - ICT Projects";
             this.ResumeLayout(false);
             this.PerformLayout();
 
