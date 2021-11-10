@@ -37,6 +37,7 @@ namespace Agile_Extension.Forms
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetButton2 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetButton3 = new MetroSet_UI.Controls.MetroSetButton();
+            this.metroSetButton4 = new MetroSet_UI.Controls.MetroSetButton();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -156,7 +157,7 @@ namespace Agile_Extension.Forms
             this.metroSetButton1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton1.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Location = new System.Drawing.Point(792, 615);
+            this.metroSetButton1.Location = new System.Drawing.Point(724, 615);
             this.metroSetButton1.Name = "metroSetButton1";
             this.metroSetButton1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -182,7 +183,7 @@ namespace Agile_Extension.Forms
             this.metroSetButton2.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton2.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton2.Location = new System.Drawing.Point(688, 615);
+            this.metroSetButton2.Location = new System.Drawing.Point(620, 615);
             this.metroSetButton2.Name = "metroSetButton2";
             this.metroSetButton2.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton2.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -208,7 +209,7 @@ namespace Agile_Extension.Forms
             this.metroSetButton3.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton3.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton3.Location = new System.Drawing.Point(896, 615);
+            this.metroSetButton3.Location = new System.Drawing.Point(828, 615);
             this.metroSetButton3.Name = "metroSetButton3";
             this.metroSetButton3.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton3.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -225,12 +226,39 @@ namespace Agile_Extension.Forms
             this.metroSetButton3.ThemeName = "MetroLite";
             this.metroSetButton3.Click += new System.EventHandler(this.metroSetButton3_Click);
             // 
+            // metroSetButton4
+            // 
+            this.metroSetButton4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton4.DisabledForeColor = System.Drawing.Color.Gray;
+            this.metroSetButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetButton4.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton4.HoverTextColor = System.Drawing.Color.White;
+            this.metroSetButton4.Location = new System.Drawing.Point(929, 615);
+            this.metroSetButton4.Name = "metroSetButton4";
+            this.metroSetButton4.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton4.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton4.NormalTextColor = System.Drawing.Color.White;
+            this.metroSetButton4.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton4.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton4.PressTextColor = System.Drawing.Color.White;
+            this.metroSetButton4.Size = new System.Drawing.Size(98, 34);
+            this.metroSetButton4.Style = MetroSet_UI.Design.Style.Light;
+            this.metroSetButton4.StyleManager = this.styleManager1;
+            this.metroSetButton4.TabIndex = 7;
+            this.metroSetButton4.Text = "Kan-Test 9";
+            this.metroSetButton4.ThemeAuthor = "Narwin";
+            this.metroSetButton4.ThemeName = "MetroLite";
+            this.metroSetButton4.Click += new System.EventHandler(this.metroSetButton4_Click);
+            // 
             // frmDashboard
             // 
             this.AllowResize = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1055, 664);
+            this.Controls.Add(this.metroSetButton4);
             this.Controls.Add(this.metroSetButton3);
             this.Controls.Add(this.metroSetButton2);
             this.Controls.Add(this.metroSetButton1);
@@ -257,5 +285,6 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton2;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton3;
+        private MetroSet_UI.Controls.MetroSetButton metroSetButton4;
     }
 }
