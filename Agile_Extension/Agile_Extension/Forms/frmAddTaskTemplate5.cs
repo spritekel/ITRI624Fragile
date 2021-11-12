@@ -21,6 +21,12 @@ namespace Agile_Extension.Forms
         private void btnAddTask_Click(object sender, EventArgs e)
         {
             frmKanbanTemplate5._Temp5.AddItem(tbTaskName.Text);
+            ResetControls();
+        }
+
+        private void ResetControls()
+        {
+            tbTaskName.Text = "";
         }
     }
 }

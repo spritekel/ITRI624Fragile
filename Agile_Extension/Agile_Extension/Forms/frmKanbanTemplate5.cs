@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroSet_UI.Forms;
+using Microsoft.VisualBasic;
 
 namespace Agile_Extension.Forms
 {
@@ -50,20 +51,60 @@ namespace Agile_Extension.Forms
             metroSetProgressBar1.Value = ((int)progPercent);
         }
 
-        // Add Tasks Section
+        #region  Add Tasks 
         public static frmKanbanTemplate5 _Temp5;
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            frmAddTaskTemplate5 add = new frmAddTaskTemplate5();
+            add.Show();
+        }
         public void AddItem(string value)
         {
             lstNotStarted.Items.Add(value);
         }
 
-        private void metroSetButton1_Click(object sender, EventArgs e)
+        #endregion
+
+
+        #region Rename
+        public string Rename(string listName)
         {
-            frmAddTaskTemplate5 add = new frmAddTaskTemplate5();
-            add.Show();
+            string newName = Interaction.InputBox("New Name", "Rename" + listName + "List", listName, (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+            if (!string.IsNullOrWhiteSpace(newName))
+            {
+                return newName;
+            }
+            else
+            {
+                MessageBox.Show("Invalid Name");
+                return listName;
+            }
+
+        }
+        private void btnRename1_Click(object sender, EventArgs e)
+        {
+            this.taskToDo.Text = Rename(this.taskToDo.Text);
+        }
+        private void btnRename2_Click(object sender, EventArgs e)
+        {
+            this.taskDoing.Text = Rename(this.taskDoing.Text);
         }
 
-        //DRAG AND DROP:
+        private void btnRename3_Click(object sender, EventArgs e)
+        {
+            this.taskCodeReview.Text = Rename(this.taskCodeReview.Text);
+        }
+
+        private void btnRename4_Click(object sender, EventArgs e)
+        {
+            this.taskTesting.Text = Rename(this.taskTesting.Text);
+        }
+
+
+        #endregion
+
+
+        #region DRAG AND DROP:
 
         private void lstNotStarted_ItemDrag(object sender, ItemDragEventArgs e)
         {
@@ -238,7 +279,8 @@ namespace Agile_Extension.Forms
             }
         }
 
-        
+        #endregion
+
         
     }
 }

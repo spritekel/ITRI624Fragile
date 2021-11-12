@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroSet_UI.Forms;
+using Microsoft.VisualBasic;
 
 namespace Agile_Extension.Forms
 {
@@ -46,14 +47,43 @@ namespace Agile_Extension.Forms
             metroSetProgressBar1.Value = ((int)progPercent);
         }
 
-
         public void AddItem(string value)
         {
             lstTodo.Items.Add(value);
         }
 
-        //DRAG AND DROP:
-        private void lstTodo_ItemDrag_Doing(object sender, ItemDragEventArgs e)
+
+        #region Rename
+        public string Rename(string listName)
+        {
+            string newName = Interaction.InputBox("New Name", "Rename" + listName + "List", listName, (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+            if (!string.IsNullOrWhiteSpace(newName))
+            {
+                return newName;
+            }
+            else
+            {
+                MessageBox.Show("Invalid Name");
+                return listName;
+            }
+
+        }
+
+        private void btnRename1_Click(object sender, EventArgs e)
+        {
+            this.taskToDo.Text = Rename(this.taskToDo.Text);
+        }
+        private void btnRename2_Click(object sender, EventArgs e)
+        {
+            this.taskDoing.Text = Rename(this.taskDoing.Text);
+        }
+
+        #endregion
+
+
+        #region Drag Drop Stuff
+        
+        private void lstTodo_ItemDrag(object sender, ItemDragEventArgs e)
         {
             // create array or collection for all selected items
             var items = new List<ListViewItem>();
@@ -71,25 +101,7 @@ namespace Agile_Extension.Forms
             lstTodo.DoDragDrop(items, DragDropEffects.Move);
         }
 
-        private void lstTodo_ItemDrag_Done(object sender, ItemDragEventArgs e)
-        {
-            // create array or collection for all selected items
-            var items = new List<ListViewItem>();
-            // add dragged one first
-            items.Add((ListViewItem)e.Item);
-            // optionally add the other selected ones
-            foreach (ListViewItem lvi in lstTodo.SelectedItems)
-            {
-                if (!items.Contains(lvi))
-                {
-                    items.Add(lvi);
-                }
-            }
-            // pass the items to move...
-            lstTodo.DoDragDrop(items, DragDropEffects.Move);
-        }
-
-        private void lstDoing_ItemDrag_Todo(object sender, ItemDragEventArgs e)
+        private void lstDoing_ItemDrag(object sender, ItemDragEventArgs e)
         {
             // create array or collection for all selected items
             var items = new List<ListViewItem>();
@@ -107,43 +119,7 @@ namespace Agile_Extension.Forms
             lstDoing.DoDragDrop(items, DragDropEffects.Move);
         }
 
-        private void lstDoing_ItemDrag_Done(object sender, ItemDragEventArgs e)
-        {
-            // create array or collection for all selected items
-            var items = new List<ListViewItem>();
-            // add dragged one first
-            items.Add((ListViewItem)e.Item);
-            // optionally add the other selected ones
-            foreach (ListViewItem lvi in lstDoing.SelectedItems)
-            {
-                if (!items.Contains(lvi))
-                {
-                    items.Add(lvi);
-                }
-            }
-            // pass the items to move...
-            lstDoing.DoDragDrop(items, DragDropEffects.Move);
-        }
-
-        private void lstDone_ItemDrag_Todo(object sender, ItemDragEventArgs e)
-        {
-            // create array or collection for all selected items
-            var items = new List<ListViewItem>();
-            // add dragged one first
-            items.Add((ListViewItem)e.Item);
-            // optionally add the other selected ones
-            foreach (ListViewItem lvi in lstDoing.SelectedItems)
-            {
-                if (!items.Contains(lvi))
-                {
-                    items.Add(lvi);
-                }
-            }
-            // pass the items to move...
-            lstDone.DoDragDrop(items, DragDropEffects.Move);
-        }
-
-        private void lstDone_ItemDrag_Doing(object sender, ItemDragEventArgs e)
+        private void lstDone_ItemDrag(object sender, ItemDragEventArgs e)
         {
             // create array or collection for all selected items
             var items = new List<ListViewItem>();
@@ -219,5 +195,7 @@ namespace Agile_Extension.Forms
             frmAddTaskTemplate3 add = new frmAddTaskTemplate3();
             add.Show();
         }
+        #endregion
+
     }
 }

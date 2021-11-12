@@ -435,3 +435,4 @@ C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agi
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate3.resources
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate5Hons.resources
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate9.resources
+C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmRenameTemplate3.resources

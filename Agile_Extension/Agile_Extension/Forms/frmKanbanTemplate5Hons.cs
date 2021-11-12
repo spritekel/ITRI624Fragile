@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroSet_UI.Forms;
+using Microsoft.VisualBasic;
 
 namespace Agile_Extension.Forms
 {
@@ -63,11 +64,47 @@ namespace Agile_Extension.Forms
             add.Show();
         }
 
+        #region Rename
+        public string Rename(string listName)
+        {
+            string newName = Interaction.InputBox("New Name", "Rename" + listName + "List", listName, (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+            if (!string.IsNullOrWhiteSpace(newName))
+            {
+                return newName;
+            }
+            else
+            {
+                MessageBox.Show("Invalid Name");
+                return listName;
+            }
+
+        }
+
+        private void btnRename1_Click(object sender, EventArgs e)
+        {
+            this.taskToDo.Text = Rename(this.taskToDo.Text);
+        }
+
+        private void btnRename2_Click(object sender, EventArgs e)
+        {
+            this.taskResearch.Text = Rename(this.taskResearch.Text);
+        }
+
+        private void btnRename3_Click(object sender, EventArgs e)
+        {
+            this.taskDevelop.Text = Rename(this.taskDevelop.Text);
+        }
+
+        private void btnRename4_Click(object sender, EventArgs e)
+        {
+            this.taskTesting.Text = Rename(this.taskTesting.Text);
+        }
+
+        #endregion
 
 
 
-
-        //DRAG AND DROP:
+        #region DRAG AND DROP:
 
         private void lstNotStarted_ItemDrag(object sender, ItemDragEventArgs e)
         {
@@ -241,6 +278,7 @@ namespace Agile_Extension.Forms
                 }
             }
         }
-        
+        #endregion
+      
     }
 }

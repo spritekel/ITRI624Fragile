@@ -41,6 +41,8 @@ namespace Agile_Extension.Forms
             this.styleManager1 = new MetroSet_UI.StyleManager();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.btnAddTask = new MetroSet_UI.Controls.MetroSetButton();
+            this.btnRename2 = new System.Windows.Forms.Button();
+            this.btnRename1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -61,7 +63,7 @@ namespace Agile_Extension.Forms
             this.lstTodo.TabIndex = 4;
             this.lstTodo.UseCompatibleStateImageBehavior = false;
             this.lstTodo.View = System.Windows.Forms.View.Details;
-            this.lstTodo.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstTodo_ItemDrag_Done);
+            this.lstTodo.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstTodo_ItemDrag);
             this.lstTodo.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstTodo_DragDrop);
             this.lstTodo.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
@@ -82,7 +84,7 @@ namespace Agile_Extension.Forms
             this.lstDoing.TabIndex = 5;
             this.lstDoing.UseCompatibleStateImageBehavior = false;
             this.lstDoing.View = System.Windows.Forms.View.Details;
-            this.lstDoing.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstDoing_ItemDrag_Done);
+            this.lstDoing.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstDoing_ItemDrag);
             this.lstDoing.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDoing_DragDrop);
             this.lstDoing.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
@@ -103,7 +105,7 @@ namespace Agile_Extension.Forms
             this.lstDone.TabIndex = 6;
             this.lstDone.UseCompatibleStateImageBehavior = false;
             this.lstDone.View = System.Windows.Forms.View.Details;
-            this.lstDone.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstDone_ItemDrag_Doing);
+            this.lstDone.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lstDone_ItemDrag);
             this.lstDone.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDone_DragDrop);
             this.lstDone.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
@@ -194,12 +196,36 @@ namespace Agile_Extension.Forms
             this.btnAddTask.ThemeName = null;
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
+            // btnRename2
+            // 
+            this.btnRename2.BackgroundImage = global::Agile_Extension.Properties.Resources.renameIcon;
+            this.btnRename2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRename2.Location = new System.Drawing.Point(497, 188);
+            this.btnRename2.Name = "btnRename2";
+            this.btnRename2.Size = new System.Drawing.Size(25, 25);
+            this.btnRename2.TabIndex = 19;
+            this.btnRename2.UseVisualStyleBackColor = true;
+            this.btnRename2.Click += new System.EventHandler(this.btnRename2_Click);
+            // 
+            // btnRename1
+            // 
+            this.btnRename1.BackgroundImage = global::Agile_Extension.Properties.Resources.renameIcon;
+            this.btnRename1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRename1.Location = new System.Drawing.Point(15, 157);
+            this.btnRename1.Name = "btnRename1";
+            this.btnRename1.Size = new System.Drawing.Size(25, 25);
+            this.btnRename1.TabIndex = 18;
+            this.btnRename1.UseVisualStyleBackColor = true;
+            this.btnRename1.Click += new System.EventHandler(this.btnRename1_Click);
+            // 
             // frmKanbanTemplate3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(792, 567);
+            this.Controls.Add(this.btnRename2);
+            this.Controls.Add(this.btnRename1);
             this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetProgressBar1);
@@ -228,5 +254,7 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetButton btnAddTask;
         private MetroSet_UI.StyleManager styleManager1;
+        private System.Windows.Forms.Button btnRename1;
+        private System.Windows.Forms.Button btnRename2;
     }
 }

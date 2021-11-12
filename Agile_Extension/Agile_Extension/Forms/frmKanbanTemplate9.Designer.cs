@@ -34,7 +34,7 @@ namespace Agile_Extension.Forms
             this.lstNotStarted = new System.Windows.Forms.ListView();
             this.taskToDo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDesignAnalysis = new System.Windows.Forms.ListView();
-            this.taskDoing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.taskDesign = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDone = new System.Windows.Forms.ListView();
             this.taskDone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroSetProgressBar1 = new MetroSet_UI.Controls.MetroSetProgressBar();
@@ -42,17 +42,25 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
             this.lstCodeReview = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.taskCodeReview = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstTesting = new System.Windows.Forms.ListView();
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.taskTesting = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstTestReady = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.taskTestReady = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstSignOff = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.taskSign = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDeployment = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.taskDeploy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDevelopment = new System.Windows.Forms.ListView();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.taskDevelop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnRename4 = new System.Windows.Forms.Button();
+            this.btnRename3 = new System.Windows.Forms.Button();
+            this.btnRename2 = new System.Windows.Forms.Button();
+            this.btnRename1 = new System.Windows.Forms.Button();
+            this.btnRename5 = new System.Windows.Forms.Button();
+            this.btnRename8 = new System.Windows.Forms.Button();
+            this.btnRename7 = new System.Windows.Forms.Button();
+            this.btnRename6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -85,7 +93,7 @@ namespace Agile_Extension.Forms
             // lstDesignAnalysis
             // 
             this.lstDesignAnalysis.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.taskDoing});
+            this.taskDesign});
             this.lstDesignAnalysis.GridLines = true;
             this.lstDesignAnalysis.HideSelection = false;
             this.lstDesignAnalysis.Location = new System.Drawing.Point(274, 137);
@@ -98,10 +106,10 @@ namespace Agile_Extension.Forms
             this.lstDesignAnalysis.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDesignAnalysis_DragDrop);
             this.lstDesignAnalysis.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
-            // taskDoing
+            // taskDesign
             // 
-            this.taskDoing.Text = "Design/Analysis";
-            this.taskDoing.Width = 250;
+            this.taskDesign.Text = "Design/Analysis";
+            this.taskDesign.Width = 250;
             // 
             // lstDone
             // 
@@ -209,7 +217,7 @@ namespace Agile_Extension.Forms
             // lstCodeReview
             // 
             this.lstCodeReview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
+            this.taskCodeReview});
             this.lstCodeReview.GridLines = true;
             this.lstCodeReview.HideSelection = false;
             this.lstCodeReview.Location = new System.Drawing.Point(787, 137);
@@ -222,15 +230,15 @@ namespace Agile_Extension.Forms
             this.lstCodeReview.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstCodeReview_DragDrop);
             this.lstCodeReview.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
-            // columnHeader1
+            // taskCodeReview
             // 
-            this.columnHeader1.Text = "Code Review";
-            this.columnHeader1.Width = 250;
+            this.taskCodeReview.Text = "Code Review";
+            this.taskCodeReview.Width = 250;
             // 
             // lstTesting
             // 
             this.lstTesting.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader2});
+            this.taskTesting});
             this.lstTesting.GridLines = true;
             this.lstTesting.HideSelection = false;
             this.lstTesting.Location = new System.Drawing.Point(146, 440);
@@ -243,15 +251,15 @@ namespace Agile_Extension.Forms
             this.lstTesting.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstTesting_DragDrop);
             this.lstTesting.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
-            // columnHeader2
+            // taskTesting
             // 
-            this.columnHeader2.Text = "In Testing";
-            this.columnHeader2.Width = 250;
+            this.taskTesting.Text = "In Testing";
+            this.taskTesting.Width = 250;
             // 
             // lstTestReady
             // 
             this.lstTestReady.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3});
+            this.taskTestReady});
             this.lstTestReady.GridLines = true;
             this.lstTestReady.HideSelection = false;
             this.lstTestReady.Location = new System.Drawing.Point(1040, 137);
@@ -264,15 +272,15 @@ namespace Agile_Extension.Forms
             this.lstTestReady.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstTestReady_DragDrop);
             this.lstTestReady.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
-            // columnHeader3
+            // taskTestReady
             // 
-            this.columnHeader3.Text = "Ready to Test";
-            this.columnHeader3.Width = 250;
+            this.taskTestReady.Text = "Ready to Test";
+            this.taskTestReady.Width = 250;
             // 
             // lstSignOff
             // 
             this.lstSignOff.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4});
+            this.taskSign});
             this.lstSignOff.GridLines = true;
             this.lstSignOff.HideSelection = false;
             this.lstSignOff.Location = new System.Drawing.Point(401, 440);
@@ -285,15 +293,15 @@ namespace Agile_Extension.Forms
             this.lstSignOff.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstSignOff_DragDrop);
             this.lstSignOff.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
-            // columnHeader4
+            // taskSign
             // 
-            this.columnHeader4.Text = "Sign Off";
-            this.columnHeader4.Width = 250;
+            this.taskSign.Text = "Sign Off";
+            this.taskSign.Width = 250;
             // 
             // lstDeployment
             // 
             this.lstDeployment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5});
+            this.taskDeploy});
             this.lstDeployment.GridLines = true;
             this.lstDeployment.HideSelection = false;
             this.lstDeployment.Location = new System.Drawing.Point(656, 440);
@@ -306,15 +314,15 @@ namespace Agile_Extension.Forms
             this.lstDeployment.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDeployment_DragDrop);
             this.lstDeployment.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
-            // columnHeader5
+            // taskDeploy
             // 
-            this.columnHeader5.Text = "Deployment";
-            this.columnHeader5.Width = 250;
+            this.taskDeploy.Text = "Deployment";
+            this.taskDeploy.Width = 250;
             // 
             // lstDevelopment
             // 
             this.lstDevelopment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6});
+            this.taskDevelop});
             this.lstDevelopment.GridLines = true;
             this.lstDevelopment.HideSelection = false;
             this.lstDevelopment.Location = new System.Drawing.Point(529, 137);
@@ -327,10 +335,98 @@ namespace Agile_Extension.Forms
             this.lstDevelopment.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDevelopment_DragDrop);
             this.lstDevelopment.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
-            // columnHeader6
+            // taskDevelop
             // 
-            this.columnHeader6.Text = "In Development";
-            this.columnHeader6.Width = 250;
+            this.taskDevelop.Text = "In Development";
+            this.taskDevelop.Width = 250;
+            // 
+            // btnRename4
+            // 
+            this.btnRename4.BackgroundImage = global::Agile_Extension.Properties.Resources.renameIcon;
+            this.btnRename4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRename4.Location = new System.Drawing.Point(1011, 137);
+            this.btnRename4.Name = "btnRename4";
+            this.btnRename4.Size = new System.Drawing.Size(25, 25);
+            this.btnRename4.TabIndex = 40;
+            this.btnRename4.UseVisualStyleBackColor = true;
+            this.btnRename4.Click += new System.EventHandler(this.btnRename4_Click);
+            // 
+            // btnRename3
+            // 
+            this.btnRename3.BackgroundImage = global::Agile_Extension.Properties.Resources.renameIcon;
+            this.btnRename3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRename3.Location = new System.Drawing.Point(756, 137);
+            this.btnRename3.Name = "btnRename3";
+            this.btnRename3.Size = new System.Drawing.Size(25, 25);
+            this.btnRename3.TabIndex = 39;
+            this.btnRename3.UseVisualStyleBackColor = true;
+            this.btnRename3.Click += new System.EventHandler(this.btnRename3_Click);
+            // 
+            // btnRename2
+            // 
+            this.btnRename2.BackgroundImage = global::Agile_Extension.Properties.Resources.renameIcon;
+            this.btnRename2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRename2.Location = new System.Drawing.Point(498, 137);
+            this.btnRename2.Name = "btnRename2";
+            this.btnRename2.Size = new System.Drawing.Size(25, 25);
+            this.btnRename2.TabIndex = 38;
+            this.btnRename2.UseVisualStyleBackColor = true;
+            this.btnRename2.Click += new System.EventHandler(this.btnRename2_Click);
+            // 
+            // btnRename1
+            // 
+            this.btnRename1.BackgroundImage = global::Agile_Extension.Properties.Resources.renameIcon;
+            this.btnRename1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRename1.Location = new System.Drawing.Point(243, 137);
+            this.btnRename1.Name = "btnRename1";
+            this.btnRename1.Size = new System.Drawing.Size(25, 25);
+            this.btnRename1.TabIndex = 37;
+            this.btnRename1.UseVisualStyleBackColor = true;
+            this.btnRename1.Click += new System.EventHandler(this.btnRename1_Click);
+            // 
+            // btnRename5
+            // 
+            this.btnRename5.BackgroundImage = global::Agile_Extension.Properties.Resources.renameIcon;
+            this.btnRename5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRename5.Location = new System.Drawing.Point(1264, 137);
+            this.btnRename5.Name = "btnRename5";
+            this.btnRename5.Size = new System.Drawing.Size(25, 25);
+            this.btnRename5.TabIndex = 41;
+            this.btnRename5.UseVisualStyleBackColor = true;
+            this.btnRename5.Click += new System.EventHandler(this.btnRename5_Click);
+            // 
+            // btnRename8
+            // 
+            this.btnRename8.BackgroundImage = global::Agile_Extension.Properties.Resources.renameIcon;
+            this.btnRename8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRename8.Location = new System.Drawing.Point(880, 440);
+            this.btnRename8.Name = "btnRename8";
+            this.btnRename8.Size = new System.Drawing.Size(25, 25);
+            this.btnRename8.TabIndex = 42;
+            this.btnRename8.UseVisualStyleBackColor = true;
+            this.btnRename8.Click += new System.EventHandler(this.btnRename8_Click);
+            // 
+            // btnRename7
+            // 
+            this.btnRename7.BackgroundImage = global::Agile_Extension.Properties.Resources.renameIcon;
+            this.btnRename7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRename7.Location = new System.Drawing.Point(625, 440);
+            this.btnRename7.Name = "btnRename7";
+            this.btnRename7.Size = new System.Drawing.Size(25, 25);
+            this.btnRename7.TabIndex = 43;
+            this.btnRename7.UseVisualStyleBackColor = true;
+            this.btnRename7.Click += new System.EventHandler(this.btnRename7_Click);
+            // 
+            // btnRename6
+            // 
+            this.btnRename6.BackgroundImage = global::Agile_Extension.Properties.Resources.renameIcon;
+            this.btnRename6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRename6.Location = new System.Drawing.Point(370, 440);
+            this.btnRename6.Name = "btnRename6";
+            this.btnRename6.Size = new System.Drawing.Size(25, 25);
+            this.btnRename6.TabIndex = 44;
+            this.btnRename6.UseVisualStyleBackColor = true;
+            this.btnRename6.Click += new System.EventHandler(this.btnRename6_Click);
             // 
             // frmKanbanTemplate9
             // 
@@ -338,6 +434,14 @@ namespace Agile_Extension.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1303, 813);
+            this.Controls.Add(this.btnRename6);
+            this.Controls.Add(this.btnRename7);
+            this.Controls.Add(this.btnRename8);
+            this.Controls.Add(this.btnRename5);
+            this.Controls.Add(this.btnRename4);
+            this.Controls.Add(this.btnRename3);
+            this.Controls.Add(this.btnRename2);
+            this.Controls.Add(this.btnRename1);
             this.Controls.Add(this.lstTestReady);
             this.Controls.Add(this.lstSignOff);
             this.Controls.Add(this.lstDeployment);
@@ -364,23 +468,31 @@ namespace Agile_Extension.Forms
         private System.Windows.Forms.ListView lstDesignAnalysis;
         private System.Windows.Forms.ListView lstDone;
         private System.Windows.Forms.ColumnHeader taskToDo;
-        private System.Windows.Forms.ColumnHeader taskDoing;
+        private System.Windows.Forms.ColumnHeader taskDesign;
         private System.Windows.Forms.ColumnHeader taskDone;
         private MetroSet_UI.Controls.MetroSetProgressBar metroSetProgressBar1;
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
         private System.Windows.Forms.ListView lstCodeReview;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader taskCodeReview;
         private System.Windows.Forms.ListView lstTesting;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader taskTesting;
         private System.Windows.Forms.ListView lstTestReady;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader taskTestReady;
         private System.Windows.Forms.ListView lstSignOff;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader taskSign;
         private System.Windows.Forms.ListView lstDeployment;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader taskDeploy;
         private System.Windows.Forms.ListView lstDevelopment;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader taskDevelop;
         private MetroSet_UI.StyleManager styleManager1;
+        private System.Windows.Forms.Button btnRename4;
+        private System.Windows.Forms.Button btnRename3;
+        private System.Windows.Forms.Button btnRename2;
+        private System.Windows.Forms.Button btnRename1;
+        private System.Windows.Forms.Button btnRename6;
+        private System.Windows.Forms.Button btnRename7;
+        private System.Windows.Forms.Button btnRename8;
+        private System.Windows.Forms.Button btnRename5;
     }
 }
