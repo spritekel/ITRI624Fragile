@@ -16,7 +16,7 @@ namespace Agile_Extension.Forms
         public frmKanbanTemplate3()
         {
             InitializeComponent();
-
+            _Temp3 = this;
             //Initially Load in progress of sprint from DB
             LoadProgressBar(DateTime.Now);
 
@@ -24,6 +24,7 @@ namespace Agile_Extension.Forms
             lstDoing.AllowDrop = true;
             lstDone.AllowDrop = true;
         }
+        public static frmKanbanTemplate3 _Temp3;
 
         public void LoadProgressBar(DateTime today)
         {
@@ -68,9 +69,12 @@ namespace Agile_Extension.Forms
             lstDone.Items.Add(listDone);
         }
 
+        public void AddItem(string value)
+        {
+            lstTodo.Items.Add(value);
+        }
 
-
-//DRAG AND DROP:
+        //DRAG AND DROP:
         private void lstTodo_ItemDrag_Doing(object sender, ItemDragEventArgs e)
         {
             // create array or collection for all selected items
@@ -232,18 +236,7 @@ namespace Agile_Extension.Forms
             }
         }
 
-        private void TodoRename_Click(object sender, EventArgs e)
-        {
-            this.taskToDo.Text = "aaaaaaaaaaaaa";
-        }
-
-        private void DoingRename_Click(object sender, EventArgs e)
-        {
-            //frmTodoRename renameDoing = new frmTodoRename();
-            //renameDoing.Show();
-        }
-
-        private void metroSetButton1_Click(object sender, EventArgs e)
+        private void btnAddTask_Click(object sender, EventArgs e)
         {
             frmAddTask add = new frmAddTask();
             add.Show();

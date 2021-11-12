@@ -45,7 +45,8 @@ namespace Agile_Extension.Forms
             this.btnDone = new System.Windows.Forms.Button();
             this.metroSetProgressBar1 = new MetroSet_UI.Controls.MetroSetProgressBar();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
-            this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
+            this.btnAddTask = new MetroSet_UI.Controls.MetroSetButton();
+            this.styleManager1 = new MetroSet_UI.StyleManager();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -186,11 +187,11 @@ namespace Agile_Extension.Forms
             this.metroSetProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetProgressBar1.Size = new System.Drawing.Size(762, 23);
             this.metroSetProgressBar1.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetProgressBar1.StyleManager = null;
+            this.metroSetProgressBar1.StyleManager = this.styleManager1;
             this.metroSetProgressBar1.TabIndex = 13;
             this.metroSetProgressBar1.Text = "metroSetProgressBar1";
-            this.metroSetProgressBar1.ThemeAuthor = "Narwin";
-            this.metroSetProgressBar1.ThemeName = "MetroLite";
+            this.metroSetProgressBar1.ThemeAuthor = null;
+            this.metroSetProgressBar1.ThemeName = null;
             this.metroSetProgressBar1.Value = 0;
             // 
             // metroSetControlBox1
@@ -212,38 +213,46 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.Name = "metroSetControlBox1";
             this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
             this.metroSetControlBox1.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetControlBox1.StyleManager = null;
+            this.metroSetControlBox1.StyleManager = this.styleManager1;
             this.metroSetControlBox1.TabIndex = 14;
             this.metroSetControlBox1.Text = "metroSetControlBox1";
-            this.metroSetControlBox1.ThemeAuthor = "Narwin";
-            this.metroSetControlBox1.ThemeName = "MetroLite";
+            this.metroSetControlBox1.ThemeAuthor = null;
+            this.metroSetControlBox1.ThemeName = null;
             // 
-            // metroSetButton1
+            // btnAddTask
             // 
-            this.metroSetButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroSetButton1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.DisabledForeColor = System.Drawing.Color.Gray;
-            this.metroSetButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetButton1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton1.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Location = new System.Drawing.Point(15, 525);
-            this.metroSetButton1.Name = "metroSetButton1";
-            this.metroSetButton1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.NormalTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton1.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Size = new System.Drawing.Size(91, 30);
-            this.metroSetButton1.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetButton1.StyleManager = null;
-            this.metroSetButton1.TabIndex = 16;
-            this.metroSetButton1.Text = "Add Task";
-            this.metroSetButton1.ThemeAuthor = "Narwin";
-            this.metroSetButton1.ThemeName = "MetroLite";
-            this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_Click);
+            this.btnAddTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddTask.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddTask.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddTask.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnAddTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAddTask.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnAddTask.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnAddTask.HoverTextColor = System.Drawing.Color.White;
+            this.btnAddTask.Location = new System.Drawing.Point(15, 525);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddTask.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAddTask.NormalTextColor = System.Drawing.Color.White;
+            this.btnAddTask.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnAddTask.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnAddTask.PressTextColor = System.Drawing.Color.White;
+            this.btnAddTask.Size = new System.Drawing.Size(91, 30);
+            this.btnAddTask.Style = MetroSet_UI.Design.Style.Light;
+            this.btnAddTask.StyleManager = this.styleManager1;
+            this.btnAddTask.TabIndex = 16;
+            this.btnAddTask.Text = "Add Task";
+            this.btnAddTask.ThemeAuthor = null;
+            this.btnAddTask.ThemeName = null;
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
+            // 
+            // styleManager1
+            // 
+            this.styleManager1.CustomTheme = "C:\\Users\\RKW-PostGrad\\AppData\\Roaming\\Microsoft\\Windows\\Templates\\ThemeFile.xml";
+            this.styleManager1.MetroForm = this;
+            this.styleManager1.Style = MetroSet_UI.Design.Style.Light;
+            this.styleManager1.ThemeAuthor = null;
+            this.styleManager1.ThemeName = null;
             // 
             // frmKanbanTemplate3
             // 
@@ -251,7 +260,7 @@ namespace Agile_Extension.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(792, 567);
-            this.Controls.Add(this.metroSetButton1);
+            this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetProgressBar1);
             this.Controls.Add(this.btnDone);
@@ -264,7 +273,10 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.inpDoing);
             this.Controls.Add(this.inpTodo);
             this.Name = "frmKanbanTemplate3";
+            this.StyleManager = this.styleManager1;
             this.Text = "Kanban Board - Simple";
+            this.ThemeAuthor = null;
+            this.ThemeName = null;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,6 +299,7 @@ namespace Agile_Extension.Forms
         private System.Windows.Forms.ColumnHeader taskDone;
         private MetroSet_UI.Controls.MetroSetProgressBar metroSetProgressBar1;
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
-        private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
+        private MetroSet_UI.Controls.MetroSetButton btnAddTask;
+        private MetroSet_UI.StyleManager styleManager1;
     }
 }

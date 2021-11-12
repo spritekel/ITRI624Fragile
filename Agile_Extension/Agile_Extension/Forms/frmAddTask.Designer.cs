@@ -33,6 +33,7 @@ namespace Agile_Extension.Forms
             this.tbTaskName = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lbTaskName = new MetroSet_UI.Controls.MetroSetLabel();
             this.btnAddTask = new MetroSet_UI.Controls.MetroSetButton();
+            this.styleManager1 = new MetroSet_UI.StyleManager();
             this.SuspendLayout();
             // 
             // metroSetControlBox1
@@ -54,11 +55,11 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.Name = "metroSetControlBox1";
             this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
             this.metroSetControlBox1.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetControlBox1.StyleManager = null;
+            this.metroSetControlBox1.StyleManager = this.styleManager1;
             this.metroSetControlBox1.TabIndex = 0;
             this.metroSetControlBox1.Text = "metroSetControlBox1";
-            this.metroSetControlBox1.ThemeAuthor = "Narwin";
-            this.metroSetControlBox1.ThemeName = "MetroLite";
+            this.metroSetControlBox1.ThemeAuthor = null;
+            this.metroSetControlBox1.ThemeName = null;
             // 
             // tbTaskName
             // 
@@ -80,11 +81,11 @@ namespace Agile_Extension.Forms
             this.tbTaskName.ReadOnly = false;
             this.tbTaskName.Size = new System.Drawing.Size(135, 30);
             this.tbTaskName.Style = MetroSet_UI.Design.Style.Light;
-            this.tbTaskName.StyleManager = null;
+            this.tbTaskName.StyleManager = this.styleManager1;
             this.tbTaskName.TabIndex = 1;
             this.tbTaskName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbTaskName.ThemeAuthor = "Narwin";
-            this.tbTaskName.ThemeName = "MetroLite";
+            this.tbTaskName.ThemeAuthor = null;
+            this.tbTaskName.ThemeName = null;
             this.tbTaskName.UseSystemPasswordChar = false;
             this.tbTaskName.WatermarkText = "";
             // 
@@ -95,12 +96,12 @@ namespace Agile_Extension.Forms
             this.lbTaskName.Name = "lbTaskName";
             this.lbTaskName.Size = new System.Drawing.Size(100, 30);
             this.lbTaskName.Style = MetroSet_UI.Design.Style.Light;
-            this.lbTaskName.StyleManager = null;
+            this.lbTaskName.StyleManager = this.styleManager1;
             this.lbTaskName.TabIndex = 2;
             this.lbTaskName.Text = "Task Name";
             this.lbTaskName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbTaskName.ThemeAuthor = "Narwin";
-            this.lbTaskName.ThemeName = "MetroLite";
+            this.lbTaskName.ThemeAuthor = null;
+            this.lbTaskName.ThemeName = null;
             // 
             // btnAddTask
             // 
@@ -121,11 +122,20 @@ namespace Agile_Extension.Forms
             this.btnAddTask.PressTextColor = System.Drawing.Color.White;
             this.btnAddTask.Size = new System.Drawing.Size(100, 38);
             this.btnAddTask.Style = MetroSet_UI.Design.Style.Light;
-            this.btnAddTask.StyleManager = null;
+            this.btnAddTask.StyleManager = this.styleManager1;
             this.btnAddTask.TabIndex = 3;
             this.btnAddTask.Text = "Add Task";
-            this.btnAddTask.ThemeAuthor = "Narwin";
-            this.btnAddTask.ThemeName = "MetroLite";
+            this.btnAddTask.ThemeAuthor = null;
+            this.btnAddTask.ThemeName = null;
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
+            // 
+            // styleManager1
+            // 
+            this.styleManager1.CustomTheme = "C:\\Users\\RKW-PostGrad\\AppData\\Roaming\\Microsoft\\Windows\\Templates\\ThemeFile.xml";
+            this.styleManager1.MetroForm = this;
+            this.styleManager1.Style = MetroSet_UI.Design.Style.Light;
+            this.styleManager1.ThemeAuthor = null;
+            this.styleManager1.ThemeName = null;
             // 
             // frmAddTask
             // 
@@ -135,7 +145,10 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.tbTaskName);
             this.Controls.Add(this.metroSetControlBox1);
             this.Name = "frmAddTask";
+            this.StyleManager = this.styleManager1;
             this.Text = "Add Task";
+            this.ThemeAuthor = null;
+            this.ThemeName = null;
             this.ResumeLayout(false);
 
         }
@@ -145,5 +158,6 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetTextBox tbTaskName;
         private MetroSet_UI.Controls.MetroSetLabel lbTaskName;
         private MetroSet_UI.Controls.MetroSetButton btnAddTask;
+        private MetroSet_UI.StyleManager styleManager1;
     }
 }

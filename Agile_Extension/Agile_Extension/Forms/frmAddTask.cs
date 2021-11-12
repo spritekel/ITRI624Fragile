@@ -19,6 +19,9 @@ namespace Agile_Extension.Forms
 
         }
 
-       
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            frmKanbanTemplate3._Temp3.AddItem(tbTaskName.Text);
+        }
     }
 }

@@ -70,6 +70,7 @@ namespace Agile_Extension.Forms
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inpDeployment = new System.Windows.Forms.TextBox();
             this.inpDevelopment = new System.Windows.Forms.TextBox();
+            this.styleManager1 = new MetroSet_UI.StyleManager();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -210,7 +211,7 @@ namespace Agile_Extension.Forms
             this.metroSetProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetProgressBar1.Size = new System.Drawing.Size(1273, 23);
             this.metroSetProgressBar1.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetProgressBar1.StyleManager = null;
+            this.metroSetProgressBar1.StyleManager = this.styleManager1;
             this.metroSetProgressBar1.TabIndex = 13;
             this.metroSetProgressBar1.Text = "metroSetProgressBar1";
             this.metroSetProgressBar1.ThemeAuthor = "Narwin";
@@ -236,7 +237,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.Name = "metroSetControlBox1";
             this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
             this.metroSetControlBox1.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetControlBox1.StyleManager = null;
+            this.metroSetControlBox1.StyleManager = this.styleManager1;
             this.metroSetControlBox1.TabIndex = 14;
             this.metroSetControlBox1.Text = "metroSetControlBox1";
             this.metroSetControlBox1.ThemeAuthor = "Narwin";
@@ -262,7 +263,7 @@ namespace Agile_Extension.Forms
             this.metroSetButton1.PressTextColor = System.Drawing.Color.White;
             this.metroSetButton1.Size = new System.Drawing.Size(91, 30);
             this.metroSetButton1.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetButton1.StyleManager = null;
+            this.metroSetButton1.StyleManager = this.styleManager1;
             this.metroSetButton1.TabIndex = 16;
             this.metroSetButton1.Text = "Add Task";
             this.metroSetButton1.ThemeAuthor = "Narwin";
@@ -503,6 +504,14 @@ namespace Agile_Extension.Forms
             this.inpDevelopment.Size = new System.Drawing.Size(206, 27);
             this.inpDevelopment.TabIndex = 26;
             // 
+            // styleManager1
+            // 
+            this.styleManager1.CustomTheme = "C:\\Users\\RKW-PostGrad\\AppData\\Roaming\\Microsoft\\Windows\\Templates\\ThemeFile.xml";
+            this.styleManager1.MetroForm = this;
+            this.styleManager1.Style = MetroSet_UI.Design.Style.Light;
+            this.styleManager1.ThemeAuthor = "Narwin";
+            this.styleManager1.ThemeName = "MetroLite";
+            // 
             // frmKanbanTemplate9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -540,6 +549,7 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.inpDesignAnalysis);
             this.Controls.Add(this.inpNotStarted);
             this.Name = "frmKanbanTemplate9";
+            this.StyleManager = this.styleManager1;
             this.Text = "Kanban Board - Software Dev Team";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -588,5 +598,6 @@ namespace Agile_Extension.Forms
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.TextBox inpDeployment;
         private System.Windows.Forms.TextBox inpDevelopment;
+        private MetroSet_UI.StyleManager styleManager1;
     }
 }
