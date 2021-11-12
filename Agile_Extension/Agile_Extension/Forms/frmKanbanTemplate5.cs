@@ -19,7 +19,9 @@ namespace Agile_Extension.Forms
 
             //Initially Load in progress of sprint from DB
             LoadProgressBar(DateTime.Now);
-
+            //Add Task
+            _Temp5 = this;
+            //DragDrop
             lstNotStarted.AllowDrop = true;
             lstProgress.AllowDrop = true;
             lstDone.AllowDrop = true;
@@ -27,6 +29,7 @@ namespace Agile_Extension.Forms
             lstCodeReview.AllowDrop = true;
         }
 
+        
         public void LoadProgressBar(DateTime today)
         {
             //place holder dates, will read from db
@@ -47,48 +50,21 @@ namespace Agile_Extension.Forms
             metroSetProgressBar1.Value = ((int)progPercent);
         }
 
-        private void frmKanban_Load(object sender, EventArgs e)
+        // Add Tasks Section
+        public static frmKanbanTemplate5 _Temp5;
+        public void AddItem(string value)
         {
-            
+            lstNotStarted.Items.Add(value);
         }
 
-        private void btnNotStarted_Click(object sender, EventArgs e)
+        private void metroSetButton1_Click(object sender, EventArgs e)
         {
-            ListViewItem item = new ListViewItem(inpNotStarted.Text);
-            lstNotStarted.Items.Add(item);
+            frmAddTaskTemplate5 add = new frmAddTaskTemplate5();
+            add.Show();
         }
-
-        private void btnProgress_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpProgress.Text);
-            lstProgress.Items.Add(item);
-        }
-
-        private void btnDone_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpDone.Text);
-            lstDone.Items.Add(item);
-        }
-
-        private void btnCodeReview_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpCodeReview.Text);
-            lstCodeReview.Items.Add(item);
-        }
-    
-
-        private void btnTesting_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpTesting.Text);
-            lstTesting.Items.Add(item);
-        }
-
-
-
-
 
         //DRAG AND DROP:
-        
+
         private void lstNotStarted_ItemDrag(object sender, ItemDragEventArgs e)
         {
             // create array or collection for all selected items
@@ -262,11 +238,7 @@ namespace Agile_Extension.Forms
             }
         }
 
-        private void metroSetButton1_Click(object sender, EventArgs e)
-        {
-            frmAddTask add = new frmAddTask();
-            add.Show();
-        }
+        
         
     }
 }

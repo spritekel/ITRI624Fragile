@@ -1,7 +1,7 @@
 ﻿
 namespace Agile_Extension.Forms
 {
-    partial class frmAddTask
+    partial class frmAddTaskTemplate9
     {
         /// <summary>
         /// Required designer variable.

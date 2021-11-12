@@ -31,22 +31,16 @@ namespace Agile_Extension.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.inpTodo = new System.Windows.Forms.TextBox();
-            this.inpDone = new System.Windows.Forms.TextBox();
-            this.inpDoing = new System.Windows.Forms.TextBox();
             this.lstTodo = new System.Windows.Forms.ListView();
             this.taskToDo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDoing = new System.Windows.Forms.ListView();
             this.taskDoing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDone = new System.Windows.Forms.ListView();
             this.taskDone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnTodo = new System.Windows.Forms.Button();
-            this.btnDoing = new System.Windows.Forms.Button();
-            this.btnDone = new System.Windows.Forms.Button();
             this.metroSetProgressBar1 = new MetroSet_UI.Controls.MetroSetProgressBar();
+            this.styleManager1 = new MetroSet_UI.StyleManager();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.btnAddTask = new MetroSet_UI.Controls.MetroSetButton();
-            this.styleManager1 = new MetroSet_UI.StyleManager();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -54,27 +48,6 @@ namespace Agile_Extension.Forms
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // inpTodo
-            // 
-            this.inpTodo.Location = new System.Drawing.Point(15, 492);
-            this.inpTodo.Name = "inpTodo";
-            this.inpTodo.Size = new System.Drawing.Size(206, 27);
-            this.inpTodo.TabIndex = 1;
-            // 
-            // inpDone
-            // 
-            this.inpDone.Location = new System.Drawing.Point(528, 490);
-            this.inpDone.Name = "inpDone";
-            this.inpDone.Size = new System.Drawing.Size(206, 27);
-            this.inpDone.TabIndex = 3;
-            // 
-            // inpDoing
-            // 
-            this.inpDoing.Location = new System.Drawing.Point(273, 491);
-            this.inpDoing.Name = "inpDoing";
-            this.inpDoing.Size = new System.Drawing.Size(206, 27);
-            this.inpDoing.TabIndex = 2;
             // 
             // lstTodo
             // 
@@ -139,39 +112,6 @@ namespace Agile_Extension.Forms
             this.taskDone.Text = "Done";
             this.taskDone.Width = 250;
             // 
-            // btnTodo
-            // 
-            this.btnTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnTodo.Location = new System.Drawing.Point(227, 491);
-            this.btnTodo.Name = "btnTodo";
-            this.btnTodo.Size = new System.Drawing.Size(40, 27);
-            this.btnTodo.TabIndex = 7;
-            this.btnTodo.Text = "Add";
-            this.btnTodo.UseVisualStyleBackColor = true;
-            this.btnTodo.Click += new System.EventHandler(this.btnTodo_Click);
-            // 
-            // btnDoing
-            // 
-            this.btnDoing.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnDoing.Location = new System.Drawing.Point(485, 491);
-            this.btnDoing.Name = "btnDoing";
-            this.btnDoing.Size = new System.Drawing.Size(37, 27);
-            this.btnDoing.TabIndex = 8;
-            this.btnDoing.Text = "Add";
-            this.btnDoing.UseVisualStyleBackColor = true;
-            this.btnDoing.Click += new System.EventHandler(this.btnDoing_Click);
-            // 
-            // btnDone
-            // 
-            this.btnDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnDone.Location = new System.Drawing.Point(740, 490);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(37, 27);
-            this.btnDone.TabIndex = 9;
-            this.btnDone.Text = "Add";
-            this.btnDone.UseVisualStyleBackColor = true;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
-            // 
             // metroSetProgressBar1
             // 
             this.metroSetProgressBar1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -193,6 +133,14 @@ namespace Agile_Extension.Forms
             this.metroSetProgressBar1.ThemeAuthor = null;
             this.metroSetProgressBar1.ThemeName = null;
             this.metroSetProgressBar1.Value = 0;
+            // 
+            // styleManager1
+            // 
+            this.styleManager1.CustomTheme = "C:\\Users\\RKW-PostGrad\\AppData\\Roaming\\Microsoft\\Windows\\Templates\\ThemeFile.xml";
+            this.styleManager1.MetroForm = this;
+            this.styleManager1.Style = MetroSet_UI.Design.Style.Light;
+            this.styleManager1.ThemeAuthor = null;
+            this.styleManager1.ThemeName = null;
             // 
             // metroSetControlBox1
             // 
@@ -229,7 +177,7 @@ namespace Agile_Extension.Forms
             this.btnAddTask.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnAddTask.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnAddTask.HoverTextColor = System.Drawing.Color.White;
-            this.btnAddTask.Location = new System.Drawing.Point(15, 525);
+            this.btnAddTask.Location = new System.Drawing.Point(15, 506);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnAddTask.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -246,14 +194,6 @@ namespace Agile_Extension.Forms
             this.btnAddTask.ThemeName = null;
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
-            // styleManager1
-            // 
-            this.styleManager1.CustomTheme = "C:\\Users\\RKW-PostGrad\\AppData\\Roaming\\Microsoft\\Windows\\Templates\\ThemeFile.xml";
-            this.styleManager1.MetroForm = this;
-            this.styleManager1.Style = MetroSet_UI.Design.Style.Light;
-            this.styleManager1.ThemeAuthor = null;
-            this.styleManager1.ThemeName = null;
-            // 
             // frmKanbanTemplate3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -263,37 +203,24 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetProgressBar1);
-            this.Controls.Add(this.btnDone);
-            this.Controls.Add(this.btnDoing);
-            this.Controls.Add(this.btnTodo);
             this.Controls.Add(this.lstDone);
             this.Controls.Add(this.lstDoing);
             this.Controls.Add(this.lstTodo);
-            this.Controls.Add(this.inpDone);
-            this.Controls.Add(this.inpDoing);
-            this.Controls.Add(this.inpTodo);
             this.Name = "frmKanbanTemplate3";
             this.StyleManager = this.styleManager1;
             this.Text = "Kanban Board - Simple";
             this.ThemeAuthor = null;
             this.ThemeName = null;
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox inpTodo;
-        private System.Windows.Forms.TextBox inpDone;
-        private System.Windows.Forms.TextBox inpDoing;
         private System.Windows.Forms.ListView lstTodo;
         private System.Windows.Forms.ListView lstDoing;
         private System.Windows.Forms.ListView lstDone;
-        private System.Windows.Forms.Button btnTodo;
-        private System.Windows.Forms.Button btnDoing;
-        private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.ColumnHeader taskToDo;
         private System.Windows.Forms.ColumnHeader taskDoing;
         private System.Windows.Forms.ColumnHeader taskDone;

@@ -46,28 +46,6 @@ namespace Agile_Extension.Forms
             metroSetProgressBar1.Value = ((int)progPercent);
         }
 
-        private void frmKanban_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnTodo_Click(object sender, EventArgs e)
-        {
-            ListViewItem listTodo = new ListViewItem(inpTodo.Text);
-            lstTodo.Items.Add(listTodo);
-        }
-
-        private void btnDoing_Click(object sender, EventArgs e)
-        {
-            ListViewItem listDoing = new ListViewItem(inpDoing.Text);
-            lstDoing.Items.Add(listDoing);
-        }
-
-        private void btnDone_Click(object sender, EventArgs e)
-        {
-            ListViewItem listDone = new ListViewItem(inpDone.Text);
-            lstDone.Items.Add(listDone);
-        }
 
         public void AddItem(string value)
         {
@@ -238,7 +216,7 @@ namespace Agile_Extension.Forms
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
-            frmAddTask add = new frmAddTask();
+            frmAddTaskTemplate3 add = new frmAddTaskTemplate3();
             add.Show();
         }
     }

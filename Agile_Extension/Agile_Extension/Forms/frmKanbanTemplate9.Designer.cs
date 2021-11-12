@@ -31,46 +31,28 @@ namespace Agile_Extension.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.inpNotStarted = new System.Windows.Forms.TextBox();
-            this.inpDone = new System.Windows.Forms.TextBox();
-            this.inpDesignAnalysis = new System.Windows.Forms.TextBox();
             this.lstNotStarted = new System.Windows.Forms.ListView();
             this.taskToDo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDesignAnalysis = new System.Windows.Forms.ListView();
             this.taskDoing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDone = new System.Windows.Forms.ListView();
             this.taskDone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnNotStarted = new System.Windows.Forms.Button();
-            this.btnDesignAnalysis = new System.Windows.Forms.Button();
-            this.btnDone = new System.Windows.Forms.Button();
             this.metroSetProgressBar1 = new MetroSet_UI.Controls.MetroSetProgressBar();
+            this.styleManager1 = new MetroSet_UI.StyleManager();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
-            this.btnCodeReview = new System.Windows.Forms.Button();
             this.lstCodeReview = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.inpCodeReview = new System.Windows.Forms.TextBox();
-            this.btnTesting = new System.Windows.Forms.Button();
             this.lstTesting = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.inpTesting = new System.Windows.Forms.TextBox();
-            this.btnTestReady = new System.Windows.Forms.Button();
             this.lstTestReady = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.inpTestReady = new System.Windows.Forms.TextBox();
-            this.btnSignOff = new System.Windows.Forms.Button();
             this.lstSignOff = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.inpSignOff = new System.Windows.Forms.TextBox();
-            this.btnDeployment = new System.Windows.Forms.Button();
-            this.btnDevelopment = new System.Windows.Forms.Button();
             this.lstDeployment = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstDevelopment = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.inpDeployment = new System.Windows.Forms.TextBox();
-            this.inpDevelopment = new System.Windows.Forms.TextBox();
-            this.styleManager1 = new MetroSet_UI.StyleManager();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -78,27 +60,6 @@ namespace Agile_Extension.Forms
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // inpNotStarted
-            // 
-            this.inpNotStarted.Location = new System.Drawing.Point(16, 441);
-            this.inpNotStarted.Name = "inpNotStarted";
-            this.inpNotStarted.Size = new System.Drawing.Size(206, 27);
-            this.inpNotStarted.TabIndex = 1;
-            // 
-            // inpDone
-            // 
-            this.inpDone.Location = new System.Drawing.Point(917, 778);
-            this.inpDone.Name = "inpDone";
-            this.inpDone.Size = new System.Drawing.Size(206, 27);
-            this.inpDone.TabIndex = 3;
-            // 
-            // inpDesignAnalysis
-            // 
-            this.inpDesignAnalysis.Location = new System.Drawing.Point(274, 440);
-            this.inpDesignAnalysis.Name = "inpDesignAnalysis";
-            this.inpDesignAnalysis.Size = new System.Drawing.Size(206, 27);
-            this.inpDesignAnalysis.TabIndex = 2;
             // 
             // lstNotStarted
             // 
@@ -148,7 +109,7 @@ namespace Agile_Extension.Forms
             this.taskDone});
             this.lstDone.GridLines = true;
             this.lstDone.HideSelection = false;
-            this.lstDone.Location = new System.Drawing.Point(917, 476);
+            this.lstDone.Location = new System.Drawing.Point(911, 443);
             this.lstDone.Name = "lstDone";
             this.lstDone.Size = new System.Drawing.Size(249, 296);
             this.lstDone.TabIndex = 6;
@@ -162,39 +123,6 @@ namespace Agile_Extension.Forms
             // 
             this.taskDone.Text = "Done";
             this.taskDone.Width = 250;
-            // 
-            // btnNotStarted
-            // 
-            this.btnNotStarted.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnNotStarted.Location = new System.Drawing.Point(228, 440);
-            this.btnNotStarted.Name = "btnNotStarted";
-            this.btnNotStarted.Size = new System.Drawing.Size(40, 27);
-            this.btnNotStarted.TabIndex = 7;
-            this.btnNotStarted.Text = "Add";
-            this.btnNotStarted.UseVisualStyleBackColor = true;
-            this.btnNotStarted.Click += new System.EventHandler(this.btnNotStarted_Click);
-            // 
-            // btnDesignAnalysis
-            // 
-            this.btnDesignAnalysis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnDesignAnalysis.Location = new System.Drawing.Point(486, 440);
-            this.btnDesignAnalysis.Name = "btnDesignAnalysis";
-            this.btnDesignAnalysis.Size = new System.Drawing.Size(37, 27);
-            this.btnDesignAnalysis.TabIndex = 8;
-            this.btnDesignAnalysis.Text = "Add";
-            this.btnDesignAnalysis.UseVisualStyleBackColor = true;
-            this.btnDesignAnalysis.Click += new System.EventHandler(this.btnProgress_Click);
-            // 
-            // btnDone
-            // 
-            this.btnDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnDone.Location = new System.Drawing.Point(1129, 778);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(37, 27);
-            this.btnDone.TabIndex = 9;
-            this.btnDone.Text = "Add";
-            this.btnDone.UseVisualStyleBackColor = true;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // metroSetProgressBar1
             // 
@@ -217,6 +145,14 @@ namespace Agile_Extension.Forms
             this.metroSetProgressBar1.ThemeAuthor = "Narwin";
             this.metroSetProgressBar1.ThemeName = "MetroLite";
             this.metroSetProgressBar1.Value = 0;
+            // 
+            // styleManager1
+            // 
+            this.styleManager1.CustomTheme = "C:\\Users\\RKW-PostGrad\\AppData\\Roaming\\Microsoft\\Windows\\Templates\\ThemeFile.xml";
+            this.styleManager1.MetroForm = this;
+            this.styleManager1.Style = MetroSet_UI.Design.Style.Light;
+            this.styleManager1.ThemeAuthor = "Narwin";
+            this.styleManager1.ThemeName = "MetroLite";
             // 
             // metroSetControlBox1
             // 
@@ -270,17 +206,6 @@ namespace Agile_Extension.Forms
             this.metroSetButton1.ThemeName = "MetroLite";
             this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_Click);
             // 
-            // btnCodeReview
-            // 
-            this.btnCodeReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnCodeReview.Location = new System.Drawing.Point(999, 440);
-            this.btnCodeReview.Name = "btnCodeReview";
-            this.btnCodeReview.Size = new System.Drawing.Size(37, 27);
-            this.btnCodeReview.TabIndex = 21;
-            this.btnCodeReview.Text = "Add";
-            this.btnCodeReview.UseVisualStyleBackColor = true;
-            this.btnCodeReview.Click += new System.EventHandler(this.btnCodeReview_Click);
-            // 
             // lstCodeReview
             // 
             this.lstCodeReview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -302,31 +227,13 @@ namespace Agile_Extension.Forms
             this.columnHeader1.Text = "Code Review";
             this.columnHeader1.Width = 250;
             // 
-            // inpCodeReview
-            // 
-            this.inpCodeReview.Location = new System.Drawing.Point(787, 440);
-            this.inpCodeReview.Name = "inpCodeReview";
-            this.inpCodeReview.Size = new System.Drawing.Size(206, 27);
-            this.inpCodeReview.TabIndex = 19;
-            // 
-            // btnTesting
-            // 
-            this.btnTesting.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnTesting.Location = new System.Drawing.Point(364, 776);
-            this.btnTesting.Name = "btnTesting";
-            this.btnTesting.Size = new System.Drawing.Size(37, 27);
-            this.btnTesting.TabIndex = 25;
-            this.btnTesting.Text = "Add";
-            this.btnTesting.UseVisualStyleBackColor = true;
-            this.btnTesting.Click += new System.EventHandler(this.btnTesting_Click);
-            // 
             // lstTesting
             // 
             this.lstTesting.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2});
             this.lstTesting.GridLines = true;
             this.lstTesting.HideSelection = false;
-            this.lstTesting.Location = new System.Drawing.Point(152, 473);
+            this.lstTesting.Location = new System.Drawing.Point(146, 440);
             this.lstTesting.Name = "lstTesting";
             this.lstTesting.Size = new System.Drawing.Size(249, 297);
             this.lstTesting.TabIndex = 24;
@@ -340,24 +247,6 @@ namespace Agile_Extension.Forms
             // 
             this.columnHeader2.Text = "In Testing";
             this.columnHeader2.Width = 250;
-            // 
-            // inpTesting
-            // 
-            this.inpTesting.Location = new System.Drawing.Point(152, 776);
-            this.inpTesting.Name = "inpTesting";
-            this.inpTesting.Size = new System.Drawing.Size(206, 27);
-            this.inpTesting.TabIndex = 23;
-            // 
-            // btnTestReady
-            // 
-            this.btnTestReady.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnTestReady.Location = new System.Drawing.Point(1252, 440);
-            this.btnTestReady.Name = "btnTestReady";
-            this.btnTestReady.Size = new System.Drawing.Size(37, 27);
-            this.btnTestReady.TabIndex = 37;
-            this.btnTestReady.Text = "Add";
-            this.btnTestReady.UseVisualStyleBackColor = true;
-            this.btnTestReady.Click += new System.EventHandler(this.btnTestReady_Click);
             // 
             // lstTestReady
             // 
@@ -380,31 +269,13 @@ namespace Agile_Extension.Forms
             this.columnHeader3.Text = "Ready to Test";
             this.columnHeader3.Width = 250;
             // 
-            // inpTestReady
-            // 
-            this.inpTestReady.Location = new System.Drawing.Point(1040, 440);
-            this.inpTestReady.Name = "inpTestReady";
-            this.inpTestReady.Size = new System.Drawing.Size(206, 27);
-            this.inpTestReady.TabIndex = 35;
-            // 
-            // btnSignOff
-            // 
-            this.btnSignOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnSignOff.Location = new System.Drawing.Point(619, 776);
-            this.btnSignOff.Name = "btnSignOff";
-            this.btnSignOff.Size = new System.Drawing.Size(37, 27);
-            this.btnSignOff.TabIndex = 34;
-            this.btnSignOff.Text = "Add";
-            this.btnSignOff.UseVisualStyleBackColor = true;
-            this.btnSignOff.Click += new System.EventHandler(this.btnSignOff_Click);
-            // 
             // lstSignOff
             // 
             this.lstSignOff.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader4});
             this.lstSignOff.GridLines = true;
             this.lstSignOff.HideSelection = false;
-            this.lstSignOff.Location = new System.Drawing.Point(407, 473);
+            this.lstSignOff.Location = new System.Drawing.Point(401, 440);
             this.lstSignOff.Name = "lstSignOff";
             this.lstSignOff.Size = new System.Drawing.Size(249, 297);
             this.lstSignOff.TabIndex = 33;
@@ -419,42 +290,13 @@ namespace Agile_Extension.Forms
             this.columnHeader4.Text = "Sign Off";
             this.columnHeader4.Width = 250;
             // 
-            // inpSignOff
-            // 
-            this.inpSignOff.Location = new System.Drawing.Point(407, 776);
-            this.inpSignOff.Name = "inpSignOff";
-            this.inpSignOff.Size = new System.Drawing.Size(206, 27);
-            this.inpSignOff.TabIndex = 32;
-            // 
-            // btnDeployment
-            // 
-            this.btnDeployment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnDeployment.Location = new System.Drawing.Point(874, 776);
-            this.btnDeployment.Name = "btnDeployment";
-            this.btnDeployment.Size = new System.Drawing.Size(37, 27);
-            this.btnDeployment.TabIndex = 31;
-            this.btnDeployment.Text = "Add";
-            this.btnDeployment.UseVisualStyleBackColor = true;
-            this.btnDeployment.Click += new System.EventHandler(this.btnDeployment_Click);
-            // 
-            // btnDevelopment
-            // 
-            this.btnDevelopment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btnDevelopment.Location = new System.Drawing.Point(741, 440);
-            this.btnDevelopment.Name = "btnDevelopment";
-            this.btnDevelopment.Size = new System.Drawing.Size(40, 27);
-            this.btnDevelopment.TabIndex = 30;
-            this.btnDevelopment.Text = "Add";
-            this.btnDevelopment.UseVisualStyleBackColor = true;
-            this.btnDevelopment.Click += new System.EventHandler(this.btnDevelopment_Click);
-            // 
             // lstDeployment
             // 
             this.lstDeployment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5});
             this.lstDeployment.GridLines = true;
             this.lstDeployment.HideSelection = false;
-            this.lstDeployment.Location = new System.Drawing.Point(662, 473);
+            this.lstDeployment.Location = new System.Drawing.Point(656, 440);
             this.lstDeployment.Name = "lstDeployment";
             this.lstDeployment.Size = new System.Drawing.Size(249, 297);
             this.lstDeployment.TabIndex = 29;
@@ -490,114 +332,55 @@ namespace Agile_Extension.Forms
             this.columnHeader6.Text = "In Development";
             this.columnHeader6.Width = 250;
             // 
-            // inpDeployment
-            // 
-            this.inpDeployment.Location = new System.Drawing.Point(662, 776);
-            this.inpDeployment.Name = "inpDeployment";
-            this.inpDeployment.Size = new System.Drawing.Size(206, 27);
-            this.inpDeployment.TabIndex = 27;
-            // 
-            // inpDevelopment
-            // 
-            this.inpDevelopment.Location = new System.Drawing.Point(529, 441);
-            this.inpDevelopment.Name = "inpDevelopment";
-            this.inpDevelopment.Size = new System.Drawing.Size(206, 27);
-            this.inpDevelopment.TabIndex = 26;
-            // 
-            // styleManager1
-            // 
-            this.styleManager1.CustomTheme = "C:\\Users\\RKW-PostGrad\\AppData\\Roaming\\Microsoft\\Windows\\Templates\\ThemeFile.xml";
-            this.styleManager1.MetroForm = this;
-            this.styleManager1.Style = MetroSet_UI.Design.Style.Light;
-            this.styleManager1.ThemeAuthor = "Narwin";
-            this.styleManager1.ThemeName = "MetroLite";
-            // 
             // frmKanbanTemplate9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1303, 813);
-            this.Controls.Add(this.btnTestReady);
             this.Controls.Add(this.lstTestReady);
-            this.Controls.Add(this.inpTestReady);
-            this.Controls.Add(this.btnSignOff);
             this.Controls.Add(this.lstSignOff);
-            this.Controls.Add(this.inpSignOff);
-            this.Controls.Add(this.btnDeployment);
-            this.Controls.Add(this.btnDevelopment);
             this.Controls.Add(this.lstDeployment);
             this.Controls.Add(this.lstDevelopment);
-            this.Controls.Add(this.inpDeployment);
-            this.Controls.Add(this.inpDevelopment);
-            this.Controls.Add(this.btnTesting);
             this.Controls.Add(this.lstTesting);
-            this.Controls.Add(this.inpTesting);
-            this.Controls.Add(this.btnCodeReview);
             this.Controls.Add(this.lstCodeReview);
-            this.Controls.Add(this.inpCodeReview);
             this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetProgressBar1);
-            this.Controls.Add(this.btnDone);
-            this.Controls.Add(this.btnDesignAnalysis);
-            this.Controls.Add(this.btnNotStarted);
             this.Controls.Add(this.lstDone);
             this.Controls.Add(this.lstDesignAnalysis);
             this.Controls.Add(this.lstNotStarted);
-            this.Controls.Add(this.inpDone);
-            this.Controls.Add(this.inpDesignAnalysis);
-            this.Controls.Add(this.inpNotStarted);
             this.Name = "frmKanbanTemplate9";
             this.StyleManager = this.styleManager1;
             this.Text = "Kanban Board - Software Dev Team";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox inpNotStarted;
-        private System.Windows.Forms.TextBox inpDone;
-        private System.Windows.Forms.TextBox inpDesignAnalysis;
         private System.Windows.Forms.ListView lstNotStarted;
         private System.Windows.Forms.ListView lstDesignAnalysis;
         private System.Windows.Forms.ListView lstDone;
-        private System.Windows.Forms.Button btnNotStarted;
-        private System.Windows.Forms.Button btnDesignAnalysis;
-        private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.ColumnHeader taskToDo;
         private System.Windows.Forms.ColumnHeader taskDoing;
         private System.Windows.Forms.ColumnHeader taskDone;
         private MetroSet_UI.Controls.MetroSetProgressBar metroSetProgressBar1;
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
-        private System.Windows.Forms.Button btnCodeReview;
         private System.Windows.Forms.ListView lstCodeReview;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.TextBox inpCodeReview;
-        private System.Windows.Forms.Button btnTesting;
         private System.Windows.Forms.ListView lstTesting;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.TextBox inpTesting;
-        private System.Windows.Forms.Button btnTestReady;
         private System.Windows.Forms.ListView lstTestReady;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.TextBox inpTestReady;
-        private System.Windows.Forms.Button btnSignOff;
         private System.Windows.Forms.ListView lstSignOff;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.TextBox inpSignOff;
-        private System.Windows.Forms.Button btnDeployment;
-        private System.Windows.Forms.Button btnDevelopment;
         private System.Windows.Forms.ListView lstDeployment;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ListView lstDevelopment;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.TextBox inpDeployment;
-        private System.Windows.Forms.TextBox inpDevelopment;
         private MetroSet_UI.StyleManager styleManager1;
     }
 }

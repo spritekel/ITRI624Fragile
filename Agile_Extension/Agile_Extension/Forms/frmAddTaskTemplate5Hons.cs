@@ -11,17 +11,16 @@ using MetroSet_UI.Forms;
 
 namespace Agile_Extension.Forms
 {
-    public partial class frmAddTask : MetroSetForm
+    public partial class frmAddTaskTemplate5Hons : MetroSetForm
     {
-        public frmAddTask()
+        public frmAddTaskTemplate5Hons()
         {
             InitializeComponent();
-
         }
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
-            frmKanbanTemplate3._Temp3.AddItem(tbTaskName.Text);
+            frmKanbanTemplate5Hons._Temp5Hons.AddItem(tbTaskName.Text);
         }
     }
 }

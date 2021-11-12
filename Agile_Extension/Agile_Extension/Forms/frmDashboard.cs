@@ -169,28 +169,24 @@ namespace Agile_Extension.Forms
         {
             frmKanbanTemplate5 kan = new frmKanbanTemplate5();
             kan.Show();
-            this.Hide();
         }
 
         private void metroSetButton2_Click(object sender, EventArgs e)
         {
             frmKanbanTemplate3 kan = new frmKanbanTemplate3();
             kan.Show();
-            this.Hide();
         }
 
         private void metroSetButton3_Click(object sender, EventArgs e)
         {
             frmKanbanTemplate5Hons kan = new frmKanbanTemplate5Hons();
             kan.Show();
-            this.Hide();
         }
 
         private void metroSetButton4_Click(object sender, EventArgs e)
         {
             frmKanbanTemplate9 kan = new frmKanbanTemplate9();
             kan.Show();
-            this.Hide();
         }
     }
 }

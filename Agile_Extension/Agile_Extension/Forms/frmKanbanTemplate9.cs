@@ -19,7 +19,9 @@ namespace Agile_Extension.Forms
 
             //Initially Load in progress of sprint from DB
             LoadProgressBar(DateTime.Now);
-
+            //AddTasks
+            _Temp9 = this;
+            //DragDrop
             lstNotStarted.AllowDrop = true;
             lstDesignAnalysis.AllowDrop = true;
             lstDevelopment.AllowDrop = true;
@@ -51,64 +53,17 @@ namespace Agile_Extension.Forms
             metroSetProgressBar1.Value = ((int)progPercent);
         }
 
-        private void frmKanban_Load(object sender, EventArgs e)
+        //Add Tasks
+        public static frmKanbanTemplate9 _Temp9;
+        public void AddItem(string value)
         {
-            
+            lstNotStarted.Items.Add(value);
         }
 
-        private void btnNotStarted_Click(object sender, EventArgs e)
+        private void metroSetButton1_Click(object sender, EventArgs e)
         {
-            ListViewItem item = new ListViewItem(inpNotStarted.Text);
-            lstNotStarted.Items.Add(item);
-        }
-
-        private void btnProgress_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpDesignAnalysis.Text);
-            lstDesignAnalysis.Items.Add(item);
-        }
-
-        private void btnDone_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpDone.Text);
-            lstDone.Items.Add(item);
-        }
-
-        private void btnCodeReview_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpCodeReview.Text);
-            lstCodeReview.Items.Add(item);
-        }
-    
-
-        private void btnTesting_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpTesting.Text);
-            lstTesting.Items.Add(item);
-        }
-
-        private void btnSignOff_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpSignOff.Text);
-            lstSignOff.Items.Add(item);
-        }
-
-        private void btnDeployment_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpDeployment.Text);
-            lstDeployment.Items.Add(item);
-        }
-
-        private void btnTestReady_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpTestReady.Text);
-            lstTestReady.Items.Add(item);
-        }
-
-        private void btnDevelopment_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem(inpDevelopment.Text);
-            lstDevelopment.Items.Add(item);
+            frmAddTaskTemplate9 add = new frmAddTaskTemplate9();
+            add.Show();
         }
 
 
@@ -421,14 +376,6 @@ namespace Agile_Extension.Forms
                 }
             }
         }
-
-
-        private void metroSetButton1_Click(object sender, EventArgs e)
-        {
-            frmAddTask add = new frmAddTask();
-            add.Show();
-        }
-
-        
+               
     }
 }
