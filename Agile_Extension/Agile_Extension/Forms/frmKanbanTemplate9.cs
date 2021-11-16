@@ -71,7 +71,7 @@ namespace Agile_Extension.Forms
         #region Rename
         public string Rename(string listName)
         {
-            string newName = Interaction.InputBox("New Name", "Rename" + listName + "List", listName, (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+            string newName = Interaction.InputBox("New Name", "Rename " + listName + " List", listName, (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             if (!string.IsNullOrWhiteSpace(newName))
             {
                 return newName;
