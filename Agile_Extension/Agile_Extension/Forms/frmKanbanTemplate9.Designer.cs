@@ -430,8 +430,7 @@ namespace Agile_Extension.Forms
             // 
             // frmKanbanTemplate9
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1303, 813);
             this.Controls.Add(this.btnRename6);

@@ -303,8 +303,7 @@ namespace Agile_Extension.Forms
             // frmSignUp
             // 
             this.AllowResize = false;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(483, 419);
             this.Controls.Add(this.metroSetPanel1);
             this.Controls.Add(this.metroSetControlBox1);

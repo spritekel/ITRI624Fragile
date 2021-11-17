@@ -255,8 +255,7 @@ namespace Agile_Extension.Forms
             // frmDashboard
             // 
             this.AllowResize = false;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1055, 664);
             this.Controls.Add(this.metroSetButton4);
             this.Controls.Add(this.metroSetButton3);
