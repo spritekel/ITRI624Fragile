@@ -36,6 +36,8 @@ namespace Agile_Extension.Forms
             this.btnAddTask = new MetroSet_UI.Controls.MetroSetButton();
             this.lblOutput = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblMembers = new MetroSet_UI.Controls.MetroSetLabel();
+            this.cmbMembers = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.lblMembersDets = new MetroSet_UI.Controls.MetroSetLabel();
             this.listMembers = new MetroSet_UI.Controls.MetroSetListBox();
             this.SuspendLayout();
             // 
@@ -46,7 +48,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(194, 7);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(485, 10);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -167,16 +169,57 @@ namespace Agile_Extension.Forms
             this.lblMembers.ThemeAuthor = null;
             this.lblMembers.ThemeName = null;
             // 
+            // cmbMembers
+            // 
+            this.cmbMembers.AllowDrop = true;
+            this.cmbMembers.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.cmbMembers.BackColor = System.Drawing.Color.Transparent;
+            this.cmbMembers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.cmbMembers.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.cmbMembers.CausesValidation = false;
+            this.cmbMembers.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbMembers.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.cmbMembers.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.cmbMembers.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMembers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cmbMembers.FormattingEnabled = true;
+            this.cmbMembers.ItemHeight = 20;
+            this.cmbMembers.Location = new System.Drawing.Point(138, 157);
+            this.cmbMembers.Name = "cmbMembers";
+            this.cmbMembers.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmbMembers.SelectedItemForeColor = System.Drawing.Color.White;
+            this.cmbMembers.Size = new System.Drawing.Size(147, 26);
+            this.cmbMembers.Style = MetroSet_UI.Design.Style.Light;
+            this.cmbMembers.StyleManager = this.styleManager1;
+            this.cmbMembers.TabIndex = 6;
+            this.cmbMembers.ThemeAuthor = null;
+            this.cmbMembers.ThemeName = null;
+            this.cmbMembers.SelectedIndexChanged += new System.EventHandler(this.cmbMembers_SelectedIndexChanged);
+            // 
+            // lblMembersDets
+            // 
+            this.lblMembersDets.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblMembersDets.Location = new System.Drawing.Point(314, 52);
+            this.lblMembersDets.Name = "lblMembersDets";
+            this.lblMembersDets.Size = new System.Drawing.Size(100, 23);
+            this.lblMembersDets.Style = MetroSet_UI.Design.Style.Light;
+            this.lblMembersDets.StyleManager = this.styleManager1;
+            this.lblMembersDets.TabIndex = 7;
+            this.lblMembersDets.Text = "Members:";
+            this.lblMembersDets.ThemeAuthor = null;
+            this.lblMembersDets.ThemeName = null;
+            // 
             // listMembers
             // 
             this.listMembers.BorderColor = System.Drawing.Color.LightGray;
             this.listMembers.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.listMembers.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.listMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.listMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.listMembers.HoveredItemBackColor = System.Drawing.Color.LightGray;
             this.listMembers.HoveredItemColor = System.Drawing.Color.DimGray;
             this.listMembers.ItemHeight = 30;
-            this.listMembers.Location = new System.Drawing.Point(139, 154);
+            this.listMembers.Location = new System.Drawing.Point(314, 78);
             this.listMembers.MultiSelect = false;
             this.listMembers.Name = "listMembers";
             this.listMembers.SelectedIndex = -1;
@@ -185,18 +228,21 @@ namespace Agile_Extension.Forms
             this.listMembers.SelectedItemColor = System.Drawing.Color.White;
             this.listMembers.SelectedValue = null;
             this.listMembers.ShowBorder = false;
-            this.listMembers.ShowScrollBar = false;
-            this.listMembers.Size = new System.Drawing.Size(134, 30);
+            this.listMembers.ShowScrollBar = true;
+            this.listMembers.Size = new System.Drawing.Size(250, 190);
             this.listMembers.Style = MetroSet_UI.Design.Style.Light;
             this.listMembers.StyleManager = this.styleManager1;
-            this.listMembers.TabIndex = 6;
+            this.listMembers.TabIndex = 8;
             this.listMembers.ThemeAuthor = null;
             this.listMembers.ThemeName = null;
+            this.listMembers.SelectedIndexChanged += new MetroSet_UI.Controls.MetroSetListBox.SelectedIndexChangedEventHandler(this.listMembers_SelectedIndexChanged);
             // 
             // frmAddTaskTemplate3
             // 
-            this.ClientSize = new System.Drawing.Size(300, 300);
+            this.ClientSize = new System.Drawing.Size(600, 300);
             this.Controls.Add(this.listMembers);
+            this.Controls.Add(this.lblMembersDets);
+            this.Controls.Add(this.cmbMembers);
             this.Controls.Add(this.lblMembers);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.btnAddTask);
@@ -220,6 +266,8 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.StyleManager styleManager1;
         private MetroSet_UI.Controls.MetroSetLabel lblOutput;
         private MetroSet_UI.Controls.MetroSetLabel lblMembers;
+        private MetroSet_UI.Controls.MetroSetComboBox cmbMembers;
+        private MetroSet_UI.Controls.MetroSetLabel lblMembersDets;
         private MetroSet_UI.Controls.MetroSetListBox listMembers;
     }
 }
