@@ -20,7 +20,11 @@ namespace Agile_Extension.Forms
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
-            frmKanbanTemplate3._Temp3.AddItem(tbTaskName.Text);
+            if(validate(tbTaskName.Text))
+            { 
+                frmKanbanTemplate3._Temp3.AddItem(tbTaskName.Text); 
+            }
+            
             ResetControls();
         }
 
@@ -28,5 +32,39 @@ namespace Agile_Extension.Forms
         {
             tbTaskName.Text = "";
         }
+
+        private bool validate(string task_name)
+        {
+            if (task_name.Length <= 0 || task_name.Contains(" "))
+            {
+                lblOutput.Text = "Please enter a valid task name eg: task_name";
+                tbTaskName.Focus();
+                return false;
+            }
+
+
+            lblOutput.Text = "";
+            return true;
+        }
+        /*
+        private bool validate(string task_name, MetroSet_UI.Controls.MetroSetListBox list)
+        {
+            if (task_name.Length <= 0 || task_name.Contains(" "))
+            {
+                lblOutput.Text = "Please enter a valid task name eg: task_name";
+                tbTaskName.Focus();
+                return false;
+            }
+
+            if (list.Items.Count <= 0)
+            {
+                lblOutput.Text = "No members added to task";
+                list.Focus();
+                return false;
+            }
+
+            lblOutput.Text = "";
+            return true;
+        }*/
     }
 }
