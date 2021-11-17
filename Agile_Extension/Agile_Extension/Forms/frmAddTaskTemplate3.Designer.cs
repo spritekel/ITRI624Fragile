@@ -30,10 +30,13 @@ namespace Agile_Extension.Forms
         private void InitializeComponent()
         {
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
+            this.styleManager1 = new MetroSet_UI.StyleManager();
             this.tbTaskName = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lbTaskName = new MetroSet_UI.Controls.MetroSetLabel();
             this.btnAddTask = new MetroSet_UI.Controls.MetroSetButton();
-            this.styleManager1 = new MetroSet_UI.StyleManager();
+            this.lblOutput = new MetroSet_UI.Controls.MetroSetLabel();
+            this.lblMembers = new MetroSet_UI.Controls.MetroSetLabel();
+            this.listMembers = new MetroSet_UI.Controls.MetroSetListBox();
             this.SuspendLayout();
             // 
             // metroSetControlBox1
@@ -43,7 +46,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(185, 8);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(194, 7);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -60,6 +63,14 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.Text = "metroSetControlBox1";
             this.metroSetControlBox1.ThemeAuthor = null;
             this.metroSetControlBox1.ThemeName = null;
+            // 
+            // styleManager1
+            // 
+            this.styleManager1.CustomTheme = "C:\\Users\\RKW-PostGrad\\AppData\\Roaming\\Microsoft\\Windows\\Templates\\ThemeFile.xml";
+            this.styleManager1.MetroForm = this;
+            this.styleManager1.Style = MetroSet_UI.Design.Style.Light;
+            this.styleManager1.ThemeAuthor = null;
+            this.styleManager1.ThemeName = null;
             // 
             // tbTaskName
             // 
@@ -79,7 +90,7 @@ namespace Agile_Extension.Forms
             this.tbTaskName.Multiline = false;
             this.tbTaskName.Name = "tbTaskName";
             this.tbTaskName.ReadOnly = false;
-            this.tbTaskName.Size = new System.Drawing.Size(135, 30);
+            this.tbTaskName.Size = new System.Drawing.Size(147, 30);
             this.tbTaskName.Style = MetroSet_UI.Design.Style.Light;
             this.tbTaskName.StyleManager = this.styleManager1;
             this.tbTaskName.TabIndex = 1;
@@ -129,22 +140,70 @@ namespace Agile_Extension.Forms
             this.btnAddTask.ThemeName = null;
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
-            // styleManager1
+            // lblOutput
             // 
-            this.styleManager1.CustomTheme = "C:\\Users\\RKW-PostGrad\\AppData\\Roaming\\Microsoft\\Windows\\Templates\\ThemeFile.xml";
-            this.styleManager1.MetroForm = this;
-            this.styleManager1.Style = MetroSet_UI.Design.Style.Light;
-            this.styleManager1.ThemeAuthor = null;
-            this.styleManager1.ThemeName = null;
+            this.lblOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutput.Location = new System.Drawing.Point(139, 228);
+            this.lblOutput.Name = "lblOutput";
+            this.lblOutput.Size = new System.Drawing.Size(146, 38);
+            this.lblOutput.Style = MetroSet_UI.Design.Style.Light;
+            this.lblOutput.StyleManager = this.styleManager1;
+            this.lblOutput.TabIndex = 4;
+            this.lblOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblOutput.ThemeAuthor = null;
+            this.lblOutput.ThemeName = null;
             // 
-            // frmAddTask
+            // lblMembers
+            // 
+            this.lblMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblMembers.Location = new System.Drawing.Point(32, 154);
+            this.lblMembers.Name = "lblMembers";
+            this.lblMembers.Size = new System.Drawing.Size(100, 30);
+            this.lblMembers.Style = MetroSet_UI.Design.Style.Light;
+            this.lblMembers.StyleManager = this.styleManager1;
+            this.lblMembers.TabIndex = 5;
+            this.lblMembers.Text = "Members";
+            this.lblMembers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMembers.ThemeAuthor = null;
+            this.lblMembers.ThemeName = null;
+            // 
+            // listMembers
+            // 
+            this.listMembers.BorderColor = System.Drawing.Color.LightGray;
+            this.listMembers.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.listMembers.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.listMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.listMembers.HoveredItemBackColor = System.Drawing.Color.LightGray;
+            this.listMembers.HoveredItemColor = System.Drawing.Color.DimGray;
+            this.listMembers.ItemHeight = 30;
+            this.listMembers.Location = new System.Drawing.Point(139, 154);
+            this.listMembers.MultiSelect = false;
+            this.listMembers.Name = "listMembers";
+            this.listMembers.SelectedIndex = -1;
+            this.listMembers.SelectedItem = null;
+            this.listMembers.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.listMembers.SelectedItemColor = System.Drawing.Color.White;
+            this.listMembers.SelectedValue = null;
+            this.listMembers.ShowBorder = false;
+            this.listMembers.ShowScrollBar = false;
+            this.listMembers.Size = new System.Drawing.Size(134, 30);
+            this.listMembers.Style = MetroSet_UI.Design.Style.Light;
+            this.listMembers.StyleManager = this.styleManager1;
+            this.listMembers.TabIndex = 6;
+            this.listMembers.ThemeAuthor = null;
+            this.listMembers.ThemeName = null;
+            // 
+            // frmAddTaskTemplate3
             // 
             this.ClientSize = new System.Drawing.Size(300, 300);
+            this.Controls.Add(this.listMembers);
+            this.Controls.Add(this.lblMembers);
+            this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.lbTaskName);
             this.Controls.Add(this.tbTaskName);
             this.Controls.Add(this.metroSetControlBox1);
-            this.Name = "frmAddTask";
+            this.Name = "frmAddTaskTemplate3";
             this.StyleManager = this.styleManager1;
             this.Text = "Add Task";
             this.ThemeAuthor = null;
@@ -159,5 +218,8 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetLabel lbTaskName;
         private MetroSet_UI.Controls.MetroSetButton btnAddTask;
         private MetroSet_UI.StyleManager styleManager1;
+        private MetroSet_UI.Controls.MetroSetLabel lblOutput;
+        private MetroSet_UI.Controls.MetroSetLabel lblMembers;
+        private MetroSet_UI.Controls.MetroSetListBox listMembers;
     }
 }

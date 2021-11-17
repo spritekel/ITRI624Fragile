@@ -76,6 +76,7 @@ namespace Agile_Extension.Forms
             this.lstNotStarted.TabIndex = 4;
             this.lstNotStarted.UseCompatibleStateImageBehavior = false;
             this.lstNotStarted.View = System.Windows.Forms.View.Details;
+            this.lstNotStarted.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstNotStarted.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
             this.lstNotStarted.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstNotStarted.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
@@ -97,6 +98,7 @@ namespace Agile_Extension.Forms
             this.lstDesignAnalysis.TabIndex = 5;
             this.lstDesignAnalysis.UseCompatibleStateImageBehavior = false;
             this.lstDesignAnalysis.View = System.Windows.Forms.View.Details;
+            this.lstDesignAnalysis.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstDesignAnalysis.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
             this.lstDesignAnalysis.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstDesignAnalysis.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
@@ -221,6 +223,7 @@ namespace Agile_Extension.Forms
             this.lstCodeReview.TabIndex = 20;
             this.lstCodeReview.UseCompatibleStateImageBehavior = false;
             this.lstCodeReview.View = System.Windows.Forms.View.Details;
+            this.lstCodeReview.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstCodeReview.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
             this.lstCodeReview.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstCodeReview.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
@@ -242,6 +245,7 @@ namespace Agile_Extension.Forms
             this.lstTesting.TabIndex = 24;
             this.lstTesting.UseCompatibleStateImageBehavior = false;
             this.lstTesting.View = System.Windows.Forms.View.Details;
+            this.lstTesting.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstTesting.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
             this.lstTesting.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstTesting.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
@@ -263,6 +267,7 @@ namespace Agile_Extension.Forms
             this.lstTestReady.TabIndex = 36;
             this.lstTestReady.UseCompatibleStateImageBehavior = false;
             this.lstTestReady.View = System.Windows.Forms.View.Details;
+            this.lstTestReady.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstTestReady.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
             this.lstTestReady.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstTestReady.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
@@ -284,6 +289,7 @@ namespace Agile_Extension.Forms
             this.lstSignOff.TabIndex = 33;
             this.lstSignOff.UseCompatibleStateImageBehavior = false;
             this.lstSignOff.View = System.Windows.Forms.View.Details;
+            this.lstSignOff.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstSignOff.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
             this.lstSignOff.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstSignOff.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
@@ -305,6 +311,7 @@ namespace Agile_Extension.Forms
             this.lstDeployment.TabIndex = 29;
             this.lstDeployment.UseCompatibleStateImageBehavior = false;
             this.lstDeployment.View = System.Windows.Forms.View.Details;
+            this.lstDeployment.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstDeployment.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
             this.lstDeployment.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstDeployment.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
@@ -326,6 +333,7 @@ namespace Agile_Extension.Forms
             this.lstDevelopment.TabIndex = 28;
             this.lstDevelopment.UseCompatibleStateImageBehavior = false;
             this.lstDevelopment.View = System.Windows.Forms.View.Details;
+            this.lstDevelopment.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstDevelopment.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
             this.lstDevelopment.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstDevelopment.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
