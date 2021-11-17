@@ -165,7 +165,6 @@ namespace Agile_Extension.Forms
             }
         }
 
-
         private void btnAddTask_Click(object sender, EventArgs e)
         {
             frmAddTaskTemplate3 add = new frmAddTaskTemplate3();
@@ -176,8 +175,6 @@ namespace Agile_Extension.Forms
         private void metroSetButton1_Click(object sender, EventArgs e)
         {
             createNewList();
-        }
-
-        
+        }  
     }
 }

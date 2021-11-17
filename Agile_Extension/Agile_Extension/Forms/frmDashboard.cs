@@ -79,6 +79,7 @@ namespace Agile_Extension.Forms
                 generateSprintTiles(project_name, tap_page[i]);
                 generateProgressBar(project_name,tap_page[i]);
                 generatePanel(tap_page[i]);
+                generateSprintBtn(project_name, tap_page[i]);
             }
         }
 
@@ -97,6 +98,18 @@ namespace Agile_Extension.Forms
                 tiles[i].Click += tile_click_event;
                 tiles[i].Name = sprints[i].ToString();
             }
+        }
+
+        private void generateSprintBtn(string project_name, Control parent)
+        {
+            int x_pos = 300;
+            int y_pos = 200;
+            int tile_size = 75;
+
+            MetroSet_UI.Controls.MetroSetTile SprintBtn = new clsDynamicFormControls("New Sprint", x_pos, y_pos, x_pos, tile_size).createDynamicTile(parent);
+
+            SprintBtn.Click += sprintbtn_click_event;
+            SprintBtn.Name = "SprintBtn";   
         }
 
         //Add ProgressBar
@@ -148,6 +161,12 @@ namespace Agile_Extension.Forms
         #region DYNAMIC_CONTROL_EVENT_HANDLERS
         //On Click event handler for dynamically created Tile Control
         private void tile_click_event(object sender, EventArgs e)
+        {
+            MetroSet_UI.Controls.MetroSetTile tile = (MetroSet_UI.Controls.MetroSetTile)sender;
+            frmKanbanTemplate3 kan = new frmKanbanTemplate3();
+            kan.Show();
+        }
+        private void sprintbtn_click_event(object sender, EventArgs e)
         {
             MetroSet_UI.Controls.MetroSetTile tile = (MetroSet_UI.Controls.MetroSetTile)sender;
             frmKanbanTemplate3 kan = new frmKanbanTemplate3();
