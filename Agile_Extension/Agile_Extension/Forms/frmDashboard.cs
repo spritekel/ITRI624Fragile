@@ -102,12 +102,12 @@ namespace Agile_Extension.Forms
         //Add ProgressBar
         private void generateProgressBar(string project,Control parent)
         {
-            int progress_bar_local_one = 13;
-            int progress_bar_local_two = 200;
+            int progress_bar_local_one = 15;
+            int progress_bar_local_two = 150;
             int progress_bar_size = 150;
             CircularProgressBar.CircularProgressBar progress = new clsDynamicFormControls("Progress", progress_bar_local_one, progress_bar_local_two, progress_bar_size, progress_bar_size).createDynamicProgressBar(parent);
             progress.Name = "pb" + project;  
-            //Change value throuh API
+            //Change value through API
             progress.Value = 75;
             progress.SubscriptText = "75";
         }
@@ -115,10 +115,11 @@ namespace Agile_Extension.Forms
         //Add Panel
         private void generatePanel(Control parent)
         {
-            int panel_local_one = 650;
-            int panel_local_two = 250;
-            int panel_size = 250;
-            MetroSet_UI.Controls.MetroSetPanel panel = new clsDynamicFormControls(panel_local_one, panel_local_two, panel_size, panel_size).createDynamicPanel(parent);
+            int panel_local_one = 700; //X-pos
+            int panel_local_two = 125; //Y-pos
+            int panel_size_one = 250;  //X-size
+            int panel_size_two = 200;  //Y-size
+            MetroSet_UI.Controls.MetroSetPanel panel = new clsDynamicFormControls(panel_local_one, panel_local_two, panel_size_one, panel_size_two).createDynamicPanel(parent);
             generatePanelLabel(panel);
             generateListBox(panel);
         }
@@ -138,7 +139,7 @@ namespace Agile_Extension.Forms
         {
             int list_local_one = 8;
             int list_local_two = 47;
-            int list_size = 200;
+            int list_size = 199;
             MetroSet_UI.Controls.MetroSetListBox list = new clsDynamicFormControls(list_local_one, list_local_two, list_size, list_size).createDynamicListBox(parent);
             list.Items.Add("Generate Dynamic GUI");
         }
@@ -148,10 +149,9 @@ namespace Agile_Extension.Forms
         //On Click event handler for dynamically created Tile Control
         private void tile_click_event(object sender, EventArgs e)
         {
-
             MetroSet_UI.Controls.MetroSetTile tile = (MetroSet_UI.Controls.MetroSetTile)sender;
-            string name = tile.Name;
-            MetroSetMessageBox.Show(this, name, name);
+            frmKanbanTemplate3 kan = new frmKanbanTemplate3();
+            kan.Show();
         }
         #endregion
 
@@ -165,6 +165,7 @@ namespace Agile_Extension.Forms
         }
         #endregion
 
+        #region TEMPLATE_BUTTON_HANDLERS
         private void metroSetButton1_Click(object sender, EventArgs e)
         {
             frmKanbanTemplate5 kan = new frmKanbanTemplate5();
@@ -188,5 +189,6 @@ namespace Agile_Extension.Forms
             frmKanbanTemplate9 kan = new frmKanbanTemplate9();
             kan.Show();
         }
+        #endregion
     }
 }

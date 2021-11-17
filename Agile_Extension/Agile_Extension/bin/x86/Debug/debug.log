@@ -7693,3 +7693,9 @@ color: purple;
 [1116/182858.271:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1116/211055.858:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1117/120314.694:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1117/131001.102:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1117/133029.825:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1117/134159.754:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1117/140011.608:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1117/140640.938:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1117/140801.998:WARNING:spdy_session.cc(3512)] Received HEADERS for invalid stream 1
