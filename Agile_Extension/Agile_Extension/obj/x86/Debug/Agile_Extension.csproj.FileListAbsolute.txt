@@ -552,3 +552,4 @@ D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Ext
 D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.csproj.CopyComplete
 D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.exe
 D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.pdb
+D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.addSprintForm.resources

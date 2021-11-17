@@ -169,8 +169,8 @@ namespace Agile_Extension.Forms
         private void sprintbtn_click_event(object sender, EventArgs e)
         {
             MetroSet_UI.Controls.MetroSetTile tile = (MetroSet_UI.Controls.MetroSetTile)sender;
-            frmKanbanTemplate3 kan = new frmKanbanTemplate3();
-            kan.Show();
+            addSprintForm cs = new addSprintForm();
+            cs.Show();
         }
         #endregion
 
