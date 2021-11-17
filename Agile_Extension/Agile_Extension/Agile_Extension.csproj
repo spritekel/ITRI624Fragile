@@ -114,6 +114,12 @@
     <Compile Include="Forms\frmAddProject.Designer.cs">
       <DependentUpon>frmAddProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmKanban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKanban.Designer.cs">
+      <DependentUpon>frmKanban.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmRenameTemplate3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddProject.resx">
       <DependentUpon>frmAddProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKanban.resx">
+      <DependentUpon>frmKanban.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRenameTemplate3.resx">
       <DependentUpon>frmRenameTemplate3.cs</DependentUpon>
