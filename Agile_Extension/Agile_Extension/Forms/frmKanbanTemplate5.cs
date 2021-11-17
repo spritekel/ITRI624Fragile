@@ -14,9 +14,12 @@ namespace Agile_Extension.Forms
 {
     public partial class frmKanbanTemplate5 : MetroSetForm
     {
+        public int count;
         public frmKanbanTemplate5()
         {
             InitializeComponent();
+            metroSetPanel1.AutoScroll = true;
+            count = 5;
 
             //Initially Load in progress of sprint from DB
             LoadProgressBar(DateTime.Now);
@@ -30,7 +33,40 @@ namespace Agile_Extension.Forms
             lstCodeReview.AllowDrop = true;
         }
 
-        
+        private void createNewList()
+        {
+            //initialisation of needed vars
+            ListView list = new ListView();
+            Random rnd = new Random();
+            System.Windows.Forms.ColumnHeader colHead = new System.Windows.Forms.ColumnHeader();
+            metroSetPanel1.AutoScrollPosition = new Point(metroSetPanel1.AutoScrollPosition.X, 0);
+            //Resets scroll position so that formulas below work as intended
+            metroSetPanel1.VerticalScroll.Value = 0;
+
+            //Adds list before done
+            this.lstDone.Location = new System.Drawing.Point(count * 250, 0);
+            list.Location = new System.Drawing.Point((count - 1) * 250, 0);
+
+            //List set up/formatting
+            list.Name = "DynaList" + rnd.Next();
+            colHead.Width = 250;
+            list.Size = new System.Drawing.Size(250, 400);
+            list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { colHead });
+            list.GridLines = true;
+            list.HideSelection = false;
+            list.UseCompatibleStateImageBehavior = false;
+            list.View = System.Windows.Forms.View.Details;
+            list.ItemDrag += lst_ItemDrag;
+            list.DragDrop += lst_DragDrop;
+            list.DragOver += lst_DragOver;
+            list.ColumnClick += lstRename_ColumnClick;
+            list.AllowDrop = true;
+            colHead.Text = Rename(colHead.Text);
+            metroSetPanel1.Controls.Add(list);
+            //used in formulae for placements
+            count += 1;
+        }
+
         public void LoadProgressBar(DateTime today)
         {
             //place holder dates, will read from db
@@ -69,7 +105,7 @@ namespace Agile_Extension.Forms
         #region Rename
         public string Rename(string listName)
         {
-            string newName = Interaction.InputBox("New Name", "Rename" + listName + "List", listName, (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+            string newName = Interaction.InputBox("New Name", "Rename " + listName + " List", listName, (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             if (!string.IsNullOrWhiteSpace(newName))
             {
                 return newName;
@@ -81,39 +117,27 @@ namespace Agile_Extension.Forms
             }
 
         }
-        private void btnRename1_Click(object sender, EventArgs e)
-        {
-            this.taskToDo.Text = Rename(this.taskToDo.Text);
-        }
-        private void btnRename2_Click(object sender, EventArgs e)
-        {
-            this.taskDoing.Text = Rename(this.taskDoing.Text);
-        }
 
-        private void btnRename3_Click(object sender, EventArgs e)
+        private void lstRename_ColumnClick(object sender, ColumnClickEventArgs e)
         {
-            this.taskCodeReview.Text = Rename(this.taskCodeReview.Text);
+            System.Windows.Forms.ListView lists = (System.Windows.Forms.ListView)sender;
+            lists.Columns[0].Text = Rename(lists.Columns[0].Text);
         }
-
-        private void btnRename4_Click(object sender, EventArgs e)
-        {
-            this.taskTesting.Text = Rename(this.taskTesting.Text);
-        }
-
 
         #endregion
 
 
         #region DRAG AND DROP:
 
-        private void lstNotStarted_ItemDrag(object sender, ItemDragEventArgs e)
+        private void lst_ItemDrag(object sender, ItemDragEventArgs e)
         {
+            System.Windows.Forms.ListView lists = (System.Windows.Forms.ListView)sender;
             // create array or collection for all selected items
             var items = new List<ListViewItem>();
             // add dragged one first
             items.Add((ListViewItem)e.Item);
             // optionally add the other selected ones
-            foreach (ListViewItem lvi in lstNotStarted.SelectedItems)
+            foreach (ListViewItem lvi in lists.SelectedItems)
             {
                 if (!items.Contains(lvi))
                 {
@@ -121,79 +145,7 @@ namespace Agile_Extension.Forms
                 }
             }
             // pass the items to move...
-            lstNotStarted.DoDragDrop(items, DragDropEffects.Move);
-        }
-
-        private void lstProgress_ItemDrag(object sender, ItemDragEventArgs e)
-        {
-            // create array or collection for all selected items
-            var items = new List<ListViewItem>();
-            // add dragged one first
-            items.Add((ListViewItem)e.Item);
-            // optionally add the other selected ones
-            foreach (ListViewItem lvi in lstProgress.SelectedItems)
-            {
-                if (!items.Contains(lvi))
-                {
-                    items.Add(lvi);
-                }
-            }
-            // pass the items to move...
-            lstProgress.DoDragDrop(items, DragDropEffects.Move);
-        }
-
-        private void lstDone_ItemDrag(object sender, ItemDragEventArgs e)
-        {
-            // create array or collection for all selected items
-            var items = new List<ListViewItem>();
-            // add dragged one first
-            items.Add((ListViewItem)e.Item);
-            // optionally add the other selected ones
-            foreach (ListViewItem lvi in lstProgress.SelectedItems)
-            {
-                if (!items.Contains(lvi))
-                {
-                    items.Add(lvi);
-                }
-            }
-            // pass the items to move...
-            lstDone.DoDragDrop(items, DragDropEffects.Move);
-        }
-
-        private void lstCodeReview_ItemDrag(object sender, ItemDragEventArgs e)
-        {
-            // create array or collection for all selected items
-            var items = new List<ListViewItem>();
-            // add dragged one first
-            items.Add((ListViewItem)e.Item);
-            // optionally add the other selected ones
-            foreach (ListViewItem lvi in lstProgress.SelectedItems)
-            {
-                if (!items.Contains(lvi))
-                {
-                    items.Add(lvi);
-                }
-            }
-            // pass the items to move...
-            lstCodeReview.DoDragDrop(items, DragDropEffects.Move);
-        }
-
-        private void lstTesting_ItemDrag(object sender, ItemDragEventArgs e)
-        {
-            // create array or collection for all selected items
-            var items = new List<ListViewItem>();
-            // add dragged one first
-            items.Add((ListViewItem)e.Item);
-            // optionally add the other selected ones
-            foreach (ListViewItem lvi in lstProgress.SelectedItems)
-            {
-                if (!items.Contains(lvi))
-                {
-                    items.Add(lvi);
-                }
-            }
-            // pass the items to move...
-            lstTesting.DoDragDrop(items, DragDropEffects.Move);
+            lists.DoDragDrop(items, DragDropEffects.Move);
         }
 
         private void lst_DragOver(object sender, DragEventArgs e)
@@ -204,8 +156,9 @@ namespace Agile_Extension.Forms
             }
         }
 
-        private void lstDoing_DragDrop(object sender, DragEventArgs e)
+        private void lst_DragDrop(object sender, DragEventArgs e)
         {
+            System.Windows.Forms.ListView lists = (System.Windows.Forms.ListView)sender;
             if (e.Data.GetDataPresent(typeof(List<ListViewItem>)))
             {
                 var items = (List<ListViewItem>)e.Data.GetData(typeof(List<ListViewItem>));
@@ -214,73 +167,17 @@ namespace Agile_Extension.Forms
                 {
                     // LVI obj can only belong to one LVI, remove
                     lvi.ListView.Items.Remove(lvi);
-                    lstProgress.Items.Add(lvi);
+                    lists.Items.Add(lvi);
                 }
             }
         }
 
-        private void lstTodo_DragDrop(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(typeof(List<ListViewItem>)))
-            {
-                var items = (List<ListViewItem>)e.Data.GetData(typeof(List<ListViewItem>));
-                // move to dest LV
-                foreach (ListViewItem lvi in items)
-                {
-                    // LVI obj can only belong to one LVI, remove
-                    lvi.ListView.Items.Remove(lvi);
-                    lstNotStarted.Items.Add(lvi);
-                }
-            }
-        }
-
-        private void lstCodeReview_DragDrop(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(typeof(List<ListViewItem>)))
-            {
-                var items = (List<ListViewItem>)e.Data.GetData(typeof(List<ListViewItem>));
-                // move to dest LV
-                foreach (ListViewItem lvi in items)
-                {
-                    // LVI obj can only belong to one LVI, remove
-                    lvi.ListView.Items.Remove(lvi);
-                    lstCodeReview.Items.Add(lvi);
-                }
-            }
-        }
-
-        private void lstTesting_DragDrop(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(typeof(List<ListViewItem>)))
-            {
-                var items = (List<ListViewItem>)e.Data.GetData(typeof(List<ListViewItem>));
-                // move to dest LV
-                foreach (ListViewItem lvi in items)
-                {
-                    // LVI obj can only belong to one LVI, remove
-                    lvi.ListView.Items.Remove(lvi);
-                    lstTesting.Items.Add(lvi);
-                }
-            }
-        }
-
-        private void lstDone_DragDrop(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(typeof(List<ListViewItem>)))
-            {
-                var items = (List<ListViewItem>)e.Data.GetData(typeof(List<ListViewItem>));
-                // move to dest LV
-                foreach (ListViewItem lvi in items)
-                {
-                    // LVI obj can only belong to one LVI, remove
-                    lvi.ListView.Items.Remove(lvi);
-                    lstDone.Items.Add(lvi);
-                }
-            }
-        }
 
         #endregion
 
-        
+        private void metroSetButton1_Click(object sender, EventArgs e)
+        {
+            createNewList();
+        }
     }
 }

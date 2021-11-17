@@ -125,13 +125,13 @@ namespace Agile_Extension.Forms
             this.metroSetProgressBar1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetProgressBar1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetProgressBar1.DisabledProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetProgressBar1.Location = new System.Drawing.Point(10, 95);
+            this.metroSetProgressBar1.Location = new System.Drawing.Point(15, 95);
             this.metroSetProgressBar1.Maximum = 100;
             this.metroSetProgressBar1.Minimum = 0;
             this.metroSetProgressBar1.Name = "metroSetProgressBar1";
             this.metroSetProgressBar1.Orientation = MetroSet_UI.Enums.ProgressOrientation.Horizontal;
             this.metroSetProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetProgressBar1.Size = new System.Drawing.Size(752, 23);
+            this.metroSetProgressBar1.Size = new System.Drawing.Size(750, 23);
             this.metroSetProgressBar1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetProgressBar1.StyleManager = this.styleManager1;
             this.metroSetProgressBar1.TabIndex = 13;
@@ -155,7 +155,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(680, 17);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(680, 15);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -183,7 +183,7 @@ namespace Agile_Extension.Forms
             this.btnAddTask.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnAddTask.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnAddTask.HoverTextColor = System.Drawing.Color.White;
-            this.btnAddTask.Location = new System.Drawing.Point(10, 144);
+            this.btnAddTask.Location = new System.Drawing.Point(15, 145);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnAddTask.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -191,7 +191,7 @@ namespace Agile_Extension.Forms
             this.btnAddTask.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnAddTask.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnAddTask.PressTextColor = System.Drawing.Color.White;
-            this.btnAddTask.Size = new System.Drawing.Size(91, 30);
+            this.btnAddTask.Size = new System.Drawing.Size(100, 30);
             this.btnAddTask.Style = MetroSet_UI.Design.Style.Light;
             this.btnAddTask.StyleManager = this.styleManager1;
             this.btnAddTask.TabIndex = 16;
@@ -210,7 +210,7 @@ namespace Agile_Extension.Forms
             this.metroSetButton1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton1.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Location = new System.Drawing.Point(669, 144);
+            this.metroSetButton1.Location = new System.Drawing.Point(665, 145);
             this.metroSetButton1.Name = "metroSetButton1";
             this.metroSetButton1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -218,7 +218,7 @@ namespace Agile_Extension.Forms
             this.metroSetButton1.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.metroSetButton1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.metroSetButton1.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Size = new System.Drawing.Size(91, 30);
+            this.metroSetButton1.Size = new System.Drawing.Size(100, 30);
             this.metroSetButton1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetButton1.StyleManager = this.styleManager1;
             this.metroSetButton1.TabIndex = 23;
@@ -235,9 +235,9 @@ namespace Agile_Extension.Forms
             this.metroSetPanel1.Controls.Add(this.lstTodo);
             this.metroSetPanel1.Controls.Add(this.lstDoing);
             this.metroSetPanel1.Controls.Add(this.lstDone);
-            this.metroSetPanel1.Location = new System.Drawing.Point(10, 180);
+            this.metroSetPanel1.Location = new System.Drawing.Point(15, 195);
             this.metroSetPanel1.Name = "metroSetPanel1";
-            this.metroSetPanel1.Size = new System.Drawing.Size(752, 403);
+            this.metroSetPanel1.Size = new System.Drawing.Size(750, 417);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetPanel1.StyleManager = this.styleManager1;
             this.metroSetPanel1.TabIndex = 24;
@@ -248,7 +248,7 @@ namespace Agile_Extension.Forms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(795, 618);
+            this.ClientSize = new System.Drawing.Size(795, 635);
             this.Controls.Add(this.metroSetPanel1);
             this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.btnAddTask);
