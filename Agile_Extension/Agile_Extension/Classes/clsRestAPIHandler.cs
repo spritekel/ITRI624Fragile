@@ -15,8 +15,12 @@ namespace Agile_Extension.Classes
 {
     class clsRestAPIHandler
     {
+        //Original Heroku app
+        //private const string BASE_URL = "https://mysterious-reef-01698.herokuapp.com/";
 
-        private const string BASE_URL = "https://mysterious-reef-01698.herokuapp.com/";
+        //Heroku app for testing kanban api
+        private const string BASE_URL = "https://kanban-api-624.herokuapp.com";
+
         public clsRestAPIHandler()
         {
 
