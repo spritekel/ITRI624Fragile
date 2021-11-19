@@ -30,7 +30,6 @@ namespace Agile_Extension.Forms
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.startDatePick = new System.Windows.Forms.DateTimePicker();
@@ -38,7 +37,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.tbSprintName = new MetroSet_UI.Controls.MetroSetTextBox();
             this.btnCreateSprint = new MetroSet_UI.Controls.MetroSetButton();
-            this.cbTemplates = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.lblOutput = new MetroSet_UI.Controls.MetroSetLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -49,15 +48,6 @@ namespace Agile_Extension.Forms
             this.label1.Size = new System.Drawing.Size(114, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sprint Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 219);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Sprint Template: ";
             // 
             // label3
             // 
@@ -154,7 +144,7 @@ namespace Agile_Extension.Forms
             this.btnCreateSprint.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnCreateSprint.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnCreateSprint.HoverTextColor = System.Drawing.Color.White;
-            this.btnCreateSprint.Location = new System.Drawing.Point(363, 281);
+            this.btnCreateSprint.Location = new System.Drawing.Point(363, 217);
             this.btnCreateSprint.Name = "btnCreateSprint";
             this.btnCreateSprint.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btnCreateSprint.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -171,44 +161,24 @@ namespace Agile_Extension.Forms
             this.btnCreateSprint.ThemeName = "MetroLite";
             this.btnCreateSprint.Click += new System.EventHandler(this.btnCreateSprint_Click_1);
             // 
-            // cbTemplates
+            // lblOutput
             // 
-            this.cbTemplates.AllowDrop = true;
-            this.cbTemplates.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.cbTemplates.BackColor = System.Drawing.Color.Transparent;
-            this.cbTemplates.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.cbTemplates.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.cbTemplates.CausesValidation = false;
-            this.cbTemplates.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cbTemplates.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.cbTemplates.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.cbTemplates.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbTemplates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTemplates.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.cbTemplates.FormattingEnabled = true;
-            this.cbTemplates.ItemHeight = 20;
-            this.cbTemplates.Items.AddRange(new object[] {
-            "Simple Kanban",
-            "ICT Projects",
-            "Post-Grad Projects",
-            "Extensive Software Development"});
-            this.cbTemplates.Location = new System.Drawing.Point(196, 219);
-            this.cbTemplates.Name = "cbTemplates";
-            this.cbTemplates.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.cbTemplates.SelectedItemForeColor = System.Drawing.Color.White;
-            this.cbTemplates.Size = new System.Drawing.Size(287, 26);
-            this.cbTemplates.Style = MetroSet_UI.Design.Style.Light;
-            this.cbTemplates.StyleManager = null;
-            this.cbTemplates.TabIndex = 9;
-            this.cbTemplates.ThemeAuthor = "Narwin";
-            this.cbTemplates.ThemeName = "MetroLite";
+            this.lblOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblOutput.Location = new System.Drawing.Point(21, 217);
+            this.lblOutput.Name = "lblOutput";
+            this.lblOutput.Size = new System.Drawing.Size(311, 23);
+            this.lblOutput.Style = MetroSet_UI.Design.Style.Light;
+            this.lblOutput.StyleManager = null;
+            this.lblOutput.TabIndex = 9;
+            this.lblOutput.ThemeAuthor = "Narwin";
+            this.lblOutput.ThemeName = "MetroLite";
             // 
             // addSprintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 331);
-            this.Controls.Add(this.cbTemplates);
+            this.ClientSize = new System.Drawing.Size(501, 265);
+            this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.btnCreateSprint);
             this.Controls.Add(this.tbSprintName);
             this.Controls.Add(this.metroSetControlBox1);
@@ -216,7 +186,6 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.startDatePick);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "addSprintForm";
             this.Text = "Add Sprint";
@@ -230,7 +199,6 @@ namespace Agile_Extension.Forms
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker startDatePick;
@@ -238,6 +206,6 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetTextBox tbSprintName;
         private MetroSet_UI.Controls.MetroSetButton btnCreateSprint;
-        private MetroSet_UI.Controls.MetroSetComboBox cbTemplates;
+        private MetroSet_UI.Controls.MetroSetLabel lblOutput;
     }
 }

@@ -43,6 +43,8 @@ namespace Agile_Extension.Forms
             this.btnAddTask = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
+            this.lbED = new MetroSet_UI.Controls.MetroSetLabel();
+            this.lbSD = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -244,11 +246,39 @@ namespace Agile_Extension.Forms
             this.metroSetPanel1.ThemeAuthor = null;
             this.metroSetPanel1.ThemeName = null;
             // 
+            // lbED
+            // 
+            this.lbED.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbED.Location = new System.Drawing.Point(665, 69);
+            this.lbED.Name = "lbED";
+            this.lbED.Size = new System.Drawing.Size(100, 23);
+            this.lbED.Style = MetroSet_UI.Design.Style.Light;
+            this.lbED.StyleManager = this.styleManager1;
+            this.lbED.TabIndex = 25;
+            this.lbED.Text = "end";
+            this.lbED.ThemeAuthor = null;
+            this.lbED.ThemeName = null;
+            // 
+            // lbSD
+            // 
+            this.lbSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbSD.Location = new System.Drawing.Point(15, 69);
+            this.lbSD.Name = "lbSD";
+            this.lbSD.Size = new System.Drawing.Size(100, 23);
+            this.lbSD.Style = MetroSet_UI.Design.Style.Light;
+            this.lbSD.StyleManager = this.styleManager1;
+            this.lbSD.TabIndex = 26;
+            this.lbSD.Text = "start";
+            this.lbSD.ThemeAuthor = null;
+            this.lbSD.ThemeName = null;
+            // 
             // frmKanbanTemplate3
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(795, 635);
+            this.Controls.Add(this.lbSD);
+            this.Controls.Add(this.lbED);
             this.Controls.Add(this.metroSetPanel1);
             this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.btnAddTask);
@@ -281,5 +311,7 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.StyleManager styleManager1;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
         private MetroSet_UI.Controls.MetroSetPanel metroSetPanel1;
+        private MetroSet_UI.Controls.MetroSetLabel lbSD;
+        private MetroSet_UI.Controls.MetroSetLabel lbED;
     }
 }
