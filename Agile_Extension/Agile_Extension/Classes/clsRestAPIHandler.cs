@@ -288,12 +288,12 @@ namespace Agile_Extension.Classes
 
         #region SPRINT_ROUTES
 
-        public JObject get_single_sprint(string project_name)
+        public JObject get_single_sprint(string sprint_name, string project_name)
         {
             try
             {
                 var client = new RestClient(BASE_URL);
-                var request = new RestRequest("/sprint/" + project_name, Method.GET);
+                var request = new RestRequest("/sprint/" + sprint_name + "/" + project_name, Method.GET);
                 request.RequestFormat = DataFormat.Json;
                 request.AddHeader("Content-type", "application/json");
                 var response = client.Execute(request);
@@ -368,7 +368,7 @@ namespace Agile_Extension.Classes
             return null;
         }
 
-        public JObject update_sprint(string sprint_name, string content)
+        public JObject update_sprint(string sprint_name, string project_name, string content)
         {
             try
             {
@@ -376,7 +376,7 @@ namespace Agile_Extension.Classes
                 Debug.WriteLine("data to be sent: update user: " + content);
 
                 var client = new RestClient(BASE_URL);
-                var request = new RestRequest("/sprint/" + sprint_name, Method.PATCH);
+                var request = new RestRequest("/sprint/" + sprint_name + "/" + project_name, Method.PATCH);
                 request.RequestFormat = DataFormat.Json;
                 request.AddHeader("Content-type", "application/json");
                 request.AddJsonBody(content);

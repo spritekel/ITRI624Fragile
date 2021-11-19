@@ -27,7 +27,12 @@ namespace Agile_Extension.Forms
             { 
                 frmKanbanTemplate3._Temp3.AddItem(tbTaskName.Text); 
             }
-            
+
+            string current_project = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            string current_sprint = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            string content = "{listName:  " + tbTaskName.Text +  ", taskUsers: " + listMembers + "}";
+            //new clsRestAPIHandler().update_sprint(current_sprint, current_project, content);
+
             ResetControls();
         }
 

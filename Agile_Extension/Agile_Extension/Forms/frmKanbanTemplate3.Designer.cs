@@ -259,6 +259,8 @@ namespace Agile_Extension.Forms
             this.Text = "Kanban Board - Simple";
             this.ThemeAuthor = null;
             this.ThemeName = null;
+            this.Load += new System.EventHandler(this.frmKanbanTemplate3_Load);
+            this.Shown += new System.EventHandler(this.frmKanbanTemplate3_Shown);
             this.metroSetPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -7809,3 +7809,5 @@ color: purple;
 [1119/160512.047:WARNING:dns_config_service_win.cc(712)] Failed to read DnsConfig.
 [1119/160513.300:WARNING:dns_config_service_win.cc(712)] Failed to read DnsConfig.
 [1119/165325.799:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1119/174519.634:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1119/191201.491:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled

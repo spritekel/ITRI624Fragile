@@ -170,15 +170,15 @@ namespace Agile_Extension.Forms
             string project = current_proj["project"][0]["projName"].ToString();
             MessageBox.Show(project);
             MessageBox.Show(current_proj.ToString());
-            //Get cuurent sprint
-            //new clsFileHandler().writeToFile(tile.Name, new clsFileHandler().get_current_sprint());
-            //string current_sprint = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
-            //MessageBox.Show(current_sprint);
-            //JObject current_spr = new clsRestAPIHandler().get_single_sprint(project);
-            //MessageBox.Show(current_spr.ToString());
-            //kan.Show();
-
-
+            //Get curent sprint
+            new clsFileHandler().writeToFile(tile.Name, new clsFileHandler().get_current_sprint());
+            string current_sprint = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            MessageBox.Show(current_sprint);
+            JObject current_spr = new clsRestAPIHandler().get_single_sprint(current_sprint, project);
+            MessageBox.Show(current_spr.ToString());
+            //Write sprint info
+            new clsFileHandler().writeToFile(current_spr.ToString(), new clsFileHandler().get_sprint_info());
+            kan.Show();
         }
         private void sprintbtn_click_event(object sender, EventArgs e)
         {

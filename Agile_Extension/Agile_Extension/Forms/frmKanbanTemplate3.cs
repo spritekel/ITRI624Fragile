@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroSet_UI.Forms;
 using Microsoft.VisualBasic;
+using Agile_Extension.Classes;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace Agile_Extension.Forms
 {
@@ -66,6 +69,7 @@ namespace Agile_Extension.Forms
             //used in formulae for placements
             count += 1;
         }
+
 
         public void LoadProgressBar(DateTime today)
         {
@@ -175,6 +179,45 @@ namespace Agile_Extension.Forms
         private void metroSetButton1_Click(object sender, EventArgs e)
         {
             createNewList();
-        }  
+        }
+
+        private void frmKanbanTemplate3_Load(object sender, EventArgs e)
+        {
+            //populate data
+            //string sprintinfo = new clsFileHandler().readFromFile(new clsFileHandler().get_sprint_info());
+            //MessageBox.Show(sprintinfo);
+        }
+
+        private void frmKanbanTemplate3_Shown(object sender, EventArgs e)
+        {
+            string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            MessageBox.Show(projectname, sprintname);
+
+            JObject sprint_info = new clsRestAPIHandler().get_single_sprint(sprintname, projectname);
+            string tasks = sprint_info["sprint"][0]["tasks"].ToString();
+            JArray tasks_array = JArray.Parse(tasks);
+            int length = tasks_array.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                string listnumber = sprint_info["sprint"][0]["tasks"][i]["listNumber"].ToString();
+                string taskname = sprint_info["sprint"][0]["tasks"][i]["taskName"].ToString();
+
+                if (listnumber == "1")
+                {
+                    lstTodo.Items.Add(taskname);
+                }
+                else if (listnumber == "2")
+                {
+                    lstDoing.Items.Add(taskname);
+                }
+                else
+                {
+                    lstDone.Items.Add(taskname);
+                }
+            }
+            
+        }
     }
 }
