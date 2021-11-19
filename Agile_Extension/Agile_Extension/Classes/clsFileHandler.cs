@@ -20,6 +20,7 @@ namespace Agile_Extension.Classes
         private const string USER_INFO = "\\User.txt";
         private const string PROJECTS_INFO = "\\Projects.txt";
         private const string CURRENT_PROJ = "\\Current_Project.txt";
+        private const string CURRENT_SPR = "\\Current_Sprint.txt";
         #endregion
 
         public string get_role_file()
@@ -42,6 +43,10 @@ namespace Agile_Extension.Classes
             return CURRENT_PROJ;
         }
 
+        public string get_current_sprint()
+        {
+            return CURRENT_SPR;
+        }
         
         #region METHODS
         public void writeToFile(string param, string file)

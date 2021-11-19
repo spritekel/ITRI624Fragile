@@ -163,7 +163,22 @@ namespace Agile_Extension.Forms
         {
             MetroSet_UI.Controls.MetroSetTile tile = (MetroSet_UI.Controls.MetroSetTile)sender;
             frmKanbanTemplate3 kan = new frmKanbanTemplate3();
-            kan.Show();
+            //Get current project
+            new clsFileHandler().writeToFile(tile.Parent.Name, new clsFileHandler().get_current_project());
+            string current_project = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            JObject current_proj = new clsRestAPIHandler().get_single_project(current_project);
+            string project = current_proj["project"][0]["projName"].ToString();
+            MessageBox.Show(project);
+            MessageBox.Show(current_proj.ToString());
+            //Get cuurent sprint
+            //new clsFileHandler().writeToFile(tile.Name, new clsFileHandler().get_current_sprint());
+            //string current_sprint = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            //MessageBox.Show(current_sprint);
+            //JObject current_spr = new clsRestAPIHandler().get_single_sprint(project);
+            //MessageBox.Show(current_spr.ToString());
+            //kan.Show();
+
+
         }
         private void sprintbtn_click_event(object sender, EventArgs e)
         {
