@@ -26,9 +26,7 @@ namespace Agile_Extension.Forms
 
             _Temp3 = this;
             //Initially Load in progress of sprint from DB
-            LoadProgressBar(DateTime.Now);
-            
-
+           
             lstTodo.AllowDrop = true;
             lstDoing.AllowDrop = true;
             lstDone.AllowDrop = true;
@@ -73,11 +71,15 @@ namespace Agile_Extension.Forms
 
         public void LoadProgressBar(DateTime today)
         {
-            //place holder dates, will read from db
-            string startdate = "2021/09/01 12:00:00";
-            string enddate = "2021/11/30 12:00:00";
+            string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            JObject sprint_info = new clsRestAPIHandler().get_single_sprint(sprintname, projectname);
+            string startdate = sprint_info["sprint"][0]["startDate"].ToString();
+            string enddate = sprint_info["sprint"][0]["endDate"].ToString();
 
-            //creating date objects
+            lbSD.Text = startdate;
+            lbED.Text = enddate;
+
             DateTime start = DateTime.Parse(startdate);
             DateTime end = DateTime.Parse(enddate);
 
@@ -87,7 +89,6 @@ namespace Agile_Extension.Forms
             {
                 metroSetProgressBar1.BorderColor = System.Drawing.Color.Red;
             }
-
             metroSetProgressBar1.Value = ((int)progPercent);
         }
 
@@ -190,6 +191,7 @@ namespace Agile_Extension.Forms
 
         private void frmKanbanTemplate3_Shown(object sender, EventArgs e)
         {
+            LoadProgressBar(DateTime.Now);
             string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
             string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
             MessageBox.Show(projectname, sprintname);

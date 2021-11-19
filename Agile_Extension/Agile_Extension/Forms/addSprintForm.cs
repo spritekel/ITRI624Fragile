@@ -28,21 +28,26 @@ namespace Agile_Extension.Forms
 
         private void btnCreateSprint_Click_1(object sender, EventArgs e)
         {
-            string current_project = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
-            JObject current_proj = new clsRestAPIHandler().get_single_project(current_project);
-            MessageBox.Show(current_proj.ToString());
-            string sprints = current_proj["project"][0]["sprints"].ToString();
-            JArray sprints_array = JArray.Parse(sprints);  
-            JObject obj_sprint = new clsRestAPIHandler().create_sprint(tbSprintName.Text, current_project, startDatePick.Value, endDatePick.Value);
-            sprints_array.Add(tbSprintName.Text);
-            string current_payload = new clsRestAPIHandler().prepareJsonPayload("sprints", sprints_array);
-            MessageBox.Show(current_payload);
-            MessageBox.Show(obj_sprint["message"].ToString());
-            new clsRestAPIHandler().update_project(current_project, current_payload);
+            if (validate(tbSprintName.Text))
+            {
+                DateTime startDate = startDatePick.Value.Date;
+                DateTime endDate = endDatePick.Value.Date;
 
-            frmDashboard dashboard = new frmDashboard();
-            dashboard.Show();
-            this.Hide();
+                string current_project = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+                JObject current_proj = new clsRestAPIHandler().get_single_project(current_project);
+                MessageBox.Show(current_proj.ToString());
+                string sprints = current_proj["project"][0]["sprints"].ToString();
+                JArray sprints_array = JArray.Parse(sprints);
+                JObject obj_sprint = new clsRestAPIHandler().create_sprint(tbSprintName.Text, current_project, startDate, endDate);
+                Console.WriteLine(obj_sprint);
+                sprints_array.Add(tbSprintName.Text);
+                string current_payload = new clsRestAPIHandler().prepareJsonPayload("sprints", sprints_array);
+                new clsRestAPIHandler().update_project(current_project, current_payload);
+
+                frmDashboard dashboard = new frmDashboard();
+                dashboard.Show();
+                this.Hide();
+            }
 
         }
 
@@ -51,6 +56,19 @@ namespace Agile_Extension.Forms
             frmDashboard dashboard = new frmDashboard();
             dashboard.Show();
             this.Hide();
+        }
+
+        private bool validate(string sprint_name)
+        {
+            if (sprint_name.Length <= 0 || sprint_name.Contains(" "))
+            {
+                lblOutput.Text = "Please enter a valid sprint name eg: sprint_1";
+                tbSprintName.Focus();
+                return false;
+            }
+
+            lblOutput.Text = "";
+            return true;
         }
     }
 }

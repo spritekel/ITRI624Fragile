@@ -7811,3 +7811,43 @@ color: purple;
 [1119/165325.799:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1119/174519.634:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1119/191201.491:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1119/203010.699:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1119/203307.262:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.", source:  (0)
+[1119/203310.376:INFO:CONSOLE(130)] "%c[Logger.tsx] 
+font-weight: bold;
+color: purple;
+ Logger has loaded", source: https://discord.com/assets/340a6ff959e6ec6a519a.js (130)
+[1119/203311.361:INFO:CONSOLE(130)] "%c[default] 
+font-weight: bold;
+color: purple;
+ [BUILD INFO] Release Channel: stable, Build Number: 105304, Version Hash: 5f6effebbd2f620d3eaba465ea27d9cc5f77d070", source: https://discord.com/assets/340a6ff959e6ec6a519a.js (130)
+[1119/203311.363:INFO:CONSOLE(130)] "AppCrashedFatalReport: getLastCrash not supported.", source: https://discord.com/assets/340a6ff959e6ec6a519a.js (130)
+[1119/203311.614:INFO:CONSOLE(2524)] "Uncaught (in promise) TypeError: Invalid attempt to iterate non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.", source: https://discord.com/assets/37b5de5d3ae7b14e0f7e.js (2524)
+[1119/203311.749:INFO:CONSOLE(130)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow batch emitChanges took 125ms recentActions: EXPERIMENT_REGISTER_LEGACY -> STREAMING_UPDATE -> ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED -> ACCESSIBILITY_SYSTEM_PREFERS_COLOR_SCHEME_CHANGED -> I18N_LOAD_SUCCESS", source: https://discord.com/assets/340a6ff959e6ec6a519a.js (130)
+[1119/203311.749:INFO:CONSOLE(130)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow dispatch on I18N_LOAD_SUCCESS: 126ms", source: https://discord.com/assets/340a6ff959e6ec6a519a.js (130)
+[1119/203313.288:INFO:CONSOLE(130)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow batch emitChanges took 186ms recentActions: ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED -> ACCESSIBILITY_SYSTEM_PREFERS_COLOR_SCHEME_CHANGED -> I18N_LOAD_SUCCESS -> TRACK -> TRACK -> EXPERIMENTS_FETCH_SUCCESS -> EXPERIMENT_TRIGGER -> NATIVE_APP_MODAL_OPENING -> TRACK -> INVITE_RESOLVE", source: https://discord.com/assets/340a6ff959e6ec6a519a.js (130)
+[1119/203313.288:INFO:CONSOLE(130)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow dispatch on INVITE_RESOLVE: 188ms", source: https://discord.com/assets/340a6ff959e6ec6a519a.js (130)
+[1119/203314.310:INFO:CONSOLE(130)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow batch emitChanges took 264ms recentActions: TRACK -> EXPERIMENTS_FETCH_SUCCESS -> EXPERIMENT_TRIGGER -> NATIVE_APP_MODAL_OPENING -> TRACK -> INVITE_RESOLVE -> MEDIA_ENGINE_DEVICES -> TRACK -> TRACK -> INVITE_RESOLVE_SUCCESS", source: https://discord.com/assets/340a6ff959e6ec6a519a.js (130)
+[1119/203314.310:INFO:CONSOLE(130)] "%c[Flux] 
+font-weight: bold;
+color: purple;
+ Slow dispatch on INVITE_RESOLVE_SUCCESS: 265ms", source: https://discord.com/assets/340a6ff959e6ec6a519a.js (130)
+[1119/203953.644:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1119/204636.436:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1119/212745.667:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
