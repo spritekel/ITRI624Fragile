@@ -7811,3 +7811,7 @@ color: purple;
 [1119/165325.799:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1119/174519.634:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1119/191201.491:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1119/195326.164:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1119/203630.941:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1119/204652.084:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1119/215547.572:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled

@@ -422,6 +422,35 @@ namespace Agile_Extension.Classes
             return null;
         }
 
+        public JObject add_task(string sprint_name, string project_name, string content)
+        {
+            try
+            {
+
+                Debug.WriteLine("data to be sent: update user: " + content);
+
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/sprint/addtask/" + sprint_name + "/" + project_name, Method.PATCH);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(content);
+
+                var response = client.Execute(request);
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("Update Sprint: " + response.Content);
+
+                if ((int)statusCode == 200)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e);
+            }
+            return null;
+        }
+
 
         #endregion
 

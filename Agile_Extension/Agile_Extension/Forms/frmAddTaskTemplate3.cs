@@ -30,8 +30,19 @@ namespace Agile_Extension.Forms
 
             string current_project = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
             string current_sprint = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
-            string content = "{listName:  " + tbTaskName.Text +  ", taskUsers: " + listMembers + "}";
-            //new clsRestAPIHandler().update_sprint(current_sprint, current_project, content);
+
+            string[] users = new string[listMembers.Items.Count];
+            for (int i = 0; i < listMembers.Items.Count; i++)
+            {
+                users[i] = listMembers.Items[i].ToString();
+            }
+            MessageBox.Show(users[0].ToString());
+
+            string content = "{listNumber: '1', " + "taskName: '" + tbTaskName.Text + "', taskUsers: '" + users.ToString() + "'}";
+            //string content = "{listNumber: '1', " + "taskName: '" + tbTaskName.Text + "', taskUsers: ['Jan']}";
+            JObject obj = JObject.Parse(content);
+            new clsRestAPIHandler().add_task(current_sprint, current_project, obj.ToString());
+            MessageBox.Show(obj.ToString());
 
             ResetControls();
         }
