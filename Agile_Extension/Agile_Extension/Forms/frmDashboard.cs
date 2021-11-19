@@ -107,7 +107,6 @@ namespace Agile_Extension.Forms
             int tile_size = 75;
 
             MetroSet_UI.Controls.MetroSetTile SprintBtn = new clsDynamicFormControls("New Sprint", x_pos, y_pos, x_pos, tile_size).createDynamicTile(parent);
-
             SprintBtn.Click += sprintbtn_click_event;
             SprintBtn.Name = "SprintBtn";   
         }
@@ -169,7 +168,9 @@ namespace Agile_Extension.Forms
         private void sprintbtn_click_event(object sender, EventArgs e)
         {
             MetroSet_UI.Controls.MetroSetTile tile = (MetroSet_UI.Controls.MetroSetTile)sender;
+            new clsFileHandler().writeToFile(tile.Parent.Name, new clsFileHandler().get_current_project());
             addSprintForm cs = new addSprintForm();
+            this.Hide();
             cs.Show();
         }
         #endregion

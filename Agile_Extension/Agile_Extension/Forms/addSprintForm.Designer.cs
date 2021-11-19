@@ -169,6 +169,7 @@ namespace Agile_Extension.Forms
             this.btnCreateSprint.Text = "Create Sprint";
             this.btnCreateSprint.ThemeAuthor = "Narwin";
             this.btnCreateSprint.ThemeName = "MetroLite";
+            this.btnCreateSprint.Click += new System.EventHandler(this.btnCreateSprint_Click_1);
             // 
             // cbTemplates
             // 
@@ -219,6 +220,8 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.label1);
             this.Name = "addSprintForm";
             this.Text = "Add Sprint";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.addSprintForm_FormClosing);
+            this.Load += new System.EventHandler(this.addSprintForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

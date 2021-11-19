@@ -40,11 +40,12 @@ namespace Agile_Extension.Forms
                     JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList(), sprint_list(txtSprintName.Text));
                     update_user_projects();
                     get_updated_project_file();
-                    if (obj_proj != null)
+                    /*if (obj_proj != null)
                     {
-                        new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text);
+                        new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text, DateTime.Now, DateTime.Now);
                         lblOutput.Text = obj_proj["message"].ToString();
-                    }
+                    }*/
+                    lblOutput.Text = obj_proj["message"].ToString();
                     resetControls();
                 }
             } 

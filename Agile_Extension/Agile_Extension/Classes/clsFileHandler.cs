@@ -19,6 +19,7 @@ namespace Agile_Extension.Classes
         private const string ROLE_FILE = "\\Role.txt";
         private const string USER_INFO = "\\User.txt";
         private const string PROJECTS_INFO = "\\Projects.txt";
+        private const string CURRENT_PROJ = "\\Current_Project.txt";
         #endregion
 
         public string get_role_file()
@@ -34,6 +35,11 @@ namespace Agile_Extension.Classes
         public string get_project_file()
         {
             return PROJECTS_INFO;
+        }
+
+        public string get_current_project()
+        {
+            return CURRENT_PROJ;
         }
 
         

@@ -673,3 +673,4 @@ C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fr
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.csproj.CopyComplete
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.exe
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.pdb
+D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanban.resources
