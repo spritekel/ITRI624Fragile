@@ -42,7 +42,7 @@ namespace Agile_Extension.Forms
                     get_updated_project_file();
                     if (obj_proj != null)
                     {
-                        new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text, DateTime.Now, DateTime.Now);
+                        new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text, dStart.Value, dEnd.Value);
                         lblOutput.Text = obj_proj["message"].ToString();
                     }
                     lblOutput.Text = obj_proj["message"].ToString();

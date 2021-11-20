@@ -47,6 +47,10 @@ namespace Agile_Extension.Forms
             this.lblFMembers = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblProjFName = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblProjFDetails = new MetroSet_UI.Controls.MetroSetLabel();
+            this.lblspr1sd = new MetroSet_UI.Controls.MetroSetLabel();
+            this.lblspr1ed = new MetroSet_UI.Controls.MetroSetLabel();
+            this.dStart = new System.Windows.Forms.DateTimePicker();
+            this.dEnd = new System.Windows.Forms.DateTimePicker();
             this.metroSetPanel1.SuspendLayout();
             this.metroSetPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +93,10 @@ namespace Agile_Extension.Forms
             this.metroSetPanel1.BackgroundColor = System.Drawing.Color.White;
             this.metroSetPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.metroSetPanel1.BorderThickness = 1;
+            this.metroSetPanel1.Controls.Add(this.dEnd);
+            this.metroSetPanel1.Controls.Add(this.dStart);
+            this.metroSetPanel1.Controls.Add(this.lblspr1ed);
+            this.metroSetPanel1.Controls.Add(this.lblspr1sd);
             this.metroSetPanel1.Controls.Add(this.txtSprintName);
             this.metroSetPanel1.Controls.Add(this.lblSprintName);
             this.metroSetPanel1.Controls.Add(this.btnAddProj);
@@ -119,12 +127,12 @@ namespace Agile_Extension.Forms
             this.txtSprintName.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.txtSprintName.Image = null;
             this.txtSprintName.Lines = null;
-            this.txtSprintName.Location = new System.Drawing.Point(170, 78);
+            this.txtSprintName.Location = new System.Drawing.Point(156, 78);
             this.txtSprintName.MaxLength = 32767;
             this.txtSprintName.Multiline = false;
             this.txtSprintName.Name = "txtSprintName";
             this.txtSprintName.ReadOnly = false;
-            this.txtSprintName.Size = new System.Drawing.Size(135, 30);
+            this.txtSprintName.Size = new System.Drawing.Size(149, 30);
             this.txtSprintName.Style = MetroSet_UI.Design.Style.Light;
             this.txtSprintName.StyleManager = null;
             this.txtSprintName.TabIndex = 3;
@@ -203,11 +211,11 @@ namespace Agile_Extension.Forms
             this.cmbMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbMembers.FormattingEnabled = true;
             this.cmbMembers.ItemHeight = 20;
-            this.cmbMembers.Location = new System.Drawing.Point(170, 119);
+            this.cmbMembers.Location = new System.Drawing.Point(156, 208);
             this.cmbMembers.Name = "cmbMembers";
             this.cmbMembers.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.cmbMembers.SelectedItemForeColor = System.Drawing.Color.White;
-            this.cmbMembers.Size = new System.Drawing.Size(135, 26);
+            this.cmbMembers.Size = new System.Drawing.Size(149, 26);
             this.cmbMembers.Style = MetroSet_UI.Design.Style.Light;
             this.cmbMembers.StyleManager = null;
             this.cmbMembers.TabIndex = 5;
@@ -218,7 +226,7 @@ namespace Agile_Extension.Forms
             // lblMembers
             // 
             this.lblMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblMembers.Location = new System.Drawing.Point(9, 122);
+            this.lblMembers.Location = new System.Drawing.Point(9, 211);
             this.lblMembers.Name = "lblMembers";
             this.lblMembers.Size = new System.Drawing.Size(155, 23);
             this.lblMembers.Style = MetroSet_UI.Design.Style.Light;
@@ -241,12 +249,12 @@ namespace Agile_Extension.Forms
             this.txtProjName.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.txtProjName.Image = null;
             this.txtProjName.Lines = null;
-            this.txtProjName.Location = new System.Drawing.Point(170, 39);
+            this.txtProjName.Location = new System.Drawing.Point(156, 39);
             this.txtProjName.MaxLength = 32767;
             this.txtProjName.Multiline = false;
             this.txtProjName.Name = "txtProjName";
             this.txtProjName.ReadOnly = false;
-            this.txtProjName.Size = new System.Drawing.Size(135, 30);
+            this.txtProjName.Size = new System.Drawing.Size(149, 30);
             this.txtProjName.Style = MetroSet_UI.Design.Style.Light;
             this.txtProjName.StyleManager = null;
             this.txtProjName.TabIndex = 1;
@@ -379,6 +387,46 @@ namespace Agile_Extension.Forms
             this.lblProjFDetails.ThemeAuthor = "Narwin";
             this.lblProjFDetails.ThemeName = "MetroLite";
             // 
+            // lblspr1sd
+            // 
+            this.lblspr1sd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblspr1sd.Location = new System.Drawing.Point(9, 119);
+            this.lblspr1sd.Name = "lblspr1sd";
+            this.lblspr1sd.Size = new System.Drawing.Size(141, 23);
+            this.lblspr1sd.Style = MetroSet_UI.Design.Style.Light;
+            this.lblspr1sd.StyleManager = null;
+            this.lblspr1sd.TabIndex = 8;
+            this.lblspr1sd.Text = "Sprint 1 Start Date:";
+            this.lblspr1sd.ThemeAuthor = "Narwin";
+            this.lblspr1sd.ThemeName = "MetroLite";
+            // 
+            // lblspr1ed
+            // 
+            this.lblspr1ed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblspr1ed.Location = new System.Drawing.Point(9, 156);
+            this.lblspr1ed.Name = "lblspr1ed";
+            this.lblspr1ed.Size = new System.Drawing.Size(141, 23);
+            this.lblspr1ed.Style = MetroSet_UI.Design.Style.Light;
+            this.lblspr1ed.StyleManager = null;
+            this.lblspr1ed.TabIndex = 9;
+            this.lblspr1ed.Text = "Sprint 1 End Date:";
+            this.lblspr1ed.ThemeAuthor = "Narwin";
+            this.lblspr1ed.ThemeName = "MetroLite";
+            // 
+            // dStart
+            // 
+            this.dStart.Location = new System.Drawing.Point(156, 119);
+            this.dStart.Name = "dStart";
+            this.dStart.Size = new System.Drawing.Size(149, 27);
+            this.dStart.TabIndex = 10;
+            // 
+            // dEnd
+            // 
+            this.dEnd.Location = new System.Drawing.Point(156, 152);
+            this.dEnd.Name = "dEnd";
+            this.dEnd.Size = new System.Drawing.Size(149, 27);
+            this.dEnd.TabIndex = 11;
+            // 
             // frmAddProject
             // 
             this.AllowResize = false;
@@ -420,5 +468,9 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetTextBox txtSprintName;
         private MetroSet_UI.Controls.MetroSetLabel lblSprintName;
         private MetroSet_UI.Controls.MetroSetLabel lblSprintF;
+        private System.Windows.Forms.DateTimePicker dEnd;
+        private System.Windows.Forms.DateTimePicker dStart;
+        private MetroSet_UI.Controls.MetroSetLabel lblspr1ed;
+        private MetroSet_UI.Controls.MetroSetLabel lblspr1sd;
     }
 }
