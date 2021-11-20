@@ -36,10 +36,10 @@ namespace Agile_Extension.Forms
             {
                 users[i] = listMembers.Items[i].ToString();
             }
-            MessageBox.Show(users[0].ToString());
+            string allusers = String.Join(",", users);
+            MessageBox.Show(allusers);
 
-            string content = "{listNumber: '1', " + "taskName: '" + tbTaskName.Text + "', taskUsers: '" + users.ToString() + "'}";
-            //string content = "{listNumber: '1', " + "taskName: '" + tbTaskName.Text + "', taskUsers: ['Jan']}";
+            string content = "{listNumber: '1', " + "taskName: '" + tbTaskName.Text + "', taskUsers: '" + allusers + "'}";
             JObject obj = JObject.Parse(content);
             new clsRestAPIHandler().add_task(current_sprint, current_project, obj.ToString());
             MessageBox.Show(obj.ToString());
