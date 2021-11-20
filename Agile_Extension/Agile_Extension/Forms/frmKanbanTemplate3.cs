@@ -18,6 +18,16 @@ namespace Agile_Extension.Forms
     public partial class frmKanbanTemplate3 : MetroSetForm
     {
         public int count;
+        public string[] sep_users;
+        public string listname;
+        public string taskname;
+        public string listnum;
+
+        public void spilt_users(string users_string)
+        {
+            sep_users = users_string.Split(',');
+        }
+
         public frmKanbanTemplate3()
         {
             InitializeComponent();
@@ -166,7 +176,32 @@ namespace Agile_Extension.Forms
                     // LVI obj can only belong to one LVI, remove
                     lvi.ListView.Items.Remove(lvi);
                     lists.Items.Add(lvi);
+                    taskname = lvi.SubItems[0].Text.ToString();
+
+                    listname = lists.Columns[0].Text;
+
+                    if (listname == "To Do")
+                    {
+                        listnum = "1";
+                    }
+                    else if (listname == "Doing")
+                    {
+                        listnum = "2";
+                    }
+                    else
+                    {
+                        listnum = "3";
+                    }
+
+                    string current_project = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+                    string current_sprint = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+
+                    string content = "{listNumber: '" + listnum + "'}";
+                    JObject obj = JObject.Parse(content);
+                    new clsRestAPIHandler().move_task(current_sprint, current_project, taskname, obj.ToString());
+                    //MessageBox.Show(taskname);
                 }
+
             }
         }
 
@@ -194,7 +229,7 @@ namespace Agile_Extension.Forms
             LoadProgressBar(DateTime.Now);
             string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
             string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
-            MessageBox.Show(projectname, sprintname);
+            //MessageBox.Show(projectname, sprintname);
 
             JObject sprint_info = new clsRestAPIHandler().get_single_sprint(sprintname, projectname);
             string tasks = sprint_info["sprint"][0]["tasks"].ToString();
@@ -220,6 +255,12 @@ namespace Agile_Extension.Forms
                 }
             }
             
+        }
+
+        private void lstTodo_Click(object sender, EventArgs e)
+        {
+            var selected_item = lstTodo.SelectedItems[0].Text;
+            //MessageBox.Show(selected_item.ToString());
         }
     }
 }

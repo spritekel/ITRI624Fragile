@@ -37,12 +37,12 @@ namespace Agile_Extension.Forms
                 users[i] = listMembers.Items[i].ToString();
             }
             string allusers = String.Join(",", users);
-            MessageBox.Show(allusers);
+            //MessageBox.Show(allusers);
 
             string content = "{listNumber: '1', " + "taskName: '" + tbTaskName.Text + "', taskUsers: '" + allusers + "'}";
             JObject obj = JObject.Parse(content);
             new clsRestAPIHandler().add_task(current_sprint, current_project, obj.ToString());
-            MessageBox.Show(obj.ToString());
+            //MessageBox.Show(obj.ToString());
 
             ResetControls();
         }

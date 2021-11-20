@@ -68,6 +68,7 @@ namespace Agile_Extension.Forms
             this.lstTodo.View = System.Windows.Forms.View.Details;
             this.lstTodo.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstTodo.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
+            this.lstTodo.Click += new System.EventHandler(this.lstTodo_Click);
             this.lstTodo.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstTodo.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
