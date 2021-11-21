@@ -286,6 +286,7 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetProgressBar1);
             this.Name = "frmKanbanTemplate3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StyleManager = this.styleManager1;
             this.Text = "Kanban Board - Simple";
             this.ThemeAuthor = null;

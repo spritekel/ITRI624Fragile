@@ -250,6 +250,7 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.tbTaskName);
             this.Controls.Add(this.metroSetControlBox1);
             this.Name = "frmAddTaskTemplate3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StyleManager = this.styleManager1;
             this.Text = "Add Task";
             this.ThemeAuthor = null;

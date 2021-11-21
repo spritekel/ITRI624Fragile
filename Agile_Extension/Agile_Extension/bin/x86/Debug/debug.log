@@ -7821,3 +7821,16 @@ color: purple;
 [1121/111803.609:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1121/135813.664:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1121/140346.303:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1121/154141.741:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1121/154145.503:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.", source:  (0)
+[1121/154145.726:INFO:CONSOLE(49)] "[FAST CONNECT] connecting to: wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream", source: https://discord.com/invite/NpeJbX3xm9 (49)
+[1121/154146.072:INFO:CONSOLE(130)] "%c[Logger.tsx] 
+font-weight: bold;
+color: purple;
+ Logger has loaded", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)
+[1121/154146.508:INFO:CONSOLE(130)] "%c[default] 
+font-weight: bold;
+color: purple;
+ [BUILD INFO] Release Channel: stable, Build Number: 105608, Version Hash: de4ad934ba7367802427947126e6a63b2b47dccb", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)
+[1121/154146.512:INFO:CONSOLE(130)] "AppCrashedFatalReport: getLastCrash not supported.", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)
+[1121/154146.762:INFO:CONSOLE(130)] "[FAST CONNECT] connected in 1008ms", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)

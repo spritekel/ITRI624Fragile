@@ -154,6 +154,7 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.metroSetEllipse1);
             this.Controls.Add(this.metroSetTabControl1);
             this.Name = "frmDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StyleManager = this.styleManager1;
             this.Text = "Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDashboard_FormClosing);

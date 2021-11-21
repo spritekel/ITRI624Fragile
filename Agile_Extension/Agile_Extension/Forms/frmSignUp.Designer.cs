@@ -308,6 +308,7 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.metroSetPanel1);
             this.Controls.Add(this.metroSetControlBox1);
             this.Name = "frmSignUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StyleManager = this.styleManager1;
             this.Text = "Sign Up";
             this.ThemeAuthor = null;
