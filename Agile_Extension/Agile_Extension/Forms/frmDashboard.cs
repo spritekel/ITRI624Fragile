@@ -152,7 +152,7 @@ namespace Agile_Extension.Forms
             int list_local_one = 8;
             int list_local_two = 47;
             int list_size = 199;
-            MetroSet_UI.Controls.MetroSetListBox list = new clsDynamicFormControls(list_local_one, list_local_two, list_size, list_size).createDynamicListBox(parent);
+            MetroSet_UI.Controls.MetroSetListBox list = new clsDynamicFormControls(list_local_one, list_local_two, list_size, list_size-100).createDynamicListBox(parent);
             list.Items.Add("Generate Dynamic GUI");
         }
         #endregion
@@ -199,37 +199,5 @@ namespace Agile_Extension.Forms
             return sprints_array;
         }
         #endregion
-
-        #region TEMPLATE_BUTTON_HANDLERS
-        private void metroSetButton1_Click(object sender, EventArgs e)
-        {
-            frmKanbanTemplate5 kan = new frmKanbanTemplate5();
-            kan.Show();
-        }
-
-        private void metroSetButton2_Click(object sender, EventArgs e)
-        {
-            frmKanbanTemplate3 kan = new frmKanbanTemplate3();
-            kan.Show();
-        }
-
-        private void metroSetButton3_Click(object sender, EventArgs e)
-        {
-            frmKanbanTemplate5Hons kan = new frmKanbanTemplate5Hons();
-            kan.Show();
-        }
-
-        private void metroSetButton4_Click(object sender, EventArgs e)
-        {
-            frmKanbanTemplate9 kan = new frmKanbanTemplate9();
-            kan.Show();
-        }
-        #endregion
-
-        private void metroSetButton5_Click(object sender, EventArgs e)
-        {
-            frmKanban kan = new frmKanban();
-            kan.Show();
-        }
     }
 }

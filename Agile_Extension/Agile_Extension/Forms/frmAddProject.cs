@@ -33,7 +33,7 @@ namespace Agile_Extension.Forms
 
         private void btnAddProj_Click(object sender, EventArgs e)
         {      
-            if(validate(txtProjName.Text,txtSprintName.Text,listMembers))
+            if(validateProjAdd(txtProjName.Text,txtSprintName.Text,listMembers))
             {
                 if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
@@ -43,10 +43,11 @@ namespace Agile_Extension.Forms
                     if (obj_proj != null)
                     {
                         new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text, dStart.Value, dEnd.Value);
+                        MessageBox.Show("" + dStart.Value + dEnd.Value);
                         lblOutput.Text = obj_proj["message"].ToString();
                     }
                     lblOutput.Text = obj_proj["message"].ToString();
-                    resetControls();
+                    AddTabPageResetControls();
                 }
             } 
         }
@@ -59,8 +60,7 @@ namespace Agile_Extension.Forms
 
         private void frmAddProject_Load(object sender, EventArgs e)
         {
-            populateComboBox();
-           
+            populateMembersComboBox();
         }
 
         private void cmbMembers_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace Agile_Extension.Forms
             return output;
         }
 
-        private void populateComboBox()
+        private void populateMembersComboBox()
         {
             JObject obj = new clsRestAPIHandler().get_all_users();
             int user_count = int.Parse(obj.GetValue("count").ToString());
@@ -154,18 +154,34 @@ namespace Agile_Extension.Forms
         #endregion
 
         #region GENERIC_METHODS
-        private void resetControls()
+        private void AddTabPageResetControls()
         {
             txtProjName.Text = "";
             lblProjFName.Text = "";
             cmbMembers.Items.Clear();
             listMembers.Items.Clear();
             txtSprintName.Text = "";
-            populateComboBox();
+            populateMembersComboBox();
         }
         #endregion
 
-        private bool validate(string proj_name, string sprint_name, MetroSet_UI.Controls.MetroSetListBox list)
+        #region DELETE_PROJECTS_REGION
+        private void populateDelProjComboBox()
+        {
+            cmbDeleteProj.Items.Clear();
+            string current_user = new clsFileHandler().readFromFile(new clsFileHandler().get_user_file());
+            JObject obj_current_user = new clsRestAPIHandler().get_user_info(current_user);
+            string projects_current_user = obj_current_user["user"][0]["projects"].ToString();
+            JArray projects_current_user_array = JArray.Parse(projects_current_user);
+            for(int i = 0; i <projects_current_user_array.Count;i++)
+            {
+                cmbDeleteProj.Items.Add(projects_current_user_array[i]);
+            }
+        }
+
+        #endregion
+
+        private bool validateProjAdd(string proj_name, string sprint_name, MetroSet_UI.Controls.MetroSetListBox list)
         {
             if(proj_name.Length<=0 || proj_name.Contains(" "))
             {
@@ -190,6 +206,64 @@ namespace Agile_Extension.Forms
 
             lblOutput.Text = "";
             return true;
+        }
+
+        private void tpAddProj_Enter(object sender, EventArgs e)
+        {
+            AddTabPageResetControls();
+            
+        }
+
+        private void tpDeleteProj_Enter(object sender, EventArgs e)
+        {
+            
+            populateDelProjComboBox();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if(cmbDeleteProj.SelectedIndex != -1)
+            {
+                string del_project = cmbDeleteProj.SelectedItem.ToString();
+                if (MetroSetMessageBox.Show(this, "Delete"+ del_project +"Database?", "Delete Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {  
+                    removeProjFromUsers(del_project);
+                    JObject obj = new clsRestAPIHandler().delete_project(del_project);
+                    int selected_index = cmbDeleteProj.SelectedIndex;
+                    cmbDeleteProj.Items.RemoveAt(selected_index);
+                    if (obj["message"].ToString().Contains("deleted"))
+                    {
+                        lblDelResult.Text = obj["message"].ToString();
+                    }
+                    get_updated_project_file();
+                }  
+            }
+            else
+            {
+                cmbDeleteProj.Focus();
+            }
+        }
+
+        private void removeProjFromUsers(string project)
+        {
+            JObject obj = new clsRestAPIHandler().get_all_users();
+            int user_count = int.Parse(obj.GetValue("count").ToString());
+            for(int i = 0; i<user_count;i++)
+            {
+                string projects = obj["users"][i]["projects"].ToString();
+                string u_name = obj["users"][i]["username"].ToString();
+                JArray proj_array = JArray.Parse(projects);
+                JArray new_proj_array = RemoveValueFromJArray(proj_array, project);
+                string json_payload = new clsRestAPIHandler().prepareJsonPayload("projects", new_proj_array);
+                new clsRestAPIHandler().update_user(u_name, json_payload);
+            }
+        }
+
+        private static JArray RemoveValueFromJArray(JArray oldArray, dynamic obj)
+        {
+            List<string> newArray = oldArray.ToObject<List<string>>();
+            newArray.Remove(obj);
+            return JArray.FromObject(newArray);
         }
     }
 }
