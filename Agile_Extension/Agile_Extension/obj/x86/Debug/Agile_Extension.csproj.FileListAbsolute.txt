@@ -667,5 +667,13 @@ C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fr
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.pdb
 D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanban.resources
 D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.addSprintForm.resources
+D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanban.resources
+D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmRenameTemplate3.resources
+D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate9.resources
+D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate5Hons.resources
+D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate5.resources
 D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate3.resources
+D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate9.resources
+D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate5Hons.resources
+D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate5.resources
 D:\GitHub Repositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate3.resources

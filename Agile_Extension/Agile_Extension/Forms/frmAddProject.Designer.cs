@@ -62,8 +62,6 @@ namespace Agile_Extension.Forms
             this.listSprints = new MetroSet_UI.Controls.MetroSetListBox();
             this.cbMSprints = new MetroSet_UI.Controls.MetroSetCheckBox();
             this.metroSetPanel3 = new MetroSet_UI.Controls.MetroSetPanel();
-            this.lblMAddUsers = new MetroSet_UI.Controls.MetroSetLabel();
-            this.cmbMUsers = new MetroSet_UI.Controls.MetroSetComboBox();
             this.listUsers = new MetroSet_UI.Controls.MetroSetListBox();
             this.cbMUsers = new MetroSet_UI.Controls.MetroSetCheckBox();
             this.tpDeleteProj = new MetroSet_UI.Child.MetroSetTabPage();
@@ -612,7 +610,7 @@ namespace Agile_Extension.Forms
             this.listSprints.HoveredItemBackColor = System.Drawing.Color.LightGray;
             this.listSprints.HoveredItemColor = System.Drawing.Color.DimGray;
             this.listSprints.ItemHeight = 30;
-            this.listSprints.Location = new System.Drawing.Point(12, 91);
+            this.listSprints.Location = new System.Drawing.Point(12, 78);
             this.listSprints.MultiSelect = false;
             this.listSprints.Name = "listSprints";
             this.listSprints.SelectedIndex = -1;
@@ -622,7 +620,7 @@ namespace Agile_Extension.Forms
             this.listSprints.SelectedValue = null;
             this.listSprints.ShowBorder = false;
             this.listSprints.ShowScrollBar = false;
-            this.listSprints.Size = new System.Drawing.Size(276, 148);
+            this.listSprints.Size = new System.Drawing.Size(276, 161);
             this.listSprints.Style = MetroSet_UI.Design.Style.Light;
             this.listSprints.StyleManager = null;
             this.listSprints.TabIndex = 3;
@@ -659,8 +657,6 @@ namespace Agile_Extension.Forms
             this.metroSetPanel3.BackgroundColor = System.Drawing.Color.White;
             this.metroSetPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.metroSetPanel3.BorderThickness = 1;
-            this.metroSetPanel3.Controls.Add(this.lblMAddUsers);
-            this.metroSetPanel3.Controls.Add(this.cmbMUsers);
             this.metroSetPanel3.Controls.Add(this.listUsers);
             this.metroSetPanel3.Controls.Add(this.cbMUsers);
             this.metroSetPanel3.Location = new System.Drawing.Point(3, 70);
@@ -672,47 +668,6 @@ namespace Agile_Extension.Forms
             this.metroSetPanel3.ThemeAuthor = null;
             this.metroSetPanel3.ThemeName = null;
             // 
-            // lblMAddUsers
-            // 
-            this.lblMAddUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblMAddUsers.Location = new System.Drawing.Point(15, 44);
-            this.lblMAddUsers.Name = "lblMAddUsers";
-            this.lblMAddUsers.Size = new System.Drawing.Size(138, 23);
-            this.lblMAddUsers.Style = MetroSet_UI.Design.Style.Light;
-            this.lblMAddUsers.StyleManager = null;
-            this.lblMAddUsers.TabIndex = 2;
-            this.lblMAddUsers.Text = "Add users:";
-            this.lblMAddUsers.ThemeAuthor = "Narwin";
-            this.lblMAddUsers.ThemeName = "MetroLite";
-            // 
-            // cmbMUsers
-            // 
-            this.cmbMUsers.AllowDrop = true;
-            this.cmbMUsers.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.cmbMUsers.BackColor = System.Drawing.Color.Transparent;
-            this.cmbMUsers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.cmbMUsers.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.cmbMUsers.CausesValidation = false;
-            this.cmbMUsers.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cmbMUsers.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.cmbMUsers.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.cmbMUsers.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbMUsers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.cmbMUsers.FormattingEnabled = true;
-            this.cmbMUsers.ItemHeight = 20;
-            this.cmbMUsers.Location = new System.Drawing.Point(159, 41);
-            this.cmbMUsers.Name = "cmbMUsers";
-            this.cmbMUsers.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.cmbMUsers.SelectedItemForeColor = System.Drawing.Color.White;
-            this.cmbMUsers.Size = new System.Drawing.Size(142, 26);
-            this.cmbMUsers.Style = MetroSet_UI.Design.Style.Light;
-            this.cmbMUsers.StyleManager = null;
-            this.cmbMUsers.TabIndex = 2;
-            this.cmbMUsers.ThemeAuthor = "Narwin";
-            this.cmbMUsers.ThemeName = "MetroLite";
-            this.cmbMUsers.SelectedIndexChanged += new System.EventHandler(this.cmbMUsers_SelectedIndexChanged);
-            // 
             // listUsers
             // 
             this.listUsers.BorderColor = System.Drawing.Color.LightGray;
@@ -723,7 +678,7 @@ namespace Agile_Extension.Forms
             this.listUsers.HoveredItemBackColor = System.Drawing.Color.LightGray;
             this.listUsers.HoveredItemColor = System.Drawing.Color.DimGray;
             this.listUsers.ItemHeight = 30;
-            this.listUsers.Location = new System.Drawing.Point(15, 91);
+            this.listUsers.Location = new System.Drawing.Point(15, 78);
             this.listUsers.MultiSelect = false;
             this.listUsers.Name = "listUsers";
             this.listUsers.SelectedIndex = -1;
@@ -733,7 +688,7 @@ namespace Agile_Extension.Forms
             this.listUsers.SelectedValue = null;
             this.listUsers.ShowBorder = false;
             this.listUsers.ShowScrollBar = false;
-            this.listUsers.Size = new System.Drawing.Size(276, 148);
+            this.listUsers.Size = new System.Drawing.Size(276, 161);
             this.listUsers.Style = MetroSet_UI.Design.Style.Light;
             this.listUsers.StyleManager = null;
             this.listUsers.TabIndex = 2;
@@ -934,7 +889,5 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetListBox listUsers;
         private MetroSet_UI.Controls.MetroSetComboBox cmbDeleteProj;
         private MetroSet_UI.Controls.MetroSetLabel lblManageResult;
-        private MetroSet_UI.Controls.MetroSetLabel lblMAddUsers;
-        private MetroSet_UI.Controls.MetroSetComboBox cmbMUsers;
     }
 }
