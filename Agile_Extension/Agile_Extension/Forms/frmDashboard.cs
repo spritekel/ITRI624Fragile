@@ -179,6 +179,8 @@ namespace Agile_Extension.Forms
             //Write sprint info
             new clsFileHandler().writeToFile(current_spr.ToString(), new clsFileHandler().get_sprint_info());
             kan.Show();
+
+            this.Hide();
         }
         private void sprintbtn_click_event(object sender, EventArgs e)
         {

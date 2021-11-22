@@ -645,17 +645,9 @@ C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fr
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.csprojAssemblyReference.cache
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.addSprintForm.resources
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddProject.resources
-C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanban.resources
-C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmRenameTemplate3.resources
-C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate9.resources
-C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate5Hons.resources
-C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate5.resources
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmChat.resources
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmDashboard.resources
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate3.resources
-C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate9.resources
-C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate5Hons.resources
-C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate5.resources
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate3.resources
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmLogin.resources
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmSignUp.resources

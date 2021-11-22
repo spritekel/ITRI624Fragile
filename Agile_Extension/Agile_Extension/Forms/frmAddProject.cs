@@ -43,7 +43,7 @@ namespace Agile_Extension.Forms
                     if (obj_proj != null)
                     {
                         new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text, dStart.Value, dEnd.Value);
-                        MessageBox.Show("" + dStart.Value + dEnd.Value);
+                        //MessageBox.Show("" + dStart.Value + dEnd.Value);
                         lblOutput.Text = obj_proj["message"].ToString();
                     }
                     lblOutput.Text = obj_proj["message"].ToString();
