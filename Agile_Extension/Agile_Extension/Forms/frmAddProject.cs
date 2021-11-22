@@ -38,12 +38,11 @@ namespace Agile_Extension.Forms
                 if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList(), sprint_list(txtSprintName.Text));
-                    update_user_projects();
+                    update_user_projects(listMembers);
                     get_updated_project_file();
                     if (obj_proj != null)
                     {
                         new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text, dStart.Value, dEnd.Value);
-                        //MessageBox.Show("" + dStart.Value + dEnd.Value);
                         lblOutput.Text = obj_proj["message"].ToString();
                     }
                     lblOutput.Text = obj_proj["message"].ToString();
@@ -81,17 +80,17 @@ namespace Agile_Extension.Forms
         #endregion
 
         #region SEND_INFO_TO_API_METHODS
-        public void update_user_projects()
+        public void update_user_projects(MetroSet_UI.Controls.MetroSetListBox list)
         {
             //Adds project to each user in the listbox to DB.
-            for(int i = 0; i < listMembers.Items.Count; i++)
+            for(int i = 0; i < list.Items.Count; i++)
             {
-                JObject obj = new clsRestAPIHandler().get_user_info(listMembers.Items[i].ToString());
+                JObject obj = new clsRestAPIHandler().get_user_info(list.Items[i].ToString());
                 string projects = obj["user"][0]["projects"].ToString();
                 JArray user_projects = JArray.Parse(projects);
                 user_projects.Add(txtProjName.Text);
                 string json_payload = new clsRestAPIHandler().prepareJsonPayload("projects",user_projects);
-                new clsRestAPIHandler().update_user(listMembers.Items[i].ToString(), json_payload);
+                new clsRestAPIHandler().update_user(list.Items[i].ToString(), json_payload);
             }
 
             //Adds project to the current user in DB.
@@ -204,6 +203,20 @@ namespace Agile_Extension.Forms
                 return false;
             }
 
+            if (DateTime.Compare(dEnd.Value, dStart.Value) < 0)
+            {
+                lblOutput.Text = "Sprint end date is before the start date.";
+                dStart.Focus();
+                return false;
+            }
+
+            if (DateTime.Compare(dEnd.Value, dStart.Value) == 0)
+            {
+                lblOutput.Text = "Sprint start and date are on the same day!";
+                dEnd.Focus();
+                return false;
+            }
+
             lblOutput.Text = "";
             return true;
         }
@@ -273,6 +286,13 @@ namespace Agile_Extension.Forms
                 cbMSprints.Checked = false;
                 listUsers.Enabled = true;
                 listSprints.Enabled = false;
+                cmbMUsers.Enabled = true;
+            }
+
+            if(!cbMUsers.Checked)
+            {
+                listUsers.Enabled = false;
+                cmbMUsers.Enabled = false;
             }
         }
 
@@ -284,6 +304,11 @@ namespace Agile_Extension.Forms
                 listUsers.Enabled = false;
                 listSprints.Enabled = true;
             }
+
+            if(!cbMSprints.Checked)
+            {
+                listSprints.Enabled = false;
+            }
         }
 
         private void tbManageProj_Enter(object sender, EventArgs e)
@@ -294,6 +319,7 @@ namespace Agile_Extension.Forms
 
         private void cmbMProjects_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cmbMUsers.Items.Clear();
             listUsers.Items.Clear();
             listSprints.Items.Clear();
             if(cmbMProjects.SelectedIndex != -1)
@@ -302,11 +328,14 @@ namespace Agile_Extension.Forms
                 cbMSprints.Enabled = true;
                 populateUsersListBox(cmbMProjects.SelectedItem.ToString());
                 populateSprintsListBox(cmbMProjects.SelectedItem.ToString());
+                populateMUsersComboBox();
             }
         }
 
         private void populateUsersListBox(string project)
         {
+            listUsers.Items.Clear();
+            string current_user = new clsFileHandler().readFromFile(new clsFileHandler().get_user_file());
             JObject users_in_proj = new clsRestAPIHandler().get_single_project(project);
             string proj_users = users_in_proj["project"][0]["projUsers"].ToString();
             JArray users_array = JArray.Parse(proj_users);
@@ -315,10 +344,12 @@ namespace Agile_Extension.Forms
             {
                 listUsers.Items.Add(users_array[i].ToString());
             }
+            listUsers.Items.Remove(current_user);
         }
 
         private void populateSprintsListBox(string project)
         {
+            listSprints.Items.Clear();
             JObject sprints_in_proj = new clsRestAPIHandler().get_single_project(project);
             string proj_sprints = sprints_in_proj["project"][0]["sprints"].ToString();
             JArray sprints_array = JArray.Parse(proj_sprints);
@@ -331,6 +362,7 @@ namespace Agile_Extension.Forms
 
         private void resetManageTab()
         {
+            cmbMUsers.Items.Clear();
             cmbMProjects.Items.Clear();
             listSprints.Items.Clear();
             listUsers.Items.Clear();
@@ -390,6 +422,7 @@ namespace Agile_Extension.Forms
                     {
                         lblManageResult.Text = "Operation successful.";
                         listUsers.Items.RemoveAt(listUsers.SelectedIndex);
+                        populateMUsersComboBox();
                     }
                     else
                     {
@@ -436,7 +469,6 @@ namespace Agile_Extension.Forms
                 if (MetroSetMessageBox.Show(this, "Remove " + sprint + " from " + proj + "?", "Remove Sprint", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     JObject current_proj = new clsRestAPIHandler().get_single_project(proj);
-                    JObject current_sprint = new clsRestAPIHandler().get_single_sprint(sprint, proj);
 
                     if(removeSprintFromProj(sprint,proj,current_proj) && removeSprint(sprint))
                     {
@@ -446,6 +478,80 @@ namespace Agile_Extension.Forms
                     else
                     {
                         lblManageResult.Text = "Erroc occured.";
+                    }
+                }
+            }
+        }
+
+        private void populateMUsersComboBox()
+        {
+            cmbMUsers.Items.Clear();
+            JObject obj = new clsRestAPIHandler().get_all_users();
+            int user_count = int.Parse(obj.GetValue("count").ToString());
+            string current_user = new clsFileHandler().readFromFile(new clsFileHandler().get_user_file());
+
+            for (int i = 0; i < user_count; i++)
+            {
+                string users = obj["users"][i]["username"].ToString();
+                if(!listUsers.Items.Contains(users))
+                {
+                    cmbMUsers.Items.Add(users);
+                }
+            }
+            cmbMUsers.Items.Remove(current_user);
+        }
+        
+        //Updates the users in each project
+        private bool updateProjectsUsers(string user, string proj)
+        {
+            JObject current_project = new clsRestAPIHandler().get_single_project(proj);
+            string project = current_project["project"][0]["projUsers"].ToString();
+            JArray users_array = JArray.Parse(project);
+            users_array.Add(user);
+            string json_payload = new clsRestAPIHandler().prepareJsonPayload("projUsers", users_array);
+            JObject result = new clsRestAPIHandler().update_project(proj, json_payload);
+            if (result["message"].ToString().Contains("update"))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        //Updates the projects in each users
+        private bool updateUsersProject(string user, string proj)
+        {
+            JObject selected_user = new clsRestAPIHandler().get_user_info(user);
+            string user_string = selected_user["user"][0]["projects"].ToString();
+            JArray user_array = JArray.Parse(user_string);
+            user_array.Add(proj);
+
+            string json_payload = new clsRestAPIHandler().prepareJsonPayload("projects", user_array);
+            JObject result = new clsRestAPIHandler().update_user(user, json_payload);
+            if (result["message"].ToString().Contains("update"))
+            {
+                return true;
+            }
+            return false;
+
+        }
+
+        private void cmbMUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbMUsers.SelectedIndex != -1)
+            {
+                string user = cmbMUsers.SelectedItem.ToString();
+                string project = cmbMProjects.SelectedItem.ToString();
+                if (MetroSetMessageBox.Show(this, "Add " + user + " to " + project + "?", "Add User", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    if(updateProjectsUsers(user,project) && updateUsersProject(user, project))
+                    {
+                        lblManageResult.Text = "Operation successful.";
+                        populateUsersListBox(project);
+                        cmbMUsers.Items.Remove(user);
+                    }
+                    else
+                    {
+                        lblManageResult.Text = "Error occured";
                     }
                 }
             }

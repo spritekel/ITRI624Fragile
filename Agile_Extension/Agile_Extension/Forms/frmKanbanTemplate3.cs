@@ -44,41 +44,6 @@ namespace Agile_Extension.Forms
         public static frmKanbanTemplate3 _Temp3;
 
 
-        private void createNewList()
-        {
-            //initialisation of needed vars
-            ListView list = new ListView();
-            Random rnd = new Random();
-            System.Windows.Forms.ColumnHeader colHead = new System.Windows.Forms.ColumnHeader();
-            metroSetPanel1.AutoScrollPosition = new Point(metroSetPanel1.AutoScrollPosition.X, 0);
-            //Resets scroll position so that formulas below work as intended
-            metroSetPanel1.VerticalScroll.Value = 0;
-
-            //Adds list before done
-            this.lstDone.Location = new System.Drawing.Point(count * 250, 0);
-            list.Location = new System.Drawing.Point((count - 1) * 250, 0);
-
-            //List set up/formatting
-            list.Name = "DynaList"+rnd.Next();
-            colHead.Width = 250;
-            list.Size = new System.Drawing.Size(250, 400);
-            list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { colHead });
-            list.GridLines = true;
-            list.HideSelection = false;
-            list.UseCompatibleStateImageBehavior = false;
-            list.View = System.Windows.Forms.View.Details;
-            list.ItemDrag += lst_ItemDrag;
-            list.DragDrop += lst_DragDrop;
-            list.DragOver += lst_DragOver;
-            list.ColumnClick += lstRename_ColumnClick;
-            list.AllowDrop = true;
-            colHead.Text = Rename(colHead.Text);
-            metroSetPanel1.Controls.Add(list);
-            //used in formulae for placements
-            count += 1;
-        }
-
-
         public void LoadProgressBar(DateTime today)
         {
             string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
@@ -99,6 +64,10 @@ namespace Agile_Extension.Forms
             {
                 metroSetProgressBar1.BorderColor = System.Drawing.Color.Red;
             }
+            if (progPercent == 100)
+            {
+                metroSetProgressBar1.ProgressColor = System.Drawing.Color.Red;
+            }
             metroSetProgressBar1.Value = ((int)progPercent);
         }
 
@@ -107,32 +76,6 @@ namespace Agile_Extension.Forms
             lstTodo.Items.Add(value);
         }
 
-
-        #region Rename
-        public string Rename(string listName)
-        {
-            string newName = Interaction.InputBox("New Name", "Rename" + listName + "List", listName, (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
-            if (!string.IsNullOrWhiteSpace(newName))
-            {
-                return newName;
-            }
-            else
-            {
-                MessageBox.Show("Invalid Name");
-                return listName;
-            }
-
-        }
-
-        
-        private void lstRename_ColumnClick(object sender, ColumnClickEventArgs e)
-        {
-            System.Windows.Forms.ListView lists = (System.Windows.Forms.ListView)sender;
-            lists.Columns[0].Text = Rename(lists.Columns[0].Text);
-        }
-
-
-        #endregion
 
 
         #region Drag Drop Stuff
@@ -212,13 +155,13 @@ namespace Agile_Extension.Forms
         }
         #endregion
 
-        private void metroSetButton1_Click(object sender, EventArgs e)
-        {
-            createNewList();
-        }
 
         private void frmKanbanTemplate3_Load(object sender, EventArgs e)
         {
+            if (!(new clsFileHandler().readFromFile(new clsFileHandler().get_role_file()).Contains("admin")))
+            {
+                btnAddTask.Enabled = false;
+            }
             //populate data
             //string sprintinfo = new clsFileHandler().readFromFile(new clsFileHandler().get_sprint_info());
             //MessageBox.Show(sprintinfo);
