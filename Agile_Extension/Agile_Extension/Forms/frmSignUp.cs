@@ -33,7 +33,10 @@ namespace Agile_Extension.Forms
                 if (new clsRestAPIHandler().create_user(txtUsrName.Text, txtPassWd.Text, is_lead))
                 {
                     lblEMessage.Text = "User: " + txtUsrName.Text + " Created Successfully (Role: " + is_lead + ").";
-                    resetControls();
+                    this.Hide();
+                    frmLogin login = new frmLogin();
+                    login.Show();
+                   
                 }
                 else
                 {
