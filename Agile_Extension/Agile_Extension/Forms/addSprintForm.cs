@@ -31,7 +31,6 @@ namespace Agile_Extension.Forms
             {
                 string current_project = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
                 JObject current_proj = new clsRestAPIHandler().get_single_project(current_project);
-                MessageBox.Show(current_proj.ToString());
                 string sprints = current_proj["project"][0]["sprints"].ToString();
                 JArray sprints_array = JArray.Parse(sprints);
                 JObject obj_sprint = new clsRestAPIHandler().create_sprint(tbSprintName.Text, current_project, dateTimePicker1.Value, dateTimePicker2.Value);
