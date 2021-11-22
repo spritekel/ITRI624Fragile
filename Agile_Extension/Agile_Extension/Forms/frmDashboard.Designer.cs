@@ -135,11 +135,11 @@ namespace Agile_Extension.Forms
             this.btnAddProj.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnAddProj.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnAddProj.PressTextColor = System.Drawing.Color.White;
-            this.btnAddProj.Size = new System.Drawing.Size(112, 35);
+            this.btnAddProj.Size = new System.Drawing.Size(154, 35);
             this.btnAddProj.Style = MetroSet_UI.Design.Style.Light;
             this.btnAddProj.StyleManager = this.styleManager1;
             this.btnAddProj.TabIndex = 3;
-            this.btnAddProj.Text = "Add Project";
+            this.btnAddProj.Text = "Manage Projects";
             this.btnAddProj.ThemeAuthor = "Narwin";
             this.btnAddProj.ThemeName = "MetroLite";
             this.btnAddProj.Click += new System.EventHandler(this.btnAddProj_Click);
@@ -147,14 +147,14 @@ namespace Agile_Extension.Forms
             // frmDashboard
             // 
             this.AllowResize = false;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1055, 664);
             this.Controls.Add(this.btnAddProj);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetEllipse1);
             this.Controls.Add(this.metroSetTabControl1);
             this.Name = "frmDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StyleManager = this.styleManager1;
             this.Text = "Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDashboard_FormClosing);

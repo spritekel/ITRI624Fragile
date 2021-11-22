@@ -79,6 +79,7 @@ namespace Agile_Extension.Forms
                 generateSprintTiles(project_name, tap_page[i]);
                 generateProgressBar(project_name,tap_page[i]);
                 generatePanel(tap_page[i]);
+                generateSprintBtn(project_name, tap_page[i]);
             }
         }
 
@@ -99,15 +100,26 @@ namespace Agile_Extension.Forms
             }
         }
 
+        private void generateSprintBtn(string project_name, Control parent)
+        {
+            int x_pos = 300;
+            int y_pos = 200;
+            int tile_size = 75;
+
+            MetroSet_UI.Controls.MetroSetTile SprintBtn = new clsDynamicFormControls("New Sprint", x_pos, y_pos, x_pos, tile_size).createDynamicTile(parent);
+            SprintBtn.Click += sprintbtn_click_event;
+            SprintBtn.Name = "SprintBtn";   
+        }
+
         //Add ProgressBar
         private void generateProgressBar(string project,Control parent)
         {
-            int progress_bar_local_one = 13;
-            int progress_bar_local_two = 200;
+            int progress_bar_local_one = 15;
+            int progress_bar_local_two = 150;
             int progress_bar_size = 150;
             CircularProgressBar.CircularProgressBar progress = new clsDynamicFormControls("Progress", progress_bar_local_one, progress_bar_local_two, progress_bar_size, progress_bar_size).createDynamicProgressBar(parent);
             progress.Name = "pb" + project;  
-            //Change value throuh API
+            //Change value through API
             progress.Value = 75;
             progress.SubscriptText = "75";
         }
@@ -115,10 +127,11 @@ namespace Agile_Extension.Forms
         //Add Panel
         private void generatePanel(Control parent)
         {
-            int panel_local_one = 650;
-            int panel_local_two = 250;
-            int panel_size = 250;
-            MetroSet_UI.Controls.MetroSetPanel panel = new clsDynamicFormControls(panel_local_one, panel_local_two, panel_size, panel_size).createDynamicPanel(parent);
+            int panel_local_one = 700; //X-pos
+            int panel_local_two = 125; //Y-pos
+            int panel_size_one = 250;  //X-size
+            int panel_size_two = 200;  //Y-size
+            MetroSet_UI.Controls.MetroSetPanel panel = new clsDynamicFormControls(panel_local_one, panel_local_two, panel_size_one, panel_size_two).createDynamicPanel(parent);
             generatePanelLabel(panel);
             generateListBox(panel);
         }
@@ -138,8 +151,8 @@ namespace Agile_Extension.Forms
         {
             int list_local_one = 8;
             int list_local_two = 47;
-            int list_size = 200;
-            MetroSet_UI.Controls.MetroSetListBox list = new clsDynamicFormControls(list_local_one, list_local_two, list_size, list_size).createDynamicListBox(parent);
+            int list_size = 199;
+            MetroSet_UI.Controls.MetroSetListBox list = new clsDynamicFormControls(list_local_one, list_local_two, list_size, list_size-100).createDynamicListBox(parent);
             list.Items.Add("Generate Dynamic GUI");
         }
         #endregion
@@ -148,10 +161,32 @@ namespace Agile_Extension.Forms
         //On Click event handler for dynamically created Tile Control
         private void tile_click_event(object sender, EventArgs e)
         {
-
             MetroSet_UI.Controls.MetroSetTile tile = (MetroSet_UI.Controls.MetroSetTile)sender;
-            string name = tile.Name;
-            MetroSetMessageBox.Show(this, name, name);
+            frmKanbanTemplate3 kan = new frmKanbanTemplate3();
+            //Get current project
+            new clsFileHandler().writeToFile(tile.Parent.Name, new clsFileHandler().get_current_project());
+            string current_project = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            JObject current_proj = new clsRestAPIHandler().get_single_project(current_project);
+            string project = current_proj["project"][0]["projName"].ToString();
+            //MessageBox.Show(project);
+            //MessageBox.Show(current_proj.ToString());
+            //Get curent sprint
+            new clsFileHandler().writeToFile(tile.Name, new clsFileHandler().get_current_sprint());
+            string current_sprint = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            //MessageBox.Show(current_sprint);
+            JObject current_spr = new clsRestAPIHandler().get_single_sprint(current_sprint, project);
+            //MessageBox.Show(current_spr.ToString());
+            //Write sprint info
+            new clsFileHandler().writeToFile(current_spr.ToString(), new clsFileHandler().get_sprint_info());
+            kan.Show();
+        }
+        private void sprintbtn_click_event(object sender, EventArgs e)
+        {
+            MetroSet_UI.Controls.MetroSetTile tile = (MetroSet_UI.Controls.MetroSetTile)sender;
+            new clsFileHandler().writeToFile(tile.Parent.Name, new clsFileHandler().get_current_project());
+            addSprintForm cs = new addSprintForm();
+            this.Hide();
+            cs.Show();
         }
         #endregion
 
@@ -164,6 +199,5 @@ namespace Agile_Extension.Forms
             return sprints_array;
         }
         #endregion
-
     }
 }

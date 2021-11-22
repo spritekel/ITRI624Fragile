@@ -74,6 +74,7 @@
     <Reference Include="MetroSet UI, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroSet_UI.1.0.5\lib\net45\MetroSet UI.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -101,11 +102,47 @@
     <Compile Include="Classes\clsDynamicFormControls.cs" />
     <Compile Include="Classes\clsFileHandler.cs" />
     <Compile Include="Classes\clsRestAPIHandler.cs" />
+    <Compile Include="Forms\addSprintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\addSprintForm.Designer.cs">
+      <DependentUpon>addSprintForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmAddProject.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmAddProject.Designer.cs">
       <DependentUpon>frmAddProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKanban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKanban.Designer.cs">
+      <DependentUpon>frmKanban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRenameTemplate3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRenameTemplate3.Designer.cs">
+      <DependentUpon>frmRenameTemplate3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddTaskTemplate9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddTaskTemplate9.Designer.cs">
+      <DependentUpon>frmAddTaskTemplate9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddTaskTemplate5Hons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddTaskTemplate5Hons.Designer.cs">
+      <DependentUpon>frmAddTaskTemplate5Hons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddTaskTemplate5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddTaskTemplate5.Designer.cs">
+      <DependentUpon>frmAddTaskTemplate5.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmChat.cs">
       <SubType>Form</SubType>
@@ -118,6 +155,36 @@
     </Compile>
     <Compile Include="Forms\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddTaskTemplate3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddTaskTemplate3.Designer.cs">
+      <DependentUpon>frmAddTaskTemplate3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKanbanTemplate9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKanbanTemplate9.Designer.cs">
+      <DependentUpon>frmKanbanTemplate9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKanbanTemplate5Hons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKanbanTemplate5Hons.Designer.cs">
+      <DependentUpon>frmKanbanTemplate5Hons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKanbanTemplate5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKanbanTemplate5.Designer.cs">
+      <DependentUpon>frmKanbanTemplate5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKanbanTemplate3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKanbanTemplate3.Designer.cs">
+      <DependentUpon>frmKanbanTemplate3.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
@@ -133,14 +200,47 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\addSprintForm.resx">
+      <DependentUpon>addSprintForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddProject.resx">
       <DependentUpon>frmAddProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKanban.resx">
+      <DependentUpon>frmKanban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRenameTemplate3.resx">
+      <DependentUpon>frmRenameTemplate3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddTaskTemplate9.resx">
+      <DependentUpon>frmAddTaskTemplate9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddTaskTemplate5Hons.resx">
+      <DependentUpon>frmAddTaskTemplate5Hons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddTaskTemplate5.resx">
+      <DependentUpon>frmAddTaskTemplate5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChat.resx">
       <DependentUpon>frmChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddTaskTemplate3.resx">
+      <DependentUpon>frmAddTaskTemplate3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKanbanTemplate9.resx">
+      <DependentUpon>frmKanbanTemplate9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKanbanTemplate5Hons.resx">
+      <DependentUpon>frmKanbanTemplate5Hons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKanbanTemplate5.resx">
+      <DependentUpon>frmKanbanTemplate5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKanbanTemplate3.resx">
+      <DependentUpon>frmKanbanTemplate3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -177,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logoFragile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\renameIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

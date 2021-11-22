@@ -15,8 +15,13 @@ namespace Agile_Extension.Classes
 {
     class clsRestAPIHandler
     {
+        //Original Heroku app
+        //private const string BASE_URL = "https://mysterious-reef-01698.herokuapp.com/";
 
-        private const string BASE_URL = "https://mysterious-reef-01698.herokuapp.com/";
+        //private const string BASE_URL = "http://localhost:5000";
+        //Heroku app for testing kanban api
+        private const string BASE_URL = "https://kanban-api-624.herokuapp.com/";
+
         public clsRestAPIHandler()
         {
 
@@ -250,16 +255,45 @@ namespace Agile_Extension.Classes
             return null;
         }
 
+        public JObject update_project(string project_name, string content)
+        {
+            try
+            {
+
+                Debug.WriteLine("data to be sent: update user: " + content);
+
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/project/" + project_name, Method.PATCH);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(content);
+
+                var response = client.Execute(request);
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("Update project: " + response.Content);
+
+                if ((int)statusCode == 200)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e);
+            }
+            return null;
+        }
+
         #endregion
 
         #region SPRINT_ROUTES
 
-        public JObject get_single_sprint(string project_name)
+        public JObject get_single_sprint(string sprint_name, string project_name)
         {
             try
             {
                 var client = new RestClient(BASE_URL);
-                var request = new RestRequest("/sprint/" + project_name, Method.GET);
+                var request = new RestRequest("/sprint/" + sprint_name + "/" + project_name, Method.GET);
                 request.RequestFormat = DataFormat.Json;
                 request.AddHeader("Content-type", "application/json");
                 var response = client.Execute(request);
@@ -303,7 +337,7 @@ namespace Agile_Extension.Classes
 
             return null;
         }
-        public JObject create_sprint(string sprint_name, string project)
+        public JObject create_sprint(string sprint_name, string project_name, DateTime start_date, DateTime end_date)
         {
             try
             {
@@ -314,7 +348,9 @@ namespace Agile_Extension.Classes
                 request.AddJsonBody(new
                 {
                     sprName = sprint_name,
-                    project = project
+                    project = project_name,
+                    startDate = start_date,
+                    endDate = end_date,
                 });
                 var response = client.Execute(request);
 
@@ -332,7 +368,7 @@ namespace Agile_Extension.Classes
             return null;
         }
 
-        public JObject update_sprint(string sprint_name, string content)
+        public JObject update_sprint(string sprint_name, string project_name, string content)
         {
             try
             {
@@ -340,7 +376,7 @@ namespace Agile_Extension.Classes
                 Debug.WriteLine("data to be sent: update user: " + content);
 
                 var client = new RestClient(BASE_URL);
-                var request = new RestRequest("/sprint/" + sprint_name, Method.PATCH);
+                var request = new RestRequest("/sprint/" + sprint_name + "/" + project_name, Method.PATCH);
                 request.RequestFormat = DataFormat.Json;
                 request.AddHeader("Content-type", "application/json");
                 request.AddJsonBody(content);
@@ -373,6 +409,64 @@ namespace Agile_Extension.Classes
                 var response = client.Execute(request);
                 HttpStatusCode statusCode = response.StatusCode;
                 Debug.WriteLine("Delete sprint: " + response.Content);
+
+                if ((int)statusCode == 200)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e);
+            }
+            return null;
+        }
+
+        public JObject add_task(string sprint_name, string project_name, string content)
+        {
+            try
+            {
+
+                Debug.WriteLine("data to be sent: update user: " + content);
+
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/sprint/addtask/" + sprint_name + "/" + project_name, Method.PATCH);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(content);
+
+                var response = client.Execute(request);
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("Update Sprint: " + response.Content);
+
+                if ((int)statusCode == 200)
+                {
+                    return toJsonObject(response.Content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e);
+            }
+            return null;
+        }
+
+        public JObject move_task(string sprint_name, string project_name, string task_name, string content)
+        {
+            try
+            {
+
+                Debug.WriteLine("data to be sent: update user: " + content);
+
+                var client = new RestClient(BASE_URL);
+                var request = new RestRequest("/sprint/movetask/" + sprint_name + "/" + project_name + "/" + task_name, Method.PATCH);
+                request.RequestFormat = DataFormat.Json;
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(content);
+
+                var response = client.Execute(request);
+                HttpStatusCode statusCode = response.StatusCode;
+                Debug.WriteLine("Move task: " + response.Content);
 
                 if ((int)statusCode == 200)
                 {
