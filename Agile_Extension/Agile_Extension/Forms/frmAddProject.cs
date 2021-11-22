@@ -43,7 +43,6 @@ namespace Agile_Extension.Forms
                     if (obj_proj != null)
                     {
                         new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text, dStart.Value, dEnd.Value);
-                        MessageBox.Show("" + dStart.Value + dEnd.Value);
                         lblOutput.Text = obj_proj["message"].ToString();
                     }
                     lblOutput.Text = obj_proj["message"].ToString();
@@ -201,6 +200,20 @@ namespace Agile_Extension.Forms
             {
                 lblOutput.Text = "No members added to project";
                 list.Focus();
+                return false;
+            }
+
+            if (DateTime.Compare(dEnd.Value, dStart.Value) < 0)
+            {
+                lblOutput.Text = "Sprint end date is before the start date.";
+                dStart.Focus();
+                return false;
+            }
+
+            if (DateTime.Compare(dEnd.Value, dStart.Value) == 0)
+            {
+                lblOutput.Text = "Sprint start and date are on the same day!";
+                dEnd.Focus();
                 return false;
             }
 

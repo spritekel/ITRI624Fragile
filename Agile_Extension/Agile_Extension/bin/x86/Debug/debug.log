@@ -7844,4 +7844,7 @@ font-weight: bold;
 color: purple;
  [BUILD INFO] Release Channel: stable, Build Number: 105608, Version Hash: de4ad934ba7367802427947126e6a63b2b47dccb", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)
 [1122/132810.799:INFO:CONSOLE(130)] "AppCrashedFatalReport: getLastCrash not supported.", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)
-[1122/144501.471:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1122/142053.279:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1122/144909.339:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1122/150104.615:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1122/150448.739:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled

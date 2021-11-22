@@ -99,6 +99,10 @@ namespace Agile_Extension.Forms
             {
                 metroSetProgressBar1.BorderColor = System.Drawing.Color.Red;
             }
+            if (progPercent == 100)
+            {
+                metroSetProgressBar1.ProgressColor = System.Drawing.Color.Red;
+            }
             metroSetProgressBar1.Value = ((int)progPercent);
         }
 
