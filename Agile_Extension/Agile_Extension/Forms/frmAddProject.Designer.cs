@@ -292,17 +292,21 @@ namespace Agile_Extension.Forms
             // 
             // dEnd
             // 
+            this.dEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.dEnd.Location = new System.Drawing.Point(156, 152);
             this.dEnd.Name = "dEnd";
-            this.dEnd.Size = new System.Drawing.Size(149, 32);
+            this.dEnd.Size = new System.Drawing.Size(149, 20);
             this.dEnd.TabIndex = 11;
+            this.dEnd.Value = System.DateTime.Today.AddDays(14);
             // 
             // dStart
             // 
+            this.dStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.dStart.Location = new System.Drawing.Point(156, 119);
             this.dStart.Name = "dStart";
-            this.dStart.Size = new System.Drawing.Size(149, 32);
+            this.dStart.Size = new System.Drawing.Size(149, 20);
             this.dStart.TabIndex = 10;
+            this.dStart.Value = System.DateTime.Today;
             // 
             // lblspr1ed
             // 
