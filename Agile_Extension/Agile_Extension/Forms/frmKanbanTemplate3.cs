@@ -203,7 +203,89 @@ namespace Agile_Extension.Forms
         private void lstTodo_Click(object sender, EventArgs e)
         {
             var selected_item = lstTodo.SelectedItems[0].Text;
+            string selected_task = selected_item.ToString();
             //MessageBox.Show(selected_item.ToString());
+
+            string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            //MessageBox.Show(projectname, sprintname);
+
+            JObject sprint_info = new clsRestAPIHandler().get_single_sprint(sprintname, projectname);
+            string tasks = sprint_info["sprint"][0]["tasks"].ToString();
+            JArray tasks_array = JArray.Parse(tasks);
+            int length = tasks_array.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                string taskname = sprint_info["sprint"][0]["tasks"][i]["taskName"].ToString();
+                if(selected_task == taskname)
+                {
+                    string taskMembers = sprint_info["sprint"][0]["tasks"][i]["taskUsers"][0].ToString();
+                    taskMembers = taskMembers.Replace(',', '\n');
+                    MetroSetMessageBox.Show(this, taskMembers, "Task Members");
+                }
+            }
+        }
+
+        private void frmKanbanTemplate3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmDashboard dashb = new frmDashboard();
+            dashb.Show();
+            this.Hide();
+        }
+
+        private void lstDoing_Click(object sender, EventArgs e)
+        {
+            var selected_item = lstDoing.SelectedItems[0].Text;
+            string selected_task = selected_item.ToString();
+            //MessageBox.Show(selected_item.ToString());
+
+            string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            //MessageBox.Show(projectname, sprintname);
+
+            JObject sprint_info = new clsRestAPIHandler().get_single_sprint(sprintname, projectname);
+            string tasks = sprint_info["sprint"][0]["tasks"].ToString();
+            JArray tasks_array = JArray.Parse(tasks);
+            int length = tasks_array.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                string taskname = sprint_info["sprint"][0]["tasks"][i]["taskName"].ToString();
+                if (selected_task == taskname)
+                {
+                    string taskMembers = sprint_info["sprint"][0]["tasks"][i]["taskUsers"][0].ToString();
+                    taskMembers = taskMembers.Replace(',', '\n');
+                    MetroSetMessageBox.Show(this, taskMembers, "Task Members");
+                }
+            }
+        }
+
+        private void lstDone_Click(object sender, EventArgs e)
+        {
+            var selected_item = lstDone.SelectedItems[0].Text;
+            string selected_task = selected_item.ToString();
+            //MessageBox.Show(selected_item.ToString());
+
+            string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            //MessageBox.Show(projectname, sprintname);
+
+            JObject sprint_info = new clsRestAPIHandler().get_single_sprint(sprintname, projectname);
+            string tasks = sprint_info["sprint"][0]["tasks"].ToString();
+            JArray tasks_array = JArray.Parse(tasks);
+            int length = tasks_array.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                string taskname = sprint_info["sprint"][0]["tasks"][i]["taskName"].ToString();
+                if (selected_task == taskname)
+                {
+                    string taskMembers = sprint_info["sprint"][0]["tasks"][i]["taskUsers"][0].ToString();
+                    taskMembers = taskMembers.Replace(',', '\n');
+                    MetroSetMessageBox.Show(this, taskMembers, "Task Members");
+                }
+            }
         }
     }
 }
