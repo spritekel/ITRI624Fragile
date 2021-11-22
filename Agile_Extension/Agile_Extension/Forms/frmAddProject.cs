@@ -204,6 +204,20 @@ namespace Agile_Extension.Forms
                 return false;
             }
 
+            if (DateTime.Compare(dEnd.Value, dStart.Value) < 0)
+            {
+                lblOutput.Text = "Sprint end date is before the start date.";
+                dStart.Focus();
+                return false;
+            }
+
+            if (DateTime.Compare(dEnd.Value, dStart.Value) == 0)
+            {
+                lblOutput.Text = "Sprint start and date are on the same day!";
+                dEnd.Focus();
+                return false;
+            }
+
             lblOutput.Text = "";
             return true;
         }

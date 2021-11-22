@@ -32,12 +32,12 @@ namespace Agile_Extension.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.startDatePick = new System.Windows.Forms.DateTimePicker();
-            this.endDatePick = new System.Windows.Forms.DateTimePicker();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.tbSprintName = new MetroSet_UI.Controls.MetroSetTextBox();
             this.btnCreateSprint = new MetroSet_UI.Controls.MetroSetButton();
             this.lblOutput = new MetroSet_UI.Controls.MetroSetLabel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -45,7 +45,7 @@ namespace Agile_Extension.Forms
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 26);
+            this.label1.Size = new System.Drawing.Size(114, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sprint Name:";
             // 
@@ -54,7 +54,7 @@ namespace Agile_Extension.Forms
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 26);
+            this.label3.Size = new System.Drawing.Size(96, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "Start Date:";
             // 
@@ -63,24 +63,9 @@ namespace Agile_Extension.Forms
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(25, 173);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 26);
+            this.label4.Size = new System.Drawing.Size(90, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "End Date:";
-            // 
-            // startDatePick
-            // 
-            this.startDatePick.Location = new System.Drawing.Point(196, 135);
-            this.startDatePick.Name = "startDatePick";
-            this.startDatePick.Size = new System.Drawing.Size(287, 32);
-            this.startDatePick.TabIndex = 4;
-            this.startDatePick.Value = new System.DateTime(2021, 11, 17, 15, 50, 39, 0);
-            // 
-            // endDatePick
-            // 
-            this.endDatePick.Location = new System.Drawing.Point(196, 173);
-            this.endDatePick.Name = "endDatePick";
-            this.endDatePick.Size = new System.Drawing.Size(287, 32);
-            this.endDatePick.TabIndex = 5;
             // 
             // metroSetControlBox1
             // 
@@ -172,18 +157,35 @@ namespace Agile_Extension.Forms
             this.lblOutput.TabIndex = 9;
             this.lblOutput.ThemeAuthor = "Narwin";
             this.lblOutput.ThemeName = "MetroLite";
+            this.lblOutput.Click += new System.EventHandler(this.lblOutput_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(196, 135);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(287, 27);
+            this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.Value = System.DateTime.Today;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(196, 174);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(287, 27);
+            this.dateTimePicker2.TabIndex = 11;
+            this.dateTimePicker2.Value = System.DateTime.Today.AddDays(14);
             // 
             // addSprintForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 265);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.btnCreateSprint);
             this.Controls.Add(this.tbSprintName);
             this.Controls.Add(this.metroSetControlBox1);
-            this.Controls.Add(this.endDatePick);
-            this.Controls.Add(this.startDatePick);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -192,6 +194,7 @@ namespace Agile_Extension.Forms
             this.Text = "Add Sprint";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.addSprintForm_FormClosing);
             this.Load += new System.EventHandler(this.addSprintForm_Load);
+            this.Shown += new System.EventHandler(this.addSprintForm_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,11 +205,11 @@ namespace Agile_Extension.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker startDatePick;
-        private System.Windows.Forms.DateTimePicker endDatePick;
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetTextBox tbSprintName;
         private MetroSet_UI.Controls.MetroSetButton btnCreateSprint;
         private MetroSet_UI.Controls.MetroSetLabel lblOutput;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }
