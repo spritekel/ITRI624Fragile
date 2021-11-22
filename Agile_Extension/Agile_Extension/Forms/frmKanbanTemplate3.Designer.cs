@@ -41,7 +41,6 @@ namespace Agile_Extension.Forms
             this.styleManager1 = new MetroSet_UI.StyleManager();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.btnAddTask = new MetroSet_UI.Controls.MetroSetButton();
-            this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
             this.lbED = new MetroSet_UI.Controls.MetroSetLabel();
             this.lbSD = new MetroSet_UI.Controls.MetroSetLabel();
@@ -66,7 +65,6 @@ namespace Agile_Extension.Forms
             this.lstTodo.TabIndex = 4;
             this.lstTodo.UseCompatibleStateImageBehavior = false;
             this.lstTodo.View = System.Windows.Forms.View.Details;
-            this.lstTodo.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstTodo.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
             this.lstTodo.Click += new System.EventHandler(this.lstTodo_Click);
             this.lstTodo.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
@@ -89,7 +87,6 @@ namespace Agile_Extension.Forms
             this.lstDoing.TabIndex = 5;
             this.lstDoing.UseCompatibleStateImageBehavior = false;
             this.lstDoing.View = System.Windows.Forms.View.Details;
-            this.lstDoing.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lstRename_ColumnClick);
             this.lstDoing.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
             this.lstDoing.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstDoing.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
@@ -203,33 +200,6 @@ namespace Agile_Extension.Forms
             this.btnAddTask.ThemeName = null;
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
-            // metroSetButton1
-            // 
-            this.metroSetButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroSetButton1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.DisabledForeColor = System.Drawing.Color.Gray;
-            this.metroSetButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetButton1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton1.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Location = new System.Drawing.Point(665, 145);
-            this.metroSetButton1.Name = "metroSetButton1";
-            this.metroSetButton1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.NormalTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton1.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Size = new System.Drawing.Size(100, 30);
-            this.metroSetButton1.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetButton1.StyleManager = this.styleManager1;
-            this.metroSetButton1.TabIndex = 23;
-            this.metroSetButton1.Text = "Add New List";
-            this.metroSetButton1.ThemeAuthor = null;
-            this.metroSetButton1.ThemeName = null;
-            this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_Click);
-            // 
             // metroSetPanel1
             // 
             this.metroSetPanel1.BackgroundColor = System.Drawing.Color.White;
@@ -281,7 +251,6 @@ namespace Agile_Extension.Forms
             this.Controls.Add(this.lbSD);
             this.Controls.Add(this.lbED);
             this.Controls.Add(this.metroSetPanel1);
-            this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetProgressBar1);
@@ -311,7 +280,6 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetButton btnAddTask;
         private MetroSet_UI.StyleManager styleManager1;
-        private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
         private MetroSet_UI.Controls.MetroSetPanel metroSetPanel1;
         private MetroSet_UI.Controls.MetroSetLabel lbSD;
         private MetroSet_UI.Controls.MetroSetLabel lbED;
