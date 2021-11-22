@@ -31,6 +31,7 @@ namespace Agile_Extension.Forms
                 btnAddProj.Enabled = true;
             }
             generateTabPages(projects);
+            ///testing
         }
 
         private void metroSetEllipse1_Click(object sender, EventArgs e)
