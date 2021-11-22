@@ -63,15 +63,15 @@ namespace Agile_Extension.Forms
         }
         private void populateComboBox()
         {
-            string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
-            JObject obj = new clsRestAPIHandler().get_single_project(projectname);
+            JObject obj = new clsRestAPIHandler().get_all_users();
+            int user_count = int.Parse(obj.GetValue("count").ToString());
             string current_user = new clsFileHandler().readFromFile(new clsFileHandler().get_user_file());
-            JArray current_users = JArray.Parse(obj["project"][0]["projUsers"].ToString());
 
-            foreach (string item in current_users)
+            for (int i = 0; i < user_count; i++)
             {
-                cmbMembers.Items.Add(item);
-            }                
+                string users = obj["users"][i]["username"].ToString();
+                cmbMembers.Items.Add(users);
+            }
             cmbMembers.Items.Remove(current_user);
         }
         private void ResetControls()

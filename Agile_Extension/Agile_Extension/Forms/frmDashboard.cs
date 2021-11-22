@@ -103,11 +103,11 @@ namespace Agile_Extension.Forms
 
         private void generateSprintBtn(string project_name, Control parent)
         {
-            int x_pos = 300;
+            int x_pos = 200;
             int y_pos = 200;
             int tile_size = 75;
 
-            MetroSet_UI.Controls.MetroSetTile SprintBtn = new clsDynamicFormControls("New Sprint", x_pos, y_pos, x_pos, tile_size).createDynamicTile(parent);
+            MetroSet_UI.Controls.MetroSetTile SprintBtn = new clsDynamicFormControls("New Sprint", x_pos, y_pos, tile_size, tile_size).createDynamicTile(parent);
             SprintBtn.Click += sprintbtn_click_event;
             SprintBtn.Name = "SprintBtn";   
         }
