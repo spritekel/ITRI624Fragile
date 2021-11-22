@@ -246,7 +246,7 @@ namespace Agile_Extension.Forms
             this.lblProjectLead.Style = MetroSet_UI.Design.Style.Light;
             this.lblProjectLead.StyleManager = null;
             this.lblProjectLead.TabIndex = 3;
-            this.lblProjectLead.Text = "Project Lead (Yes/No):";
+            this.lblProjectLead.Text = "Project Lead (No/Yes):";
             this.lblProjectLead.ThemeAuthor = "Narwin";
             this.lblProjectLead.ThemeName = "MetroLite";
             // 
