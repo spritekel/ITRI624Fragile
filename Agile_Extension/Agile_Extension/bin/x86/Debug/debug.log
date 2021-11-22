@@ -7834,3 +7834,13 @@ color: purple;
  [BUILD INFO] Release Channel: stable, Build Number: 105608, Version Hash: de4ad934ba7367802427947126e6a63b2b47dccb", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)
 [1121/154146.512:INFO:CONSOLE(130)] "AppCrashedFatalReport: getLastCrash not supported.", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)
 [1121/154146.762:INFO:CONSOLE(130)] "[FAST CONNECT] connected in 1008ms", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)
+[1122/132809.956:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.", source:  (0)
+[1122/132810.446:INFO:CONSOLE(130)] "%c[Logger.tsx] 
+font-weight: bold;
+color: purple;
+ Logger has loaded", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)
+[1122/132810.796:INFO:CONSOLE(130)] "%c[default] 
+font-weight: bold;
+color: purple;
+ [BUILD INFO] Release Channel: stable, Build Number: 105608, Version Hash: de4ad934ba7367802427947126e6a63b2b47dccb", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)
+[1122/132810.799:INFO:CONSOLE(130)] "AppCrashedFatalReport: getLastCrash not supported.", source: https://discord.com/assets/0bfa49fd2365391e08a7.js (130)

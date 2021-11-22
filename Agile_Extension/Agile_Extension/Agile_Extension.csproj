@@ -114,36 +114,6 @@
     <Compile Include="Forms\frmAddProject.Designer.cs">
       <DependentUpon>frmAddProject.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmKanban.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmKanban.Designer.cs">
-      <DependentUpon>frmKanban.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmRenameTemplate3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmRenameTemplate3.Designer.cs">
-      <DependentUpon>frmRenameTemplate3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmAddTaskTemplate9.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmAddTaskTemplate9.Designer.cs">
-      <DependentUpon>frmAddTaskTemplate9.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmAddTaskTemplate5Hons.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmAddTaskTemplate5Hons.Designer.cs">
-      <DependentUpon>frmAddTaskTemplate5Hons.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmAddTaskTemplate5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmAddTaskTemplate5.Designer.cs">
-      <DependentUpon>frmAddTaskTemplate5.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmChat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,24 +131,6 @@
     </Compile>
     <Compile Include="Forms\frmAddTaskTemplate3.Designer.cs">
       <DependentUpon>frmAddTaskTemplate3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmKanbanTemplate9.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmKanbanTemplate9.Designer.cs">
-      <DependentUpon>frmKanbanTemplate9.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmKanbanTemplate5Hons.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmKanbanTemplate5Hons.Designer.cs">
-      <DependentUpon>frmKanbanTemplate5Hons.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmKanbanTemplate5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmKanbanTemplate5.Designer.cs">
-      <DependentUpon>frmKanbanTemplate5.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmKanbanTemplate3.cs">
       <SubType>Form</SubType>
@@ -206,21 +158,6 @@
     <EmbeddedResource Include="Forms\frmAddProject.resx">
       <DependentUpon>frmAddProject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmKanban.resx">
-      <DependentUpon>frmKanban.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmRenameTemplate3.resx">
-      <DependentUpon>frmRenameTemplate3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddTaskTemplate9.resx">
-      <DependentUpon>frmAddTaskTemplate9.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddTaskTemplate5Hons.resx">
-      <DependentUpon>frmAddTaskTemplate5Hons.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddTaskTemplate5.resx">
-      <DependentUpon>frmAddTaskTemplate5.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChat.resx">
       <DependentUpon>frmChat.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,15 +166,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddTaskTemplate3.resx">
       <DependentUpon>frmAddTaskTemplate3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmKanbanTemplate9.resx">
-      <DependentUpon>frmKanbanTemplate9.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmKanbanTemplate5Hons.resx">
-      <DependentUpon>frmKanbanTemplate5Hons.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmKanbanTemplate5.resx">
-      <DependentUpon>frmKanbanTemplate5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmKanbanTemplate3.resx">
       <DependentUpon>frmKanbanTemplate3.cs</DependentUpon>

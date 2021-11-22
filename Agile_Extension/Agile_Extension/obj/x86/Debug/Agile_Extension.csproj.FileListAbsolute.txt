@@ -428,14 +428,7 @@ C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agi
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.exe
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.pdb
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate3.resources
-C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate5.resources
-C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate5Hons.resources
-C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanbanTemplate9.resources
-C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate5.resources
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate3.resources
-C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate5Hons.resources
-C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmAddTaskTemplate9.resources
-C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmRenameTemplate3.resources
 D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\chrome_100_percent.pak
 D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\chrome_200_percent.pak
 D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\chrome_elf.dll
@@ -554,7 +547,6 @@ D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Ext
 D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.pdb
 D:\Coding\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.addSprintForm.resources
 C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.addSprintForm.resources
-C:\Users\RKW-PostGrad\Desktop\GitRepositories\ITRI624Fragile\Agile_Extension\Agile_Extension\obj\x86\Debug\Agile_Extension.Forms.frmKanban.resources
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\chrome_100_percent.pak
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\chrome_200_percent.pak
 C:\Users\vanzy\Desktop\NWU\Honours\4-ISE\2nd-Semester\ITRI-625_Project\ITRI624Fragile\ITRI624Fragile\Agile_Extension\Agile_Extension\bin\x86\Debug\chrome_elf.dll
