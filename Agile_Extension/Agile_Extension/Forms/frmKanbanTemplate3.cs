@@ -156,6 +156,136 @@ namespace Agile_Extension.Forms
         #endregion
 
 
-        
+        private void frmKanbanTemplate3_Load(object sender, EventArgs e)
+        {
+            if (!(new clsFileHandler().readFromFile(new clsFileHandler().get_role_file()).Contains("admin")))
+            {
+                btnAddTask.Enabled = false;
+            }
+            //populate data
+            //string sprintinfo = new clsFileHandler().readFromFile(new clsFileHandler().get_sprint_info());
+            //MessageBox.Show(sprintinfo);
+        }
+
+        private void frmKanbanTemplate3_Shown(object sender, EventArgs e)
+        {
+            LoadProgressBar(DateTime.Now);
+            string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            //MessageBox.Show(projectname, sprintname);
+
+            JObject sprint_info = new clsRestAPIHandler().get_single_sprint(sprintname, projectname);
+            string tasks = sprint_info["sprint"][0]["tasks"].ToString();
+            JArray tasks_array = JArray.Parse(tasks);
+            int length = tasks_array.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                string listnumber = sprint_info["sprint"][0]["tasks"][i]["listNumber"].ToString();
+                string taskname = sprint_info["sprint"][0]["tasks"][i]["taskName"].ToString();
+
+                if (listnumber == "1")
+                {
+                    lstTodo.Items.Add(taskname);
+                }
+                else if (listnumber == "2")
+                {
+                    lstDoing.Items.Add(taskname);
+                }
+                else
+                {
+                    lstDone.Items.Add(taskname);
+                }
+            }
+
+        }
+
+        private void lstTodo_Click(object sender, EventArgs e)
+        {
+            var selected_item = lstTodo.SelectedItems[0].Text;
+            string selected_task = selected_item.ToString();
+            //MessageBox.Show(selected_item.ToString());
+
+            string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            //MessageBox.Show(projectname, sprintname);
+
+            JObject sprint_info = new clsRestAPIHandler().get_single_sprint(sprintname, projectname);
+            string tasks = sprint_info["sprint"][0]["tasks"].ToString();
+            JArray tasks_array = JArray.Parse(tasks);
+            int length = tasks_array.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                string taskname = sprint_info["sprint"][0]["tasks"][i]["taskName"].ToString();
+                if (selected_task == taskname)
+                {
+                    string taskMembers = sprint_info["sprint"][0]["tasks"][i]["taskUsers"][0].ToString();
+                    taskMembers = taskMembers.Replace(',', '\n');
+                    MetroSetMessageBox.Show(this, taskMembers, "Task Members");
+                }
+            }
+        }
+
+        private void frmKanbanTemplate3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmDashboard dashb = new frmDashboard();
+            dashb.Show();
+            this.Hide();
+        }
+
+        private void lstDoing_Click(object sender, EventArgs e)
+        {
+            var selected_item = lstDoing.SelectedItems[0].Text;
+            string selected_task = selected_item.ToString();
+            //MessageBox.Show(selected_item.ToString());
+
+            string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            //MessageBox.Show(projectname, sprintname);
+
+            JObject sprint_info = new clsRestAPIHandler().get_single_sprint(sprintname, projectname);
+            string tasks = sprint_info["sprint"][0]["tasks"].ToString();
+            JArray tasks_array = JArray.Parse(tasks);
+            int length = tasks_array.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                string taskname = sprint_info["sprint"][0]["tasks"][i]["taskName"].ToString();
+                if (selected_task == taskname)
+                {
+                    string taskMembers = sprint_info["sprint"][0]["tasks"][i]["taskUsers"][0].ToString();
+                    taskMembers = taskMembers.Replace(',', '\n');
+                    MetroSetMessageBox.Show(this, taskMembers, "Task Members");
+                }
+            }
+        }
+
+        private void lstDone_Click(object sender, EventArgs e)
+        {
+            var selected_item = lstDone.SelectedItems[0].Text;
+            string selected_task = selected_item.ToString();
+            //MessageBox.Show(selected_item.ToString());
+
+            string projectname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+            string sprintname = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+            //MessageBox.Show(projectname, sprintname);
+
+            JObject sprint_info = new clsRestAPIHandler().get_single_sprint(sprintname, projectname);
+            string tasks = sprint_info["sprint"][0]["tasks"].ToString();
+            JArray tasks_array = JArray.Parse(tasks);
+            int length = tasks_array.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                string taskname = sprint_info["sprint"][0]["tasks"][i]["taskName"].ToString();
+                if (selected_task == taskname)
+                {
+                    string taskMembers = sprint_info["sprint"][0]["tasks"][i]["taskUsers"][0].ToString();
+                    taskMembers = taskMembers.Replace(',', '\n');
+                    MetroSetMessageBox.Show(this, taskMembers, "Task Members");
+                }
+            }
+        }
     }
 }
