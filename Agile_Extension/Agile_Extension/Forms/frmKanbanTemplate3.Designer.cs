@@ -66,7 +66,7 @@ namespace Agile_Extension.Forms
             this.lstTodo.UseCompatibleStateImageBehavior = false;
             this.lstTodo.View = System.Windows.Forms.View.Details;
             this.lstTodo.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
-            this.lstTodo.Click += new System.EventHandler(this.lstTodo_Click);
+            //this.lstTodo.Click += new System.EventHandler(this.lstTodo_Click);
             this.lstTodo.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstTodo.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
@@ -88,7 +88,7 @@ namespace Agile_Extension.Forms
             this.lstDoing.UseCompatibleStateImageBehavior = false;
             this.lstDoing.View = System.Windows.Forms.View.Details;
             this.lstDoing.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
-            this.lstDoing.Click += new System.EventHandler(this.lstDoing_Click);
+            //this.lstDoing.Click += new System.EventHandler(this.lstDoing_Click);
             this.lstDoing.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstDoing.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
@@ -111,7 +111,7 @@ namespace Agile_Extension.Forms
             this.lstDone.UseCompatibleStateImageBehavior = false;
             this.lstDone.View = System.Windows.Forms.View.Details;
             this.lstDone.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
-            this.lstDone.Click += new System.EventHandler(this.lstDone_Click);
+            //this.lstDone.Click += new System.EventHandler(this.lstDone_Click);
             this.lstDone.DragDrop += new System.Windows.Forms.DragEventHandler(this.lst_DragDrop);
             this.lstDone.DragOver += new System.Windows.Forms.DragEventHandler(this.lst_DragOver);
             // 
@@ -262,9 +262,9 @@ namespace Agile_Extension.Forms
             this.Text = "Kanban Board - Simple";
             this.ThemeAuthor = null;
             this.ThemeName = null;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmKanbanTemplate3_FormClosing);
-            this.Load += new System.EventHandler(this.frmKanbanTemplate3_Load);
-            this.Shown += new System.EventHandler(this.frmKanbanTemplate3_Shown);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmKanbanTemplate3_FormClosing);
+            //this.Load += new System.EventHandler(this.frmKanbanTemplate3_Load);
+            //this.Shown += new System.EventHandler(this.frmKanbanTemplate3_Shown);
             this.metroSetPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
