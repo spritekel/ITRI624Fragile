@@ -197,7 +197,7 @@ namespace Agile_Extension.Forms
                     lstDone.Items.Add(taskname);
                 }
             }
-            
+
         }
 
         private void lstTodo_Click(object sender, EventArgs e)
@@ -218,7 +218,7 @@ namespace Agile_Extension.Forms
             for (int i = 0; i < length; i++)
             {
                 string taskname = sprint_info["sprint"][0]["tasks"][i]["taskName"].ToString();
-                if(selected_task == taskname)
+                if (selected_task == taskname)
                 {
                     string taskMembers = sprint_info["sprint"][0]["tasks"][i]["taskUsers"][0].ToString();
                     taskMembers = taskMembers.Replace(',', '\n');
