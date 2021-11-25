@@ -122,7 +122,7 @@ namespace Agile_Extension.Forms
             this.tcProjects.Controls.Add(this.tpAddProj);
             this.tcProjects.Controls.Add(this.tbManageProj);
             this.tcProjects.Controls.Add(this.tpDeleteProj);
-            this.tcProjects.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tcProjects.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tcProjects.ItemSize = new System.Drawing.Size(100, 38);
             this.tcProjects.Location = new System.Drawing.Point(15, 88);
             this.tcProjects.Name = "tcProjects";
@@ -132,7 +132,7 @@ namespace Agile_Extension.Forms
             this.tcProjects.Speed = 20;
             this.tcProjects.Style = MetroSet_UI.Design.Style.Light;
             this.tcProjects.StyleManager = this.styleManager1;
-            this.tcProjects.TabIndex = 7;
+            this.tcProjects.TabIndex = 0;
             this.tcProjects.TabStyle = MetroSet_UI.Enums.TabStyle.Style1;
             this.tcProjects.ThemeAuthor = null;
             this.tcProjects.ThemeName = null;
@@ -173,7 +173,7 @@ namespace Agile_Extension.Forms
             this.metroSetPanel2.Size = new System.Drawing.Size(305, 355);
             this.metroSetPanel2.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetPanel2.StyleManager = this.styleManager1;
-            this.metroSetPanel2.TabIndex = 7;
+            this.metroSetPanel2.TabIndex = 0;
             this.metroSetPanel2.ThemeAuthor = null;
             this.metroSetPanel2.ThemeName = null;
             // 
@@ -185,7 +185,7 @@ namespace Agile_Extension.Forms
             this.lblSprintF.Size = new System.Drawing.Size(273, 23);
             this.lblSprintF.Style = MetroSet_UI.Design.Style.Light;
             this.lblSprintF.StyleManager = null;
-            this.lblSprintF.TabIndex = 13;
+            this.lblSprintF.TabIndex = 0;
             this.lblSprintF.ThemeAuthor = "Narwin";
             this.lblSprintF.ThemeName = "MetroLite";
             // 
@@ -197,7 +197,7 @@ namespace Agile_Extension.Forms
             this.lblOutput.Size = new System.Drawing.Size(273, 23);
             this.lblOutput.Style = MetroSet_UI.Design.Style.Light;
             this.lblOutput.StyleManager = null;
-            this.lblOutput.TabIndex = 12;
+            this.lblOutput.TabIndex = 0;
             this.lblOutput.ThemeAuthor = "Narwin";
             this.lblOutput.ThemeName = "MetroLite";
             // 
@@ -223,7 +223,7 @@ namespace Agile_Extension.Forms
             this.listMembers.Size = new System.Drawing.Size(273, 171);
             this.listMembers.Style = MetroSet_UI.Design.Style.Light;
             this.listMembers.StyleManager = null;
-            this.listMembers.TabIndex = 11;
+            this.listMembers.TabIndex = 1;
             this.listMembers.ThemeAuthor = "Narwin";
             this.listMembers.ThemeName = "MetroLite";
             this.listMembers.SelectedIndexChanged += new MetroSet_UI.Controls.MetroSetListBox.SelectedIndexChangedEventHandler(this.listMembers_SelectedIndexChanged);
@@ -236,7 +236,7 @@ namespace Agile_Extension.Forms
             this.lblFMembers.Size = new System.Drawing.Size(235, 23);
             this.lblFMembers.Style = MetroSet_UI.Design.Style.Light;
             this.lblFMembers.StyleManager = null;
-            this.lblFMembers.TabIndex = 10;
+            this.lblFMembers.TabIndex = 0;
             this.lblFMembers.Text = "Members:";
             this.lblFMembers.ThemeAuthor = "Narwin";
             this.lblFMembers.ThemeName = "MetroLite";
@@ -249,19 +249,19 @@ namespace Agile_Extension.Forms
             this.lblProjFName.Size = new System.Drawing.Size(273, 23);
             this.lblProjFName.Style = MetroSet_UI.Design.Style.Light;
             this.lblProjFName.StyleManager = null;
-            this.lblProjFName.TabIndex = 9;
+            this.lblProjFName.TabIndex = 0;
             this.lblProjFName.ThemeAuthor = "Narwin";
             this.lblProjFName.ThemeName = "MetroLite";
             // 
             // lblProjFDetails
             // 
             this.lblProjFDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblProjFDetails.Location = new System.Drawing.Point(12, 9);
+            this.lblProjFDetails.Location = new System.Drawing.Point(15, 10);
             this.lblProjFDetails.Name = "lblProjFDetails";
             this.lblProjFDetails.Size = new System.Drawing.Size(235, 23);
             this.lblProjFDetails.Style = MetroSet_UI.Design.Style.Light;
             this.lblProjFDetails.StyleManager = null;
-            this.lblProjFDetails.TabIndex = 7;
+            this.lblProjFDetails.TabIndex = 0;
             this.lblProjFDetails.Text = "Project Summary:";
             this.lblProjFDetails.ThemeAuthor = "Narwin";
             this.lblProjFDetails.ThemeName = "MetroLite";
@@ -288,7 +288,7 @@ namespace Agile_Extension.Forms
             this.metroSetPanel1.Size = new System.Drawing.Size(315, 355);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetPanel1.StyleManager = this.styleManager1;
-            this.metroSetPanel1.TabIndex = 3;
+            this.metroSetPanel1.TabIndex = 1;
             this.metroSetPanel1.ThemeAuthor = null;
             this.metroSetPanel1.ThemeName = null;
             // 
@@ -298,8 +298,8 @@ namespace Agile_Extension.Forms
             this.dEnd.Location = new System.Drawing.Point(156, 152);
             this.dEnd.Name = "dEnd";
             this.dEnd.Size = new System.Drawing.Size(149, 20);
-            this.dEnd.TabIndex = 11;
-            this.dEnd.Value = System.DateTime.Today.AddDays(14);
+            this.dEnd.TabIndex = 4;
+            this.dEnd.Value = new System.DateTime(2021, 12, 8, 0, 0, 0, 0);
             // 
             // dStart
             // 
@@ -307,8 +307,8 @@ namespace Agile_Extension.Forms
             this.dStart.Location = new System.Drawing.Point(156, 119);
             this.dStart.Name = "dStart";
             this.dStart.Size = new System.Drawing.Size(149, 20);
-            this.dStart.TabIndex = 10;
-            this.dStart.Value = System.DateTime.Today;
+            this.dStart.TabIndex = 3;
+            this.dStart.Value = new System.DateTime(2021, 11, 24, 0, 0, 0, 0);
             // 
             // lblspr1ed
             // 
@@ -318,7 +318,7 @@ namespace Agile_Extension.Forms
             this.lblspr1ed.Size = new System.Drawing.Size(141, 23);
             this.lblspr1ed.Style = MetroSet_UI.Design.Style.Light;
             this.lblspr1ed.StyleManager = null;
-            this.lblspr1ed.TabIndex = 9;
+            this.lblspr1ed.TabIndex = 0;
             this.lblspr1ed.Text = "Sprint 1 End Date:";
             this.lblspr1ed.ThemeAuthor = "Narwin";
             this.lblspr1ed.ThemeName = "MetroLite";
@@ -331,7 +331,7 @@ namespace Agile_Extension.Forms
             this.lblspr1sd.Size = new System.Drawing.Size(141, 23);
             this.lblspr1sd.Style = MetroSet_UI.Design.Style.Light;
             this.lblspr1sd.StyleManager = null;
-            this.lblspr1sd.TabIndex = 8;
+            this.lblspr1sd.TabIndex = 0;
             this.lblspr1sd.Text = "Sprint 1 Start Date:";
             this.lblspr1sd.ThemeAuthor = "Narwin";
             this.lblspr1sd.ThemeName = "MetroLite";
@@ -357,7 +357,7 @@ namespace Agile_Extension.Forms
             this.txtSprintName.Size = new System.Drawing.Size(149, 30);
             this.txtSprintName.Style = MetroSet_UI.Design.Style.Light;
             this.txtSprintName.StyleManager = null;
-            this.txtSprintName.TabIndex = 3;
+            this.txtSprintName.TabIndex = 2;
             this.txtSprintName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSprintName.ThemeAuthor = "Narwin";
             this.txtSprintName.ThemeName = "MetroLite";
@@ -373,7 +373,7 @@ namespace Agile_Extension.Forms
             this.lblSprintName.Size = new System.Drawing.Size(141, 23);
             this.lblSprintName.Style = MetroSet_UI.Design.Style.Light;
             this.lblSprintName.StyleManager = null;
-            this.lblSprintName.TabIndex = 2;
+            this.lblSprintName.TabIndex = 0;
             this.lblSprintName.Text = "1st Sprint Name:";
             this.lblSprintName.ThemeAuthor = "Narwin";
             this.lblSprintName.ThemeName = "MetroLite";
@@ -398,7 +398,7 @@ namespace Agile_Extension.Forms
             this.btnAddProj.Size = new System.Drawing.Size(150, 53);
             this.btnAddProj.Style = MetroSet_UI.Design.Style.Light;
             this.btnAddProj.StyleManager = null;
-            this.btnAddProj.TabIndex = 7;
+            this.btnAddProj.TabIndex = 6;
             this.btnAddProj.Text = "Add Project";
             this.btnAddProj.ThemeAuthor = "Narwin";
             this.btnAddProj.ThemeName = "MetroLite";
@@ -407,12 +407,12 @@ namespace Agile_Extension.Forms
             // lblProjDetails
             // 
             this.lblProjDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblProjDetails.Location = new System.Drawing.Point(9, 9);
+            this.lblProjDetails.Location = new System.Drawing.Point(14, 11);
             this.lblProjDetails.Name = "lblProjDetails";
             this.lblProjDetails.Size = new System.Drawing.Size(241, 23);
             this.lblProjDetails.Style = MetroSet_UI.Design.Style.Light;
             this.lblProjDetails.StyleManager = null;
-            this.lblProjDetails.TabIndex = 6;
+            this.lblProjDetails.TabIndex = 0;
             this.lblProjDetails.Text = "New Project Details:";
             this.lblProjDetails.ThemeAuthor = "Narwin";
             this.lblProjDetails.ThemeName = "MetroLite";
@@ -453,7 +453,7 @@ namespace Agile_Extension.Forms
             this.lblMembers.Size = new System.Drawing.Size(155, 23);
             this.lblMembers.Style = MetroSet_UI.Design.Style.Light;
             this.lblMembers.StyleManager = null;
-            this.lblMembers.TabIndex = 4;
+            this.lblMembers.TabIndex = 0;
             this.lblMembers.Text = "Project Members:";
             this.lblMembers.ThemeAuthor = "Narwin";
             this.lblMembers.ThemeName = "MetroLite";
@@ -529,7 +529,7 @@ namespace Agile_Extension.Forms
             this.lblManageResult.Size = new System.Drawing.Size(459, 23);
             this.lblManageResult.Style = MetroSet_UI.Design.Style.Light;
             this.lblManageResult.StyleManager = null;
-            this.lblManageResult.TabIndex = 2;
+            this.lblManageResult.TabIndex = 0;
             this.lblManageResult.ThemeAuthor = "Narwin";
             this.lblManageResult.ThemeName = "MetroLite";
             // 
@@ -545,7 +545,7 @@ namespace Agile_Extension.Forms
             this.metroSetPanel5.Size = new System.Drawing.Size(634, 61);
             this.metroSetPanel5.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetPanel5.StyleManager = null;
-            this.metroSetPanel5.TabIndex = 6;
+            this.metroSetPanel5.TabIndex = 1;
             this.metroSetPanel5.ThemeAuthor = "Narwin";
             this.metroSetPanel5.ThemeName = "MetroLite";
             // 
@@ -602,7 +602,7 @@ namespace Agile_Extension.Forms
             this.metroSetPanel4.Size = new System.Drawing.Size(315, 261);
             this.metroSetPanel4.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetPanel4.StyleManager = this.styleManager1;
-            this.metroSetPanel4.TabIndex = 5;
+            this.metroSetPanel4.TabIndex = 3;
             this.metroSetPanel4.ThemeAuthor = null;
             this.metroSetPanel4.ThemeName = null;
             // 
@@ -629,7 +629,7 @@ namespace Agile_Extension.Forms
             this.listSprints.Size = new System.Drawing.Size(276, 148);
             this.listSprints.Style = MetroSet_UI.Design.Style.Light;
             this.listSprints.StyleManager = null;
-            this.listSprints.TabIndex = 3;
+            this.listSprints.TabIndex = 1;
             this.listSprints.ThemeAuthor = "Narwin";
             this.listSprints.ThemeName = "MetroLite";
             this.listSprints.SelectedIndexChanged += new MetroSet_UI.Controls.MetroSetListBox.SelectedIndexChangedEventHandler(this.listSprints_SelectedIndexChanged);
@@ -652,7 +652,7 @@ namespace Agile_Extension.Forms
             this.cbMSprints.Size = new System.Drawing.Size(162, 16);
             this.cbMSprints.Style = MetroSet_UI.Design.Style.Light;
             this.cbMSprints.StyleManager = null;
-            this.cbMSprints.TabIndex = 2;
+            this.cbMSprints.TabIndex = 0;
             this.cbMSprints.Text = "Manage Sprints?";
             this.cbMSprints.ThemeAuthor = "Narwin";
             this.cbMSprints.ThemeName = "MetroLite";
@@ -672,7 +672,7 @@ namespace Agile_Extension.Forms
             this.metroSetPanel3.Size = new System.Drawing.Size(315, 261);
             this.metroSetPanel3.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetPanel3.StyleManager = this.styleManager1;
-            this.metroSetPanel3.TabIndex = 4;
+            this.metroSetPanel3.TabIndex = 2;
             this.metroSetPanel3.ThemeAuthor = null;
             this.metroSetPanel3.ThemeName = null;
             // 
@@ -684,7 +684,7 @@ namespace Agile_Extension.Forms
             this.lblMAddUsers.Size = new System.Drawing.Size(138, 23);
             this.lblMAddUsers.Style = MetroSet_UI.Design.Style.Light;
             this.lblMAddUsers.StyleManager = null;
-            this.lblMAddUsers.TabIndex = 2;
+            this.lblMAddUsers.TabIndex = 0;
             this.lblMAddUsers.Text = "Add users:";
             this.lblMAddUsers.ThemeAuthor = "Narwin";
             this.lblMAddUsers.ThemeName = "MetroLite";
@@ -712,7 +712,7 @@ namespace Agile_Extension.Forms
             this.cmbMUsers.Size = new System.Drawing.Size(142, 26);
             this.cmbMUsers.Style = MetroSet_UI.Design.Style.Light;
             this.cmbMUsers.StyleManager = null;
-            this.cmbMUsers.TabIndex = 2;
+            this.cmbMUsers.TabIndex = 1;
             this.cmbMUsers.ThemeAuthor = "Narwin";
             this.cmbMUsers.ThemeName = "MetroLite";
             this.cmbMUsers.SelectedIndexChanged += new System.EventHandler(this.cmbMUsers_SelectedIndexChanged);
@@ -763,7 +763,7 @@ namespace Agile_Extension.Forms
             this.cbMUsers.Size = new System.Drawing.Size(162, 16);
             this.cbMUsers.Style = MetroSet_UI.Design.Style.Light;
             this.cbMUsers.StyleManager = null;
-            this.cbMUsers.TabIndex = 1;
+            this.cbMUsers.TabIndex = 0;
             this.cbMUsers.Text = "Manage Users?";
             this.cbMUsers.ThemeAuthor = "Narwin";
             this.cbMUsers.ThemeName = "MetroLite";
@@ -813,7 +813,7 @@ namespace Agile_Extension.Forms
             this.cmbDeleteProj.Size = new System.Drawing.Size(251, 26);
             this.cmbDeleteProj.Style = MetroSet_UI.Design.Style.Light;
             this.cmbDeleteProj.StyleManager = null;
-            this.cmbDeleteProj.TabIndex = 4;
+            this.cmbDeleteProj.TabIndex = 1;
             this.cmbDeleteProj.ThemeAuthor = "Narwin";
             this.cmbDeleteProj.ThemeName = "MetroLite";
             // 
@@ -825,7 +825,7 @@ namespace Agile_Extension.Forms
             this.lblDelResult.Size = new System.Drawing.Size(337, 23);
             this.lblDelResult.Style = MetroSet_UI.Design.Style.Light;
             this.lblDelResult.StyleManager = null;
-            this.lblDelResult.TabIndex = 3;
+            this.lblDelResult.TabIndex = 0;
             this.lblDelResult.ThemeAuthor = "Narwin";
             this.lblDelResult.ThemeName = "MetroLite";
             // 
@@ -837,7 +837,7 @@ namespace Agile_Extension.Forms
             this.lblDelProjName.Size = new System.Drawing.Size(136, 23);
             this.lblDelProjName.Style = MetroSet_UI.Design.Style.Light;
             this.lblDelProjName.StyleManager = null;
-            this.lblDelProjName.TabIndex = 1;
+            this.lblDelProjName.TabIndex = 0;
             this.lblDelProjName.Text = "Select Project:";
             this.lblDelProjName.ThemeAuthor = "Narwin";
             this.lblDelProjName.ThemeName = "MetroLite";
@@ -862,7 +862,7 @@ namespace Agile_Extension.Forms
             this.btnDelete.Size = new System.Drawing.Size(136, 45);
             this.btnDelete.Style = MetroSet_UI.Design.Style.Light;
             this.btnDelete.StyleManager = null;
-            this.btnDelete.TabIndex = 0;
+            this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete Project";
             this.btnDelete.ThemeAuthor = "Narwin";
             this.btnDelete.ThemeName = "MetroLite";

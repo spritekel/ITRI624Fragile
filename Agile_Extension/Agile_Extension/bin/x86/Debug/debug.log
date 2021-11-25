@@ -7850,3 +7850,25 @@ color: purple;
 [1122/150448.739:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1122/155018.664:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
 [1122/161659.821:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1123/195832.898:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1123/202407.145:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1123/205611.888:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1123/225342.918:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1123/231314.696:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1123/232514.849:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1124/002928.066:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1124/125149.051:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1124/131355.168:WARNING:dns_config_service_win.cc(712)] Failed to read DnsConfig.
+[1124/131355.181:WARNING:dns_config_service_win.cc(712)] Failed to read DnsConfig.
+[1124/131355.195:WARNING:dns_config_service_win.cc(712)] Failed to read DnsConfig.
+[1124/134018.855:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1124/140724.515:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1124/155721.630:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1124/172613.874:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1124/184104.810:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1124/185222.993:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1125/140323.835:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1125/140926.325:WARNING:dns_config_service_win.cc(712)] Failed to read DnsConfig.
+[1125/140926.344:WARNING:dns_config_service_win.cc(712)] Failed to read DnsConfig.
+[1125/143349.484:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
+[1125/163718.013:ERROR:gpu_init.cc(441)] Passthrough is not supported, GL is disabled
