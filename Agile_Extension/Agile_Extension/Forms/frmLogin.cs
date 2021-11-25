@@ -67,7 +67,7 @@ namespace Agile_Extension.Forms
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }

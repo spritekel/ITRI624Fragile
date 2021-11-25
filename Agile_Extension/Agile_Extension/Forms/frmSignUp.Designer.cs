@@ -110,7 +110,7 @@ namespace Agile_Extension.Forms
             this.lblEMessage.Size = new System.Drawing.Size(423, 23);
             this.lblEMessage.Style = MetroSet_UI.Design.Style.Light;
             this.lblEMessage.StyleManager = null;
-            this.lblEMessage.TabIndex = 9;
+            this.lblEMessage.TabIndex = 0;
             this.lblEMessage.ThemeAuthor = "Narwin";
             this.lblEMessage.ThemeName = "MetroLite";
             // 
@@ -134,7 +134,7 @@ namespace Agile_Extension.Forms
             this.btnSignUp.Size = new System.Drawing.Size(169, 49);
             this.btnSignUp.Style = MetroSet_UI.Design.Style.Light;
             this.btnSignUp.StyleManager = null;
-            this.btnSignUp.TabIndex = 8;
+            this.btnSignUp.TabIndex = 5;
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.ThemeAuthor = "Narwin";
             this.btnSignUp.ThemeName = "MetroLite";
@@ -161,7 +161,7 @@ namespace Agile_Extension.Forms
             this.txtCPassWd.Size = new System.Drawing.Size(198, 30);
             this.txtCPassWd.Style = MetroSet_UI.Design.Style.Light;
             this.txtCPassWd.StyleManager = null;
-            this.txtCPassWd.TabIndex = 7;
+            this.txtCPassWd.TabIndex = 3;
             this.txtCPassWd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCPassWd.ThemeAuthor = "Narwin";
             this.txtCPassWd.ThemeName = "MetroLite";
@@ -176,7 +176,7 @@ namespace Agile_Extension.Forms
             this.lblCPassword.Size = new System.Drawing.Size(182, 23);
             this.lblCPassword.Style = MetroSet_UI.Design.Style.Light;
             this.lblCPassword.StyleManager = null;
-            this.lblCPassword.TabIndex = 6;
+            this.lblCPassword.TabIndex = 0;
             this.lblCPassword.Text = "Confirm Password:";
             this.lblCPassword.ThemeAuthor = "Narwin";
             this.lblCPassword.ThemeName = "MetroLite";
@@ -202,7 +202,7 @@ namespace Agile_Extension.Forms
             this.txtPassWd.Size = new System.Drawing.Size(198, 30);
             this.txtPassWd.Style = MetroSet_UI.Design.Style.Light;
             this.txtPassWd.StyleManager = null;
-            this.txtPassWd.TabIndex = 5;
+            this.txtPassWd.TabIndex = 2;
             this.txtPassWd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassWd.ThemeAuthor = "Narwin";
             this.txtPassWd.ThemeName = "MetroLite";
@@ -230,7 +230,7 @@ namespace Agile_Extension.Forms
             this.txtUsrName.Size = new System.Drawing.Size(198, 30);
             this.txtUsrName.Style = MetroSet_UI.Design.Style.Light;
             this.txtUsrName.StyleManager = null;
-            this.txtUsrName.TabIndex = 4;
+            this.txtUsrName.TabIndex = 1;
             this.txtUsrName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsrName.ThemeAuthor = "Narwin";
             this.txtUsrName.ThemeName = "MetroLite";
@@ -245,7 +245,7 @@ namespace Agile_Extension.Forms
             this.lblProjectLead.Size = new System.Drawing.Size(182, 23);
             this.lblProjectLead.Style = MetroSet_UI.Design.Style.Light;
             this.lblProjectLead.StyleManager = null;
-            this.lblProjectLead.TabIndex = 3;
+            this.lblProjectLead.TabIndex = 0;
             this.lblProjectLead.Text = "Project Lead (No/Yes):";
             this.lblProjectLead.ThemeAuthor = "Narwin";
             this.lblProjectLead.ThemeName = "MetroLite";
@@ -268,7 +268,7 @@ namespace Agile_Extension.Forms
             this.swProjectLead.StyleManager = null;
             this.swProjectLead.Switched = false;
             this.swProjectLead.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.swProjectLead.TabIndex = 2;
+            this.swProjectLead.TabIndex = 4;
             this.swProjectLead.Text = "metroSetSwitch1";
             this.swProjectLead.ThemeAuthor = "Narwin";
             this.swProjectLead.ThemeName = "MetroLite";
@@ -282,7 +282,7 @@ namespace Agile_Extension.Forms
             this.lblPassword.Size = new System.Drawing.Size(146, 23);
             this.lblPassword.Style = MetroSet_UI.Design.Style.Light;
             this.lblPassword.StyleManager = null;
-            this.lblPassword.TabIndex = 1;
+            this.lblPassword.TabIndex = 0;
             this.lblPassword.Text = "Password:";
             this.lblPassword.ThemeAuthor = "Narwin";
             this.lblPassword.ThemeName = "MetroLite";

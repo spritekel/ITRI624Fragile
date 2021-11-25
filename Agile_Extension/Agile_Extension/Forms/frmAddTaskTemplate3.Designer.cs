@@ -110,7 +110,7 @@ namespace Agile_Extension.Forms
             this.lbTaskName.Size = new System.Drawing.Size(100, 30);
             this.lbTaskName.Style = MetroSet_UI.Design.Style.Light;
             this.lbTaskName.StyleManager = this.styleManager1;
-            this.lbTaskName.TabIndex = 2;
+            this.lbTaskName.TabIndex = 0;
             this.lbTaskName.Text = "Task Name";
             this.lbTaskName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbTaskName.ThemeAuthor = null;
@@ -136,7 +136,7 @@ namespace Agile_Extension.Forms
             this.btnAddTask.Size = new System.Drawing.Size(100, 38);
             this.btnAddTask.Style = MetroSet_UI.Design.Style.Light;
             this.btnAddTask.StyleManager = this.styleManager1;
-            this.btnAddTask.TabIndex = 3;
+            this.btnAddTask.TabIndex = 4;
             this.btnAddTask.Text = "Add Task";
             this.btnAddTask.ThemeAuthor = null;
             this.btnAddTask.ThemeName = null;
@@ -150,7 +150,7 @@ namespace Agile_Extension.Forms
             this.lblOutput.Size = new System.Drawing.Size(146, 38);
             this.lblOutput.Style = MetroSet_UI.Design.Style.Light;
             this.lblOutput.StyleManager = this.styleManager1;
-            this.lblOutput.TabIndex = 4;
+            this.lblOutput.TabIndex = 0;
             this.lblOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblOutput.ThemeAuthor = null;
             this.lblOutput.ThemeName = null;
@@ -163,7 +163,7 @@ namespace Agile_Extension.Forms
             this.lblMembers.Size = new System.Drawing.Size(100, 30);
             this.lblMembers.Style = MetroSet_UI.Design.Style.Light;
             this.lblMembers.StyleManager = this.styleManager1;
-            this.lblMembers.TabIndex = 5;
+            this.lblMembers.TabIndex = 0;
             this.lblMembers.Text = "Members";
             this.lblMembers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMembers.ThemeAuthor = null;
@@ -192,7 +192,7 @@ namespace Agile_Extension.Forms
             this.cmbMembers.Size = new System.Drawing.Size(147, 26);
             this.cmbMembers.Style = MetroSet_UI.Design.Style.Light;
             this.cmbMembers.StyleManager = this.styleManager1;
-            this.cmbMembers.TabIndex = 6;
+            this.cmbMembers.TabIndex = 2;
             this.cmbMembers.ThemeAuthor = null;
             this.cmbMembers.ThemeName = null;
             this.cmbMembers.SelectedIndexChanged += new System.EventHandler(this.cmbMembers_SelectedIndexChanged);
@@ -205,7 +205,7 @@ namespace Agile_Extension.Forms
             this.lblMembersDets.Size = new System.Drawing.Size(100, 23);
             this.lblMembersDets.Style = MetroSet_UI.Design.Style.Light;
             this.lblMembersDets.StyleManager = this.styleManager1;
-            this.lblMembersDets.TabIndex = 7;
+            this.lblMembersDets.TabIndex = 0;
             this.lblMembersDets.Text = "Members:";
             this.lblMembersDets.ThemeAuthor = null;
             this.lblMembersDets.ThemeName = null;
@@ -232,13 +232,14 @@ namespace Agile_Extension.Forms
             this.listMembers.Size = new System.Drawing.Size(250, 190);
             this.listMembers.Style = MetroSet_UI.Design.Style.Light;
             this.listMembers.StyleManager = this.styleManager1;
-            this.listMembers.TabIndex = 8;
+            this.listMembers.TabIndex = 3;
             this.listMembers.ThemeAuthor = null;
             this.listMembers.ThemeName = null;
             this.listMembers.SelectedIndexChanged += new MetroSet_UI.Controls.MetroSetListBox.SelectedIndexChangedEventHandler(this.listMembers_SelectedIndexChanged);
             // 
             // frmAddTaskTemplate3
             // 
+            this.AllowResize = false;
             this.ClientSize = new System.Drawing.Size(600, 300);
             this.Controls.Add(this.listMembers);
             this.Controls.Add(this.lblMembersDets);

@@ -62,7 +62,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
             this.metroSetControlBox1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetControlBox1.StyleManager = this.styleManager1;
-            this.metroSetControlBox1.TabIndex = 2;
+            this.metroSetControlBox1.TabIndex = 0;
             this.metroSetControlBox1.Text = "metroSetControlBox1";
             this.metroSetControlBox1.ThemeAuthor = null;
             this.metroSetControlBox1.ThemeName = null;
@@ -96,7 +96,7 @@ namespace Agile_Extension.Forms
             this.txtUsername.Size = new System.Drawing.Size(262, 25);
             this.txtUsername.Style = MetroSet_UI.Design.Style.Light;
             this.txtUsername.StyleManager = this.styleManager1;
-            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsername.ThemeAuthor = null;
             this.txtUsername.ThemeName = null;
@@ -111,7 +111,7 @@ namespace Agile_Extension.Forms
             this.metroSetLabel1.Size = new System.Drawing.Size(118, 24);
             this.metroSetLabel1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetLabel1.StyleManager = this.styleManager1;
-            this.metroSetLabel1.TabIndex = 4;
+            this.metroSetLabel1.TabIndex = 0;
             this.metroSetLabel1.Text = "Username:";
             this.metroSetLabel1.ThemeAuthor = null;
             this.metroSetLabel1.ThemeName = null;
@@ -124,7 +124,7 @@ namespace Agile_Extension.Forms
             this.metroSetLabel2.Size = new System.Drawing.Size(118, 24);
             this.metroSetLabel2.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetLabel2.StyleManager = this.styleManager1;
-            this.metroSetLabel2.TabIndex = 5;
+            this.metroSetLabel2.TabIndex = 0;
             this.metroSetLabel2.Text = "Password:";
             this.metroSetLabel2.ThemeAuthor = null;
             this.metroSetLabel2.ThemeName = null;
@@ -150,7 +150,7 @@ namespace Agile_Extension.Forms
             this.txtPassword.Size = new System.Drawing.Size(262, 25);
             this.txtPassword.Style = MetroSet_UI.Design.Style.Light;
             this.txtPassword.StyleManager = this.styleManager1;
-            this.txtPassword.TabIndex = 6;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.ThemeAuthor = null;
             this.txtPassword.ThemeName = null;
@@ -177,7 +177,7 @@ namespace Agile_Extension.Forms
             this.btnLogin.Size = new System.Drawing.Size(80, 37);
             this.btnLogin.Style = MetroSet_UI.Design.Style.Light;
             this.btnLogin.StyleManager = this.styleManager1;
-            this.btnLogin.TabIndex = 7;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "LOG IN";
             this.btnLogin.ThemeAuthor = null;
             this.btnLogin.ThemeName = null;
@@ -193,7 +193,7 @@ namespace Agile_Extension.Forms
             this.metroSetLink1.Size = new System.Drawing.Size(264, 23);
             this.metroSetLink1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetLink1.StyleManager = this.styleManager1;
-            this.metroSetLink1.TabIndex = 8;
+            this.metroSetLink1.TabIndex = 4;
             this.metroSetLink1.TabStop = true;
             this.metroSetLink1.Text = "Not signed up yet? Click here to sign up";
             this.metroSetLink1.ThemeAuthor = null;
@@ -209,7 +209,7 @@ namespace Agile_Extension.Forms
             this.lblEMessage.Size = new System.Drawing.Size(100, 23);
             this.lblEMessage.Style = MetroSet_UI.Design.Style.Light;
             this.lblEMessage.StyleManager = this.styleManager1;
-            this.lblEMessage.TabIndex = 9;
+            this.lblEMessage.TabIndex = 0;
             this.lblEMessage.ThemeAuthor = null;
             this.lblEMessage.ThemeName = null;
             // 

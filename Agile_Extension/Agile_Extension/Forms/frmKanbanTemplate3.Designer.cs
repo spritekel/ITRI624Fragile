@@ -62,7 +62,7 @@ namespace Agile_Extension.Forms
             this.lstTodo.Location = new System.Drawing.Point(0, 0);
             this.lstTodo.Name = "lstTodo";
             this.lstTodo.Size = new System.Drawing.Size(250, 400);
-            this.lstTodo.TabIndex = 4;
+            this.lstTodo.TabIndex = 0;
             this.lstTodo.UseCompatibleStateImageBehavior = false;
             this.lstTodo.View = System.Windows.Forms.View.Details;
             this.lstTodo.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
@@ -84,7 +84,7 @@ namespace Agile_Extension.Forms
             this.lstDoing.Location = new System.Drawing.Point(250, 0);
             this.lstDoing.Name = "lstDoing";
             this.lstDoing.Size = new System.Drawing.Size(250, 400);
-            this.lstDoing.TabIndex = 5;
+            this.lstDoing.TabIndex = 1;
             this.lstDoing.UseCompatibleStateImageBehavior = false;
             this.lstDoing.View = System.Windows.Forms.View.Details;
             this.lstDoing.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
@@ -107,7 +107,7 @@ namespace Agile_Extension.Forms
             this.lstDone.Location = new System.Drawing.Point(500, 0);
             this.lstDone.Name = "lstDone";
             this.lstDone.Size = new System.Drawing.Size(250, 400);
-            this.lstDone.TabIndex = 6;
+            this.lstDone.TabIndex = 2;
             this.lstDone.UseCompatibleStateImageBehavior = false;
             this.lstDone.View = System.Windows.Forms.View.Details;
             this.lstDone.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lst_ItemDrag);
@@ -136,7 +136,7 @@ namespace Agile_Extension.Forms
             this.metroSetProgressBar1.Size = new System.Drawing.Size(750, 23);
             this.metroSetProgressBar1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetProgressBar1.StyleManager = this.styleManager1;
-            this.metroSetProgressBar1.TabIndex = 13;
+            this.metroSetProgressBar1.TabIndex = 0;
             this.metroSetProgressBar1.Text = "metroSetProgressBar1";
             this.metroSetProgressBar1.ThemeAuthor = null;
             this.metroSetProgressBar1.ThemeName = null;
@@ -170,7 +170,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
             this.metroSetControlBox1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetControlBox1.StyleManager = this.styleManager1;
-            this.metroSetControlBox1.TabIndex = 14;
+            this.metroSetControlBox1.TabIndex = 0;
             this.metroSetControlBox1.Text = "metroSetControlBox1";
             this.metroSetControlBox1.ThemeAuthor = null;
             this.metroSetControlBox1.ThemeName = null;
@@ -196,7 +196,7 @@ namespace Agile_Extension.Forms
             this.btnAddTask.Size = new System.Drawing.Size(100, 30);
             this.btnAddTask.Style = MetroSet_UI.Design.Style.Light;
             this.btnAddTask.StyleManager = this.styleManager1;
-            this.btnAddTask.TabIndex = 16;
+            this.btnAddTask.TabIndex = 1;
             this.btnAddTask.Text = "Add Task";
             this.btnAddTask.ThemeAuthor = null;
             this.btnAddTask.ThemeName = null;
@@ -227,7 +227,7 @@ namespace Agile_Extension.Forms
             this.lbED.Size = new System.Drawing.Size(100, 23);
             this.lbED.Style = MetroSet_UI.Design.Style.Light;
             this.lbED.StyleManager = this.styleManager1;
-            this.lbED.TabIndex = 25;
+            this.lbED.TabIndex = 0;
             this.lbED.Text = "end";
             this.lbED.ThemeAuthor = null;
             this.lbED.ThemeName = null;
@@ -240,13 +240,14 @@ namespace Agile_Extension.Forms
             this.lbSD.Size = new System.Drawing.Size(100, 23);
             this.lbSD.Style = MetroSet_UI.Design.Style.Light;
             this.lbSD.StyleManager = this.styleManager1;
-            this.lbSD.TabIndex = 26;
+            this.lbSD.TabIndex = 0;
             this.lbSD.Text = "start";
             this.lbSD.ThemeAuthor = null;
             this.lbSD.ThemeName = null;
             // 
             // frmKanbanTemplate3
             // 
+            this.AllowResize = false;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(795, 635);

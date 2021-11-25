@@ -86,7 +86,7 @@ namespace Agile_Extension.Forms
             this.metroSetEllipse1.Size = new System.Drawing.Size(112, 110);
             this.metroSetEllipse1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetEllipse1.StyleManager = this.styleManager1;
-            this.metroSetEllipse1.TabIndex = 1;
+            this.metroSetEllipse1.TabIndex = 3;
             this.metroSetEllipse1.Text = "Chat";
             this.metroSetEllipse1.ThemeAuthor = "Narwin";
             this.metroSetEllipse1.ThemeName = "MetroLite";
@@ -112,7 +112,7 @@ namespace Agile_Extension.Forms
             this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
             this.metroSetControlBox1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetControlBox1.StyleManager = this.styleManager1;
-            this.metroSetControlBox1.TabIndex = 2;
+            this.metroSetControlBox1.TabIndex = 1;
             this.metroSetControlBox1.Text = "metroSetControlBox1";
             this.metroSetControlBox1.ThemeAuthor = "Narwin";
             this.metroSetControlBox1.ThemeName = "MetroLite";
@@ -138,7 +138,7 @@ namespace Agile_Extension.Forms
             this.btnAddProj.Size = new System.Drawing.Size(154, 35);
             this.btnAddProj.Style = MetroSet_UI.Design.Style.Light;
             this.btnAddProj.StyleManager = this.styleManager1;
-            this.btnAddProj.TabIndex = 3;
+            this.btnAddProj.TabIndex = 2;
             this.btnAddProj.Text = "Manage Projects";
             this.btnAddProj.ThemeAuthor = "Narwin";
             this.btnAddProj.ThemeName = "MetroLite";
