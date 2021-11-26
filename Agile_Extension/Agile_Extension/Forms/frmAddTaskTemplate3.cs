@@ -25,24 +25,26 @@ namespace Agile_Extension.Forms
         {
             if(validate(tbTaskName.Text,listMembers))
             { 
-                frmKanbanTemplate3._Temp3.AddItem(tbTaskName.Text); 
+                frmKanbanTemplate3._Temp3.AddItem(tbTaskName.Text);
+
+                string current_project = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
+                string current_sprint = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
+
+                string[] users = new string[listMembers.Items.Count];
+                for (int i = 0; i < listMembers.Items.Count; i++)
+                {
+                    users[i] = listMembers.Items[i].ToString();
+                }
+                string allusers = String.Join(",", users);
+                //MessageBox.Show(allusers);
+
+                string content = "{listNumber: '1', " + "taskName: '" + tbTaskName.Text + "', taskUsers: '" + allusers + "'}";
+                JObject obj = JObject.Parse(content);
+                new clsRestAPIHandler().add_task(current_sprint, current_project, obj.ToString());
+                //MessageBox.Show(obj.ToString());
             }
 
-            string current_project = new clsFileHandler().readFromFile(new clsFileHandler().get_current_project());
-            string current_sprint = new clsFileHandler().readFromFile(new clsFileHandler().get_current_sprint());
 
-            string[] users = new string[listMembers.Items.Count];
-            for (int i = 0; i < listMembers.Items.Count; i++)
-            {
-                users[i] = listMembers.Items[i].ToString();
-            }
-            string allusers = String.Join(",", users);
-            //MessageBox.Show(allusers);
-
-            string content = "{listNumber: '1', " + "taskName: '" + tbTaskName.Text + "', taskUsers: '" + allusers + "'}";
-            JObject obj = JObject.Parse(content);
-            new clsRestAPIHandler().add_task(current_sprint, current_project, obj.ToString());
-            //MessageBox.Show(obj.ToString());
 
             ResetControls();
         }
