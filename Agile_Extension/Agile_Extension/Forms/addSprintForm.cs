@@ -34,7 +34,7 @@ namespace Agile_Extension.Forms
                 string sprints = current_proj["project"][0]["sprints"].ToString();
                 JArray sprints_array = JArray.Parse(sprints);
                 JObject obj_sprint = new clsRestAPIHandler().create_sprint(tbSprintName.Text, current_project, dateTimePicker1.Value, dateTimePicker2.Value);
-                Console.WriteLine(obj_sprint);
+               
                 sprints_array.Add(tbSprintName.Text);
                 string current_payload = new clsRestAPIHandler().prepareJsonPayload("sprints", sprints_array);
                 new clsRestAPIHandler().update_project(current_project, current_payload);

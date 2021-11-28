@@ -38,6 +38,7 @@ namespace Agile_Extension.Forms
             this.lblOutput = new MetroSet_UI.Controls.MetroSetLabel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.lblOut = new MetroSet_UI.Controls.MetroSetLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -45,7 +46,7 @@ namespace Agile_Extension.Forms
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 22);
+            this.label1.Size = new System.Drawing.Size(140, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sprint Name:";
             // 
@@ -54,7 +55,7 @@ namespace Agile_Extension.Forms
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 22);
+            this.label3.Size = new System.Drawing.Size(116, 26);
             this.label3.TabIndex = 0;
             this.label3.Text = "Start Date:";
             // 
@@ -63,7 +64,7 @@ namespace Agile_Extension.Forms
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(25, 173);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 22);
+            this.label4.Size = new System.Drawing.Size(109, 26);
             this.label4.TabIndex = 0;
             this.label4.Text = "End Date:";
             // 
@@ -163,7 +164,7 @@ namespace Agile_Extension.Forms
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(196, 135);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(287, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(287, 32);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.Value = new System.DateTime(2021, 11, 24, 0, 0, 0, 0);
             // 
@@ -171,16 +172,30 @@ namespace Agile_Extension.Forms
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(196, 174);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(287, 27);
+            this.dateTimePicker2.Size = new System.Drawing.Size(287, 32);
             this.dateTimePicker2.TabIndex = 3;
             this.dateTimePicker2.Value = new System.DateTime(2021, 12, 8, 0, 0, 0, 0);
+            // 
+            // lblOut
+            // 
+            this.lblOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblOut.Location = new System.Drawing.Point(21, 217);
+            this.lblOut.Name = "lblOut";
+            this.lblOut.Size = new System.Drawing.Size(311, 23);
+            this.lblOut.Style = MetroSet_UI.Design.Style.Light;
+            this.lblOut.StyleManager = null;
+            this.lblOut.TabIndex = 5;
+            this.lblOut.Text = "metroSetLabel1";
+            this.lblOut.ThemeAuthor = "Narwin";
+            this.lblOut.ThemeName = "MetroLite";
             // 
             // addSprintForm
             // 
             this.AllowResize = false;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 265);
+            this.Controls.Add(this.lblOut);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblOutput);
@@ -212,5 +227,6 @@ namespace Agile_Extension.Forms
         private MetroSet_UI.Controls.MetroSetLabel lblOutput;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private MetroSet_UI.Controls.MetroSetLabel lblOut;
     }
 }

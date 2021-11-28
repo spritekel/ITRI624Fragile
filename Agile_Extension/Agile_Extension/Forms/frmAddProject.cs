@@ -38,14 +38,18 @@ namespace Agile_Extension.Forms
                 if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList(), sprint_list(txtSprintName.Text));
-                    update_user_projects(listMembers);
-                    get_updated_project_file();
+                    
                     if (obj_proj != null)
                     {
+                        update_user_projects(listMembers);
+                        get_updated_project_file();
                         new clsRestAPIHandler().create_sprint(txtSprintName.Text, txtProjName.Text, dStart.Value, dEnd.Value);
                         lblOutput.Text = obj_proj["message"].ToString();
                     }
-                    lblOutput.Text = obj_proj["message"].ToString();
+                    else
+                    {
+                        lblOutput.Text = "Project already exists in the database";
+                    }             
                     AddTabPageResetControls();
                 }
             } 

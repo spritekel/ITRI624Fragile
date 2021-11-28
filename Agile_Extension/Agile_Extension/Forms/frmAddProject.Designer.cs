@@ -192,9 +192,9 @@ namespace Agile_Extension.Forms
             // lblOutput
             // 
             this.lblOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblOutput.Location = new System.Drawing.Point(12, 317);
+            this.lblOutput.Location = new System.Drawing.Point(12, 293);
             this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(273, 23);
+            this.lblOutput.Size = new System.Drawing.Size(273, 47);
             this.lblOutput.Style = MetroSet_UI.Design.Style.Light;
             this.lblOutput.StyleManager = null;
             this.lblOutput.TabIndex = 0;
@@ -297,7 +297,7 @@ namespace Agile_Extension.Forms
             this.dEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.dEnd.Location = new System.Drawing.Point(156, 152);
             this.dEnd.Name = "dEnd";
-            this.dEnd.Size = new System.Drawing.Size(149, 20);
+            this.dEnd.Size = new System.Drawing.Size(149, 23);
             this.dEnd.TabIndex = 4;
             this.dEnd.Value = new System.DateTime(2021, 12, 8, 0, 0, 0, 0);
             // 
@@ -306,7 +306,7 @@ namespace Agile_Extension.Forms
             this.dStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.dStart.Location = new System.Drawing.Point(156, 119);
             this.dStart.Name = "dStart";
-            this.dStart.Size = new System.Drawing.Size(149, 20);
+            this.dStart.Size = new System.Drawing.Size(149, 23);
             this.dStart.TabIndex = 3;
             this.dStart.Value = new System.DateTime(2021, 11, 24, 0, 0, 0, 0);
             // 
