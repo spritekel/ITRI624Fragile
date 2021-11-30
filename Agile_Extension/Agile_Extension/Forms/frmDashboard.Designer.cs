@@ -135,11 +135,11 @@ namespace Agile_Extension.Forms
             this.btnAddProj.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnAddProj.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnAddProj.PressTextColor = System.Drawing.Color.White;
-            this.btnAddProj.Size = new System.Drawing.Size(154, 35);
+            this.btnAddProj.Size = new System.Drawing.Size(271, 35);
             this.btnAddProj.Style = MetroSet_UI.Design.Style.Light;
             this.btnAddProj.StyleManager = this.styleManager1;
             this.btnAddProj.TabIndex = 2;
-            this.btnAddProj.Text = "Manage Projects";
+            this.btnAddProj.Text = "Manage Product Development";
             this.btnAddProj.ThemeAuthor = "Narwin";
             this.btnAddProj.ThemeName = "MetroLite";
             this.btnAddProj.Click += new System.EventHandler(this.btnAddProj_Click);

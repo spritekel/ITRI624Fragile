@@ -24,7 +24,7 @@ namespace Agile_Extension.Forms
         private void txtProjName_TextChanged(object sender)
         {
             //Changes text of Summary label as text is entered
-            lblProjFName.Text = "Project: " +  txtProjName.Text;
+            lblProjFName.Text = "Product: " +  txtProjName.Text;
         }
         private void txtSprintName_TextChanged(object sender)
         {
@@ -35,7 +35,7 @@ namespace Agile_Extension.Forms
         {      
             if(validateProjAdd(txtProjName.Text,txtSprintName.Text,listMembers))
             {
-                if (MetroSetMessageBox.Show(this, "Add Project to Database?", "Add Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MetroSetMessageBox.Show(this, "Add Product to Database?", "Add Product", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     JObject obj_proj = new clsRestAPIHandler().create_project(txtProjName.Text, listbox_toList(), sprint_list(txtSprintName.Text));
                     
@@ -188,7 +188,7 @@ namespace Agile_Extension.Forms
         {
             if(proj_name.Length<=0 || proj_name.Contains(" "))
             {
-                lblOutput.Text = "Please enter a valid project name eg: proj_name";
+                lblOutput.Text = "Please enter a valid product name eg: prod_name";
                 txtProjName.Focus();
                 return false;
             }
@@ -202,7 +202,7 @@ namespace Agile_Extension.Forms
 
             if(list.Items.Count <= 0)
             {
-                lblOutput.Text = "No members added to project";
+                lblOutput.Text = "No members added to product development";
                 list.Focus();
                 return false;
             }
@@ -242,7 +242,7 @@ namespace Agile_Extension.Forms
             if(cmbDeleteProj.SelectedIndex != -1)
             {
                 string del_project = cmbDeleteProj.SelectedItem.ToString();
-                if (MetroSetMessageBox.Show(this, "Delete"+ del_project +"Database?", "Delete Project", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MetroSetMessageBox.Show(this, "Delete "+ del_project +" Database?", "Delete Product Development", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {  
                     removeProjFromUsers(del_project);
                     JObject obj = new clsRestAPIHandler().delete_project(del_project);

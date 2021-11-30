@@ -242,11 +242,11 @@ namespace Agile_Extension.Forms
             this.lblProjectLead.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblProjectLead.Location = new System.Drawing.Point(17, 144);
             this.lblProjectLead.Name = "lblProjectLead";
-            this.lblProjectLead.Size = new System.Drawing.Size(182, 23);
+            this.lblProjectLead.Size = new System.Drawing.Size(238, 23);
             this.lblProjectLead.Style = MetroSet_UI.Design.Style.Light;
             this.lblProjectLead.StyleManager = null;
             this.lblProjectLead.TabIndex = 0;
-            this.lblProjectLead.Text = "Project Lead (No/Yes):";
+            this.lblProjectLead.Text = "Development Lead (No/Yes):";
             this.lblProjectLead.ThemeAuthor = "Narwin";
             this.lblProjectLead.ThemeName = "MetroLite";
             // 
@@ -261,7 +261,7 @@ namespace Agile_Extension.Forms
             this.swProjectLead.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
             this.swProjectLead.DisabledCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.swProjectLead.DisabledUnCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
-            this.swProjectLead.Location = new System.Drawing.Point(243, 145);
+            this.swProjectLead.Location = new System.Drawing.Point(261, 144);
             this.swProjectLead.Name = "swProjectLead";
             this.swProjectLead.Size = new System.Drawing.Size(58, 22);
             this.swProjectLead.Style = MetroSet_UI.Design.Style.Light;
